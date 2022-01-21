@@ -1,3 +1,7 @@
+'''
+Create User, database and table
+'''
+
 CREATE USER 'doe'@'%' IDENTIFIED BY 'pass';
 GRANT ALL PRIVILEGES ON doe.* TO 'doe'@'%';
 
