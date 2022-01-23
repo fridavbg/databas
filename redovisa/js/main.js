@@ -4,7 +4,18 @@
 (function () {
     "use strict";
 
+    let li = document.querySelectorAll(".redo-text li");
 
+    for (var i = 0; i < li.length; i++) {
+        li[i].addEventListener("click", (e) => {
+            let clickedLi;
 
-    console.log("All ready.");
-}());
+            if (e.target.classList.contains("question-arrow")) {
+                clickedLi = e.target.parentElement;
+            } else {
+                clickedLi = e.target.parentElement.parentElement;
+            }
+            clickedLi.classList.toggle("showAnswer");
+        });
+    }
+})();
