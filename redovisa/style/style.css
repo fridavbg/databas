@@ -57,6 +57,11 @@ header nav a:hover{
 .accordion .accordion-text .title p {
     margin-bottom: 2em;
 }
+.accordion .accordion-text img {
+    width: 250px;
+    border-radius: 8px;
+}
+
 .accordion .accordion-text .redo-text {
     margin-top: 25px;
     overflow-y: auto;
@@ -111,6 +116,7 @@ header nav a:hover{
 }
 .accordion-text li.showAnswer p {
     display: block;
+    margin-left: 1.5em;
 }
 .accordion-text li.showAnswer .prompt {
     font-size: 18px;
