@@ -4,7 +4,7 @@
 (function () {
     "use strict";
 
-    let li = document.querySelectorAll(".faq-text li");
+    let li = document.querySelectorAll(".redo-text li");
 
     for (var i = 0; i < li.length; i++) {
         li[i].addEventListener("click", (e) => {

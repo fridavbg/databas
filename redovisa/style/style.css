@@ -12,37 +12,53 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     min-height: 100vh;
-    background: #7d2ae8;
+    background: #666B6A;
     padding: 40px;
 }
 ::selection {
-    background: #7d2ae8;
+    background: #666B6A;
     color: #fff;
 }
+
+/* NAVBAR */
+header nav {
+    background-color: #CCC;
+	overflow: hidden;
+	padding: 1em;
+	border-bottom: 1px solid #000;
+    margin-bottom: 2em;
+}
+header nav a{
+    color: #000;
+    text-decoration: none;
+}
+header nav a:hover{
+    color: rgb(245, 236, 236);
+}
+
+/* Accordion */
 .accordion {
-    display: flex;
     max-width: 1010px;
     width: 100%;
-    align-items: center;
-    justify-content: space-between;
+    height: 100%;
     background: #fff;
     border-radius: 25px;
     padding: 45px 90px 45px 60px;
 }
 
-.accordion .accordion-text {
-    width: 60%;
-}
 .accordion .accordion-text .title {
     font-size: 35px;
     font-weight: 600;
-    color: #7d2ae8;
+    color: #72A276;
     font-family: "Fira Sans", sans-serif;
+}
+.accordion .accordion-text .title p {
+    margin-bottom: 2em;
 }
 .accordion .accordion-text .redo-text {
     margin-top: 25px;
-    height: 263px;
     overflow-y: auto;
 }
 .redo-text::-webkit-scrollbar {
@@ -73,11 +89,11 @@ body {
 }
 .accordion-text li:hover .question-arrow .question,
 .accordion-text li:hover .question-arrow .arrow {
-    color: #7d2ae8;
+    color: #8AE9C1;
 }
 .accordion-text li.showAnswer .question-arrow .question,
 .accordion-text li.showAnswer .question-arrow .arrow {
-    color: #7d2ae8;
+    color: #8AE9C1;
 }
 .accordion-text li .line {
     display: block;
@@ -105,26 +121,8 @@ body {
         max-width: 100%;
         padding: 45px 60px 45px 60px;
     }
-    .accordion .image-box {
-        height: 360px;
-        width: 220px;
-    }
-    .accordion .accordion-text {
-        width: 63%;
-    }
 }
 @media (max-width: 820px) {
-    .accordion {
-        flex-direction: column;
-    }
-    .accordion .image-box {
-        height: 360px;
-        width: 300px;
-        background: #7d2ae8;
-        width: 100%;
-        border-radius: 25px;
-        padding: 30px;
-    }
     .accordion .accordion-text {
         width: 100%;
         margin-top: 30px;
