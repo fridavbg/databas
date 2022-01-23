@@ -112,6 +112,11 @@ header nav a:hover{
 .accordion-text li.showAnswer p {
     display: block;
 }
+.accordion-text li.showAnswer .prompt {
+    font-size: 18px;
+    margin: 1em;
+    font-weight: bold;
+}
 
 @media (max-width: 994px) {
     body {
