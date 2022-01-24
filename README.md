@@ -1,5 +1,7 @@
-# MARIADB
 
+
+
+# MARIADB
 #### START:
 ```
 brew services start mariadb
@@ -10,7 +12,6 @@ mysql.server start
 ```
 Sudo - datalösenord först
 mariadb -u root -p
-mariadb -udbadm -pP@ssw0rd
 ```
 
 #### STOP:
@@ -23,9 +24,7 @@ mysql.server stop
 mariadb --table < <FILENAME>.sql
 ```
 
-
-
-## DOCKER
+# DOCKER
 
 #### Init the container and read the files in sql.d/
 ```

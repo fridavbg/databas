@@ -1,5 +1,5 @@
 --
--- Create scheme for database skolan.
+-- Create table larare in database skolan.
 --
 
 USE skolan;

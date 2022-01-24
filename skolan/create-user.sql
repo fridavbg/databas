@@ -1,3 +1,7 @@
+--
+-- Create a user with all privileges
+--
+
 -- If users already exists delete
 
 DROP USER IF EXISTS 'frida'@'localhost';

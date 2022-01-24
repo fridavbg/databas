@@ -1,3 +1,7 @@
+--
+-- Create database skolan.
+--
+
 -- erasse db if it exits
 DROP database if exists skolan;
 
