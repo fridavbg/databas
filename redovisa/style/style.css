@@ -49,14 +49,14 @@ header nav a:hover{
 /* ME PAGE */
 .me-img {
     float: left;
+    width: 200px;
     margin-right: 1em;
+    border-radius: 25px;
 }
 .me-text {
     padding: 0.5em;
     line-height: 2em;
 }
-
-
 
 /* Accordion */
 .accordion {
@@ -77,10 +77,6 @@ header nav a:hover{
 }
 .accordion .accordion-text .title p {
     margin-bottom: 2em;
-}
-.accordion .accordion-text img {
-    width: 250px;
-    border-radius: 8px;
 }
 
 .accordion .accordion-text .redo-text {
