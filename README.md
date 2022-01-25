@@ -5,19 +5,16 @@
 #### START:
 ```
 brew services start mariadb
-mysql.server start
 ```
 
 #### LOGIN:
 ```
-Sudo - datalösenord först
 mariadb -u root -p
 ```
 
 #### STOP:
 ```
 brew services stop mariadb
-mysql.server stop
 ```
 #### RUN .sql files
 ```
