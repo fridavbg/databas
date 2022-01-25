@@ -26,4 +26,4 @@ VALUES
     ('ala', 'DIPT', 'Alastor', 'Moody', 'M', '1943-04-03')
 ;
 
-SELECT * FROM larare;
+-- SELECT * FROM larare;

@@ -2,7 +2,8 @@
 -- ALTER table larare
 --
 
--- Update columns
+-- Calculate salary budget
+SELECT SUM(lon) AS Lönesumma, ROUND(SUM(lon) * 0.064) ASLonepott FROM larare;
 
 -- Albus kompetens är nu 7 och lönen har ökat till 85 000.
 UPDATE larare
@@ -48,7 +49,7 @@ UPDATE larare
         lon = lon + ROUND(lon * 0.03)
     WHERE
         lon < 40000
-        OR kon = 'K';
+        AND kon = 'K';
 
 -- Ge Snape, Minerva och Hagrid ett extra lönetillägg om 5 000 för extra arbete de utför åt Albus och öka deras kompetens med +1.
 UPDATE larare
@@ -60,15 +61,16 @@ UPDATE larare
         OR akronym = 'min'
         OR akronym = 'hag';
 
+
 -- Ge alla lärare en ökning om 2.2% men exkludera Albus, Snape, Minerva och Hagrid som redan fått tillräckligt.
 UPDATE larare
     SET 
         lon = lon + ROUND(lon * 0.022)
     WHERE
-        akronym = 'hoc'
-        OR akronym = 'ala'
-        OR akronym = 'gyl'
-        OR akronym = 'fil';
+        akronym <> 'sna'
+        AND akronym <> 'dum'
+        AND akronym <> 'min'
+        AND akronym <> 'hag';
 
 -- Total salary sum and competence
 SELECT

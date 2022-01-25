@@ -40,17 +40,12 @@ docker-compose down -v && docker-compose up -d mariadb
 ```
 # Connect to MariaDB
 ```
-docker-compose run mariadb mariadb
+docker run --name mariadb -p 13307:3306 -e MARIADB_ROOT_PASSWORD=pass -d mariadb:latest
 ```
 
  # Open MariaDB bash in Docker 
 
 ```
-docker-compose run mariadb bash
+docker exec -it mariadb bash
 ```
 
-```
-docker run --name mariadb -p 13307:3306 -e MARIADB_ROOT_PASSWORD=pass -d mariadb:latest
-
-mariadb -u dbadm -p -h mariadb dbadm
-```

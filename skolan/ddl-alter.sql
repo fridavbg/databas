@@ -10,4 +10,4 @@
 
 ALTER TABLE larare ADD COLUMN kompetens INT NOT NULL DEFAULT 1;
 
-SELECT * FROM larare;
+-- SELECT * FROM larare;

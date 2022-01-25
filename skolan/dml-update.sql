@@ -25,6 +25,6 @@ UPDATE larare
         lon IS NULL
 ;
 
-SELECT akronym, avdelning, fornamn, kon, lon, kompetens
-    FROM larare
-    ORDER BY lon DESC;
+-- SELECT akronym, avdelning, fornamn, kon, lon, kompetens
+    -- FROM larare
+    -- ORDER BY lon DESC;

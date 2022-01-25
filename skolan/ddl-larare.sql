@@ -19,4 +19,4 @@ CREATE TABLE larare
     PRIMARY KEY (akronym)
 );
 
-SHOW TABLES;
+-- SHOW TABLES;
