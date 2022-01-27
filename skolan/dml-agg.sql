@@ -81,3 +81,127 @@ FROM larare
 GROUP BY avdelning, kompetens
 ORDER BY avdelning, Snittlon
 ;
+
+--
+-- Average salary per department, total higher than 35 000
+--
+
+SELECT
+    avdelning,
+    ROUND(AVG(lon)) AS Snittlon,
+    COUNT(lon) AS Antal
+FROM larare
+GROUP BY
+    avdelning
+HAVING
+    Snittlon > 35000
+ORDER BY
+    Snittlon DESC
+;
+
+--
+-- Average salary per department, total with 3 or more staff
+--
+
+SELECT
+    avdelning,
+    ROUND(AVG(lon)) AS Snittlon,
+    COUNT(lon) AS Antal
+FROM larare
+GROUP BY
+    avdelning
+HAVING
+    COUNT(avdelning) >= 3
+ORDER BY
+    Snittlon DESC
+;
+
+
+-- HAVING
+
+
+--
+-- 1
+-- Amount of staff, avg salary sorted by avdelning and avg salary
+--
+
+SELECT
+    avdelning,
+    ROUND(AVG(lon)) AS Snittlon,
+    COUNT(avdelning) AS Antal
+FROM larare
+GROUP BY
+    avdelning
+HAVING
+    COUNT(avdelning)
+ORDER BY
+    avdelning ASC,
+    Snittlon ASC
+;
+
+--
+-- 2
+-- Amount of staff, avg salary, kompetens sorted by avdelning and kompetens
+--
+
+SELECT
+    avdelning,
+    kompetens,
+    ROUND(AVG(lon)) AS Snittlon,
+    COUNT(avdelning) AS Antal
+FROM larare
+GROUP BY
+    avdelning,
+    kompetens
+HAVING
+    COUNT(avdelning)
+ORDER BY
+    avdelning, 
+    kompetens DESC
+;
+
+--
+-- 3
+-- Amount of staff, avg salary, kompetens sorted by avdelning and kompetens less than 3
+--
+
+SELECT
+    avdelning,
+    kompetens,
+    ROUND(AVG(lon)) AS Snittlon,
+    COUNT(avdelning) AS Antal
+FROM larare
+GROUP BY
+    avdelning,
+    kompetens
+HAVING
+    kompetens <= 3
+ORDER BY
+    avdelning, 
+    kompetens DESC
+;
+
+--
+-- 4
+-- Amount of staff, avg salary, kompetens sorted by avdelning and kompetens
+-- excluding groups > 1 
+-- including 1 participant (staff ??)
+-- avg(lon) between 30 000 - 45 000
+-- sort by avg (lon)
+--
+
+SELECT
+    avdelning,
+    kompetens,
+    ROUND(AVG(lon)) AS Snittlon,
+    COUNT(avdelning) AS Antal
+FROM larare
+GROUP BY
+    avdelning,
+    kompetens
+HAVING
+    kompetens <= 3
+    AND Snittlon BETWEEN 30000 AND 45000
+ORDER BY
+    Snittlon DESC
+;
