@@ -2,6 +2,8 @@
 -- Aggregate functions 
 --
 
+USE skolan;
+
 --
 -- Highest salary of all the teachers
 --

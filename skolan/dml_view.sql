@@ -31,4 +31,4 @@ SELECT
     ROUND(SUM(Alder) / COUNT(Alder)) AS Snittalder
 FROM v_larare
 GROUP BY avdelning
-ORDER BY Snittalder;
+ORDER BY Snittalder DESC;
