@@ -5,6 +5,8 @@
 -- 
 -- Create a view of larare table with an age column
 --
+DROP VIEW IF EXISTS v_larare;
+
 CREATE VIEW v_larare
 AS
 SELECT
