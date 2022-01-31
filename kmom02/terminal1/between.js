@@ -1,4 +1,10 @@
 /**
+ * A simple program to display information from the skolan database.
+ *
+ * @author frpe21
+ */
+
+/**
  * Show teachers and their departments.
  */
 
@@ -34,10 +40,11 @@ const question = util.promisify(rl.question);
 (async function () {
     const db = await mysql.createConnection(config);
     let str;
-    let search;
+    let minValue, maxValue;
 
-    search = await question("What to search for? ");
-    str = await searchTeachers(db, search);
+    minValue = await question("Enter minimum value? ");
+    maxValue = await question("Enter maximum value? ");
+    str = await searchTeachers(db, minValue, maxValue);
     console.info(str);
 
     rl.close();
@@ -53,13 +60,14 @@ const question = util.promisify(rl.question);
  *
  * @returns {string} Formatted table to print out.
  */
-async function searchTeachers(db, search) {
+async function searchTeachers(db, minValue, maxValue) {
     let sql;
     let res;
     let str;
-    let like = `%${search}%`;
+    let minVal = `${minValue}`;
+    let maxVal = `${maxValue}`;
 
-    console.info(`Searching for: ${search}`);
+    console.info(`Searching for values between: ${minValue} - ${maxValue}`);
 
     sql = `
         SELECT
@@ -72,15 +80,11 @@ async function searchTeachers(db, search) {
             fodd
         FROM larare
         WHERE
-            akronym LIKE ?
-            OR fornamn LIKE ?
-            OR efternamn LIKE ?
-            OR avdelning LIKE ?
-            OR lon = ?
-            OR kompetens = ?
+            lon BETWEEN ? AND ?
+            OR kompetens BETWEEN ? AND ?
         ORDER BY akronym;
     `;
-    res = await db.query(sql, [like, like, like, like, like, search]);
+    res = await db.query(sql, [minVal, maxVal, minValue, maxValue]);
     str = teacherAsTable(res);
     return str;
 }
