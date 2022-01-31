@@ -16,7 +16,7 @@ const config = require("./config.json");
     let sql;
     let res;
     // Output resultset as JSON
-    let data;
+    // let data;
     // Str to table
     let str;
 
