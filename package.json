@@ -18,6 +18,7 @@
   "homepage": "https://github.com/fridavbg/databas#readme",
   "dependencies": {
     "mysql": "^2.18.1",
-    "promise-mysql": "^5.1.0"
+    "promise-mysql": "^5.1.0",
+    "table": "^6.8.0"
   }
 }
