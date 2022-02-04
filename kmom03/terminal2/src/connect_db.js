@@ -8,7 +8,7 @@ async function connectDb() {
 
     sql = "USE skolan;";
     res = await db.query(sql);
-    console.info(res);
+    console.info("You have connected to the Db");
     db.end();
 }
 

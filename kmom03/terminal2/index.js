@@ -21,14 +21,14 @@ const rl = readline.createInterface({
  * @returns void
  */
 (async function () {
-    db.connectDb();
+    await db.connectDb();
     rl.on("close", exitProgram);
     rl.on("line", handleInput);
 
     rl.setPrompt(
         `Please choose an option:\n` +
             `write menu/help - to see all options \n` +
-            `Write and option: \n`
+            `Write your option: \n`
     );
     rl.prompt();
 })();
