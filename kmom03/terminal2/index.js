@@ -4,10 +4,9 @@
  * @author frpe21
  */
 
-"use strict";
+("use strict");
 
-const mysql = require("promise-mysql");
-const config = require("./config.json");
+const db = require("./src/connect_db.js");
 
 // Read from commandline
 const readline = require("readline");
@@ -22,18 +21,16 @@ const rl = readline.createInterface({
  * @returns void
  */
 (async function () {
-    const db = await mysql.createConnection(config);
-
+    db.connectDb();
     rl.on("close", exitProgram);
     rl.on("line", handleInput);
 
     rl.setPrompt(
         `Please choose an option:\n` +
             `write menu/help - to see all options \n` +
-            `Write and option: `
+            `Write and option: \n`
     );
     rl.prompt();
-    db.end();
 })();
 
 /**
@@ -55,9 +52,11 @@ function handleInput(line) {
         case "menu":
             printMenu();
             break;
-        case "search":
-            startSearch();
+        case "teachers":
+            searchTeachers();
             break;
+        default:
+            errorLog("Invalid command passed");
     }
 
     rl.prompt();
@@ -77,43 +76,24 @@ function printMenu() {
         `Please choose one of the following\n` +
         `exit or quit or ctrl + d: to stop game\n` +
         `menu or help: to see programme options \n` +
-        `search: search database \n`;
+        `teachers: search database \n`;
     console.info(message);
 }
 
 /**
- * Show the user all search options
+ * Show all information regarding teachers
  *
  * @returns (string) menu options
  *
  */
-async function startSearch() {
-    rl.on("line", handleInputSearch);
+async function searchTeachers() {
+    // let sql;
 
-    rl.setPrompt(`What would you like to search for ?\n` + `Search: `);
-    rl.prompt();
+    console.log("TEACHERS");
 }
 
-function handleInputSearch(line) {
-    line = line.trim();
-    switch (line) {
-        case "quit":
-        case "exit":
-            exitProgram();
-            break;
-        case "larare":
-            return "teacher-search";
-        case "kompetens":
-            return "kompetens";
-        case "lon":
-            return "lon";
-        case "nylon":
-            return "nylon";
-        default:
-            return "sok";
-    }
-
-    rl.prompt();
+function errorLog() {
+    console.log("Invalid command");
 }
 
 function exitProgram(code) {
