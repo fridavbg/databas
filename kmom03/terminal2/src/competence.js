@@ -15,24 +15,13 @@ const config = require("../config.json");
  *
  */
 
-async function searchLarare() {
+async function searchKompetens() {
     const db = await mysql.createConnection(config);
-    let sql = `SELECT 
-        akronym,
-        avdelning,
-        fornamn,
-        efternamn,
-        kon,
-        lon,
-        DATE_FORMAT(fodd, "%Y-%m-%d") as fodd,
-        kompetens,
-        Alder
-        FROM v_larare;`;
+    let sql = `SELECT * FROM larare;`;
     let res = await db.query(sql);
 
-    console.log("TEACHERS");
+    console.log("KOMPETENS");
     console.table(res);
-    return res;
 }
 
-module.exports.searchLarare = searchLarare;
+module.exports.searchKompetens = searchKompetens;

@@ -10,6 +10,7 @@
 const db = require("./src/connect_db.js");
 const helpers = require("./src/helpers.js");
 const teachers = require("./src/teachers");
+const competence = require("./src/competence");
 
 // Read from commandline
 const readline = require("readline");
@@ -58,7 +59,7 @@ function handleInput(line) {
             teachers.searchLarare();
             break;
         case "kompetens":
-            // teachers.searchTeachers();
+            competence.searchKompetens();
             break;
         case "lon":
             // teachers.searchTeachers();
