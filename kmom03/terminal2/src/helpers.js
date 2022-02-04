@@ -17,6 +17,7 @@ function printMenu() {
             # lon: change in lon
             # sok: search skolan database
             # nylon: Update a teacher salary
+            # checkDb: Is the db connected?
     `;
     console.info(message);
 }

@@ -24,17 +24,14 @@ const rl = readline.createInterface({
  * @returns void
  */
 
-(async function () {
-    await db.connectDb();
-    rl.on("close", helpers.exitProgram);
-    rl.on("line", handleInput);
-
-    rl.setPrompt(`
-    ----- Please choose one of the following:
+(function () {
+    console.log(`
+        ----- Please choose one of the following:
             # exit or quit or ctrl + d: to quit
             # menu or help: to see programme option
-            Write your option:
     `);
+    rl.on("close", helpers.exitProgram);
+    rl.on("line", handleInput);
     rl.prompt();
 })();
 
@@ -72,9 +69,11 @@ function handleInput(line) {
         case "nylon":
             // teachers.searchTeachers();
             break;
+        case "checkDb":
+            db.connectDb();
+            break;
         default:
             helpers.errorLog("Invalid command passed");
     }
-
     rl.prompt();
 }

@@ -4,7 +4,7 @@ const config = require("../config.json");
 async function connectDb() {
     const db = await mysql.createConnection(config);
 
-    console.info("#### You have connected to the Db");
+    console.log("#### DB is connected");
     db.end();
 }
 
