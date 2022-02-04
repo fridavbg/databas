@@ -8,11 +8,16 @@
 function printMenu() {
     let message;
 
-    message =
-        `Please choose one of the following\n` +
-        `exit or quit or ctrl + d: to stop game\n` +
-        `menu or help: to see programme options \n` +
-        `teachers: search database \n`;
+    message = `
+    ----- Please choose one of the following:
+            # exit or quit or ctrl + d: to quit
+            # menu or help: to see programme option
+            # teachers: search for teacher information
+            # kompetens: change in kompetens
+            # lon: change in lon
+            # sok: search skolan database
+            # nylon: Update a teacher salary
+    `;
     console.info(message);
 }
 

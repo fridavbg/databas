@@ -29,11 +29,12 @@ const rl = readline.createInterface({
     rl.on("close", helpers.exitProgram);
     rl.on("line", handleInput);
 
-    rl.setPrompt(
-        ` --- Please choose an option:\n` +
-            ` --- write menu/help - to see all options \n` +
-            `Write your option: \n`
-    );
+    rl.setPrompt(`
+    ----- Please choose one of the following:
+            # exit or quit or ctrl + d: to quit
+            # menu or help: to see programme option
+            Write your option:
+    `);
     rl.prompt();
 })();
 
@@ -56,8 +57,20 @@ function handleInput(line) {
         case "menu":
             helpers.printMenu();
             break;
-        case "teachers":
-            teachers.searchTeachers();
+        case "larare":
+            teachers.searchLarare();
+            break;
+        case "kompetens":
+            // teachers.searchTeachers();
+            break;
+        case "lon":
+            // teachers.searchTeachers();
+            break;
+        case "sok":
+            // teachers.searchTeachers();
+            break;
+        case "nylon":
+            // teachers.searchTeachers();
             break;
         default:
             helpers.errorLog("Invalid command passed");
