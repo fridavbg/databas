@@ -13,6 +13,7 @@ const teachers = require("./src/teachers");
 const competence = require("./src/competence");
 const lon = require("./src/salary");
 const search = require("./src/search");
+const nylon = require("./src/nylon");
 
 // Read from commandline
 const readline = require("readline");
@@ -72,7 +73,7 @@ function handleInput(line) {
             search.searchLarare(parts[1]);
             break;
         case "nylon":
-            // teachers.searchTeachers();
+            nylon.updateSalary(parts[1], parts[2]);
             break;
         case "checkDb":
             db.connectDb();

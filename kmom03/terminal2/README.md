@@ -20,7 +20,7 @@
 
 - [x] Skapa kommandot lon som visar en rapport hur lönen ändrats i senaste lönerevisionen.
 
-- []Skapa kommandot sok <sokstrang> som söker bland all information hos läraren och visar de lärare som matchar söksträngen.
+- [x]Skapa kommandot sok <sokstrang> som söker bland all information hos läraren och visar de lärare som matchar söksträngen.
 
 - [] Skapa kommandot nylon <akronym> <lon> som tar argumenten för lärarens akronym samt den nya lönen och uppdaterar lärarens lön.
 

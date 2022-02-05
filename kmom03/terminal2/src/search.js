@@ -30,9 +30,27 @@ async function searchLarare(searchWord) {
         FROM v_larare
         WHERE 
             akronym LIKE ?
+            OR avdelning LIKE ? 
+            OR fornamn LIKE ?
+            OR efternamn LIKE ?
+            OR kon LIKE ?
+            OR lon LIKE ?
+            OR fodd LIKE ?
+            OR kompetens LIKE ?
+            OR Alder LIKE ?
         ORDER BY akronym
         `;
-    let res = await db.query(sql, [`%${searchWord}%`]);
+    let res = await db.query(sql, [
+        `%${searchWord}%`,
+        `%${searchWord}%`,
+        `%${searchWord}%`,
+        `%${searchWord}%`,
+        `%${searchWord}%`,
+        `%${searchWord}%`,
+        `%${searchWord}%`,
+        `%${searchWord}%`,
+        `%${searchWord}%`,
+    ]);
 
     console.log("TEACHERS wtih searchword: " + searchWord);
     console.table(res);
