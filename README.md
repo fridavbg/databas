@@ -25,7 +25,7 @@ mariadb --table skolan < ddl-migrate.sql
 ```
 #### RUN .sql files
 ```
-mariadb --table < <FILENAME>.sql
+mariadb --table <DBName> < <FILENAME>.sql
 ```
 
 # DOCKER

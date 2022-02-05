@@ -1,5 +1,5 @@
 /**
- * Shows all teacher information from larare table
+ * Search all teacher information from larare table
  *
  * @author frpe21
  */
@@ -8,14 +8,15 @@ const mysql = require("promise-mysql");
 const config = require("../config.json");
 
 /**
- * Show all information regarding teachers
+ * Search all information regarding teachers
  *
  * @returns (string) menu options
  *
  */
 
-async function showLarare() {
+async function searchLarare(searchWord) {
     const db = await mysql.createConnection(config);
+
     let sql = `SELECT 
         akronym,
         avdelning,
@@ -26,12 +27,16 @@ async function showLarare() {
         DATE_FORMAT(fodd, "%Y-%m-%d") as fodd,
         kompetens,
         Alder
-        FROM v_larare;`;
-    let res = await db.query(sql);
+        FROM v_larare
+        WHERE 
+            akronym LIKE ?
+        ORDER BY akronym
+        `;
+    let res = await db.query(sql, [`%${searchWord}%`]);
 
-    console.log("TEACHERS");
+    console.log("TEACHERS wtih searchword: " + searchWord);
     console.table(res);
     return res;
 }
 
-module.exports.showLarare = showLarare;
+module.exports.searchLarare = searchLarare;

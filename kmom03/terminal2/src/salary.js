@@ -15,17 +15,17 @@ const config = require("../config.json");
  *
  */
 
-async function showKompetens() {
+async function showLon() {
     const db = await mysql.createConnection(config);
     let sql = `SELECT 
-        prekomp,
-        nukomp,
-        diffkomp
+        pre,
+        nu,
+        diff
         FROM v_lonerevision;`;
     let res = await db.query(sql);
 
-    console.log("KOMPETENS");
+    console.log("LON");
     console.table(res);
 }
 
-module.exports.showKompetens = showKompetens;
+module.exports.showLon = showLon;

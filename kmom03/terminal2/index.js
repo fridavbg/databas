@@ -7,10 +7,12 @@
 ("use strict");
 
 /// WHY NOT ????? const chalk = require("chalk");
-const db = require("./src/connect_db.js");
-const helpers = require("./src/helpers.js");
+const db = require("./src/connect_db");
+const helpers = require("./src/helpers");
 const teachers = require("./src/teachers");
 const competence = require("./src/competence");
+const lon = require("./src/salary");
+const search = require("./src/search");
 
 // Read from commandline
 const readline = require("readline");
@@ -46,7 +48,9 @@ const rl = readline.createInterface({
 
 function handleInput(line) {
     line = line.trim();
-    switch (line) {
+    let parts = line.split(" ");
+
+    switch (parts[0]) {
         case "quit":
         case "exit":
             helpers.exitProgram();
@@ -56,16 +60,16 @@ function handleInput(line) {
             helpers.printMenu();
             break;
         case "larare":
-            teachers.searchLarare();
+            teachers.showLarare();
             break;
         case "kompetens":
-            competence.searchKompetens();
+            competence.showKompetens();
             break;
         case "lon":
-            // teachers.searchTeachers();
+            lon.showLon();
             break;
         case "sok":
-            // teachers.searchTeachers();
+            search.searchLarare(parts[1]);
             break;
         case "nylon":
             // teachers.searchTeachers();

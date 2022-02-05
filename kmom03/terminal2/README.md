@@ -10,17 +10,17 @@
 
 - [x] Inloggningsdetaljer till databasen skall sparas i config.json och läsas in av programmet.
 
-- [] Om du använder externa moduler för att skriva ut texttabeller så måste modulen finnas i din me/package.json.
+- [x] Om du använder externa moduler för att skriva ut texttabeller så måste modulen finnas i din me/package.json.
 
 - [x] Ditt program skall fungera som en oändlig kommandoloop där man kan skriva in kommandon som programmet utför. Det skall finnas ett kommando menu som visar menyn med samtliga kommandon. När man skriver kommandot exit skall programmet avslutas. Du skall använda readline.prompt med callbackhanterare.
 
-- [] I din meny, skapa kommandot larare som visar all information om lärare, inklusive deras ålder. Minns att du har en vy för detta.
+- [x] I din meny, skapa kommandot larare som visar all information om lärare, inklusive deras ålder. Minns att du har en vy för detta.
 
-- [] Skapa kommandot kompetens som visar en rapport hur kompetensen ändrats i senaste lönerevisionen.
+- [x] Skapa kommandot kompetens som visar en rapport hur kompetensen ändrats i senaste lönerevisionen.
 
-- [] Skapa kommandot lon som visar en rapport hur lönen ändrats i senaste lönerevisionen.
+- [x] Skapa kommandot lon som visar en rapport hur lönen ändrats i senaste lönerevisionen.
 
-- []kapa kommandot sok <sokstrang> som söker bland all information hos läraren och visar de lärare som matchar söksträngen.
+- []Skapa kommandot sok <sokstrang> som söker bland all information hos läraren och visar de lärare som matchar söksträngen.
 
 - [] Skapa kommandot nylon <akronym> <lon> som tar argumenten för lärarens akronym samt den nya lönen och uppdaterar lärarens lön.
 
