@@ -17,28 +17,23 @@ CREATE TABLE larare
     kon CHAR(1),
     lon INT,
     fodd DATE,
+    kompetens INT NOT NULL DEFAULT 1,
 
     PRIMARY KEY (akronym)
 );
 
--- Add kompetens to larare table
+-- SHOW larare TABLE
+DESCRIBE larare;
+
 --
--- ALTER TABLE larare ADD COLUMN kompetens INT NOT NULL DEFAULT 1; 
-
--- ALTER TABLE larare DROP COLUMN kompetens;
-
-ALTER TABLE larare ADD COLUMN kompetens INT NOT NULL DEFAULT 1;
-
 -- Make copy of table
 --
 DROP TABLE IF EXISTS larare_pre;
 CREATE TABLE larare_pre LIKE larare;
-INSERT INTO larare_pre SELECT * FROM larare;
 
 -- Check the content of the tables, for sanity checking
 SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare;
 SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare_pre;
-
 
 -- Create a view of larare table with an age column
 --
@@ -58,31 +53,8 @@ SELECT
     FLOOR((CURDATE() - fodd) / 10000) AS Alder
 FROM larare;
 
--- From v_larare show avg(age) per department, name of department, sorted by AVG(AGE)
---
-
-SELECT
-    avdelning,
-    ROUND(SUM(Alder) / COUNT(Alder)) AS Snittalder
-FROM v_larare
-GROUP BY avdelning
-ORDER BY Snittalder DESC;
-
--- SHOW VIEW
--- SELECT * FROM v_larare;
-
--- JOIN of larare & pre_larare
-SELECT
-    l.akronym,
-    l.lon,
-    l.kompetens,
-    p.lon AS "pre-lon",
-    p.kompetens AS "pre-kompetens"
-FROM larare AS l
-    JOIN larare_pre AS p
-        ON l.akronym = p.akronym
-ORDER BY akronym
-;
+-- Show view TABLE structure
+DESCRIBE v_larare;
 
 -- View to show old/new wage, wage increase in %, warning if wage increase does not reach 3% 
 
@@ -107,16 +79,6 @@ FROM larare AS l
         ON l.akronym = p.akronym
 ;
 
--- check wages in v_lonerevision
-SELECT
-    akronym, fornamn, efternamn, pre, nu, diff, proc, mini
-FROM v_lonerevision
-ORDER BY proc DESC
-;
 
--- check kompetens in v_lonerevision
-SELECT
-    akronym, fornamn, efternamn, prekomp, nukomp, diffkomp
-FROM v_lonerevision
-ORDER BY nukomp DESC, diffkomp DESC
-;
+-- Show view v_lonerevision;
+DESCRIBE v_lonerevision;

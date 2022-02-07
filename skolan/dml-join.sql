@@ -8,7 +8,7 @@ SELECT
     l.lon,
     l.kompetens,
     p.lon AS "pre-lon",
-    p.kompetens AS "pre-kompetens"
+    p.kompetens AS "pre-kompetens",
 FROM larare AS l
     JOIN larare_pre AS p
         ON l.akronym = p.akronym
