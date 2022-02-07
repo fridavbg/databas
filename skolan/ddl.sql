@@ -7,8 +7,12 @@
 USE skolan;
 
 -- DROP TABLES in right order to avoid FK constraint
+DROP VIEW IF EXISTS v_planering;
 DROP TABLE if EXISTS kurstillfalle;
 DROP TABLE if EXISTS kurs;
+DROP TABLE IF EXISTS larare_pre;
+DROP VIEW IF EXISTS v_larare;
+
 DROP TABLE if exists larare;
 
 CREATE TABLE larare
@@ -31,12 +35,11 @@ CREATE TABLE larare
 --
 -- Make copy of table
 --
-DROP TABLE IF EXISTS larare_pre;
 CREATE TABLE larare_pre LIKE larare;
+
 
 -- Create a view of larare table with an age column
 --
-DROP VIEW IF EXISTS v_larare;
 
 CREATE VIEW v_larare
 AS
@@ -103,8 +106,6 @@ CREATE TABLE kurs
 -- Create table for course moments 
 --
 
-
-
 CREATE TABLE kurstillfalle
 (
     id INT AUTO_INCREMENT NOT NULL,
@@ -118,4 +119,21 @@ CREATE TABLE kurstillfalle
 );
 
 -- SHOW kurstillfalle table
-SHOW CREATE TABLE kurstillfalle \G;
+/* SHOW CREATE TABLE kurstillfalle \G; */
+
+--
+-- Create view of kurs, kurstillfalle, larare
+--
+
+DROP VIEW IF EXISTS v_planering;
+
+CREATE VIEW v_planering
+AS
+SELECT *
+FROM kurs AS k
+    JOIN kurstillfalle AS kt
+        ON k.kod = kt.kurskod
+    JOIN larare AS l
+        ON l.akronym = kt.kursansvarig;
+
+DESCRIBE v_planering;

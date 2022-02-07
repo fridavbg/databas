@@ -1,5 +1,10 @@
 -- empty table before insert
+SET FOREIGN_KEY_CHECKS = 0; 
+TRUNCATE table kurstillfalle;
+TRUNCATE table kurs;
 TRUNCATE table larare;
+TRUNCATE table larare_pre;
+SET FOREIGN_KEY_CHECKS = 1;
 
 --
 -- Add teacher staff
@@ -55,3 +60,45 @@ INSERT INTO larare_pre SELECT * FROM larare;
 -- SHOW larare;
 -- SELECT * FROM larare;
 -- SELECT * FROM larare_pre;
+
+--
+-- Add kurs information
+--
+
+INSERT INTO kurs
+    (kod, namn, poang, niva) 
+VALUES
+    ("AST101","Astronomi","5","G1N"),
+    ("SVT101","Försvar mot svartkonster","8","G1N"),
+    ("SVT201","Försvar mot svartkonster","6","G1F"),
+    ("SVT202","Försvar mot svartkonster","6","G1F"),
+    ("SVT401","Försvar mot svartkonster","6","G2F"),
+    ("KVA101","Kvastflygning","4","G1N"),
+    ("DJU101","Skötsel och vård av magiska djur","4","G1F"),
+    ("DRY101","Trolldryckslära","6","G1N"),
+    ("DRY102","Trolldryckslära","6","G1F"),
+    ("VAN101","Förvandlingskonst","5","G1F"),
+    ("MUG101","Mugglarstudier","6","G1F")
+;
+
+-- SELECT * FROM kurs;
+
+--
+-- Add kurstillfalle information
+--
+
+INSERT INTO kurstillfalle
+    (kurskod, kursansvarig, lasperiod) 
+VALUES
+    ("SVT101","gyl","1"),
+    ("SVT201","ala","1"),
+    ("SVT202","ala","2"),
+    ("SVT401","sna","1"),
+    ("KVA101","hoc","1"),
+    ("DJU101","hag","3"),
+    ("DRY101","sna","2"),
+    ("DRY102","sna","3"),
+    ("MUG101","min","4")
+;
+
+-- SELECT * FROM kurstillfalle;
