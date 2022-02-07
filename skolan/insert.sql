@@ -26,14 +26,7 @@ VALUES
 --
 UPDATE larare SET lon = 30000 WHERE akronym = 'gyl';
 
-UPDATE larare
-    SET
-        lon = 30000
-    WHERE
-        akronym = 'gyl'
-        OR akronym = 'ala'
-;
-
+-- update lon to 30000 for akronyms gyl, ala
 UPDATE larare
     SET
         lon = 30000
@@ -41,6 +34,7 @@ UPDATE larare
         akronym IN ('gyl', 'ala')
 ;
 
+-- Remove NULL values, set default to 30000
 UPDATE larare
     SET
         lon = 30000
@@ -50,10 +44,14 @@ UPDATE larare
 
 INSERT INTO larare_pre SELECT * FROM larare;
 
+-- Check the content of the tables, for sanity checking
+-- SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare;
+-- SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare_pre;
+
 -- SELECT akronym, avdelning, fornamn, kon, lon, kompetens
     -- FROM larare
     -- ORDER BY lon DESC;
 
 -- SHOW larare;
-SELECT * FROM larare;
-SELECT * FROM larare_pre;
+-- SELECT * FROM larare;
+-- SELECT * FROM larare_pre;

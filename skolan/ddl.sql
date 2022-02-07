@@ -6,6 +6,9 @@
 --
 USE skolan;
 
+-- DROP TABLES in right order to avoid FK constraint
+DROP TABLE if EXISTS kurstillfalle;
+DROP TABLE if EXISTS kurs;
 DROP TABLE if exists larare;
 
 CREATE TABLE larare
@@ -23,17 +26,13 @@ CREATE TABLE larare
 );
 
 -- SHOW larare TABLE
-DESCRIBE larare;
+-- DESCRIBE larare;
 
 --
 -- Make copy of table
 --
 DROP TABLE IF EXISTS larare_pre;
 CREATE TABLE larare_pre LIKE larare;
-
--- Check the content of the tables, for sanity checking
-SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare;
-SELECT SUM(lon) AS 'Lönesumma', SUM(kompetens) AS Kompetens FROM larare_pre;
 
 -- Create a view of larare table with an age column
 --
@@ -54,7 +53,7 @@ SELECT
 FROM larare;
 
 -- Show view TABLE structure
-DESCRIBE v_larare;
+-- DESCRIBE v_larare;
 
 -- View to show old/new wage, wage increase in %, warning if wage increase does not reach 3% 
 
@@ -81,4 +80,42 @@ FROM larare AS l
 
 
 -- Show view v_lonerevision;
-DESCRIBE v_lonerevision;
+-- DESCRIBE v_lonerevision;
+
+--
+-- Create table for courses
+--
+
+CREATE TABLE kurs
+(
+    kod CHAR(6) NOT NULL,
+    namn VARCHAR(40),
+    poang FLOAT,
+    niva CHAR(3),
+
+    PRIMARY KEY (kod)    
+);
+
+-- SHOW kurs table
+-- DESCRIBE kurs;
+
+--
+-- Create table for course moments 
+--
+
+
+
+CREATE TABLE kurstillfalle
+(
+    id INT AUTO_INCREMENT NOT NULL,
+    kurskod VARCHAR(6) NOT NULL,
+    kursansvarig CHAR(3) NOT NULL,
+    lasperiod INT NOT NULL,
+
+    PRIMARY KEY (id),
+    FOREIGN KEY (kurskod) REFERENCES kurs(kod),
+    FOREIGN KEY (kursansvarig) REFERENCES larare(akronym)
+);
+
+-- SHOW kurstillfalle table
+SHOW CREATE TABLE kurstillfalle \G;
