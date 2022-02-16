@@ -6,7 +6,6 @@
 
 ("use strict");
 
-/// WHY NOT ????? const chalk = require("chalk");
 const db = require("./src/connect_db");
 const helpers = require("./src/helpers");
 const teachers = require("./src/teachers");

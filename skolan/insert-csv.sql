@@ -29,7 +29,6 @@ SELECT * FROM kurs;
 
 --
 -- Insert into kurstillfalle.
--- NOT WORKING
 --
 LOAD DATA LOCAL INFILE 'kurstillfalle.csv'
 INTO TABLE kurstillfalle
