@@ -10,8 +10,7 @@ const port = process.env.DBWEBB_PORT || 1337;
 // Set upp Express server
 const express = require("express");
 const app = express();
-const indexRoutes = require("./routes/index.js");
-const routeToday = require("./routes/today.js");
+const routeBank = require("./route/bank.js");
 const path = require("path");
 
 // This is middleware called for all routes.
@@ -22,8 +21,7 @@ const middleware = require("./middleware/index.js");
 
 app.use(middleware.logIncomingToConsole);
 app.use(express.static(path.join(__dirname + "/public")));
-app.use("/", indexRoutes);
-app.use("/today", routeToday);
+app.use("/bank", routeBank);
 
 app.listen(port, logStartUpDetailsToConsole);
 app.set("view engine", "ejs");
