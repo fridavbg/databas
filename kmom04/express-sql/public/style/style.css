@@ -14,7 +14,6 @@ body {
     justify-content: left;
     flex-direction: column;
     min-height: 100vh;
-    background: #9fe9da;
     padding: 40px;
 }
 
@@ -55,6 +54,7 @@ table,
 th,
 td {
     border: 1px solid;
+    text-align: center;
 }
 
 /* FOOTER */
