@@ -1,21 +1,21 @@
 # Krav
-- Dina klienter kommer att testas mot den databas som finns i exemplet “Transaktioner i databas”. Du kan alltså inte göra ändringar i databasens struktur. []
+- Dina klienter kommer att testas mot den databas som finns i exemplet “Transaktioner i databas”. Du kan alltså inte göra ändringar i databasens struktur. [x]
 
 - Flytten av pengar skall alltid utföras inom ramen för en transaktion. []
 
-- Din webbklient skall startas utifrån skriptet index.js med node index.js. []
+- Din webbklient skall startas utifrån skriptet index.js med node index.js. [x]
 
-- Inloggningsdetaljer till databasen skall sparas i config/db/bank.json och delas mellan webbklient och terminalklient. []
+- Inloggningsdetaljer till databasen skall sparas i config/db/bank.json och delas mellan webbklient och terminalklient. [/]
 
-- Din webbklient har en sida bank/index som hälsar välkommen till banken och visar en meny över de saker man kan göra. []
+- Din webbklient har en sida bank/index som hälsar välkommen till banken och visar en meny över de saker man kan göra. [x]
 
-- Din webbklient har en sida bank/balance som visar en kontoöversikt. []
+- Din webbklient har en sida bank/balance som visar en kontoöversikt. [x]
 
-- Bygg vidare på din webbklient och lägg till en sida bank/move-to-adam. Varje gång man går in på den sidan skall det flyttas 1.5 pengar från Eva till Adam. Sidan visar bara ett tackmeddelande från Adam som tackar för pengarna. []
+- Bygg vidare på din webbklient och lägg till en sida bank/move-to-adam. Varje gång man går in på den sidan skall det flyttas 1.5 pengar från Eva till Adam. Sidan visar bara ett tackmeddelande från Adam som tackar för pengarna. [/]
 
-- Sidlayouten skall vara gemensam header och footer för samtliga sidor. []
+- Sidlayouten skall vara gemensam header och footer för samtliga sidor. [x]
 
-- Det skall finnas en meny i header som ger en navigeringsmöjlighet mellan de sidor som är relaterade till banken. []
+- Det skall finnas en meny i header som ger en navigeringsmöjlighet mellan de sidor som är relaterade till banken. [x]
 
 - Bygg ett terminalprogram och spara main-funktionen i cli.js. Terminalprogrammet skall startas med node cli.js. []
 

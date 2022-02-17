@@ -1,0 +1,25 @@
+<%- include("../partials/header.ejs", {title: title}); %>
+
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content">
+        <h1>Moving 1.5 money to Adam</h1>
+    
+        <p>Adam says thanks and checks his balance</p>
+        <hr />
+        
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Balance</th>
+            </tr>
+            <tr>
+                <td><%= res[0].id %></td>
+                <td><%= res[0].name %></td>
+                <td class="right"><%= res[0].balance %></td>
+            </tr>
+        </table>
+</div>
+<%- include("../partials/footer.ejs"); %>

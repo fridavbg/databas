@@ -42,6 +42,7 @@ async function showBalance() {
  *
  * @returns {RowDataPacket} Resultset from the query.
  */
+
 async function findAllInTable(table) {
     let sql = `SELECT * FROM ??;`;
     let res;
