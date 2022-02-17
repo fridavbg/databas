@@ -21,7 +21,7 @@ const middleware = require("./middleware/index.js");
 
 app.use(middleware.logIncomingToConsole);
 app.use(express.static(path.join(__dirname + "/public")));
-app.use("/bank", routeBank);
+app.use("/", routeBank);
 
 app.listen(port, logStartUpDetailsToConsole);
 app.set("view engine", "ejs");

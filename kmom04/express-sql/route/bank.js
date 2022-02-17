@@ -7,12 +7,12 @@ const express = require("express");
 const router = express.Router();
 const bank = require("../src/bank.js");
 
-router.get("/index", (req, res) => {
+router.get("/", (req, res) => {
     let data = {
         title: "Welcome | The Bank",
     };
 
-    res.render("bank/index", data);
+    res.render("pages/", data);
 });
 
 router.get("/balance", async (req, res) => {
@@ -22,7 +22,7 @@ router.get("/balance", async (req, res) => {
 
     data.res = await bank.showBalance();
 
-    res.render("bank/balance", data);
+    res.render("pages/balance", data);
 });
 
 module.exports = router;
