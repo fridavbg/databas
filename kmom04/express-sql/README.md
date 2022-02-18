@@ -5,7 +5,7 @@
 
 - Din webbklient skall startas utifrån skriptet index.js med node index.js. [x]
 
-- Inloggningsdetaljer till databasen skall sparas i config/db/bank.json och delas mellan webbklient och terminalklient. [/]
+- Inloggningsdetaljer till databasen skall sparas i config/db/bank.json och delas mellan webbklient och terminalklient. [x]
 
 - Din webbklient har en sida bank/index som hälsar välkommen till banken och visar en meny över de saker man kan göra. [x]
 
@@ -17,15 +17,15 @@
 
 - Det skall finnas en meny i header som ger en navigeringsmöjlighet mellan de sidor som är relaterade till banken. [x]
 
-- Bygg ett terminalprogram och spara main-funktionen i cli.js. Terminalprogrammet skall startas med node cli.js. []
+- Bygg ett terminalprogram och spara main-funktionen i cli.js. Terminalprogrammet skall startas med node cli.js. [x]
 
-- Kod, funktioner, moduler och klasser som delas mellan webbklienten och terminalklienten placerar du i katalogen src/ och de skall sedan importeras till de mainprogram som använder dem. []
+- Kod, funktioner, moduler och klasser som delas mellan webbklienten och terminalklienten placerar du i katalogen src/ och de skall sedan importeras till de mainprogram som använder dem. [x]
 
-- Ditt terminalprogram skall fungera som en oändlig kommandoloop där man kan skriva in kommandon som programmet utför. Det skall finnas ett kommando menu som visar menyn med samtliga kommandon. När man skriver kommandot exit skall programmet avslutas. []
+- Ditt terminalprogram skall fungera som en oändlig kommandoloop där man kan skriva in kommandon som programmet utför. Det skall finnas ett kommando menu som visar menyn med samtliga kommandon. När man skriver kommandot exit skall programmet avslutas. [x]
 
-- I terminalprogrammet, skapa kommandot move som flyttar 1.5 pengar från Adam till Eva (notera att webbklienten flyttar pengar i motsatt riktning). TIPS: se första extrauppgiften nedan, det kan förenkla din implementation. []
+- I terminalprogrammet, skapa kommandot move som flyttar 1.5 pengar från Adam till Eva (notera att webbklienten flyttar pengar i motsatt riktning). TIPS: se första extrauppgiften nedan, det kan förenkla din implementation. [x]
 
-- I terminalprogrammet, skapa kommandot balance som visar en översikt av de konton som finns och kontobehållningen. []
+- I terminalprogrammet, skapa kommandot balance som visar en översikt av de konton som finns och kontobehållningen. [x]
 
 - Validera din kod. []
 

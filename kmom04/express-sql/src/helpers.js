@@ -12,11 +12,8 @@ function printMenu() {
     ----- Please choose one of the following:
             # exit or quit or ctrl + d: to quit
             # menu or help: to see programme option
-            # larare: search for teacher information
-            # kompetens: change in kompetens
-            # lon: change in lon
-            # sok: search skolan database
-            # nylon: Update a teacher salary
+            # move: move 1.5 money to Eva
+            # balance: check account balances
             # checkDb: Is the db connected?
     `;
     console.info(message);

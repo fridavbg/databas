@@ -8,6 +8,7 @@
 
 const db = require("./src/connect_db");
 const helpers = require("./src/helpers");
+const bank = require("./src/bank");
 
 // Read from commandline
 const readline = require("readline");
@@ -56,6 +57,12 @@ function handleInput(line) {
             break;
         case "checkDb":
             db.connectDb();
+            break;
+        case "move":
+            bank.moveToEva();
+            break;
+        case "balance":
+            bank.showBalance();
             break;
         default:
             helpers.errorLog("Invalid command passed");
