@@ -27,10 +27,10 @@ router.get("/bank/balance", async (req, res) => {
 
 router.get("/bank/move-to-adam", async (req, res) => {
     let data = {
-        title: "Account balance | The Bank",
+        title: "Move to Adam | The Bank",
     };
 
-    data.res = await bank.showBalance();
+    data.res = await bank.showBalanceOfAdam();
 
     res.render("bank/move-to-adam", data);
 });

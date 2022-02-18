@@ -1,7 +1,7 @@
 # Krav
 - Dina klienter kommer att testas mot den databas som finns i exemplet “Transaktioner i databas”. Du kan alltså inte göra ändringar i databasens struktur. [x]
 
-- Flytten av pengar skall alltid utföras inom ramen för en transaktion. []
+- Flytten av pengar skall alltid utföras inom ramen för en transaktion. [x]
 
 - Din webbklient skall startas utifrån skriptet index.js med node index.js. [x]
 
@@ -11,7 +11,7 @@
 
 - Din webbklient har en sida bank/balance som visar en kontoöversikt. [x]
 
-- Bygg vidare på din webbklient och lägg till en sida bank/move-to-adam. Varje gång man går in på den sidan skall det flyttas 1.5 pengar från Eva till Adam. Sidan visar bara ett tackmeddelande från Adam som tackar för pengarna. [/]
+- Bygg vidare på din webbklient och lägg till en sida bank/move-to-adam. Varje gång man går in på den sidan skall det flyttas 1.5 pengar från Eva till Adam. Sidan visar bara ett tackmeddelande från Adam som tackar för pengarna. [x]
 
 - Sidlayouten skall vara gemensam header och footer för samtliga sidor. [x]
 

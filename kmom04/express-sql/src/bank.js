@@ -5,6 +5,7 @@
 
 module.exports = {
     showBalance: showBalance,
+    showBalanceOfAdam: showBalanceOfAdam,
 };
 
 const mysql = require("promise-mysql");
@@ -46,6 +47,43 @@ async function showBalance() {
 async function findAllInTable(table) {
     let sql = `SELECT * FROM ??;`;
     let res;
+
+    res = await db.query(sql, [table]);
+    console.info(`SQL: ${sql} (${table}) got ${res.length} rows.`);
+
+    return res;
+}
+
+/**
+ * Show all entries in the selected table.
+ *
+ * @async
+ * @param {string} table A valid table name.
+ *
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+
+async function showBalanceOfAdam(table) {
+    let sql = `
+
+    START TRANSACTION;
+
+    UPDATE account
+    SET
+        balance = balance + 1.5
+    WHERE
+        id = "2222";
+
+    UPDATE account
+    SET
+        balance = balance - 1.5
+    WHERE
+        id = "1111";
+
+    COMMIT;
+    `;
+    let res;
+    table = "account";
 
     res = await db.query(sql, [table]);
     console.info(`SQL: ${sql} (${table}) got ${res.length} rows.`);
