@@ -27,7 +27,7 @@
 
 - I terminalprogrammet, skapa kommandot balance som visar en översikt av de konton som finns och kontobehållningen. [x]
 
-- Validera din kod. []
+- Validera din kod. [x]
 
 # Flytta till kurskatalogen
 ```
@@ -45,4 +45,4 @@ Gör följande om du har tid och ro.
 
 - Lägg till kommandot move <amount> i din terminalklient, eller gör det ännu mer flexibelt med move <amount> <from> <to>. []
 
-- Snygga till din webklient med CSS och se över så att navigeringen är smidig mellan sidorna. []
+- Snygga till din webklient med CSS och se över så att navigeringen är smidig mellan sidorna. [x]
