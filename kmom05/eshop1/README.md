@@ -20,9 +20,10 @@ Uppgiften är indelad i tre huvudsakliga delar, en generell del inklusive databa
 - Skapa en SQL-fil som du kan använda för att återskapa hela databasen från början till slut, kalla den för sql/eshop/reset.sql. []
 
 - Du skall ha en loggtabell som loggar intressanta händelser i systemet, via triggers. Du skall logga när någon gör 
-INSERT [] 
-UPDATE [] 
-DELETE []
+- INSERT [] 
+- UPDATE [] 
+- DELETE []
+
 på tabellen produkt. Du loggar tiden då något hände och en textsträng som beskriver händelsen och det objekt som var inblandat i händelsen.
 
 Till exempel så här.
@@ -30,7 +31,7 @@ Till exempel så här.
 | Tidstämpel         | Händelse | # |
 |--------------|:-----|-----------:|
 | 2019-02-18 16:01:01 |  “Ny produkt lades till med produktid ‘produkt1’.” |         
-| 2019-02-18 16:02:01	      | “Detaljer om produktid ‘produkt1’ uppdaterades.”||
+| 2019-02-18 16:02:01 | “Detaljer om produktid ‘produkt1’ uppdaterades.”||
 |2019-02-18 16:03:01|“Produkten med produktid ‘produkt1’ raderades.”|
 
 ## Webbklient
@@ -78,13 +79,13 @@ Till exempel så här.
 
 ### Lämna in
 
-- När du är helt klar och har testkört ditt system mot din egen databas, så tar du en backup av databasen med mysqldump och sparar i sql/eshop/backup.sql. 
+- När du är helt klar och har testkört ditt system mot din egen databas, så tar du en backup av databasen med mysqldump och sparar i sql/eshop/backup.sql. []
 
-- Använd optionen --routines så att procedurerna följer med. Verifiera att backup-filen fungerar och tänk att rättaren kan ladda denna databas för att testköra mot ditt system.
+- Använd optionen --routines så att procedurerna följer med. Verifiera att backup-filen fungerar och tänk att rättaren kan ladda denna databas för att testköra mot ditt system. []
 
 Testa och validera din kod.
 
-# Flytta till kurskatalogen
+###s Flytta till kurskatalogen
 
 ```
 dbwebb test eshop1
