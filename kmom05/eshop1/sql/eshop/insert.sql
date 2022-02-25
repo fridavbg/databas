@@ -16,6 +16,7 @@ IGNORE 1 LINES
 
 SELECT * FROM kund;
 
+
 LOAD DATA LOCAL INFILE 'produkt.csv'
 INTO TABLE produkt
 CHARSET utf8
@@ -30,6 +31,34 @@ IGNORE 1 LINES
 SELECT * FROM produkt;
 
 
+LOAD DATA LOCAL INFILE 'kategori.csv'
+INTO TABLE kategori
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;
+
+SELECT * FROM kategori;
+
+
+LOAD DATA LOCAL INFILE 'produkt_kategori.csv'
+INTO TABLE produkt_kategori
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;
+
+SELECT * FROM produkt_kategori;
+
+
 LOAD DATA LOCAL INFILE 'lagerhylla.csv'
 INTO TABLE lagerhylla
 CHARSET utf8
@@ -42,3 +71,17 @@ IGNORE 1 LINES
 ;
 
 SELECT * FROM lagerhylla;
+
+LOAD DATA LOCAL INFILE 'stock.csv'
+INTO TABLE stock
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;
+
+SELECT * FROM stock;
+
