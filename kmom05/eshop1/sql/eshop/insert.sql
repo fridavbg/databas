@@ -85,3 +85,28 @@ IGNORE 1 LINES
 
 SELECT * FROM stock;
 
+
+INSERT INTO
+    kundorder(ordernummer, kund)
+VALUES
+    (11123, 3)
+;
+
+SELECT * from kundorder;
+
+INSERT INTO
+    faktura(fakturanummer, kundorder)
+VALUES
+    (123, 11123)
+;
+
+SELECT * from faktura;
+
+
+INSERT INTO
+    logg (kundorder, faktura)
+VALUES
+    (11123, 123)
+;
+
+SELECT * FROM logg;

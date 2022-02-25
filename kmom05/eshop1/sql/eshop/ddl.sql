@@ -144,14 +144,15 @@ CREATE TABLE stock
 
 CREATE TABLE logg
 (
-    kundorder_ordernummer INT,
-    faktura_fakturanummer INT,
-    ordersdatum DATE,
+    id INT AUTO_INCREMENT,
+    kundorder INT,
+    faktura INT,
+    orderdatum TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     fraktdatum DATE,
 
-    PRIMARY KEY(kundorder_ordernummer, faktura_fakturanummer),
-    FOREIGN KEY(kundorder_ordernummer) REFERENCES kundorder(ordernummer),
-    FOREIGN KEY(faktura_fakturanummer) REFERENCES faktura(fakturanummer)
+    PRIMARY KEY(id),
+    FOREIGN KEY(kundorder) REFERENCES kundorder(ordernummer),
+    FOREIGN KEY(faktura) REFERENCES faktura(fakturanummer)
 );
 
 ----------------------
@@ -176,3 +177,16 @@ FROM kundorder as ko
 SHOW TABLES;
 
 DESCRIBE plocklista;
+
+
+-- -----------------------
+-- -- TRIGGER
+-- --
+
+-- DROP TRIGGER IF EXISTS logga_kunorder;
+
+-- CREATE TRIGGER logga_kunorder
+-- AFTER UPDATE
+-- ON kundorder FOR EACH ROW
+--     INSERT INTO logg (kundorder, orderdatum)
+--         VALUES ('trigger', NEW.ordernummer, );
