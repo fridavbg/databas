@@ -1,0 +1,30 @@
+--
+-- Insert from CSV-files
+--
+
+
+LOAD DATA LOCAL INFILE 'kund.csv'
+INTO TABLE kund
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;
+
+SELECT * FROM kund;
+
+LOAD DATA LOCAL INFILE 'produkt.csv'
+INTO TABLE produkt
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;
+
+SELECT * FROM produkt;
