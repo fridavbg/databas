@@ -1,5 +1,5 @@
 const mysql = require("promise-mysql");
-const config = require("../config/db/bank.json");
+const config = require("../config/db/eshop.json");
 
 async function connectDb() {
     const db = await mysql.createConnection(config);

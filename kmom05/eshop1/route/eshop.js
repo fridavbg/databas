@@ -5,11 +5,11 @@
 
 const express = require("express");
 const router = express.Router();
-const bank = require("../src/eshop.js");
+// const eshop = require("../src/eshop.js");
 
 router.get("/eshop/index", (req, res) => {
     let data = {
-        title: "Welcome | BuckStar",
+        title: "Välkommen | BuckStar",
     };
 
     res.render("eshop/", data);
@@ -17,10 +17,34 @@ router.get("/eshop/index", (req, res) => {
 
 router.get("/eshop/about", async (req, res) => {
     let data = {
-        title: "About | BuckStar",
+        title: "Om | BuckStar",
     };
 
     res.render("eshop/about", data);
+});
+
+router.get("/eshop/category", async (req, res) => {
+    let data = {
+        title: "Kategori | BuckStar",
+    };
+
+    res.render("eshop/product", data);
+});
+
+router.get("/eshop/product", async (req, res) => {
+    let data = {
+        title: "Produkter | BuckStar",
+    };
+
+    res.render("eshop/product", data);
+});
+
+router.get("/eshop/crud", async (req, res) => {
+    let data = {
+        title: "CRUD | BuckStar",
+    };
+
+    res.render("eshop/crud", data);
 });
 
 module.exports = router;

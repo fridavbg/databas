@@ -39,15 +39,15 @@ Till exempel så här.
 
 - All access från klienten mot databasen skall gå via lagrade procedurer. []
 
-- Alla sidor skall ha samma sidlayout med gemensam header, footer och det skall gå att klicka sig fram mellan sidorna, via navigeringen. []
+- Alla sidor skall ha samma sidlayout med gemensam header, footer och det skall gå att klicka sig fram mellan sidorna, via navigeringen. [x]
 
 - Skapa en om-sida på eshop/about som visar namnen på de som jobbat (i gruppen) för att lösa uppgiften. [x]
 
-- I webbklienten, skapa routen /eshop/index som visar en välkomstssida till din eshop. Välj själv vad du visar på förstasidan. [/]
+- I webbklienten, skapa routen /eshop/index som visar en välkomstssida till din eshop. Välj själv vad du visar på förstasidan. [x]
 
-- I webbklienten, skapa en sida /eshop/category som visar en tabell över de produktkategorier som finns. []
+- I webbklienten, skapa en sida /eshop/category som visar en tabell över de produktkategorier som finns. [/]
 
-- I webbklienten, skapa en sida /eshop/product som visar en översikt av de produkter som finns. Visa (minst) produktens id, namn, pris och antal som finns i lagret. Visa även information om vilken kategori som produkten tillhör (TIPS GROUP_CONCAT). []
+- I webbklienten, skapa en sida /eshop/product som visar en översikt av de produkter som finns. Visa (minst) produktens id, namn, pris och antal som finns i lagret. Visa även information om vilken kategori som produkten tillhör (TIPS GROUP_CONCAT). [/]
 
 - Skapa CRUD för att lägga till, redigera, visa och radera produkter. Du behöver enbart redigera de delar som finns i tabellen kopplad till produkten. Du behöver inte redigera antal produkter på lagret, eller kopplingen till kategori. []
 

@@ -6,7 +6,7 @@
 module.exports = {};
 
 const mysql = require("promise-mysql");
-const config = require("../config/db/bank.json");
+const config = require("../config/db/eshop.json");
 let db;
 
 /**
@@ -31,12 +31,12 @@ let db;
  * @returns {RowDataPacket} Resultset from the query.
  */
 
-async function findAllInTable(table) {
-    let sql = `SELECT * FROM ??;`;
-    let res;
+// async function findAllInTable(table) {
+//     let sql = `SELECT * FROM ??;`;
+//     let res;
 
-    res = await db.query(sql, [table]);
-    console.info(`SQL: ${sql} (${table}) got ${res.length} rows.`);
-    console.table(res);
-    return res;
-}
+//     res = await db.query(sql, [table]);
+//     console.info(`SQL: ${sql} (${table}) got ${res.length} rows.`);
+//     console.table(res);
+//     return res;
+// }
