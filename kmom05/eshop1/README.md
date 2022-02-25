@@ -35,15 +35,15 @@ Till exempel så här.
 |2019-02-18 16:03:01|“Produkten med produktid ‘produkt1’ raderades.”|
 
 ## Webbklient
-- Skapa en webbklient med Express. Servern startas via node index.js och skall snurra på porten 1337. []
+- Skapa en webbklient med Express. Servern startas via node index.js och skall snurra på porten 1337. [x]
 
 - All access från klienten mot databasen skall gå via lagrade procedurer. []
 
 - Alla sidor skall ha samma sidlayout med gemensam header, footer och det skall gå att klicka sig fram mellan sidorna, via navigeringen. []
 
-- Skapa en om-sida på eshop/about som visar namnen på de som jobbat (i gruppen) för att lösa uppgiften. []
+- Skapa en om-sida på eshop/about som visar namnen på de som jobbat (i gruppen) för att lösa uppgiften. [x]
 
-- I webbklienten, skapa routen /eshop/index som visar en välkomstssida till din eshop. Välj själv vad du visar på förstasidan. []
+- I webbklienten, skapa routen /eshop/index som visar en välkomstssida till din eshop. Välj själv vad du visar på förstasidan. [/]
 
 - I webbklienten, skapa en sida /eshop/category som visar en tabell över de produktkategorier som finns. []
 
