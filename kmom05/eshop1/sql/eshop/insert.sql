@@ -28,3 +28,17 @@ IGNORE 1 LINES
 ;
 
 SELECT * FROM produkt;
+
+
+LOAD DATA LOCAL INFILE 'lagerhylla.csv'
+INTO TABLE lagerhylla
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
+;
+
+SELECT * FROM lagerhylla;
