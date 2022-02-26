@@ -43,3 +43,23 @@ END
 DELIMITER ;
 
 CALL show_account("1111");
+
+--
+-- Create procedure for edit account details
+--
+DROP PROCEDURE IF EXISTS edit_account;
+DELIMITER ;;
+CREATE PROCEDURE edit_account(
+    a_id CHAR(4),
+    a_name VARCHAR(8),
+    a_balance DECIMAL(4, 2)
+)
+BEGIN
+    UPDATE account SET
+        `name` = a_name,
+        `balance` = a_balance
+    WHERE
+        `id` = a_id;
+END
+;;
+DELIMITER ;

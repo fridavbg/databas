@@ -10,6 +10,7 @@ module.exports = {
     moveToEva: moveToEva,
     createAccount: createAccount,
     showAccount: showAccount,
+    editAccount: editAccount,
 };
 
 const mysql = require("promise-mysql");
@@ -164,4 +165,23 @@ async function showAccount(id) {
     console.info(`SQL: ${sql} got ${res.length} rows.`);
 
     return res[0];
+}
+
+/**
+ * Edit details on an account.
+ *
+ * @async
+ * @param {string} id      The id of the account to be updated.
+ * @param {string} name    The updated name of the account holder.
+ * @param {string} balance The updated amount in the account.
+ *
+ * @returns {void}
+ */
+async function editAccount(id, name, balance) {
+    let sql = `CALL edit_account(?, ?, ?);`;
+    let res;
+
+    res = await db.query(sql, [id, name, balance]);
+    //console.log(res);
+    console.info(`SQL: ${sql} got ${res.length} rows.`);
 }
