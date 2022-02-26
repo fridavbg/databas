@@ -8,6 +8,7 @@ module.exports = {
     showBalance: showBalance,
     moveToAdam: moveToAdam,
     moveToEva: moveToEva,
+    createAccount: createAccount,
 };
 
 const mysql = require("promise-mysql");
@@ -124,4 +125,23 @@ async function moveToEva() {
 
     console.log("Money moved to Eva");
     return res;
+}
+
+/**
+ * Create a new account.
+ *
+ * @async
+ * @param {string} id      A id of the account.
+ * @param {string} name    The name of the account holder.
+ * @param {string} balance Initial amount in the account.
+ *
+ * @returns {void}
+ */
+async function createAccount(id, name, balance) {
+    let sql = `CALL create_account(?, ?, ?);`;
+    let res;
+
+    res = await db.query(sql, [id, name, balance]);
+    console.log(res);
+    console.info(`SQL: ${sql} got ${res.length} rows.`);
 }

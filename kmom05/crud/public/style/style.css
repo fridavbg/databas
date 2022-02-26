@@ -112,6 +112,24 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
+/* FORM */
+
+form {
+    margin: 1em;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+legend {
+    margin: 0.5em;
+}
+input {
+    text-align: center;
+    padding: 0.1em;
+    margin: 1em;
+}
+
 /* FOOTER */
 
 footer {

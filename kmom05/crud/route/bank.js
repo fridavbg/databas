@@ -6,6 +6,8 @@
 const express = require("express");
 const router = express.Router();
 const bank = require("../src/bank.js");
+const bodyParser = require("body-parser");
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 router.get("/bank/index", (req, res) => {
     let data = {
@@ -33,6 +35,22 @@ router.get("/bank/move-to-adam", async (req, res) => {
     data.res = await bank.moveToAdam();
 
     res.render("bank/move-to-adam", data);
+});
+
+router.get("/bank/create", async (req, res) => {
+    // view form
+    let data = {
+        title: "Create account | The Bank",
+    };
+    res.render("bank/create", data);
+});
+
+router.post("/bank/create", urlencodedParser, async (req, res) => {
+    // Extract the data from the posted form
+    await bank.createAccount(req.body.id, req.body.name, req.body.balance);
+    // console.log(JSON.stringify(req.body, null, 4));
+    // Send data to a stored procedure
+    res.redirect("/bank/balance");
 });
 
 module.exports = router;
