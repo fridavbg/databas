@@ -140,14 +140,13 @@ input {
 /* FOOTER */
 
 footer {
-    width: 95%;
-    height: 50px;
+    width: 100%;
     text-align: center;
     background-color: #ccc;
-    position: fixed;
-    bottom: 0;
-    padding: 1em;
-    margin-bottom: 2em;
-    border-radius: 25px;
+    overflow: hidden;
     border-bottom: 1px solid #000;
+    margin-top: 2em;
+    border-radius: 25px;
+    padding: 1em;
+    padding: 0.5em;
 }
