@@ -47,13 +47,13 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 0.25em;
     box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
-    box-sizing: border-box;
-    left: 50%;
-    padding: 2em;
-    position: fixed;
     text-align: center;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    padding: 2em;
+    height: 500px;
+    overflow: auto;
+    float: left;
+    position: relative;
+    margin-left: -5px;
 }
 
 @keyframes slide {
@@ -117,6 +117,24 @@ td {
 }
 tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+/* FORM */
+
+form {
+    margin: 1em;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+legend {
+    margin: 0.5em;
+}
+input {
+    text-align: center;
+    padding: 0.1em;
+    margin: 1em;
 }
 
 /* FOOTER */

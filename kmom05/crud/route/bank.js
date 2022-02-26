@@ -82,6 +82,18 @@ router.get("/bank/edit/:id", async (req, res) => {
     res.render("bank/account-edit", data);
 });
 
+router.get("/bank/delete/:id", async (req, res) => {
+    let id = req.params.id;
+    let data = {
+        title: `Edit account ${id} ${sitename}`,
+        account: id,
+    };
+
+    data.res = await bank.showAccount(id);
+
+    res.render("bank/account-delete", data);
+});
+
 router.post("/bank/create", urlencodedParser, async (req, res) => {
     // Extract the data from the posted form
     await bank.createAccount(req.body.id, req.body.name, req.body.balance);
@@ -96,4 +108,9 @@ router.post("/bank/edit", urlencodedParser, async (req, res) => {
     res.redirect(`/bank/balance`);
 });
 
+router.post("/bank/delete", urlencodedParser, async (req, res) => {
+    // console.log(JSON.stringify(req.body, null, 4));
+    await bank.deleteAccount(req.body.id);
+    res.redirect(`/bank/balance`);
+});
 module.exports = router;

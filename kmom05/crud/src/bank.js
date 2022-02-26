@@ -11,6 +11,7 @@ module.exports = {
     createAccount: createAccount,
     showAccount: showAccount,
     editAccount: editAccount,
+    deleteAccount: deleteAccount,
 };
 
 const mysql = require("promise-mysql");
@@ -182,6 +183,22 @@ async function editAccount(id, name, balance) {
     let res;
 
     res = await db.query(sql, [id, name, balance]);
+    //console.log(res);
+    console.info(`SQL: ${sql} got ${res.length} rows.`);
+}
+
+/**
+ * Delete an account.
+ *
+ * @async
+ * @param {string} id      The id of the account to be deleted.
+ * @returns {void}
+ */
+async function deleteAccount(id) {
+    let sql = `CALL delete_account(?, ?, ?);`;
+    let res;
+
+    res = await db.query(sql, [id]);
     //console.log(res);
     console.info(`SQL: ${sql} got ${res.length} rows.`);
 }
