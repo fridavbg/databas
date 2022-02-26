@@ -11,7 +11,11 @@
         <p><i>To output the content of the account table.</i></p>
         <hr />
         
+
+
         <div>
+            <pre><%= JSON.stringify(res, null, 4) %></pre>
+
             <ul>
                 <% for (const row of res) { %>
                 <li><%= JSON.stringify(row) %></li>

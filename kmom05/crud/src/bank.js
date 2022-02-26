@@ -34,7 +34,14 @@ let db;
  * @returns {RowDataPacket} Resultset from the query.
  */
 async function showBalance() {
-    return findAllInTable("account");
+    let sql = `CALL show_balance();`;
+    let res;
+
+    res = await db.query(sql);
+    //console.log(res);
+    console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
 }
 
 /**
