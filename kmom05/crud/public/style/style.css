@@ -1,0 +1,129 @@
+/* Google Font CDN Link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/* BACKGROUND */
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(
+        -60deg,
+        rgb(120, 196, 82) 50%,
+        rgb(20, 137, 214) 50%
+    );
+    bottom: 0;
+    left: -50%;
+    opacity: 0.5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0.25em;
+    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    left: 50%;
+    padding: 2em;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+/* NAVBAR */
+header {
+    width: 100%;
+    text-align: center;
+}
+
+header nav {
+    background-color: #ccc;
+    overflow: hidden;
+    padding: 1em;
+    border-bottom: 1px solid #000;
+    margin-bottom: 2em;
+    border-radius: 25px;
+}
+
+header nav a {
+    color: #000;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: rgb(245, 236, 236);
+}
+
+/* LIST */
+
+ul {
+    margin: 1em;
+    padding: 0.5em;
+}
+
+/* TABLE */
+
+table {
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* FOOTER */
+
+footer {
+    width: 95%;
+    height: 50px;
+    text-align: center;
+    background-color: #ccc;
+    position: fixed;
+    bottom: 0;
+    padding: 1em;
+    margin-bottom: 2em;
+    border-radius: 25px;
+    border-bottom: 1px solid #000;
+}
