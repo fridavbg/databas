@@ -1,6 +1,7 @@
 /**
  * A module exporting functions to access the bank database.
  */
+
 "use strict";
 
 module.exports = {
@@ -72,7 +73,7 @@ async function moveToAdam() {
 
     UPDATE account
     SET
-        balance = balance  1.5
+        balance = balance - 1.5
     WHERE
         id = "2222";
 
