@@ -9,6 +9,7 @@ module.exports = {
     moveToAdam: moveToAdam,
     moveToEva: moveToEva,
     createAccount: createAccount,
+    showAccount: showAccount,
 };
 
 const mysql = require("promise-mysql");
@@ -144,4 +145,23 @@ async function createAccount(id, name, balance) {
     res = await db.query(sql, [id, name, balance]);
     console.log(res);
     console.info(`SQL: ${sql} got ${res.length} rows.`);
+}
+
+/**
+ * Show details for an account.
+ *
+ * @async
+ * @param {string} id A id of the account.
+ *
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+async function showAccount(id) {
+    let sql = `CALL show_account(?);`;
+    let res;
+
+    res = await db.query(sql, [id]);
+    //console.log(res);
+    console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
 }

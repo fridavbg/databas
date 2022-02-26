@@ -27,6 +27,18 @@ router.get("/bank/balance", async (req, res) => {
     res.render("bank/balance", data);
 });
 
+router.get("/bank/account/:id", async (req, res) => {
+    let id = req.params.id;
+    let data = {
+        title: `Account ${id} | Bank`,
+        account: id,
+    };
+
+    data.res = await bank.showAccount(id);
+
+    res.render("bank/account-view", data);
+});
+
 router.get("/bank/move-to-adam", async (req, res) => {
     let data = {
         title: "Move to Adam | The Bank",
@@ -43,6 +55,18 @@ router.get("/bank/create", async (req, res) => {
         title: "Create account | The Bank",
     };
     res.render("bank/create", data);
+});
+
+router.get("/bank/account/:id", async (req, res) => {
+    let id = req.params.id;
+    let data = {
+        title: `account ${id} | The Bank}`,
+        account: id,
+    };
+
+    data.res = await bank.showAccount(id);
+
+    res.render("bank/account-view", data);
 });
 
 router.post("/bank/create", urlencodedParser, async (req, res) => {

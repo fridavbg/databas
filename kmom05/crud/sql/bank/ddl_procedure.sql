@@ -27,3 +27,19 @@ BEGIN
 END
 ;;
 DELIMITER ;
+
+--
+-- Create procedure for individual account
+--
+DROP PROCEDURE IF EXISTS show_account;
+DELIMITER ;;
+CREATE PROCEDURE show_account(
+    a_id CHAR(4)
+)
+BEGIN
+    SELECT * FROM account WHERE id = a_id;
+END
+;;
+DELIMITER ;
+
+CALL show_account("1111");
