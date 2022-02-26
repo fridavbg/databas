@@ -70,8 +70,8 @@ CREATE TABLE kundorder
     -- föreläsning 2017 48:00
     -- borttagen markera som ej aktiv - soft delete
     uppdaterad DATETIME DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-    borttagen DATETIME DEFAULT NULL,
-    skickad DATETIME DEFAULT NULL,
+    borttagen DATETIME,
+    skickad DATETIME,
 
     PRIMARY KEY (ordernummer),
     FOREIGN KEY (kund) REFERENCES kund(id)
@@ -98,6 +98,9 @@ CREATE TABLE faktura
     kund INT,
     fakturadatum DATETIME DEFAULT CURRENT_TIMESTAMP,
     totalpris INT,
+    uppdaterad DATETIME DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+    borttagen DATETIME,
+    skickad DATETIME,
 
     PRIMARY KEY(fakturanummer),
     FOREIGN KEY(kundorder) REFERENCES kundorder(ordernummer),
@@ -147,8 +150,8 @@ CREATE TABLE logg
     id INT AUTO_INCREMENT,
     kundorder INT,
     faktura INT,
-    orderdatum TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    fraktdatum DATE,
+    loggdatum DATETIME,
+    kommentar VARCHAR(40),
 
     PRIMARY KEY(id),
     FOREIGN KEY(kundorder) REFERENCES kundorder(ordernummer),
@@ -183,10 +186,86 @@ DESCRIBE plocklista;
 -- -- TRIGGER
 -- --
 
--- DROP TRIGGER IF EXISTS logga_kunorder;
+-- Trigger för logging vid insert kundorder
+DROP TRIGGER IF EXISTS log_insert_kundorder;
 
--- CREATE TRIGGER logga_kunorder
+CREATE TRIGGER log_insert_kundorder
+AFTER INSERT
+ON kundorder FOR EACH ROW
+    INSERT INTO logg (kundorder, loggdatum, kommentar)
+        VALUES (NEW.ordernummer, NEW.orderdatum, 'beställning skapad')
+;
+
+-- Trigger för logging vid update kundorder
+DROP TRIGGER IF EXISTS log_update_kundorder;
+
+CREATE TRIGGER log_update_kundorder
+AFTER UPDATE
+ON kundorder FOR EACH ROW
+    INSERT INTO logg (kundorder, loggdatum, kommentar)
+        VALUES (NEW.ordernummer, NEW.uppdaterad, 'beställning ändrad')
+;
+
+
+-- Trigger för logging vid insert faktura
+DROP TRIGGER IF EXISTS log_insert_faktura;
+
+CREATE TRIGGER log_insert_faktura
+AFTER INSERT
+ON faktura FOR EACH ROW
+    INSERT INTO logg (kundorder, faktura, loggdatum, kommentar)
+        VALUES (NEW.kundorder, NEW.fakturanummer, NEW.fakturadatum, 'faktura skapad')
+;
+
+-- Trigger för logging vid insert faktura
+DROP TRIGGER IF EXISTS log_update_faktura;
+
+CREATE TRIGGER log_update_faktura
+AFTER UPDATE
+ON faktura FOR EACH ROW
+    INSERT INTO logg (kundorder, faktura, loggdatum, kommentar)
+        VALUES (NEW.kundorder, NEW.fakturanummer, NEW.fakturadatum, 'faktura ändrad')
+;
+
+
+-- Hur göra för att visa produkter som lagts till eller tagits bort i kundorder (eftersom det är kopplat till kundorder-rad)?
+-- Lägga till compound för att se om det var "uppdaterad", "borttagen" eller "skickad" som ändrades och ändra kommentar i enlighet.
+
+
+-- Trigger orderändring logg_kundorder (when delete kundorder)
+-- Trigger fakturaändringsdatum logg_faktura (when update faktura)
+-- Trigger fakturaändringsdatum logg_faktura (when delete faktura)
+
+
+
+-- OBS NEDAN ÄR OM VI ISTÄLLET FÖR ATT LÄGGA IN NYA LOGGAR VARJE GÅNG VILL (BRA FÖR ATT SE HISTORIK)
+-- ISTÄLLET VILL UPPDATERA EXISTERANDE (BRA FÖR ÖVERBLICK)
+
+-- -- Trigger för logging vid update kundorder
+-- DROP TRIGGER IF EXISTS log_update_kundorder;
+
+-- CREATE TRIGGER log_update_kundorder
 -- AFTER UPDATE
 -- ON kundorder FOR EACH ROW
---     INSERT INTO logg (kundorder, orderdatum)
---         VALUES ('trigger', NEW.ordernummer, );
+--     UPDATE logg
+--         SET
+--             orderändringsdatum = NEW.uppdaterad,
+--             kommentar = 'beställning ändrad'
+--         WHERE
+--             kundorder = NEW.kundorder
+-- ;
+
+-- -- Trigger för logging vid insert faktura
+-- DROP TRIGGER IF EXISTS log_faktura;
+
+-- CREATE TRIGGER log_faktura
+-- AFTER INSERT
+-- ON faktura FOR EACH ROW
+--     UPDATE logg
+--         SET
+--             faktura = NEW.fakturanummer,
+--             fakturadatum = NEW.fakturadatum,
+--             kommentar = 'faktura skickad'
+--         WHERE
+--             kundorder = NEW.kundorder
+-- ;

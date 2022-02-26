@@ -3,6 +3,9 @@
 --
 
 
+-- OBS, många LOAD DATA... kan man kanske skapa en funktion för det?
+-- Har provat procedur men LOAD DATA är inte tillåtet innanför en procedur
+
 LOAD DATA LOCAL INFILE 'kund.csv'
 INTO TABLE kund
 CHARSET utf8
@@ -13,9 +16,6 @@ LINES
     TERMINATED BY '\n'
 IGNORE 1 LINES
 ;
-
-SELECT * FROM kund;
-
 
 LOAD DATA LOCAL INFILE 'produkt.csv'
 INTO TABLE produkt
@@ -28,9 +28,6 @@ LINES
 IGNORE 1 LINES
 ;
 
-SELECT * FROM produkt;
-
-
 LOAD DATA LOCAL INFILE 'kategori.csv'
 INTO TABLE kategori
 CHARSET utf8
@@ -41,9 +38,6 @@ LINES
     TERMINATED BY '\n'
 IGNORE 1 LINES
 ;
-
-SELECT * FROM kategori;
-
 
 LOAD DATA LOCAL INFILE 'produkt_kategori.csv'
 INTO TABLE produkt_kategori
@@ -56,9 +50,6 @@ LINES
 IGNORE 1 LINES
 ;
 
-SELECT * FROM produkt_kategori;
-
-
 LOAD DATA LOCAL INFILE 'lagerhylla.csv'
 INTO TABLE lagerhylla
 CHARSET utf8
@@ -69,8 +60,6 @@ LINES
     TERMINATED BY '\n'
 IGNORE 1 LINES
 ;
-
-SELECT * FROM lagerhylla;
 
 LOAD DATA LOCAL INFILE 'stock.csv'
 INTO TABLE stock
@@ -83,16 +72,18 @@ LINES
 IGNORE 1 LINES
 ;
 
-SELECT * FROM stock;
-
-
 INSERT INTO
     kundorder(ordernummer, kund)
 VALUES
     (11123, 3)
 ;
 
-SELECT * from kundorder;
+UPDATE kundorder
+    SET
+        kund = 2
+    WHERE
+        ordernummer = 11123
+;
 
 INSERT INTO
     faktura(fakturanummer, kundorder)
@@ -100,13 +91,20 @@ VALUES
     (123, 11123)
 ;
 
-SELECT * from faktura;
-
-
-INSERT INTO
-    logg (kundorder, faktura)
-VALUES
-    (11123, 123)
+UPDATE faktura
+    SET
+        totalpris = 300
+    WHERE
+        fakturanummer = 123
 ;
 
+
+SELECT * FROM kund;
+SELECT * FROM produkt;
+SELECT * FROM kategori;
+SELECT * FROM produkt_kategori;
+SELECT * FROM lagerhylla;
+SELECT * FROM stock;
+SELECT * from kundorder;
+SELECT * from faktura;
 SELECT * FROM logg;
