@@ -63,3 +63,21 @@ BEGIN
 END
 ;;
 DELIMITER ;
+
+--
+-- Create procedure for delete account
+--
+DROP PROCEDURE IF EXISTS delete_account;
+DELIMITER ;;
+CREATE PROCEDURE delete_account(
+    a_id CHAR(4)
+)
+BEGIN
+    DELETE FROM account
+    WHERE
+        `id` = a_id;
+END
+;;
+DELIMITER ;
+
+-- SHOW WARNINGS;
