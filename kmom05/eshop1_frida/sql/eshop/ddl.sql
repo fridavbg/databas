@@ -206,31 +206,31 @@ ON kundorder FOR EACH ROW
 ;
 
 -- -- Trigger kunorder_rad
-DROP TRIGGER IF EXISTS log_insert_kundorder_rad;
+DROP TRIGGER IF EXISTS log_insert_produkt;
 
-CREATE TRIGGER log_insert_kundorder_rad
+CREATE TRIGGER log_insert_produkt
 AFTER INSERT
-ON kundorder_rad FOR EACH ROW
-    INSERT INTO logg (kundorder, loggdatum, kommentar)
-        VALUES (NEW.kundorder, NOW(), CONCAT('produkt med id ', NEW.produkt, ' tillagd'))
+ON produkt FOR EACH ROW
+    INSERT INTO logg (loggdatum, kommentar)
+        VALUES (NOW(), CONCAT('produkt med kod ', NEW.produktkod, ' tillagd'))
 ;
 
-DROP TRIGGER IF EXISTS log_update_kundorder_rad;
+DROP TRIGGER IF EXISTS log_update_produkt;
 
-CREATE TRIGGER log_update_kundorder_rad
+CREATE TRIGGER log_update_produkt
 AFTER UPDATE
-ON kundorder_rad FOR EACH ROW
-    INSERT INTO logg (kundorder, loggdatum, kommentar)
-        VALUES (NEW.kundorder, NOW(), CONCAT('detaljer om produkt med id ', NEW.produkt, ' ändrade'))
+ON produkt FOR EACH ROW
+    INSERT INTO logg (loggdatum, kommentar)
+        VALUES (NOW(), CONCAT('detaljer om produkt med kod ', NEW.produktkod, ' ändrade'))
 ;
 
-DROP TRIGGER IF EXISTS log_delete_kundorder_rad;
+DROP TRIGGER IF EXISTS log_delete_produkt;
 
-CREATE TRIGGER log_delete_kundorder_rad
+CREATE TRIGGER log_delete_produkt
 AFTER DELETE
-ON kundorder_rad FOR EACH ROW
-    INSERT INTO logg (kundorder, loggdatum, kommentar)
-        VALUES (OLD.kundorder, NOW(), CONCAT('produkt med id ', OLD.produkt, ' raderad'))
+ON produkt FOR EACH ROW
+    INSERT INTO logg (loggdatum, kommentar)
+        VALUES (NOW(), CONCAT('produkt med kod ', OLD.produktkod, ' raderad'))
 ;
 
 
