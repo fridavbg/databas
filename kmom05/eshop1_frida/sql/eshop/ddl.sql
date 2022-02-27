@@ -295,6 +295,30 @@ DELIMITER ;
 
 CALL show_product();
 
+--
+-- Procedure to show one product 
+--
+DROP PROCEDURE IF EXISTS show_productkod;
+DELIMITER ;;
+CREATE PROCEDURE show_productkod(
+    a_id INT
+)
+BEGIN
+    SELECT 
+    p.produktkod, 
+    p.produktnamn, 
+    p.produktbeskrivning, 
+    p.produktpris,
+    s.antal
+    FROM produkt as p 
+        INNER JOIN stock as s 
+            ON p.produktkod = s.produkt
+    WHERE p.produktkod = a_id;
+END
+;;
+DELIMITER ;
+
+-- CALL show_productkod(1);
 
 --
 -- Procedure to insert product 
