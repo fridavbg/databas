@@ -276,5 +276,20 @@ END
 ;;
 DELIMITER ;
 
+
 -- Testar procedur:
--- CALL insert_produkt('testprodukt', 'detta är en testbeskrivning', 350);
+CALL insert_produkt('testprodukt', 'detta är en testbeskrivning', 350);
+
+-- Procedure show logg
+
+DROP PROCEDURE IF EXISTS show_logg;
+DELIMITER ;;
+CREATE PROCEDURE show_logg()
+BEGIN
+    SELECT * FROM logg;
+END
+;;
+DELIMITER ;
+
+-- Testar procedur: (fast inget är inlagt än)
+-- CALL show_logg();
