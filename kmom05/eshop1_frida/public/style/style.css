@@ -44,7 +44,7 @@ body {
 }
 
 .content {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 0.25em;
     box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
     text-align: center;
@@ -101,26 +101,13 @@ p {
     width: 200px;
 }
 
-/* BUTTONS */
-
-.btn {
-    margin: 1em;
-    padding: 0.3em;
-    text-decoration: none;
-    background-color: green;
-    color: black;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    color: white;
-    box-shadow: 5px 10px #888888;
-}
 
 /* LINKS */
 
 .link {
     color: black;
+    border: 1px solid black;
+    border-radius: 5px;
     text-decoration: none;
     padding: 7px;
     box-shadow: 5px 10px rgb(85, 55, 3);

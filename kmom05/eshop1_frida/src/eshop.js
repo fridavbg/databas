@@ -6,6 +6,8 @@
 module.exports = {
     showCategory: showCategory,
     showProduct: showProduct,
+    showProductkod: showProductkod,
+    editProduct: editProduct,
 };
 
 const mysql = require("promise-mysql");
@@ -59,4 +61,53 @@ async function showProduct() {
     console.info(`SQL: ${sql} got ${res.length} rows.`);
 
     return res[0];
+}
+
+/**
+ * Show details for a product.
+ *
+ * @async
+ * @param {string} id A id of the account.
+ *
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+async function showProductkod(produktkod) {
+    let sql = `CALL show_productkod(?);`;
+    let res;
+
+    res = await db.query(sql, [produktkod]);
+    //console.log(res);
+    console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
+
+/**
+ * Edit details on a product.
+ *
+ * @async
+ * @param {string} produktkod      The id of the product to be updated.
+ * @param {string} produktnamn    The updated name of the product.
+ * @param {string} produktbeskrivning The updated details of the product.
+ *  @param {integer} produktpris The updated price of the product.
+ *
+ * @returns {void}
+ */
+async function editProduct(
+    produktkod,
+    produktnamn,
+    produktbeskrivning,
+    produktpris
+) {
+    let sql = `CALL edit_produkt(?, ?, ?, ?);`;
+    let res;
+
+    res = await db.query(sql, [
+        produktkod,
+        produktnamn,
+        produktbeskrivning,
+        produktpris,
+    ]);
+    //console.log(res);
+    console.info(`SQL: ${sql} got ${res.length} rows.`);
 }

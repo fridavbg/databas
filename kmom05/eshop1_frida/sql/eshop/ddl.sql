@@ -321,6 +321,32 @@ DELIMITER ;
 -- CALL show_productkod(1);
 
 --
+-- Procedure to edit product 
+--
+DROP PROCEDURE IF EXISTS edit_produkt;
+
+DELIMITER ;;
+CREATE PROCEDURE edit_produkt(
+    a_produktkod INT,
+    a_produktnamn VARCHAR(20),
+    a_produktbeskrivning VARCHAR(50),
+    a_produktpris INT
+)
+BEGIN
+    UPDATE produkt SET
+        `produktnamn` = a_produktnamn, 
+        `produktbeskrivning` = a_produktbeskrivning, 
+        `produktpris` = a_produktpris
+    WHERE
+        `produktkod` = a_produktkod
+    ;
+END
+;;
+DELIMITER ;
+
+-- SHOW PROCEDURE STATUS LIKE 'edit%';
+
+--
 -- Procedure to insert product 
 --
 DROP PROCEDURE IF EXISTS insert_produkt;
