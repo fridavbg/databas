@@ -127,6 +127,6 @@ SELECT * FROM produkt_kategori;
 SELECT * FROM lagerhylla;
 SELECT * FROM stock;
 SELECT * from kundorder;
--- SELECT * from kundorder_rad;
+SELECT * from kundorder_rad; -- obs tog bort den rad som fanns!
 SELECT * from faktura;
 SELECT * FROM logg;
