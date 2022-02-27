@@ -48,6 +48,8 @@ router.get("/eshop/crud", async (req, res) => {
         title: "CRUD | BuckStar",
     };
 
+    data.res = await eshop.showProduct();
+
     res.render("eshop/crud", data);
 });
 

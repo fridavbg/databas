@@ -89,10 +89,46 @@ header nav a:hover {
     color: rgb(245, 236, 236);
 }
 
+/* TEXT */
+
+p {
+    margin: 1em;
+}
+
 /* IMAGE */
 
 .img {
     width: 200px;
+}
+
+/* BUTTONS */
+
+.btn {
+    margin: 1em;
+    padding: 0.3em;
+    text-decoration: none;
+    background-color: green;
+    color: black;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    color: white;
+    box-shadow: 5px 10px #888888;
+}
+
+/* LINKS */
+
+.link {
+    color: black;
+    text-decoration: none;
+    padding: 7px;
+    box-shadow: 5px 10px rgb(85, 55, 3);
+}
+
+.link:hover {
+    color: rgb(85, 55, 3);
+    box-shadow: 5px 10px #0c0c0c;
 }
 
 /* LIST */

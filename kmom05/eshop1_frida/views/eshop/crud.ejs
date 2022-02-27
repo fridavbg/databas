@@ -7,7 +7,35 @@
     <h1>CRUD</h1>
 
     <p>CREATE READ UPDATE DELETE</p>
-    
+
+    <a class="btn" href="#">CREATE NEW PRODUCT</a>
+
+    <table>
+        <tr>
+            <th>Produktkod</th>
+            <th>Produktnamn</th>
+            <th>Produktbeskrivning</th>
+            <th>Produktpris</th>
+            <th>Antal</th>
+        </tr>
+        <% for (const row of res) { %>
+        <tr>
+            <td><%= row.produktkod %></td>
+            <td>
+                <a href="#" class="link"> <%= row.produktnamn %> </a>
+            </td>
+            <td><%= row.produktbeskrivning %></td>
+            <td><%= row.produktpris %></td>
+            <td><%= row.antal %></td>
+            <td>
+                <a href="#" class="link"> Edit </a>
+            </td>
+            <td>
+                <a href="#" class="link"> Delete </a>
+            </td>
+        </tr>
+        <% }; %>
+    </table>
 </div>
 
 <%- include("../partials/footer.ejs"); %>
