@@ -8,7 +8,7 @@
 
 const db = require("./src/connect_db");
 const helpers = require("./src/helpers");
-const bank = require("./src/bank");
+const eshop = require("./src/eshop");
 
 // Read from commandline
 const readline = require("readline");
@@ -24,11 +24,7 @@ const rl = readline.createInterface({
  */
 
 (function () {
-    console.log(`
-         ----- Please choose one of the following:
-             # exit or quit or ctrl + d: to quit
-             # menu or help: to see programme option
-     `);
+    helpers.printMenu();
     rl.on("close", helpers.exitProgram);
     rl.on("line", handleInput);
     rl.prompt();
@@ -54,6 +50,9 @@ function handleInput(line) {
         case "help":
         case "menu":
             helpers.printMenu();
+            break;
+        case "about":
+            helpers.printGroupNames();
             break;
         case "checkDb":
             db.connectDb();

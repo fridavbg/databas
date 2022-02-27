@@ -5,7 +5,7 @@
 
 const express = require("express");
 const router = express.Router();
-// const eshop = require("../src/eshop.js");
+const eshop = require("../src/eshop.js");
 
 router.get("/eshop/index", (req, res) => {
     let data = {
@@ -28,6 +28,8 @@ router.get("/eshop/category", async (req, res) => {
         title: "Kategori | BuckStar",
     };
 
+    // data.res = await eshop.showBalance();    ersätta med tabell över kategorier
+
     res.render("eshop/product", data);
 });
 
@@ -35,6 +37,8 @@ router.get("/eshop/product", async (req, res) => {
     let data = {
         title: "Produkter | BuckStar",
     };
+
+    // data.res = await eshop.showBalance();    ersätta med tabell över produkter
 
     res.render("eshop/product", data);
 });

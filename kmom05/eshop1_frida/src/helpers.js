@@ -12,11 +12,20 @@ function printMenu() {
     ----- Please choose one of the following:
             # exit or quit or ctrl + d: to quit
             # menu or help: to see programme option
-            # move: move 1.5 money to Eva
-            # balance: check account balances
-            # checkDb: Is the db connected?
+            # about: to see names of group members
     `;
     console.info(message);
+}
+
+function printGroupNames() {
+    let message;
+
+    message = `
+    ----- Group Members:
+        # Frida Persson
+        # Erik Nästesjö Todd
+    `;
+    console.info(message)
 }
 
 function errorLog(error) {
@@ -42,4 +51,5 @@ module.exports = {
     printMenu,
     errorLog,
     exitProgram,
+    printGroupNames
 };
