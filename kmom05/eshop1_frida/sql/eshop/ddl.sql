@@ -287,7 +287,7 @@ BEGIN
     p.produktpris,
     s.antal
     FROM produkt as p 
-        INNER JOIN stock as s 
+        LEFT JOIN stock as s 
             ON p.produktkod = s.produkt;
 END
 ;;
@@ -297,6 +297,8 @@ CALL show_product();
 
 --
 -- Procedure to show one product 
+-- . Visa även information om vilken kategori som produkten tillhör (TIPS GROUP_CONCAT).
+-- BYTA KATEGORI IFRAN INT TILL STRANG ??
 --
 DROP PROCEDURE IF EXISTS show_productkod;
 DELIMITER ;;
@@ -367,9 +369,10 @@ END
 ;;
 DELIMITER ;
 
+-- SHOW PROCEDURE STATUS LIKE 'insert%';
 
 -- Testar procedur:
-CALL insert_produkt('testprodukt', 'detta är en testbeskrivning', 350);
+CALL insert_produkt('kaffemugg', 'muggbeskrivning', 340);
 
 --
 -- Procedure to show logg

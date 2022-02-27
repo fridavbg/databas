@@ -8,6 +8,7 @@ module.exports = {
     showProduct: showProduct,
     showProductkod: showProductkod,
     editProduct: editProduct,
+    createProduct: createProduct,
 };
 
 const mysql = require("promise-mysql");
@@ -109,5 +110,24 @@ async function editProduct(
         produktpris,
     ]);
     //console.log(res);
+    console.info(`SQL: ${sql} got ${res.length} rows.`);
+}
+
+/**
+ * Create a new product.
+ *
+ * @async
+ * @param {string} produktkod      The id of the product to be updated.
+ * @param {string} produktnamn    The updated name of the product.
+ * @param {string} produktbeskrivning The updated details of the product.
+ *  @param {integer} produktpris The updated price of the product.
+ * @returns {void}
+ */
+async function createProduct(produktnamn, produktbeskrivning, produktpris) {
+    let sql = `CALL insert_produkt(?, ?, ?);`;
+    let res;
+
+    res = await db.query(sql, [produktnamn, produktbeskrivning, produktpris]);
+    console.log(res);
     console.info(`SQL: ${sql} got ${res.length} rows.`);
 }

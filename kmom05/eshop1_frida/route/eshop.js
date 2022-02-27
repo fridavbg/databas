@@ -78,12 +78,30 @@ router.get("/eshop/edit/:produktkod", async (req, res) => {
     res.render("eshop/product-edit", data);
 });
 
-// POSTS
+router.get("/eshop/create", async (req, res) => {
+    let data = {
+        title: `Create account ${sitename}`,
+    };
+
+    res.render("eshop/product-create", data);
+});
+
+// PRODUKT POSTS
 
 router.post("/eshop/edit", urlencodedParser, async (req, res) => {
     // console.log(JSON.stringify(req.body, null, 4));
     await eshop.editProduct(
         req.body.produktkod,
+        req.body.produktnamn,
+        req.body.produktbeskrivning,
+        req.body.produktpris
+    );
+    res.redirect(`/eshop/crud`);
+});
+
+router.post("/eshop/create", urlencodedParser, async (req, res) => {
+    // console.log(JSON.stringify(req.body, null, 4));
+    await eshop.createProduct(
         req.body.produktnamn,
         req.body.produktbeskrivning,
         req.body.produktpris

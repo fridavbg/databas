@@ -8,7 +8,7 @@
 
     <p>CREATE READ UPDATE DELETE</p>
 
-    <a class="link" href="#">CREATE NEW PRODUCT</a>
+    <a class="link" href="/eshop/create/">CREATE NEW PRODUCT</a>
 
     <table>
         <tr>
@@ -31,7 +31,7 @@
                 <a href="/eshop/edit/<%= row.produktkod  %> " class="link"> Edit </a>
             </td>
             <td>
-                <a href="#" class="link"> Delete </a>
+                <a href="/eshop/delete/<%= row.produktkod  %> " class="link"> Delete </a>
             </td>
         </tr>
         <% }; %>
