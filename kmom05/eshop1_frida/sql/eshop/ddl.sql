@@ -258,6 +258,20 @@ ON faktura FOR EACH ROW
 -- -- PROCEDURES
 -- --
 
+--
+-- Procedure to show category table
+--
+DROP PROCEDURE IF EXISTS show_category;
+DELIMITER ;;
+CREATE PROCEDURE show_category()
+BEGIN
+    SELECT * FROM produkt_kategori;
+END
+;;
+DELIMITER ;
+
+CALL show_category();
+
 DROP PROCEDURE IF EXISTS insert_produkt;
 
 DELIMITER ;;

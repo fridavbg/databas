@@ -5,7 +5,7 @@
 
 const express = require("express");
 const router = express.Router();
-// const eshop = require("../src/eshop.js");
+const eshop = require("../src/eshop.js");
 
 router.get("/eshop/index", (req, res) => {
     let data = {
@@ -28,7 +28,9 @@ router.get("/eshop/category", async (req, res) => {
         title: "Kategori | BuckStar",
     };
 
-    res.render("eshop/product", data);
+    data.res = await eshop.showCategory();
+
+    res.render("eshop/category", data);
 });
 
 router.get("/eshop/product", async (req, res) => {

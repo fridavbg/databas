@@ -3,7 +3,9 @@
  */
 "use strict";
 
-module.exports = {};
+module.exports = {
+    showCategory: showCategory,
+};
 
 const mysql = require("promise-mysql");
 const config = require("../config/db/eshop.json");
@@ -31,12 +33,13 @@ let db;
  * @returns {RowDataPacket} Resultset from the query.
  */
 
-// async function findAllInTable(table) {
-//     let sql = `SELECT * FROM ??;`;
-//     let res;
+async function showCategory() {
+    let sql = `CALL show_category();`;
+    let res;
 
-//     res = await db.query(sql, [table]);
-//     console.info(`SQL: ${sql} (${table}) got ${res.length} rows.`);
-//     console.table(res);
-//     return res;
-// }
+    res = await db.query(sql);
+    //console.log(res);
+    console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
