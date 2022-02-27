@@ -26,7 +26,13 @@
             </td>
             <td><%= row.produktbeskrivning %></td>
             <td><%= row.produktpris %></td>
-            <td><%= row.antal %></td>
+            <td>
+                <% if (row.antal) { %>
+                    <%= row.antal %>
+                <%} else { %>
+                    Tillfälligt slut
+                <% } %>
+            </td>
             <td>
                 <a href="/eshop/edit/<%= row.produktkod  %> " class="link"> Edit </a>
             </td>

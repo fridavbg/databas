@@ -18,7 +18,13 @@
             <td><%= row.produktnamn %></td>
             <td><%= row.produktbeskrivning %></td>
             <td><%= row.produktpris %></td>
-            <td><%= row.antal %></td>
+            <td>
+                <% if (row.antal) { %>
+                    <%= row.antal %>
+                <%} else { %>
+                    Tillfälligt slut
+                <% } %>
+            </td>
         </tr>
         <% }; %>
     </table>

@@ -70,12 +70,22 @@ router.get("/eshop/edit/:produktkod", async (req, res) => {
     let produktkod = req.params.produktkod;
     let data = {
         title: `Edit account ${produktkod} ${sitename}`,
-        account: produktkod,
     };
 
     data.res = await eshop.showProductkod(produktkod);
 
     res.render("eshop/product-edit", data);
+});
+
+router.get("/eshop/delete/:produktkod", async (req, res) => {
+    let produktkod = req.params.produktkod;
+    let data = {
+        title: `Delete produkt ${produktkod} ${sitename}`,
+    };
+
+    data.res = await eshop.showProductkod(produktkod);
+
+    res.render("eshop/product-delete", data);
 });
 
 router.get("/eshop/create", async (req, res) => {
