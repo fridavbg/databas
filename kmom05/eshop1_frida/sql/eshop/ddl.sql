@@ -186,7 +186,7 @@ DESCRIBE plocklista;
 -- -- TRIGGER
 -- --
 
--- Trigger för logging vid insert kundorder
+-- Trigger kundorder
 DROP TRIGGER IF EXISTS log_insert_kundorder;
 
 CREATE TRIGGER log_insert_kundorder
@@ -196,7 +196,6 @@ ON kundorder FOR EACH ROW
         VALUES (NEW.ordernummer, NEW.orderdatum, 'beställning skapad')
 ;
 
--- Trigger för logging vid update kundorder
 DROP TRIGGER IF EXISTS log_update_kundorder;
 
 CREATE TRIGGER log_update_kundorder
@@ -206,8 +205,36 @@ ON kundorder FOR EACH ROW
         VALUES (NEW.ordernummer, NEW.uppdaterad, 'beställning ändrad')
 ;
 
+-- -- Trigger kunorder_rad
+DROP TRIGGER IF EXISTS log_insert_kundorder_rad;
 
--- Trigger för logging vid insert faktura
+CREATE TRIGGER log_insert_kundorder_rad
+AFTER INSERT
+ON kundorder_rad FOR EACH ROW
+    INSERT INTO logg (kundorder, loggdatum, kommentar)
+        VALUES (NEW.kundorder, NOW(), CONCAT('produkt med id ', NEW.produkt, ' tillagd'))
+;
+
+DROP TRIGGER IF EXISTS log_update_kundorder_rad;
+
+CREATE TRIGGER log_update_kundorder_rad
+AFTER UPDATE
+ON kundorder_rad FOR EACH ROW
+    INSERT INTO logg (kundorder, loggdatum, kommentar)
+        VALUES (NEW.kundorder, NOW(), CONCAT('detaljer om produkt med id ', NEW.produkt, ' ändrade'))
+;
+
+DROP TRIGGER IF EXISTS log_delete_kundorder_rad;
+
+CREATE TRIGGER log_delete_kundorder_rad
+AFTER DELETE
+ON kundorder_rad FOR EACH ROW
+    INSERT INTO logg (kundorder, loggdatum, kommentar)
+        VALUES (OLD.kundorder, NOW(), CONCAT('produkt med id ', OLD.produkt, ' raderad'))
+;
+
+
+-- Trigger faktura
 DROP TRIGGER IF EXISTS log_insert_faktura;
 
 CREATE TRIGGER log_insert_faktura
@@ -217,7 +244,6 @@ ON faktura FOR EACH ROW
         VALUES (NEW.kundorder, NEW.fakturanummer, NEW.fakturadatum, 'faktura skapad')
 ;
 
--- Trigger för logging vid insert faktura
 DROP TRIGGER IF EXISTS log_update_faktura;
 
 CREATE TRIGGER log_update_faktura
@@ -228,7 +254,8 @@ ON faktura FOR EACH ROW
 ;
 
 
--- Hur göra för att visa produkter som lagts till eller tagits bort i kundorder (eftersom det är kopplat till kundorder-rad)?
+
+-- Hur göra för att visa produkter som lagts till eller tagits bort i kundorder (eftersom det är kopplat till kundorder-rad)? - IDÈ!!! : se om kundorder-rad INSERT eller DELETE
 -- Lägga till compound för att se om det var "uppdaterad", "borttagen" eller "skickad" som ändrades och ändra kommentar i enlighet.
 
 

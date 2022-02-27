@@ -86,16 +86,37 @@ UPDATE kundorder
 ;
 
 INSERT INTO
+    kundorder_rad(kundorder, produkt)
+VALUES
+    (11123, 3)
+;
+
+UPDATE kundorder_rad
+SET
+    antal = 10
+WHERE
+    kundorder = 11123 AND
+    produkt = 3
+;
+
+DELETE FROM
+    kundorder_rad
+WHERE
+    kundorder = 11123 AND
+    produkt = 3
+;
+
+INSERT INTO
     faktura(fakturanummer, kundorder)
 VALUES
     (123, 11123)
 ;
 
 UPDATE faktura
-    SET
-        totalpris = 300
-    WHERE
-        fakturanummer = 123
+SET
+    totalpris = 300
+WHERE
+    fakturanummer = 123
 ;
 
 
@@ -106,5 +127,6 @@ SELECT * FROM produkt_kategori;
 SELECT * FROM lagerhylla;
 SELECT * FROM stock;
 SELECT * from kundorder;
+-- SELECT * from kundorder_rad;
 SELECT * from faktura;
 SELECT * FROM logg;
