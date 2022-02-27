@@ -206,31 +206,31 @@ ON kundorder FOR EACH ROW
 ;
 
 -- -- Trigger kunorder_rad
-DROP TRIGGER IF EXISTS log_insert_kundorder_rad;
+DROP TRIGGER IF EXISTS log_insert_produkt;
 
-CREATE TRIGGER log_insert_kundorder_rad
+CREATE TRIGGER log_insert_produkt
 AFTER INSERT
-ON kundorder_rad FOR EACH ROW
-    INSERT INTO logg (kundorder, loggdatum, kommentar)
-        VALUES (NEW.kundorder, NOW(), CONCAT('produkt med id ', NEW.produkt, ' tillagd'))
+ON produkt FOR EACH ROW
+    INSERT INTO logg (loggdatum, kommentar)
+        VALUES (NOW(), CONCAT('produkt med kod ', NEW.produktkod, ' tillagd'))
 ;
 
-DROP TRIGGER IF EXISTS log_update_kundorder_rad;
+DROP TRIGGER IF EXISTS log_update_produkt;
 
-CREATE TRIGGER log_update_kundorder_rad
+CREATE TRIGGER log_update_produkt
 AFTER UPDATE
-ON kundorder_rad FOR EACH ROW
-    INSERT INTO logg (kundorder, loggdatum, kommentar)
-        VALUES (NEW.kundorder, NOW(), CONCAT('detaljer om produkt med id ', NEW.produkt, ' ändrade'))
+ON produkt FOR EACH ROW
+    INSERT INTO logg (loggdatum, kommentar)
+        VALUES (NOW(), CONCAT('detaljer om produkt med kod ', NEW.produktkod, ' ändrade'))
 ;
 
-DROP TRIGGER IF EXISTS log_delete_kundorder_rad;
+DROP TRIGGER IF EXISTS log_delete_produkt;
 
-CREATE TRIGGER log_delete_kundorder_rad
+CREATE TRIGGER log_delete_produkt
 AFTER DELETE
-ON kundorder_rad FOR EACH ROW
-    INSERT INTO logg (kundorder, loggdatum, kommentar)
-        VALUES (OLD.kundorder, NOW(), CONCAT('produkt med id ', OLD.produkt, ' raderad'))
+ON produkt FOR EACH ROW
+    INSERT INTO logg (loggdatum, kommentar)
+        VALUES (NOW(), CONCAT('produkt med kod ', OLD.produktkod, ' raderad'))
 ;
 
 
@@ -254,45 +254,42 @@ ON faktura FOR EACH ROW
 ;
 
 
+-- -----------------------
+-- -- PROCEDURES
+-- --
 
--- Hur göra för att visa produkter som lagts till eller tagits bort i kundorder (eftersom det är kopplat till kundorder-rad)? - IDÈ!!! : se om kundorder-rad INSERT eller DELETE
--- Lägga till compound för att se om det var "uppdaterad", "borttagen" eller "skickad" som ändrades och ändra kommentar i enlighet.
+DROP PROCEDURE IF EXISTS insert_produkt;
+
+DELIMITER ;;
+CREATE PROCEDURE insert_produkt(
+    a_produktnamn VARCHAR(20),
+    a_produktbeskrivning VARCHAR(50),
+    a_produktpris INT
+)
+BEGIN
+    INSERT INTO
+        produkt(produktnamn, produktbeskrivning, produktpris)
+    VALUES
+        (a_produktnamn, a_produktbeskrivning, a_produktpris)
+    ;
+END
+;;
+DELIMITER ;
 
 
--- Trigger orderändring logg_kundorder (when delete kundorder)
--- Trigger fakturaändringsdatum logg_faktura (when update faktura)
--- Trigger fakturaändringsdatum logg_faktura (when delete faktura)
+-- Testar procedur:
+CALL insert_produkt('testprodukt', 'detta är en testbeskrivning', 350);
 
+-- Procedure show logg
 
+DROP PROCEDURE IF EXISTS show_logg;
+DELIMITER ;;
+CREATE PROCEDURE show_logg()
+BEGIN
+    SELECT * FROM logg;
+END
+;;
+DELIMITER ;
 
--- OBS NEDAN ÄR OM VI ISTÄLLET FÖR ATT LÄGGA IN NYA LOGGAR VARJE GÅNG VILL (BRA FÖR ATT SE HISTORIK)
--- ISTÄLLET VILL UPPDATERA EXISTERANDE (BRA FÖR ÖVERBLICK)
-
--- -- Trigger för logging vid update kundorder
--- DROP TRIGGER IF EXISTS log_update_kundorder;
-
--- CREATE TRIGGER log_update_kundorder
--- AFTER UPDATE
--- ON kundorder FOR EACH ROW
---     UPDATE logg
---         SET
---             orderändringsdatum = NEW.uppdaterad,
---             kommentar = 'beställning ändrad'
---         WHERE
---             kundorder = NEW.kundorder
--- ;
-
--- -- Trigger för logging vid insert faktura
--- DROP TRIGGER IF EXISTS log_faktura;
-
--- CREATE TRIGGER log_faktura
--- AFTER INSERT
--- ON faktura FOR EACH ROW
---     UPDATE logg
---         SET
---             faktura = NEW.fakturanummer,
---             fakturadatum = NEW.fakturadatum,
---             kommentar = 'faktura skickad'
---         WHERE
---             kundorder = NEW.kundorder
--- ;
+-- Testar procedur: (fast inget är inlagt än)
+-- CALL show_logg();
