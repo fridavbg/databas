@@ -7,6 +7,25 @@
     <h1>Produkter</h1>
 
     <p>Produkt Lista</p>
+
+    <table>
+        <tr>
+            <th>Produktkod</th>
+            <th>Produktnamn</th>
+            <th>Produktbeskrivning</th>
+            <th>Produktpris</th>
+            <th>Antal</th>
+        </tr>
+        <% for (const row of res) { %>
+        <tr>
+            <td><%= row.produktkod %></td>
+            <td><%= row.produktnamn %></td>
+            <td><%= row.produktbeskrivning %></td>
+            <td><%= row.produktpris %></td>
+            <td><%= row.antal %></td>
+        </tr>
+        <% }; %>
+    </table>
     
 </div>
 

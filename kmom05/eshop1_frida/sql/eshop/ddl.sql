@@ -272,6 +272,33 @@ DELIMITER ;
 
 CALL show_category();
 
+--
+-- Procedure to show product table + stock antal
+-- kod, namn, pris och antal
+--
+DROP PROCEDURE IF EXISTS show_product;
+DELIMITER ;;
+CREATE PROCEDURE show_product()
+BEGIN
+    SELECT 
+    p.produktkod, 
+    p.produktnamn, 
+    p.produktbeskrivning, 
+    p.produktpris,
+    s.antal
+    FROM produkt as p 
+        INNER JOIN stock as s 
+            ON p.produktkod = s.produkt;
+END
+;;
+DELIMITER ;
+
+CALL show_product();
+
+
+--
+-- Procedure to insert product 
+--
 DROP PROCEDURE IF EXISTS insert_produkt;
 
 DELIMITER ;;
@@ -294,8 +321,9 @@ DELIMITER ;
 -- Testar procedur:
 CALL insert_produkt('testprodukt', 'detta är en testbeskrivning', 350);
 
--- Procedure show logg
-
+--
+-- Procedure to show logg
+--
 DROP PROCEDURE IF EXISTS show_logg;
 DELIMITER ;;
 CREATE PROCEDURE show_logg()

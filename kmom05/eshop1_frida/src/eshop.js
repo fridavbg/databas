@@ -5,6 +5,7 @@
 
 module.exports = {
     showCategory: showCategory,
+    showProduct: showProduct,
 };
 
 const mysql = require("promise-mysql");
@@ -25,16 +26,32 @@ let db;
 })();
 
 /**
- * Show all entries in the selected table.
+ * Show all entries in the categories table.
  *
  * @async
- * @param {string} table A valid table name.
- *
  * @returns {RowDataPacket} Resultset from the query.
  */
 
 async function showCategory() {
     let sql = `CALL show_category();`;
+    let res;
+
+    res = await db.query(sql);
+    //console.log(res);
+    console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
+
+/**
+ * Show all entries in the categories table.
+ *
+ * @async
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+
+async function showProduct() {
+    let sql = `CALL show_product();`;
     let res;
 
     res = await db.query(sql);

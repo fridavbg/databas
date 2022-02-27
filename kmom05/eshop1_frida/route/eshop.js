@@ -38,6 +38,8 @@ router.get("/eshop/product", async (req, res) => {
         title: "Produkter | BuckStar",
     };
 
+    data.res = await eshop.showProduct();
+
     res.render("eshop/product", data);
 });
 
