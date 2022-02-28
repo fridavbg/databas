@@ -120,13 +120,15 @@ WHERE
 ;
 
 
-SELECT * FROM kund;
-SELECT * FROM produkt;
-SELECT * FROM kategori;
-SELECT * FROM produkt_kategori;
-SELECT * FROM lagerhylla;
-SELECT * FROM stock;
-SELECT * from kundorder;
-SELECT * from kundorder_rad; -- obs tog bort den rad som fanns!
-SELECT * from faktura;
-SELECT * FROM logg;
+-- SELECT * FROM kund;
+-- SELECT * FROM produkt;
+-- SELECT * FROM kategori;
+-- SELECT * FROM produkt_kategori;
+-- SELECT * FROM lagerhylla;
+-- SELECT * FROM stock;
+-- SELECT * from kundorder;
+-- SELECT * from kundorder_rad; -- obs tog bort den rad som fanns!
+-- SELECT * from faktura;
+-- SELECT * FROM logg;
+
+CALL show_product();

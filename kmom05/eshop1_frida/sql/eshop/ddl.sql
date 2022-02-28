@@ -185,6 +185,9 @@ DESCRIBE plocklista;
 -- -----------------------
 -- -- TRIGGER
 -- --
+-- -- Du skall ha en loggtabell som loggar intressanta händelser i systemet, via triggers. Du skall logga när någon gör INSERT, UPDATE och DELETE på tabellen produkt. Du loggar tiden då något hände och en textsträng som beskriver händelsen och det objekt som var inblandat i händelsen. Till exempel så här.
+-- -- Få med loggers i webbklienten ???
+-- --
 
 -- Trigger kundorder
 DROP TRIGGER IF EXISTS log_insert_kundorder;
@@ -258,6 +261,104 @@ ON faktura FOR EACH ROW
 -- -- PROCEDURES
 -- --
 
+--
+-- Procedure to show category table
+--
+DROP PROCEDURE IF EXISTS show_category;
+DELIMITER ;;
+CREATE PROCEDURE show_category()
+BEGIN
+    SELECT * FROM produkt_kategori;
+END
+;;
+DELIMITER ;
+
+CALL show_category();
+
+--
+-- Procedure to show product table + stock antal
+-- kod, namn, pris och antal
+--
+DROP PROCEDURE IF EXISTS show_product;
+DELIMITER ;;
+CREATE PROCEDURE show_product()
+BEGIN
+    SELECT
+    p.produktkod,
+    p.produktnamn,
+    p.produktbeskrivning,
+    p.produktpris,
+    s.antal,
+    GROUP_CONCAT(k.kategori) as "kategori"
+    FROM produkt as p
+        LEFT OUTER JOIN stock as s
+            ON p.produktkod = s.produkt
+        LEFT OUTER JOIN produkt_kategori as k
+            ON p.produktkod = k.produkt
+    GROUP BY p.produktkod
+    ;
+END
+;;
+DELIMITER ;
+
+-- CALL show_product();
+
+--
+-- Procedure to show one product
+-- . Visa även information om vilken kategori som produkten tillhör (TIPS GROUP_CONCAT).
+-- BYTA KATEGORI IFRAN INT TILL STRANG ??
+--
+DROP PROCEDURE IF EXISTS show_productkod;
+DELIMITER ;;
+CREATE PROCEDURE show_productkod(
+    a_id INT
+)
+BEGIN
+    SELECT
+    p.produktkod,
+    p.produktnamn,
+    p.produktbeskrivning,
+    p.produktpris,
+    s.antal
+    FROM produkt as p
+        INNER JOIN stock as s
+            ON p.produktkod = s.produkt
+    WHERE p.produktkod = a_id;
+END
+;;
+DELIMITER ;
+
+-- CALL show_productkod(1);
+
+--
+-- Procedure to edit product
+--
+DROP PROCEDURE IF EXISTS edit_produkt;
+
+DELIMITER ;;
+CREATE PROCEDURE edit_produkt(
+    a_produktkod INT,
+    a_produktnamn VARCHAR(20),
+    a_produktbeskrivning VARCHAR(50),
+    a_produktpris INT
+)
+BEGIN
+    UPDATE produkt SET
+        `produktnamn` = a_produktnamn,
+        `produktbeskrivning` = a_produktbeskrivning,
+        `produktpris` = a_produktpris
+    WHERE
+        `produktkod` = a_produktkod
+    ;
+END
+;;
+DELIMITER ;
+
+-- SHOW PROCEDURE STATUS LIKE 'edit%';
+
+--
+-- Procedure to insert product
+--
 DROP PROCEDURE IF EXISTS insert_produkt;
 
 DELIMITER ;;
@@ -276,12 +377,14 @@ END
 ;;
 DELIMITER ;
 
+-- SHOW PROCEDURE STATUS LIKE 'insert%';
 
 -- Testar procedur:
-CALL insert_produkt('testprodukt', 'detta är en testbeskrivning', 350);
+-- CALL insert_produkt('kaffemugg', 'muggbeskrivning', 340);
 
--- Procedure show logg
-
+--
+-- Procedure to show logg
+--
 DROP PROCEDURE IF EXISTS show_logg;
 DELIMITER ;;
 CREATE PROCEDURE show_logg()
