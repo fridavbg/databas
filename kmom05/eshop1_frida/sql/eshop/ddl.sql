@@ -1,3 +1,5 @@
+
+-- TABLE DROPS
 -- UTAN FK sist, MED FK först
 DROP TABLE IF EXISTS logg;
 DROP TABLE IF EXISTS faktura_rad;
@@ -10,6 +12,25 @@ DROP TABLE IF EXISTS kund;
 DROP TABLE IF EXISTS produkt;
 DROP TABLE IF EXISTS kategori;
 
+-- VIEW DROPS
+DROP VIEW IF EXISTS plocklista;
+
+-- TRIGGER DROPS
+DROP TRIGGER IF EXISTS log_insert_kundorder;
+DROP TRIGGER IF EXISTS log_update_kundorder;
+DROP TRIGGER IF EXISTS log_insert_produkt;
+DROP TRIGGER IF EXISTS log_update_produkt;
+DROP TRIGGER IF EXISTS log_delete_produkt;
+DROP TRIGGER IF EXISTS log_insert_faktura;
+DROP TRIGGER IF EXISTS log_update_faktura;
+
+-- PROCEDURE DROPS
+DROP PROCEDURE IF EXISTS show_category;
+DROP PROCEDURE IF EXISTS show_product;
+DROP PROCEDURE IF EXISTS show_productkod;
+DROP PROCEDURE IF EXISTS edit_produkt;
+DROP PROCEDURE IF EXISTS show_logg;
+DROP PROCEDURE IF EXISTS delete_produkt;
 
 ------------------------------------------
 -- PRODUKT
@@ -162,8 +183,6 @@ CREATE TABLE logg
 -- VIEWS
 --
 
-DROP VIEW IF EXISTS plocklista;
-
 CREATE VIEW plocklista
 AS
 SELECT
@@ -186,10 +205,7 @@ DESCRIBE plocklista;
 -- -- TRIGGERS
 -- --
 
--- TRIGGER DROPS
-
 -- Trigger kundorder
-DROP TRIGGER IF EXISTS log_insert_kundorder;
 
 CREATE TRIGGER log_insert_kundorder
 AFTER INSERT
@@ -197,8 +213,6 @@ ON kundorder FOR EACH ROW
     INSERT INTO logg (kundorder, loggdatum, kommentar)
         VALUES (NEW.ordernummer, NEW.orderdatum, 'beställning skapad')
 ;
-
-DROP TRIGGER IF EXISTS log_update_kundorder;
 
 CREATE TRIGGER log_update_kundorder
 AFTER UPDATE
@@ -208,7 +222,6 @@ ON kundorder FOR EACH ROW
 ;
 
 -- -- Trigger kunorder_rad
-DROP TRIGGER IF EXISTS log_insert_produkt;
 
 CREATE TRIGGER log_insert_produkt
 AFTER INSERT
@@ -217,7 +230,6 @@ ON produkt FOR EACH ROW
         VALUES (NOW(), CONCAT('produkt med kod ', NEW.produktkod, ' tillagd'))
 ;
 
-DROP TRIGGER IF EXISTS log_update_produkt;
 
 CREATE TRIGGER log_update_produkt
 AFTER UPDATE
@@ -226,7 +238,6 @@ ON produkt FOR EACH ROW
         VALUES (NOW(), CONCAT('detaljer om produkt med kod ', NEW.produktkod, ' ändrade'))
 ;
 
-DROP TRIGGER IF EXISTS log_delete_produkt;
 
 CREATE TRIGGER log_delete_produkt
 AFTER DELETE
@@ -237,7 +248,6 @@ ON produkt FOR EACH ROW
 
 
 -- Trigger faktura
-DROP TRIGGER IF EXISTS log_insert_faktura;
 
 CREATE TRIGGER log_insert_faktura
 AFTER INSERT
@@ -245,8 +255,6 @@ ON faktura FOR EACH ROW
     INSERT INTO logg (kundorder, faktura, loggdatum, kommentar)
         VALUES (NEW.kundorder, NEW.fakturanummer, NEW.fakturadatum, 'faktura skapad')
 ;
-
-DROP TRIGGER IF EXISTS log_update_faktura;
 
 CREATE TRIGGER log_update_faktura
 AFTER UPDATE
@@ -263,7 +271,6 @@ ON faktura FOR EACH ROW
 --
 -- Procedure to show category table
 --
-DROP PROCEDURE IF EXISTS show_category;
 DELIMITER ;;
 CREATE PROCEDURE show_category()
 BEGIN
@@ -278,7 +285,6 @@ CALL show_category();
 -- Procedure to show product table + stock antal
 -- kod, namn, pris och antal
 --
-DROP PROCEDURE IF EXISTS show_product;
 DELIMITER ;;
 CREATE PROCEDURE show_product()
 BEGIN
@@ -307,7 +313,6 @@ DELIMITER ;
 -- . Visa även information om vilken kategori som produkten tillhör (TIPS GROUP_CONCAT).
 -- BYTA KATEGORI IFRAN INT TILL STRANG ??
 --
-DROP PROCEDURE IF EXISTS show_productkod;
 DELIMITER ;;
 CREATE PROCEDURE show_productkod(
     a_id INT
@@ -326,7 +331,6 @@ DELIMITER ;
 --
 -- Procedure to edit product
 --
-DROP PROCEDURE IF EXISTS edit_produkt;
 
 DELIMITER ;;
 CREATE PROCEDURE edit_produkt(
@@ -352,7 +356,6 @@ DELIMITER ;
 --
 -- Procedure to insert product
 --
-DROP PROCEDURE IF EXISTS insert_produkt;
 
 DELIMITER ;;
 CREATE PROCEDURE insert_produkt(
@@ -378,7 +381,6 @@ DELIMITER ;
 --
 -- Procedure to show logg
 --
-DROP PROCEDURE IF EXISTS show_logg;
 DELIMITER ;;
 CREATE PROCEDURE show_logg()
 BEGIN
@@ -393,7 +395,6 @@ DELIMITER ;
 --
 -- Create procedure for delete produkt
 --
-DROP PROCEDURE IF EXISTS delete_produkt;
 DELIMITER ;;
 CREATE PROCEDURE delete_produkt(
     a_id CHAR(4)
