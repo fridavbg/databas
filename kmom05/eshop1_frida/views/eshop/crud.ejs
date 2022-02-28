@@ -16,7 +16,6 @@
             <th>Produktnamn</th>
             <th>Produktbeskrivning</th>
             <th>Produktpris</th>
-            <th>Antal</th>
         </tr>
         <% for (const row of res) { %>
         <tr>
@@ -26,13 +25,6 @@
             </td>
             <td><%= row.produktbeskrivning %></td>
             <td><%= row.produktpris %></td>
-            <td>
-                <% if (row.antal) { %>
-                    <%= row.antal %>
-                <%} else { %>
-                    Tillfälligt slut
-                <% } %>
-            </td>
             <td>
                 <a href="/eshop/edit/<%= row.produktkod  %> " class="link"> Edit </a>
             </td>
