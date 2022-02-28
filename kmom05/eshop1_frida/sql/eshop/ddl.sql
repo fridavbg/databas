@@ -41,7 +41,7 @@ CREATE TABLE produkt_kategori
     kategori INT,
 
     PRIMARY KEY(produkt, kategori),
-    FOREIGN KEY(produkt) REFERENCES produkt(produktkod),
+    CONSTRAINT FOREIGN KEY(produkt) REFERENCES produkt(produktkod) ON DELETE CASCADE,
     FOREIGN KEY(kategori) REFERENCES kategori(id)
 );
 
@@ -140,7 +140,7 @@ CREATE TABLE stock
     antal INT,
 
     PRIMARY KEY (produkt, lagerhylla),
-    FOREIGN KEY (produkt) REFERENCES produkt(produktkod),
+    CONSTRAINT FOREIGN KEY (produkt) REFERENCES produkt(produktkod) ON DELETE CASCADE,
     FOREIGN KEY (lagerhylla) REFERENCES lagerhylla(hylla)
 );
 
@@ -390,3 +390,21 @@ DELIMITER ;
 
 -- Testar procedur: (fast inget är inlagt än)
 -- CALL show_logg();
+
+--
+-- Create procedure for delete produkt
+--
+DROP PROCEDURE IF EXISTS delete_produkt;
+DELIMITER ;;
+CREATE PROCEDURE delete_produkt(
+    a_id CHAR(4)
+)
+BEGIN
+    DELETE FROM produkt
+    WHERE
+        `produktkod` = a_id;
+END
+;;
+DELIMITER ;
+
+CALL delete_produkt(6);

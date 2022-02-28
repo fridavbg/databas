@@ -119,6 +119,13 @@ router.post("/eshop/create", urlencodedParser, async (req, res) => {
     res.redirect(`/eshop/crud`);
 });
 
+router.post("/eshop/delete", urlencodedParser, async (req, res) => {
+    // console.log(JSON.stringify(req.body, null, 4));
+    await eshop.deleteProduct(req.body.produktkod);
+    res.redirect(`/eshop/crud`);
+});
+module.exports = router;
+
 // CRUD
 
 router.get("/eshop/crud", async (req, res) => {

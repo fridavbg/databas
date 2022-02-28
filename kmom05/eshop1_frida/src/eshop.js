@@ -9,6 +9,7 @@ module.exports = {
     showProductkod: showProductkod,
     editProduct: editProduct,
     createProduct: createProduct,
+    deleteProduct: deleteProduct,
 };
 
 const mysql = require("promise-mysql");
@@ -128,6 +129,22 @@ async function createProduct(produktnamn, produktbeskrivning, produktpris) {
     let res;
 
     res = await db.query(sql, [produktnamn, produktbeskrivning, produktpris]);
+    console.log(res);
+    console.info(`SQL: ${sql} got ${res.length} rows.`);
+}
+
+/**
+ * Delete a product.
+ *
+ * @async
+ * @param {string} produktkod      The id of the product to be deleted.
+ * @returns {void}
+ */
+async function deleteProduct(produktkod) {
+    let sql = `CALL delete_produkt(?);`;
+    let res;
+
+    res = await db.query(sql, [produktkod]);
     console.log(res);
     console.info(`SQL: ${sql} got ${res.length} rows.`);
 }
