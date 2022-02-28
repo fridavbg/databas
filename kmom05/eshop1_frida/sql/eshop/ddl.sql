@@ -453,3 +453,48 @@ END
 ;;
 DELIMITER ;
 
+
+-- Procedure to insert in stock
+
+DROP PROCEDURE IF EXISTS insert_stock;
+DELIMITER ;;
+CREATE PROCEDURE insert_stock(
+    a_produktkod INT,
+    a_lagerhylla INT,
+    a_antal INT
+)
+BEGIN
+    INSERT INTO
+        stock(produkt, lagerhylla, antal)
+    VALUES
+        (a_produktkod, a_lagerhylla, a_antal)
+    ON DUPLICATE KEY UPDATE
+        antal = antal + a_antal
+    ;
+END
+;;
+DELIMITER ;
+
+
+-- Procedure to delete from stock
+
+DROP PROCEDURE IF EXISTS remove_from_stock;
+DELIMITER ;;
+CREATE PROCEDURE remove_from_stock(
+    a_produktkod INT,
+    a_lagerhylla INT,
+    a_antal INT
+)
+BEGIN
+    UPDATE
+        stock
+    SET
+        antal = antal - a_antal
+    WHERE
+        produkt = a_produktkod AND
+        lagerhylla = a_lagerhylla
+    ;
+END
+;;
+DELIMITER ;
+

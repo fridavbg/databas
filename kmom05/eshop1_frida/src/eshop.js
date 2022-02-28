@@ -12,7 +12,9 @@ module.exports = {
     showLog: showLog,
     showShelfs: showShelfs,
     showInv: showInv,
-    searchInv: searchInv
+    searchInv: searchInv,
+    addToShelf: addToShelf,
+    removeFromShelf: removeFromShelf
 };
 
 const mysql = require("promise-mysql");
@@ -193,12 +195,55 @@ async function showInv() {
  * Search inventory.
  *
  * @async
- * @param {string} searchWord      Search on this word
+ * @param {string} searchWord      Search on this word.
  * @returns {RowDataPacket} Resultset from the query.
  */
 async function searchInv(searchWord) {
     let sql;
     sql = `CALL search_stock('${searchWord}');`;
+
+    let res;
+    res = await db.query(sql);
+    //console.log(res);
+    // console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
+
+/**
+ * Add product to shelf.
+ *
+ * @async
+ * @param {int} productId      Product to add.
+ * @param {int} shelfId      Shelf to add product on.
+ * @param {int} number      Number of products to add.
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+async function addToShelf(productId, shelfId, number) {
+    let sql;
+    sql = `CALL insert_stock(${productId}, ${shelfId}, ${number});`;
+
+    let res;
+    res = await db.query(sql);
+    //console.log(res);
+    // console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
+
+
+/**
+ * Remove product from shelf.
+ *
+ * @async
+ * @param {int} productId      Product to remove.
+ * @param {int} shelfId      Shelf to remove product from.
+ * @param {int} number      Number of products to remove.
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+async function removeFromShelf(productId, shelfId, number) {
+    let sql;
+    sql = `CALL remove_from_stock(${productId}, ${shelfId}, ${number});`;
 
     let res;
     res = await db.query(sql);

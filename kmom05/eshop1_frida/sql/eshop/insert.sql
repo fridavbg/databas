@@ -132,9 +132,21 @@ WHERE
 -- SELECT * FROM logg;
 
 -- CALL show_product();
+
 -- CALL show_logg(3);
+
 -- CALL show_product();
 -- CALL show_stock();
-CALL search_stock('kaffe');
-CALL search_stock(3);
-CALL search_stock(500);
+
+-- CALL search_stock('kaffe');
+-- CALL search_stock(3);
+-- CALL search_stock(500);
+
+-- CALL insert_stock(1, 4, 9999);
+-- CALL insert_stock(1, 4, 11854);
+-- CALL insert_stock(3, 2, 20);
+-- CALL insert_stock(3, 2, 30);
+-- SELECT * FROM stock;
+
+-- CALL remove_from_stock(1, 1, 30);
+-- SELECT * FROM stock;

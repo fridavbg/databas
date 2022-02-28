@@ -69,6 +69,14 @@ async function handleInput(line) {
                 console.table(await eshop.searchInv(parts[1]));
             }
             break;
+        case "invadd":
+            await eshop.addToShelf(parts[1], parts[2], parts[3]);
+            console.info(`${parts[3]} products with id ${parts[1]} added to shelf ${parts[2]}`)
+            break;
+        case "invdel":
+            await eshop.removeFromShelf(parts[1], parts[2], parts[3]);
+            console.info(`${parts[3]} products with id ${parts[1]} removed from shelf ${parts[2]}`)
+            break;
         default:
             helpers.errorLog("Invalid command passed");
     }

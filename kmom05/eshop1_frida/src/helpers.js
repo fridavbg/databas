@@ -29,6 +29,8 @@ function printMenu() {
             # shelf: to see shelfs in inventory
             # inv: to see inventory
             # inv <str>: to search inventory on <str>
+            # invadd <productid> <shelf> <number>: to add number of products to shelf
+            # invdel <productid> <shelf> <number>: to remove number of products from shelf
     `;
     console.info(message);
 }

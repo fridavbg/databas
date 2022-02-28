@@ -79,9 +79,9 @@ Till exempel så här.
 
 ### Lämna in
 
-- När du är helt klar och har testkört ditt system mot din egen databas, så tar du en backup av databasen med mysqldump och sparar i sql/eshop/backup.sql. []
+- När du är helt klar och har testkört ditt system mot din egen databas, så tar du en backup av databasen med mysqldump och sparar i sql/eshop/backup.sql. [x]
 
-- Använd optionen --routines så att procedurerna följer med. Verifiera att backup-filen fungerar och tänk att rättaren kan ladda denna databas för att testköra mot ditt system. []
+- Använd optionen --routines så att procedurerna följer med. Verifiera att backup-filen fungerar och tänk att rättaren kan ladda denna databas för att testköra mot ditt system. [x]
 
 Testa och validera din kod.
 
