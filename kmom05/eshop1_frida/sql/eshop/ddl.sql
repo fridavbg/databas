@@ -393,5 +393,38 @@ END
 ;;
 DELIMITER ;
 
--- Testar procedur: (fast inget är inlagt än)
--- CALL show_logg();
+
+--
+-- Procedure to show lagerhylla
+--
+DROP PROCEDURE IF EXISTS show_lagerhylla;
+DELIMITER ;;
+CREATE PROCEDURE show_lagerhylla()
+BEGIN
+    SELECT * FROM lagerhylla;
+END
+;;
+DELIMITER ;
+
+--
+-- Procedure to show stock
+--
+DROP PROCEDURE IF EXISTS show_stock;
+DELIMITER ;;
+CREATE PROCEDURE show_stock()
+BEGIN
+    SELECT
+        s.produkt,
+        p.produktnamn,
+        s.lagerhylla,
+        s.antal
+    FROM stock as s
+        JOIN produkt AS p
+            on s.produkt = p.produktkod
+    ;
+END
+;;
+DELIMITER ;
+
+
+

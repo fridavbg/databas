@@ -67,9 +67,9 @@ Till exempel så här.
 
 - Skapa kommandot product som visar alla producter som finns, inklusive produkternas id. [x]
 
-- Skapa kommandot shelf som visar vilka lagerhyllor som finns på lagret. []
+- Skapa kommandot shelf som visar vilka lagerhyllor som finns på lagret. [x]
 
-- Skapa kommandot inv (inventory) som visar en tabell över vilka produkter som finns var i lagret. Visa produktid, produktnamn, lagerhylla och antal. []
+- Skapa kommandot inv (inventory) som visar en tabell över vilka produkter som finns var i lagret. Visa produktid, produktnamn, lagerhylla och antal. [x]
 
 - Skapa kommandot inv <str> där det optionella argumentet <str> används för att filtrera det som skrivs ut. Filtrering sker på produktid, produktnamn, lagerhylla. []
 

@@ -133,4 +133,5 @@ WHERE
 
 -- CALL show_product();
 -- CALL show_logg(3);
-CALL show_product();
+-- CALL show_product();
+CALL show_stock();

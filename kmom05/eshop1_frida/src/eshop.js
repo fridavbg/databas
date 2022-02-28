@@ -9,7 +9,9 @@ module.exports = {
     showProductkod: showProductkod,
     editProduct: editProduct,
     createProduct: createProduct,
-    showLog: showLog
+    showLog: showLog,
+    showShelfs: showShelfs,
+    showInv: showInv
 };
 
 const mysql = require("promise-mysql");
@@ -134,16 +136,49 @@ async function createProduct(produktnamn, produktbeskrivning, produktpris) {
 }
 
 
+/**
+ * Show details for a product.
+ *
+ * @async
+ * @param {integer} numberOfLogs      The number of logs you want to be displayed.
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+async function showLog(numberOfLogs) {
+    let sql = `CALL show_logg(${numberOfLogs});`;
+    let res;
+
+    res = await db.query(sql);
+    //console.log(res);
+    // console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
 
 /**
  * Show details for a product.
  *
  * @async
- *
  * @returns {RowDataPacket} Resultset from the query.
  */
-async function showLog(numberOfLogs) {
-    let sql = `CALL show_logg(${numberOfLogs});`;
+async function showShelfs() {
+    let sql = `CALL show_lagerhylla();`;
+    let res;
+
+    res = await db.query(sql);
+    //console.log(res);
+    // console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
+
+/**
+ * Show details for a product.
+ *
+ * @async
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+async function showInv() {
+    let sql = `CALL show_stock();`;
     let res;
 
     res = await db.query(sql);

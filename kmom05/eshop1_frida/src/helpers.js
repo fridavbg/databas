@@ -26,6 +26,8 @@ function printMenu() {
             # about: to see names of group members
             # log <number>: to see latest <number> of logs
             # product: to see table of products
+            # shelf: to see shelfs in inventory
+            # inv: to see inventory
     `;
     console.info(message);
 }
