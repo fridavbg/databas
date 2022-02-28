@@ -1,4 +1,3 @@
-const eshop = require("./eshop");
 
 
 module.exports = {
@@ -28,7 +27,7 @@ function printMenu() {
             # product: to see table of products
             # shelf: to see shelfs in inventory
             # inv: to see inventory
-            # inv <str>: to search inventory on <str>
+            # inv <str>: to search inventory with search word <str>
             # invadd <productid> <shelf> <number>: to add number of products to shelf
             # invdel <productid> <shelf> <number>: to remove number of products from shelf
     `;
