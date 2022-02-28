@@ -134,4 +134,7 @@ WHERE
 -- CALL show_product();
 -- CALL show_logg(3);
 -- CALL show_product();
-CALL show_stock();
+-- CALL show_stock();
+CALL search_stock('kaffe');
+CALL search_stock(3);
+CALL search_stock(500);

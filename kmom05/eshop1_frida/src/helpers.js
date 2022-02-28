@@ -28,6 +28,7 @@ function printMenu() {
             # product: to see table of products
             # shelf: to see shelfs in inventory
             # inv: to see inventory
+            # inv <str>: to search inventory on <str>
     `;
     console.info(message);
 }

@@ -11,7 +11,8 @@ module.exports = {
     createProduct: createProduct,
     showLog: showLog,
     showShelfs: showShelfs,
-    showInv: showInv
+    showInv: showInv,
+    searchInv: searchInv
 };
 
 const mysql = require("promise-mysql");
@@ -155,7 +156,7 @@ async function showLog(numberOfLogs) {
 }
 
 /**
- * Show details for a product.
+ * Show shelfs.
  *
  * @async
  * @returns {RowDataPacket} Resultset from the query.
@@ -172,7 +173,7 @@ async function showShelfs() {
 }
 
 /**
- * Show details for a product.
+ * Show inventory.
  *
  * @async
  * @returns {RowDataPacket} Resultset from the query.
@@ -187,3 +188,23 @@ async function showInv() {
 
     return res[0];
 }
+
+/**
+ * Search inventory.
+ *
+ * @async
+ * @param {string} searchWord      Search on this word
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+async function searchInv(searchWord) {
+    let sql;
+    sql = `CALL search_stock('${searchWord}');`;
+
+    let res;
+    res = await db.query(sql);
+    //console.log(res);
+    // console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
+

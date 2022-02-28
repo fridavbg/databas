@@ -71,7 +71,7 @@ Till exempel så här.
 
 - Skapa kommandot inv (inventory) som visar en tabell över vilka produkter som finns var i lagret. Visa produktid, produktnamn, lagerhylla och antal. [x]
 
-- Skapa kommandot inv <str> där det optionella argumentet <str> används för att filtrera det som skrivs ut. Filtrering sker på produktid, produktnamn, lagerhylla. []
+- Skapa kommandot inv <str> där det optionella argumentet <str> används för att filtrera det som skrivs ut. Filtrering sker på produktid, produktnamn, lagerhylla. [x]
 
 - Skapa kommandot invadd <productid> <shelf> <number> som lägger till ett visst antal av en produkt på en lagerhylla. Om det redan finns samma produkt på lagerhyllan så kan man öka på antalet. (Tips: det finns en konstruktion som heter INSERT ON DUPLICATE KEY UPDATE.) []
 

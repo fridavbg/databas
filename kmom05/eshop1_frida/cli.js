@@ -63,7 +63,11 @@ async function handleInput(line) {
             console.table(await eshop.showShelfs());
             break;
         case "inv":
-            console.table(await eshop.showInv());
+            if (parts.length == 1) {
+                console.table(await eshop.showInv());
+            } else {
+                console.table(await eshop.searchInv(parts[1]));
+            }
             break;
         default:
             helpers.errorLog("Invalid command passed");

@@ -426,5 +426,30 @@ END
 ;;
 DELIMITER ;
 
-
+--
+-- Procedure to search stock
+--
+DROP PROCEDURE IF EXISTS search_stock;
+DELIMITER ;;
+CREATE PROCEDURE search_stock(
+    a_search VARCHAR(20)
+)
+BEGIN
+    SELECT
+        s.produkt,
+        p.produktnamn,
+        s.lagerhylla,
+        s.antal
+    FROM stock as s
+        JOIN produkt AS p
+            on s.produkt = p.produktkod
+    WHERE
+        s.produkt = a_search OR
+        p.produktnamn LIKE CONCAT('%', a_search, '%') OR
+        s.lagerhylla = a_search OR
+        s.antal = a_search
+    ;
+END
+;;
+DELIMITER ;
 
