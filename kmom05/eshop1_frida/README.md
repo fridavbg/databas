@@ -19,9 +19,9 @@ Uppgiften är indelad i tre huvudsakliga delar, en generell del inklusive databa
 
 - Skapa en SQL-fil som du kan använda för att återskapa hela databasen från början till slut, kalla den för sql/eshop/reset.sql. []
 
-- Du skall ha en loggtabell som loggar intressanta händelser i systemet, via triggers. Du skall logga när någon gör 
-- INSERT [] 
-- UPDATE [] 
+- Du skall ha en loggtabell som loggar intressanta händelser i systemet, via triggers. Du skall logga när någon gör
+- INSERT []
+- UPDATE []
 - DELETE []
 
 på tabellen produkt. Du loggar tiden då något hände och en textsträng som beskriver händelsen och det objekt som var inblandat i händelsen.
@@ -30,7 +30,7 @@ Till exempel så här.
 
 | Tidstämpel         | Händelse | # |
 |--------------|:-----|-----------:|
-| 2019-02-18 16:01:01 |  “Ny produkt lades till med produktid ‘produkt1’.” |         
+| 2019-02-18 16:01:01 |  “Ny produkt lades till med produktid ‘produkt1’.” |
 | 2019-02-18 16:02:01 | “Detaljer om produktid ‘produkt1’ uppdaterades.”||
 |2019-02-18 16:03:01|“Produkten med produktid ‘produkt1’ raderades.”|
 
@@ -55,15 +55,15 @@ Till exempel så här.
 
 ## Terminalklient
 
-- Bygg ett terminalprogram och spara main-funktionen i cli.js. Eventuell övrig kod lägger du i moduler under katalogen src/. Terminalprogrammet skall startas med node cli.js. []
+- Bygg ett terminalprogram och spara main-funktionen i cli.js. Eventuell övrig kod lägger du i moduler under katalogen src/. Terminalprogrammet skall startas med node cli.js. [x]
 
-- All access från klienten mot databasen skall gå via lagrade procedurer. []
+- All access från klienten mot databasen skall gå via lagrade procedurer. [x]
 
-- Ditt terminalprogram skall fungera som en oändlig kommandoloop där man kan skriva in kommandon som programmet utför. Det skall finnas ett kommando menu som visar menyn med samtliga kommandon. När man skriver kommandot exit skall programmet avslutas. []
+- Ditt terminalprogram skall fungera som en oändlig kommandoloop där man kan skriva in kommandon som programmet utför. Det skall finnas ett kommando menu som visar menyn med samtliga kommandon. När man skriver kommandot exit skall programmet avslutas. [x]
 
-- Skapa kommandot about som visar namnen på de som jobbat (i grupp) för att lösa uppgiften. []
+- Skapa kommandot about som visar namnen på de som jobbat (i grupp) för att lösa uppgiften. [x]
 
-- Skapa kommandot log <number> som visar de <number> senaste raderna i loggtabellen. []
+- Skapa kommandot log <number> som visar de <number> senaste raderna i loggtabellen. [x]
 
 - Skapa kommandot product som visar alla producter som finns, inklusive produkternas id. []
 

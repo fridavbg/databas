@@ -131,4 +131,5 @@ WHERE
 -- SELECT * from faktura;
 -- SELECT * FROM logg;
 
-CALL show_product();
+-- CALL show_product();
+CALL show_logg(3);

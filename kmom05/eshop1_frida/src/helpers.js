@@ -1,3 +1,14 @@
+const eshop = require("./eshop");
+
+
+module.exports = {
+    printMenu,
+    errorLog,
+    exitProgram,
+    printGroupNames
+};
+
+
 /**
  * Show the user all programme options
  *
@@ -13,6 +24,7 @@ function printMenu() {
             # exit or quit or ctrl + d: to quit
             # menu or help: to see programme option
             # about: to see names of group members
+            # log <number>: to see latest <number> of logs
     `;
     console.info(message);
 }
@@ -47,9 +59,3 @@ function exitProgram(code) {
     process.exit(code);
 }
 
-module.exports = {
-    printMenu,
-    errorLog,
-    exitProgram,
-    printGroupNames
-};

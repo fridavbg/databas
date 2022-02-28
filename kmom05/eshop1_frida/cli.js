@@ -38,7 +38,7 @@ const rl = readline.createInterface({
  * @returns (void)
  */
 
-function handleInput(line) {
+async function handleInput(line) {
     line = line.trim();
     let parts = line.split(" ");
 
@@ -54,14 +54,8 @@ function handleInput(line) {
         case "about":
             helpers.printGroupNames();
             break;
-        case "checkDb":
-            db.connectDb();
-            break;
-        case "move":
-            bank.moveToEva();
-            break;
-        case "balance":
-            bank.showBalance();
+        case "log":
+            console.table(await eshop.showLog(parts[1]));
             break;
         default:
             helpers.errorLog("Invalid command passed");

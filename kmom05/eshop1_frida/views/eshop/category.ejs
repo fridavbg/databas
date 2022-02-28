@@ -8,6 +8,19 @@
 
     <p>Kategori Lista</p>
     
+    <table>
+        <tr>
+            <th>Produkt</th>
+            <th>Kategori</th>
+        </tr>
+        <% for (const row of res) { %>
+        <tr>
+            <td><%= row.produkt %></td>
+            <td><%= row.kategori %></td>
+        </tr>
+        <% }; %>
+    </table>
+    
 </div>
 
 <%- include("../partials/footer.ejs"); %>

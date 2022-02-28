@@ -1,0 +1,26 @@
+<%- include("../partials/header.ejs", {title: title}); %>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content">
+    <h1>Product Create</h1>
+    <form class="label-left" method="post" action="/eshop/create">
+        <fieldset>
+            <legend>Skapa produkt</legend>
+    
+            <label for="produktnamn">Produktnamn</label>
+            <input id="produktnamn" type="text" name="produktnamn" value=" ">
+    
+            <label for="produktbeskrivning">Produktbeskrivning</label>
+            <input id="produktbeskrivning" type="text" name="produktbeskrivning" value=" ">
+
+            <label for="produktpris">Produktpris</label>
+            <input id="produktpris" type="number" name="produktpris" value=" ">
+    
+            <input class="link" type="submit" name="doit" value="Create - NOT WORKING">
+        </fieldset>
+    </form>
+    <a href="/eshop/crud" class="link">Go back</a>
+</div>
+
+<%- include("../partials/footer.ejs"); %>

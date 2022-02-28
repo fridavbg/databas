@@ -44,7 +44,7 @@ body {
 }
 
 .content {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 0.25em;
     box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
     text-align: center;
@@ -89,10 +89,33 @@ header nav a:hover {
     color: rgb(245, 236, 236);
 }
 
+/* TEXT */
+
+p {
+    margin: 1em;
+}
+
 /* IMAGE */
 
 .img {
     width: 200px;
+}
+
+
+/* LINKS */
+
+.link {
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 7px;
+    box-shadow: 5px 10px rgb(85, 55, 3);
+}
+
+.link:hover {
+    color: rgb(85, 55, 3);
+    box-shadow: 5px 10px #0c0c0c;
 }
 
 /* LIST */

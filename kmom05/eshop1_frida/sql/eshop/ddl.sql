@@ -315,15 +315,10 @@ CREATE PROCEDURE show_productkod(
 )
 BEGIN
     SELECT
-    p.produktkod,
-    p.produktnamn,
-    p.produktbeskrivning,
-    p.produktpris,
-    s.antal
-    FROM produkt as p
-        INNER JOIN stock as s
-            ON p.produktkod = s.produkt
-    WHERE p.produktkod = a_id;
+    *
+    FROM produkt
+    WHERE produktkod = a_id
+    ;
 END
 ;;
 DELIMITER ;
@@ -387,9 +382,13 @@ DELIMITER ;
 --
 DROP PROCEDURE IF EXISTS show_logg;
 DELIMITER ;;
-CREATE PROCEDURE show_logg()
+CREATE PROCEDURE show_logg(
+    a_limit INT
+)
 BEGIN
-    SELECT * FROM logg;
+    SELECT * FROM logg
+    LIMIT a_limit
+    ;
 END
 ;;
 DELIMITER ;
