@@ -1,6 +1,7 @@
 /**
- * A module exporting functions to access the bank database.
+ * A module exporting functions to access the eshop database.
  */
+
 "use strict";
 
 module.exports = {
@@ -66,7 +67,7 @@ async function showProduct() {
 }
 
 /**
- * Show details for a product.
+ * Show details for one product.
  *
  * @async
  * @param {string} id A id of the account.
@@ -91,7 +92,7 @@ async function showProductkod(produktkod) {
  * @param {string} produktkod      The id of the product to be updated.
  * @param {string} produktnamn    The updated name of the product.
  * @param {string} produktbeskrivning The updated details of the product.
- *  @param {integer} produktpris The updated price of the product.
+ * @param {integer} produktpris The updated price of the product.
  *
  * @returns {void}
  */
@@ -118,10 +119,10 @@ async function editProduct(
  * Create a new product.
  *
  * @async
- * @param {string} produktkod      The id of the product to be updated.
- * @param {string} produktnamn    The updated name of the product.
- * @param {string} produktbeskrivning The updated details of the product.
- *  @param {integer} produktpris The updated price of the product.
+ * @param {string} produktkod      The id of the product to be added.
+ * @param {string} produktnamn    The name of the product to be added.
+ * @param {string} produktbeskrivning The details of the product to be added.
+ *  @param {integer} produktpris The price of the product to be added.
  * @returns {void}
  */
 async function createProduct(produktnamn, produktbeskrivning, produktpris) {
@@ -137,7 +138,7 @@ async function createProduct(produktnamn, produktbeskrivning, produktpris) {
  * Delete a product.
  *
  * @async
- * @param {string} produktkod      The id of the product to be deleted.
+ * @param {string} produktkod The id of the product to be deleted.
  * @returns {void}
  */
 async function deleteProduct(produktkod) {

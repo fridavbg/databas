@@ -183,11 +183,10 @@ DESCRIBE plocklista;
 
 
 -- -----------------------
--- -- TRIGGER
+-- -- TRIGGERS
 -- --
--- -- Du skall ha en loggtabell som loggar intressanta händelser i systemet, via triggers. Du skall logga när någon gör INSERT, UPDATE och DELETE på tabellen produkt. Du loggar tiden då något hände och en textsträng som beskriver händelsen och det objekt som var inblandat i händelsen. Till exempel så här.
--- -- Få med loggers i webbklienten ???
--- --
+
+-- TRIGGER DROPS
 
 -- Trigger kundorder
 DROP TRIGGER IF EXISTS log_insert_kundorder;

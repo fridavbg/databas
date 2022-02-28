@@ -10,8 +10,13 @@ const bodyParser = require("body-parser");
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const sitename = " | BuckStar";
 
-// INDEX
-
+/**
+ * INDEX ROUTE
+ * /eshop/index:
+ *   get:
+ *     summary: Display welcome page
+ *     description: Render welcome page
+ */
 router.get("/eshop/index", (req, res) => {
     let data = {
         title: `Välkommen  ${sitename}`,
@@ -20,8 +25,13 @@ router.get("/eshop/index", (req, res) => {
     res.render("eshop/", data);
 });
 
-// ABOUT
-
+/**
+ * About ROUTE
+ * /eshop/about:
+ *   get:
+ *     summary: Display about page
+ *     description: Render information of creators
+ */
 router.get("/eshop/about", async (req, res) => {
     let data = {
         title: `Om  ${sitename}`,
@@ -30,7 +40,13 @@ router.get("/eshop/about", async (req, res) => {
     res.render("eshop/about", data);
 });
 
-// KATEGORI
+/**
+ * CATEGORY ROUTE
+ * /eshop/category:
+ *   get:
+ *     summary: Display category page
+ *     description: Render data from the 
+ */
 
 router.get("/eshop/category", async (req, res) => {
     let data = {
@@ -42,8 +58,13 @@ router.get("/eshop/category", async (req, res) => {
     res.render("eshop/category", data);
 });
 
-// PRODUCT
-// GETS
+/**
+ * PRODUCT ROUTE
+ * /eshop/product:
+ *   get:
+ *     summary: Display produkt table from db eshop
+ *     description: Render data from produkt table
+ */
 router.get("/eshop/product", async (req, res) => {
     let data = {
         title: "Produkter",
@@ -54,6 +75,13 @@ router.get("/eshop/product", async (req, res) => {
     res.render("eshop/product", data);
 });
 
+/**
+ * PRODUCT ROUTE
+ * /eshop/product/:produktkod:
+ *   get:
+ *     summary: Display information of a product
+ *     description: CRUD - READ information of a produkt
+ */
 router.get("/eshop/product/:produktkod", async (req, res) => {
     let produktkod = req.params.produktkod;
     let data = {
@@ -66,6 +94,13 @@ router.get("/eshop/product/:produktkod", async (req, res) => {
     res.render("eshop/product-view", data);
 });
 
+/**
+ * PRODUCT ROUTE
+ * /eshop/edit/:produktkod:
+ *   get:
+ *     summary: Display information of a product
+ *     description: CRUD - READ information of a produkt
+ */
 router.get("/eshop/edit/:produktkod", async (req, res) => {
     let produktkod = req.params.produktkod;
     let data = {
@@ -77,6 +112,13 @@ router.get("/eshop/edit/:produktkod", async (req, res) => {
     res.render("eshop/product-edit", data);
 });
 
+/**
+ * PRODUCT ROUTE
+ * /eshop/delete/:produktkod:
+ *   get:
+ *     summary: Display information of a product
+ *     description: CRUD - READ information of a produkt
+ */
 router.get("/eshop/delete/:produktkod", async (req, res) => {
     let produktkod = req.params.produktkod;
     let data = {
@@ -88,6 +130,13 @@ router.get("/eshop/delete/:produktkod", async (req, res) => {
     res.render("eshop/product-delete", data);
 });
 
+/**
+ * PRODUCT ROUTE
+ * /eshop/create/:produktkod:
+ *   get:
+ *     summary: Display information of a product
+ *     description: CRUD - READ information of a produkt
+ */
 router.get("/eshop/create", async (req, res) => {
     let data = {
         title: `Create account ${sitename}`,
@@ -96,7 +145,13 @@ router.get("/eshop/create", async (req, res) => {
     res.render("eshop/product-create", data);
 });
 
-// PRODUKT POSTS
+/**
+ * PRODUCT ROUTE
+ * /eshop/edit/:produktkod:
+ *   post:
+ *     summary: Update information of a product
+ *     description: CRUD - UPDATE information of a produkt
+ */
 
 router.post("/eshop/edit", urlencodedParser, async (req, res) => {
     // console.log(JSON.stringify(req.body, null, 4));
@@ -109,6 +164,13 @@ router.post("/eshop/edit", urlencodedParser, async (req, res) => {
     res.redirect(`/eshop/crud`);
 });
 
+/**
+ * PRODUCT ROUTE
+ * /eshop/create/:produktkod:
+ *   post:
+ *     summary: Display information of a product
+ *     description: CRUD - CREATE information for a produkt
+ */
 router.post("/eshop/create", urlencodedParser, async (req, res) => {
     // console.log(JSON.stringify(req.body, null, 4));
     await eshop.createProduct(
@@ -119,6 +181,14 @@ router.post("/eshop/create", urlencodedParser, async (req, res) => {
     res.redirect(`/eshop/crud`);
 });
 
+
+/**
+ * PRODUCT ROUTE
+ * /eshop/delete/:produktkod:
+ *   post:
+ *     summary: Display information of a product
+ *     description: CRUD - DELETE information of a produkt
+ */
 router.post("/eshop/delete", urlencodedParser, async (req, res) => {
     // console.log(JSON.stringify(req.body, null, 4));
     await eshop.deleteProduct(req.body.produktkod);
@@ -126,8 +196,13 @@ router.post("/eshop/delete", urlencodedParser, async (req, res) => {
 });
 module.exports = router;
 
-// CRUD
-
+/**
+ * PRODUCT ROUTE
+ * /eshop/crud:
+ *   get:
+ *     summary: Display information of product table
+ *     description: CRUD - READ information produkt table
+ */
 router.get("/eshop/crud", async (req, res) => {
     let data = {
         title: `CRUD |  ${sitename}`,
