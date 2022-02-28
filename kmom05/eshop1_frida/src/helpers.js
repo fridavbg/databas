@@ -25,6 +25,7 @@ function printMenu() {
             # menu or help: to see programme option
             # about: to see names of group members
             # log <number>: to see latest <number> of logs
+            # product: to see table of products
     `;
     console.info(message);
 }

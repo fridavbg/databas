@@ -65,7 +65,7 @@ Till exempel så här.
 
 - Skapa kommandot log <number> som visar de <number> senaste raderna i loggtabellen. [x]
 
-- Skapa kommandot product som visar alla producter som finns, inklusive produkternas id. []
+- Skapa kommandot product som visar alla producter som finns, inklusive produkternas id. [x]
 
 - Skapa kommandot shelf som visar vilka lagerhyllor som finns på lagret. []
 

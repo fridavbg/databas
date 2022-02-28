@@ -132,4 +132,5 @@ WHERE
 -- SELECT * FROM logg;
 
 -- CALL show_product();
-CALL show_logg(3);
+-- CALL show_logg(3);
+CALL show_product();

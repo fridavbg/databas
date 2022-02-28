@@ -56,6 +56,8 @@ async function handleInput(line) {
             break;
         case "log":
             console.table(await eshop.showLog(parts[1]));
+        case "product":
+            console.table(await eshop.showProduct());
             break;
         default:
             helpers.errorLog("Invalid command passed");
