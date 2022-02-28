@@ -3,26 +3,26 @@ Uppgiften är indelad i tre huvudsakliga delar, en generell del inklusive databa
 
 ## Generella krav
 
-- Din katalog innehåller en package.json med samtliga externa moduler som används. []
+- Din katalog innehåller en package.json med samtliga externa moduler som används. [x]
 
-- Inloggningsdetaljer till databasen skall sparas i config/db/eshop.json. []
+- Inloggningsdetaljer till databasen skall sparas i config/db/eshop.json. [x]
 
-- SQL-filer lägger du i sql/eshop. Skapa filen setup.sql för att skapa databasen. Låt din databas heta eshop. []
+- SQL-filer lägger du i sql/eshop. Skapa filen setup.sql för att skapa databasen. Låt din databas heta eshop. [x]
 
-- Skapa filen sql/eshop/ddl.sql där du samlar all kod som skapar tabeller, vyer, procedurer, triggers och liknande. Använd den filen för att skapa databasens schema. []
+- Skapa filen sql/eshop/ddl.sql där du samlar all kod som skapar tabeller, vyer, procedurer, triggers och liknande. Använd den filen för att skapa databasens schema. [x]
 
-- Skapa filen sql/eshop/insert.sql med SQL-kod för att lägga in minst 5 vardera, av följande: kunder, produkter, produktkategorier, lagerhyllor som du läser in från CSV-filer som du själv skapat. CSV-filerna sparar du i samma katalog som sql-filerna. Använd inte absoluta filvägar till CSV-filerna. []
+- Skapa filen sql/eshop/insert.sql med SQL-kod för att lägga in minst 5 vardera, av följande: kunder, produkter, produktkategorier, lagerhyllor som du läser in från CSV-filer som du själv skapat. CSV-filerna sparar du i samma katalog som sql-filerna. Använd inte absoluta filvägar till CSV-filerna. [x]
 
-- Försäkra dig om att samtliga produkter tillhör minst en produktkategori. Försäkra dig om att minst tre av produkterna tillhör två eller fler produktkategorier. Skriv kod i insert.sql, om det krävs. []
+- Försäkra dig om att samtliga produkter tillhör minst en produktkategori. Försäkra dig om att minst tre av produkterna tillhör två eller fler produktkategorier. Skriv kod i insert.sql, om det krävs. [x]
 
-- Försäkra dig om att samtliga produkter finns på lagret, i någon omfattning. Skriv kod i insert.sql, om det krävs. []
+- Försäkra dig om att samtliga produkter finns på lagret, i någon omfattning. Skriv kod i insert.sql, om det krävs. [x]
 
-- Skapa en SQL-fil som du kan använda för att återskapa hela databasen från början till slut, kalla den för sql/eshop/reset.sql. []
+- Skapa en SQL-fil som du kan använda för att återskapa hela databasen från början till slut, kalla den för sql/eshop/reset.sql. [x]
 
 - Du skall ha en loggtabell som loggar intressanta händelser i systemet, via triggers. Du skall logga när någon gör 
-- INSERT [] 
-- UPDATE [] 
-- DELETE []
+- INSERT [x] 
+- UPDATE [x] 
+- DELETE [x]
 
 på tabellen produkt. Du loggar tiden då något hände och en textsträng som beskriver händelsen och det objekt som var inblandat i händelsen.
 
@@ -37,7 +37,7 @@ Till exempel så här.
 ## Webbklient
 - Skapa en webbklient med Express. Servern startas via node index.js och skall snurra på porten 1337. [x]
 
-- All access från klienten mot databasen skall gå via lagrade procedurer. []
+- All access från klienten mot databasen skall gå via lagrade procedurer. [x]
 
 - Alla sidor skall ha samma sidlayout med gemensam header, footer och det skall gå att klicka sig fram mellan sidorna, via navigeringen. [x]
 
@@ -45,11 +45,11 @@ Till exempel så här.
 
 - I webbklienten, skapa routen /eshop/index som visar en välkomstssida till din eshop. Välj själv vad du visar på förstasidan. [x]
 
-- I webbklienten, skapa en sida /eshop/category som visar en tabell över de produktkategorier som finns. [/]
+- I webbklienten, skapa en sida /eshop/category som visar en tabell över de produktkategorier som finns. [x]
 
-- I webbklienten, skapa en sida /eshop/product som visar en översikt av de produkter som finns. Visa (minst) produktens id, namn, pris och antal som finns i lagret. Visa även information om vilken kategori som produkten tillhör (TIPS GROUP_CONCAT). [/]
+- I webbklienten, skapa en sida /eshop/product som visar en översikt av de produkter som finns. Visa (minst) produktens id, namn, pris och antal som finns i lagret. Visa även information om vilken kategori som produkten tillhör (TIPS GROUP_CONCAT). [x]
 
-- Skapa CRUD för att lägga till, redigera, visa och radera produkter. Du behöver enbart redigera de delar som finns i tabellen kopplad till produkten. Du behöver inte redigera antal produkter på lagret, eller kopplingen till kategori. []
+- Skapa CRUD för att lägga till, redigera, visa och radera produkter. Du behöver enbart redigera de delar som finns i tabellen kopplad till produkten. Du behöver inte redigera antal produkter på lagret, eller kopplingen till kategori. [x]
 
 - Se till att det är smidigt att navigera i din produkt CRUD, via länkar och/eller formulär, man skall kunna klicka sig fram till det man vill göra. [x]
 
