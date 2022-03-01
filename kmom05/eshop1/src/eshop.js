@@ -10,7 +10,12 @@ module.exports = {
     showProductkod: showProductkod,
     editProduct: editProduct,
     createProduct: createProduct,
-    deleteProduct: deleteProduct,
+    showLog: showLog,
+    showShelfs: showShelfs,
+    showInv: showInv,
+    searchInv: searchInv,
+    addToShelf: addToShelf,
+    removeFromShelf: removeFromShelf,
 };
 
 const mysql = require("promise-mysql");
@@ -47,6 +52,8 @@ async function showCategory() {
 
     return res[0];
 }
+
+// WEBKLIENT
 
 /**
  * Show all entries in the categories table.
@@ -148,4 +155,125 @@ async function deleteProduct(produktkod) {
     res = await db.query(sql, [produktkod]);
     console.log(res);
     console.info(`SQL: ${sql} got ${res.length} rows.`);
+}
+
+// TERMINALKLIENT
+
+/**
+ * Show details for a product.
+ *
+ * @async
+ * @param {integer} numberOfLogs      The number of logs you want to be displayed.
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+async function showLog(numberOfLogs) {
+    let sql = `CALL show_logg(${numberOfLogs});`;
+    let res;
+
+    res = await db.query(sql);
+    //console.log(res);
+    // console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
+
+/**
+ * Show shelfs.
+ *
+ * @async
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+async function showShelfs() {
+    let sql = `CALL show_lagerhylla();`;
+    let res;
+
+    res = await db.query(sql);
+    //console.log(res);
+    // console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
+
+/**
+ * Show inventory.
+ *
+ * @async
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+async function showInv() {
+    let sql = `CALL show_stock();`;
+    let res;
+
+    res = await db.query(sql);
+    //console.log(res);
+    // console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
+
+/**
+ * Search inventory.
+ *
+ * @async
+ * @param {string} searchWord      Search on this word.
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+async function searchInv(searchWord) {
+    let sql;
+
+    sql = `CALL search_stock('${searchWord}');`;
+
+    let res;
+
+    res = await db.query(sql);
+    //console.log(res);
+    // console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
+
+/**
+ * Add product to shelf.
+ *
+ * @async
+ * @param {int} productId      Product to add.
+ * @param {int} shelfId      Shelf to add product on.
+ * @param {int} number      Number of products to add.
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+async function addToShelf(productId, shelfId, number) {
+    let sql;
+
+    sql = `CALL insert_stock(${productId}, ${shelfId}, ${number});`;
+
+    let res;
+
+    res = await db.query(sql);
+    //console.log(res);
+    // console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
+
+/**
+ * Remove product from shelf.
+ *
+ * @async
+ * @param {int} productId      Product to remove.
+ * @param {int} shelfId      Shelf to remove product from.
+ * @param {int} number      Number of products to remove.
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+async function removeFromShelf(productId, shelfId, number) {
+    let sql;
+
+    sql = `CALL remove_from_stock(${productId}, ${shelfId}, ${number});`;
+
+    let res;
+
+    res = await db.query(sql);
+    //console.log(res);
+    // console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
 }

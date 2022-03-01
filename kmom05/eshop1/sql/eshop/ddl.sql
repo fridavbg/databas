@@ -29,7 +29,13 @@ DROP PROCEDURE IF EXISTS show_category;
 DROP PROCEDURE IF EXISTS show_product;
 DROP PROCEDURE IF EXISTS show_productkod;
 DROP PROCEDURE IF EXISTS edit_produkt;
+DROP PROCEDURE IF EXISTS insert_produkt;
 DROP PROCEDURE IF EXISTS show_logg;
+DROP PROCEDURE IF EXISTS show_lagerhylla;
+DROP PROCEDURE IF EXISTS show_stock;
+DROP PROCEDURE IF EXISTS search_stock;
+DROP PROCEDURE IF EXISTS insert_stock;
+DROP PROCEDURE IF EXISTS remove_from_stock;
 DROP PROCEDURE IF EXISTS delete_produkt;
 
 ------------------------------------------
@@ -382,15 +388,114 @@ DELIMITER ;
 -- Procedure to show logg
 --
 DELIMITER ;;
-CREATE PROCEDURE show_logg()
+CREATE PROCEDURE show_logg(
+    a_limit INT
+)
 BEGIN
-    SELECT * FROM logg;
+    SELECT * FROM logg
+    LIMIT a_limit
+    ;
 END
 ;;
 DELIMITER ;
 
--- Testar procedur: (fast inget är inlagt än)
--- CALL show_logg();
+--
+-- Procedure to show lagerhylla
+--
+DELIMITER ;;
+CREATE PROCEDURE show_lagerhylla()
+BEGIN
+    SELECT * FROM lagerhylla;
+END
+;;
+DELIMITER ;
+
+--
+-- Procedure to show stock
+--
+DELIMITER ;;
+CREATE PROCEDURE show_stock()
+BEGIN
+    SELECT
+        s.produkt,
+        p.produktnamn,
+        s.lagerhylla,
+        s.antal
+    FROM stock as s
+        JOIN produkt AS p
+            on s.produkt = p.produktkod
+    ;
+END
+;;
+DELIMITER ;
+
+--
+-- Procedure to search stock
+--
+DELIMITER ;;
+CREATE PROCEDURE search_stock(
+    a_search VARCHAR(20)
+)
+BEGIN
+    SELECT
+        s.produkt,
+        p.produktnamn,
+        s.lagerhylla,
+        s.antal
+    FROM stock as s
+        JOIN produkt AS p
+            on s.produkt = p.produktkod
+    WHERE
+        s.produkt = a_search OR
+        p.produktnamn LIKE CONCAT('%', a_search, '%') OR
+        s.lagerhylla = a_search OR
+        s.antal = a_search
+    ;
+END
+;;
+DELIMITER ;
+
+
+-- Procedure to insert in stock
+
+DELIMITER ;;
+CREATE PROCEDURE insert_stock(
+    a_produktkod INT,
+    a_lagerhylla INT,
+    a_antal INT
+)
+BEGIN
+    INSERT INTO
+        stock(produkt, lagerhylla, antal)
+    VALUES
+        (a_produktkod, a_lagerhylla, a_antal)
+    ON DUPLICATE KEY UPDATE
+        antal = antal + a_antal
+    ;
+END
+;;
+DELIMITER ;
+
+-- Procedure to delete from stock
+
+DELIMITER ;;
+CREATE PROCEDURE remove_from_stock(
+    a_produktkod INT,
+    a_lagerhylla INT,
+    a_antal INT
+)
+BEGIN
+    UPDATE
+        stock
+    SET
+        antal = antal - a_antal
+    WHERE
+        produkt = a_produktkod AND
+        lagerhylla = a_lagerhylla
+    ;
+END
+;;
+DELIMITER ;
 
 --
 -- Create procedure for delete produkt
