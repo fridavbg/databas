@@ -200,9 +200,11 @@ async function showInv() {
  */
 async function searchInv(searchWord) {
     let sql;
+
     sql = `CALL search_stock('${searchWord}');`;
 
     let res;
+
     res = await db.query(sql);
     //console.log(res);
     // console.info(`SQL: ${sql} got ${res.length} rows.`);
@@ -221,9 +223,11 @@ async function searchInv(searchWord) {
  */
 async function addToShelf(productId, shelfId, number) {
     let sql;
+
     sql = `CALL insert_stock(${productId}, ${shelfId}, ${number});`;
 
     let res;
+
     res = await db.query(sql);
     //console.log(res);
     // console.info(`SQL: ${sql} got ${res.length} rows.`);
@@ -243,13 +247,14 @@ async function addToShelf(productId, shelfId, number) {
  */
 async function removeFromShelf(productId, shelfId, number) {
     let sql;
+
     sql = `CALL remove_from_stock(${productId}, ${shelfId}, ${number});`;
 
     let res;
+
     res = await db.query(sql);
     //console.log(res);
     // console.info(`SQL: ${sql} got ${res.length} rows.`);
 
     return res[0];
 }
-

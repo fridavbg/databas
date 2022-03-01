@@ -14,7 +14,6 @@ source create-database.sql;
 
 -- source insert-csv.sql
 -- source dml-join2.sql
--- source dml-outer-join.sql
 -- source dml-subquery.sql
 
 
@@ -34,12 +33,14 @@ SELECT
     SUM(kompetens) AS Kompetens
 FROM larare;
 
--- Three joined tables in a view
-SELECT
-    *
-FROM
-    v_planering
-;
+-- -- Three joined tables in a view
+-- SELECT
+--     *
+-- FROM
+--     v_planering
+-- ;
+
+source dml-outer-join.sql
 
 -- Visar alla tabeller (ungefär som en innehållsförteckning)
 SHOW FULL TABLES

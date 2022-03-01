@@ -119,6 +119,7 @@ WHERE
     fakturanummer = 123
 ;
 
+-- CALL insert_product(testprodukt, detta är en testbeskrivning, 350);
 
 SELECT * FROM kund;
 SELECT * FROM produkt;
@@ -127,6 +128,6 @@ SELECT * FROM produkt_kategori;
 SELECT * FROM lagerhylla;
 SELECT * FROM stock;
 SELECT * from kundorder;
--- SELECT * from kundorder_rad;
+SELECT * from kundorder_rad; -- obs tog bort den rad som fanns!
 SELECT * from faktura;
 SELECT * FROM logg;

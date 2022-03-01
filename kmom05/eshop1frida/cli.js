@@ -6,7 +6,7 @@
 
 ("use strict");
 
-const db = require("./src/connect_db");
+// const db = require("./src/connect_db");
 const helpers = require("./src/helpers");
 const eshop = require("./src/eshop");
 
@@ -56,6 +56,7 @@ async function handleInput(line) {
             break;
         case "log":
             console.table(await eshop.showLog(parts[1]));
+            break;
         case "product":
             console.table(await eshop.showProduct());
             break;
@@ -71,11 +72,11 @@ async function handleInput(line) {
             break;
         case "invadd":
             await eshop.addToShelf(parts[1], parts[2], parts[3]);
-            console.info(`${parts[3]} products with id ${parts[1]} added to shelf ${parts[2]}`)
+            console.info(`${parts[3]} products with id ${parts[1]} added to shelf ${parts[2]}`);
             break;
         case "invdel":
             await eshop.removeFromShelf(parts[1], parts[2], parts[3]);
-            console.info(`${parts[3]} products with id ${parts[1]} removed from shelf ${parts[2]}`)
+            console.info(`${parts[3]} products with id ${parts[1]} removed from shelf ${parts[2]}`);
             break;
         default:
             helpers.errorLog("Invalid command passed");

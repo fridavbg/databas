@@ -42,7 +42,7 @@ function printGroupNames() {
         # Frida Persson
         # Erik Nästesjö Todd
     `;
-    console.info(message)
+    console.info(message);
 }
 
 function errorLog(error) {
