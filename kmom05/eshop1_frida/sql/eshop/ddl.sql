@@ -10,6 +10,27 @@ DROP TABLE IF EXISTS kund;
 DROP TABLE IF EXISTS produkt;
 DROP TABLE IF EXISTS kategori;
 
+DROP VIEW IF EXISTS plocklista;
+
+DROP TRIGGER IF EXISTS log_insert_kundorder;
+DROP TRIGGER IF EXISTS log_update_kundorder;
+DROP TRIGGER IF EXISTS log_update_produkt;
+DROP TRIGGER IF EXISTS log_delete_produkt;
+DROP TRIGGER IF EXISTS log_insert_faktura;
+DROP TRIGGER IF EXISTS log_update_faktura;
+
+DROP PROCEDURE IF EXISTS show_category;
+DROP PROCEDURE IF EXISTS show_product;
+DROP PROCEDURE IF EXISTS show_productkod;
+DROP PROCEDURE IF EXISTS edit_produkt;
+DROP PROCEDURE IF EXISTS insert_produkt;
+DROP PROCEDURE IF EXISTS show_logg;
+DROP PROCEDURE IF EXISTS show_lagerhylla;
+DROP PROCEDURE IF EXISTS show_stock;
+DROP PROCEDURE IF EXISTS search_stock;
+DROP PROCEDURE IF EXISTS insert_stock;
+DROP PROCEDURE IF EXISTS remove_from_stock;
+
 
 ------------------------------------------
 -- PRODUKT
@@ -162,7 +183,6 @@ CREATE TABLE logg
 -- VIEWS
 --
 
-DROP VIEW IF EXISTS plocklista;
 
 CREATE VIEW plocklista
 AS
@@ -185,9 +205,11 @@ DESCRIBE plocklista;
 -- -----------------------
 -- -- TRIGGER
 -- --
+-- -- Du skall ha en loggtabell som loggar intressanta händelser i systemet, via triggers. Du skall logga när någon gör INSERT, UPDATE och DELETE på tabellen produkt. Du loggar tiden då något hände och en textsträng som beskriver händelsen och det objekt som var inblandat i händelsen. Till exempel så här.
+-- -- Få med loggers i webbklienten ???
+-- --
 
 -- Trigger kundorder
-DROP TRIGGER IF EXISTS log_insert_kundorder;
 
 CREATE TRIGGER log_insert_kundorder
 AFTER INSERT
@@ -196,7 +218,6 @@ ON kundorder FOR EACH ROW
         VALUES (NEW.ordernummer, NEW.orderdatum, 'beställning skapad')
 ;
 
-DROP TRIGGER IF EXISTS log_update_kundorder;
 
 CREATE TRIGGER log_update_kundorder
 AFTER UPDATE
@@ -206,36 +227,33 @@ ON kundorder FOR EACH ROW
 ;
 
 -- -- Trigger kunorder_rad
-DROP TRIGGER IF EXISTS log_insert_kundorder_rad;
+DROP TRIGGER IF EXISTS log_insert_produkt;
 
-CREATE TRIGGER log_insert_kundorder_rad
+CREATE TRIGGER log_insert_produkt
 AFTER INSERT
-ON kundorder_rad FOR EACH ROW
-    INSERT INTO logg (kundorder, loggdatum, kommentar)
-        VALUES (NEW.kundorder, NOW(), CONCAT('produkt med id ', NEW.produkt, ' tillagd'))
+ON produkt FOR EACH ROW
+    INSERT INTO logg (loggdatum, kommentar)
+        VALUES (NOW(), CONCAT('produkt med kod ', NEW.produktkod, ' tillagd'))
 ;
 
-DROP TRIGGER IF EXISTS log_update_kundorder_rad;
 
-CREATE TRIGGER log_update_kundorder_rad
+CREATE TRIGGER log_update_produkt
 AFTER UPDATE
-ON kundorder_rad FOR EACH ROW
-    INSERT INTO logg (kundorder, loggdatum, kommentar)
-        VALUES (NEW.kundorder, NOW(), CONCAT('detaljer om produkt med id ', NEW.produkt, ' ändrade'))
+ON produkt FOR EACH ROW
+    INSERT INTO logg (loggdatum, kommentar)
+        VALUES (NOW(), CONCAT('detaljer om produkt med kod ', NEW.produktkod, ' ändrade'))
 ;
 
-DROP TRIGGER IF EXISTS log_delete_kundorder_rad;
 
-CREATE TRIGGER log_delete_kundorder_rad
+CREATE TRIGGER log_delete_produkt
 AFTER DELETE
-ON kundorder_rad FOR EACH ROW
-    INSERT INTO logg (kundorder, loggdatum, kommentar)
-        VALUES (OLD.kundorder, NOW(), CONCAT('produkt med id ', OLD.produkt, ' raderad'))
+ON produkt FOR EACH ROW
+    INSERT INTO logg (loggdatum, kommentar)
+        VALUES (NOW(), CONCAT('produkt med kod ', OLD.produktkod, ' raderad'))
 ;
 
 
 -- Trigger faktura
-DROP TRIGGER IF EXISTS log_insert_faktura;
 
 CREATE TRIGGER log_insert_faktura
 AFTER INSERT
@@ -244,7 +262,6 @@ ON faktura FOR EACH ROW
         VALUES (NEW.kundorder, NEW.fakturanummer, NEW.fakturadatum, 'faktura skapad')
 ;
 
-DROP TRIGGER IF EXISTS log_update_faktura;
 
 CREATE TRIGGER log_update_faktura
 AFTER UPDATE
@@ -258,13 +275,98 @@ ON faktura FOR EACH ROW
 -- -- PROCEDURES
 -- --
 
--- Procedure insert produkt
+--
+-- Procedure to show category table
+--
+DELIMITER ;;
+CREATE PROCEDURE show_category()
+BEGIN
+    SELECT * FROM produkt_kategori;
+END
+;;
+DELIMITER ;
 
-DROP PROCEDURE insert_product
+CALL show_category();
+
+--
+-- Procedure to show product table + stock antal
+-- kod, namn, pris och antal
+--
+DELIMITER ;;
+CREATE PROCEDURE show_product()
+BEGIN
+    SELECT
+    p.produktkod,
+    p.produktnamn,
+    p.produktbeskrivning,
+    p.produktpris,
+    s.antal,
+    GROUP_CONCAT(k.kategori) as "kategori"
+    FROM produkt as p
+        LEFT OUTER JOIN stock as s
+            ON p.produktkod = s.produkt
+        LEFT OUTER JOIN produkt_kategori as k
+            ON p.produktkod = k.produkt
+    GROUP BY p.produktkod
+    ;
+END
+;;
+DELIMITER ;
+
+-- CALL show_product();
+
+--
+-- Procedure to show one product
+-- . Visa även information om vilken kategori som produkten tillhör (TIPS GROUP_CONCAT).
+-- BYTA KATEGORI IFRAN INT TILL STRANG ??
+--
+DELIMITER ;;
+CREATE PROCEDURE show_productkod(
+    a_id INT
+)
+BEGIN
+    SELECT
+    *
+    FROM produkt
+    WHERE produktkod = a_id
+    ;
+END
+;;
+DELIMITER ;
+
+-- CALL show_productkod(1);
+
+--
+-- Procedure to edit product
+--
 
 DELIMITER ;;
+CREATE PROCEDURE edit_produkt(
+    a_produktkod INT,
+    a_produktnamn VARCHAR(20),
+    a_produktbeskrivning VARCHAR(50),
+    a_produktpris INT
+)
+BEGIN
+    UPDATE produkt SET
+        `produktnamn` = a_produktnamn,
+        `produktbeskrivning` = a_produktbeskrivning,
+        `produktpris` = a_produktpris
+    WHERE
+        `produktkod` = a_produktkod
+    ;
+END
+;;
+DELIMITER ;
 
-CREATE PROCEDURE insert_product(
+-- SHOW PROCEDURE STATUS LIKE 'edit%';
+
+--
+-- Procedure to insert product
+--
+
+DELIMITER ;;
+CREATE PROCEDURE insert_produkt(
     a_produktnamn VARCHAR(20),
     a_produktbeskrivning VARCHAR(50),
     a_produktpris INT
@@ -274,27 +376,128 @@ BEGIN
         produkt(produktnamn, produktbeskrivning, produktpris)
     VALUES
         (a_produktnamn, a_produktbeskrivning, a_produktpris)
-;
+    ;
 END
 ;;
+DELIMITER ;
 
-DELIMETER ;
+-- SHOW PROCEDURE STATUS LIKE 'insert%';
 
 -- Testar procedur:
-CALL insert_produkt('testprodukt', 'detta är en testbeskrivning', 350);
+-- CALL insert_produkt('kaffemugg', 'muggbeskrivning', 340);
 
--- Procedure show logg
-
-DROP PROCEDURE show_logg
-
+--
+-- Procedure to show logg
+--
 DELIMITER ;;
-
-CREATE PROCEDURE show_logg()
+CREATE PROCEDURE show_logg(
+    a_limit INT
+)
 BEGIN
-    SELECT * FROM logg;
+    SELECT * FROM logg
+    LIMIT a_limit
+    ;
 END
 ;;
+DELIMITER ;
 
-DELIMETER ;
 
--- test
+--
+-- Procedure to show lagerhylla
+--
+DELIMITER ;;
+CREATE PROCEDURE show_lagerhylla()
+BEGIN
+    SELECT * FROM lagerhylla;
+END
+;;
+DELIMITER ;
+
+--
+-- Procedure to show stock
+--
+DELIMITER ;;
+CREATE PROCEDURE show_stock()
+BEGIN
+    SELECT
+        s.produkt,
+        p.produktnamn,
+        s.lagerhylla,
+        s.antal
+    FROM stock as s
+        JOIN produkt AS p
+            on s.produkt = p.produktkod
+    ;
+END
+;;
+DELIMITER ;
+
+--
+-- Procedure to search stock
+--
+DELIMITER ;;
+CREATE PROCEDURE search_stock(
+    a_search VARCHAR(20)
+)
+BEGIN
+    SELECT
+        s.produkt,
+        p.produktnamn,
+        s.lagerhylla,
+        s.antal
+    FROM stock as s
+        JOIN produkt AS p
+            on s.produkt = p.produktkod
+    WHERE
+        s.produkt = a_search OR
+        p.produktnamn LIKE CONCAT('%', a_search, '%') OR
+        s.lagerhylla = a_search OR
+        s.antal = a_search
+    ;
+END
+;;
+DELIMITER ;
+
+
+-- Procedure to insert in stock
+
+DELIMITER ;;
+CREATE PROCEDURE insert_stock(
+    a_produktkod INT,
+    a_lagerhylla INT,
+    a_antal INT
+)
+BEGIN
+    INSERT INTO
+        stock(produkt, lagerhylla, antal)
+    VALUES
+        (a_produktkod, a_lagerhylla, a_antal)
+    ON DUPLICATE KEY UPDATE
+        antal = antal + a_antal
+    ;
+END
+;;
+DELIMITER ;
+
+
+-- Procedure to delete from stock
+
+DELIMITER ;;
+CREATE PROCEDURE remove_from_stock(
+    a_produktkod INT,
+    a_lagerhylla INT,
+    a_antal INT
+)
+BEGIN
+    UPDATE
+        stock
+    SET
+        antal = antal - a_antal
+    WHERE
+        produkt = a_produktkod AND
+        lagerhylla = a_lagerhylla
+    ;
+END
+;;
+DELIMITER ;
+
