@@ -14,6 +14,7 @@ DROP VIEW IF EXISTS plocklista;
 
 DROP TRIGGER IF EXISTS log_insert_kundorder;
 DROP TRIGGER IF EXISTS log_update_kundorder;
+DROP TRIGGER IF EXISTS log_insert_produkt;
 DROP TRIGGER IF EXISTS log_update_produkt;
 DROP TRIGGER IF EXISTS log_delete_produkt;
 DROP TRIGGER IF EXISTS log_insert_faktura;
@@ -227,7 +228,6 @@ ON kundorder FOR EACH ROW
 ;
 
 -- -- Trigger kunorder_rad
-DROP TRIGGER IF EXISTS log_insert_produkt;
 
 CREATE TRIGGER log_insert_produkt
 AFTER INSERT
