@@ -55,27 +55,27 @@ Till exempel så här.
 
 ## Terminalklient
 
-- Bygg ett terminalprogram och spara main-funktionen i cli.js. Eventuell övrig kod lägger du i moduler under katalogen src/. Terminalprogrammet skall startas med node cli.js. []
+- Bygg ett terminalprogram och spara main-funktionen i cli.js. Eventuell övrig kod lägger du i moduler under katalogen src/. Terminalprogrammet skall startas med node cli.js. [x]
 
-- All access från klienten mot databasen skall gå via lagrade procedurer. []
+- All access från klienten mot databasen skall gå via lagrade procedurer. [x]
 
-- Ditt terminalprogram skall fungera som en oändlig kommandoloop där man kan skriva in kommandon som programmet utför. Det skall finnas ett kommando menu som visar menyn med samtliga kommandon. När man skriver kommandot exit skall programmet avslutas. []
+- Ditt terminalprogram skall fungera som en oändlig kommandoloop där man kan skriva in kommandon som programmet utför. Det skall finnas ett kommando menu som visar menyn med samtliga kommandon. När man skriver kommandot exit skall programmet avslutas. [x]
 
-- Skapa kommandot about som visar namnen på de som jobbat (i grupp) för att lösa uppgiften. []
+- Skapa kommandot about som visar namnen på de som jobbat (i grupp) för att lösa uppgiften. [x]
 
-- Skapa kommandot log <number> som visar de <number> senaste raderna i loggtabellen. []
+- Skapa kommandot log <number> som visar de <number> senaste raderna i loggtabellen. [x]
 
-- Skapa kommandot product som visar alla producter som finns, inklusive produkternas id. []
+- Skapa kommandot product som visar alla producter som finns, inklusive produkternas id. [x]
 
-- Skapa kommandot shelf som visar vilka lagerhyllor som finns på lagret. []
+- Skapa kommandot shelf som visar vilka lagerhyllor som finns på lagret. [x]
 
-- Skapa kommandot inv (inventory) som visar en tabell över vilka produkter som finns var i lagret. Visa produktid, produktnamn, lagerhylla och antal. []
+- Skapa kommandot inv (inventory) som visar en tabell över vilka produkter som finns var i lagret. Visa produktid, produktnamn, lagerhylla och antal. [x]
 
-- Skapa kommandot inv <str> där det optionella argumentet <str> används för att filtrera det som skrivs ut. Filtrering sker på produktid, produktnamn, lagerhylla. []
+- Skapa kommandot inv <str> där det optionella argumentet <str> används för att filtrera det som skrivs ut. Filtrering sker på produktid, produktnamn, lagerhylla. [x]
 
-- Skapa kommandot invadd <productid> <shelf> <number> som lägger till ett visst antal av en produkt på en lagerhylla. Om det redan finns samma produkt på lagerhyllan så kan man öka på antalet. (Tips: det finns en konstruktion som heter INSERT ON DUPLICATE KEY UPDATE.) []
+- Skapa kommandot invadd <productid> <shelf> <number> som lägger till ett visst antal av en produkt på en lagerhylla. Om det redan finns samma produkt på lagerhyllan så kan man öka på antalet. (Tips: det finns en konstruktion som heter INSERT ON DUPLICATE KEY UPDATE.) [x]
 
-- Skapa kommandot invdel <productid> <shelf> <number> som plockar bort ett visst antal produkter från en viss lagerhylla. Det behöver inte finnas någon kontroll om antalet produkter fortfarande är positivt. []
+- Skapa kommandot invdel <productid> <shelf> <number> som plockar bort ett visst antal produkter från en viss lagerhylla. Det behöver inte finnas någon kontroll om antalet produkter fortfarande är positivt. [x]
 
 ### Lämna in
 

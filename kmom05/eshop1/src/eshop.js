@@ -10,6 +10,7 @@ module.exports = {
     showProductkod: showProductkod,
     editProduct: editProduct,
     createProduct: createProduct,
+    deleteProduct: deleteProduct,
     showLog: showLog,
     showShelfs: showShelfs,
     showInv: showInv,
