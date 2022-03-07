@@ -55,13 +55,14 @@ router.get("/bank/create", async (req, res) => {
     let data = {
         title: `Create account ${sitename}`,
     };
+
     res.render("bank/create", data);
 });
 
 router.get("/bank/account/:id", async (req, res) => {
     let id = req.params.id;
     let data = {
-        title: `account ${id} ${sitename}}`,
+        title: `Account ${id} ${sitename}`,
         account: id,
     };
 

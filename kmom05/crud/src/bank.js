@@ -57,16 +57,16 @@ async function showBalance() {
  * @returns {RowDataPacket} Resultset from the query.
  */
 
-async function findAllInTable(table) {
-    let sql = `SELECT * FROM ??;`;
-    let res;
+// async function findAllInTable(table) {
+//     let sql = `SELECT * FROM ??;`;
+//     let res;
 
-    res = await db.query(sql, [table]);
-    console.info(`SQL: ${sql} (${table}) got ${res.length} rows.`);
-    console.log("BALANCE");
-    console.table(res);
-    return res;
-}
+//     res = await db.query(sql, [table]);
+//     console.info(`SQL: ${sql} (${table}) got ${res.length} rows.`);
+//     console.log("BALANCE");
+//     console.table(res);
+//     return res;
+// }
 
 /**
  * Show all entries in the selected table.

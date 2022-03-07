@@ -302,18 +302,30 @@
                             <span class="question">kmom05</span>
                             <i class="bx bxs-chevron-down arrow"></i>
                         </div>
-                        <p class="prompt">FRÅGA</p>
-                        <p></p>
-                        <p class="prompt">FRÅGA</p>
-                        <p></p>
-                        <p class="prompt">FRÅGA</p>
-                        <p></p>
-                        <p class="prompt">FRÅGA</p>
-                        <p></p>
-                        <p class="prompt">FRÅGA</p>
-                        <p></p>
-                        <p class="prompt">FRÅGA</p>
-                        <p></p>
+                        <p class="prompt">Gick det bra att komma igång med lagrade procedurer och triggers?
+                        </p>
+                        <p>Ja då, det kändes som att det gick lätt att implementera, och kul att fördjupa sig lite mer i SQL. Fastnade med en trigger ett tag, men efter jag kunnat gå igenom några föredrag och läsa på mer så hittade jag felet.</p>
+                        <p class="prompt">Hur är din syn på att “programmera” på detta viset i databasen, jämför med traditionell SQL som exponeras i klienten?</p>
+                        <p>
+                            Det känns som det blir mer organiserat och lättare att kunna anpassa databasen om man ev. skulle behöva göra ändringar. Precis som man delar upp moduler i JavaScript, så skulle man nu kunna dela upp SQL kod och samla relevanta triggers, procedurer och andra statements i en fil. 
+                        </p>
+                        <p class="prompt">Skriv ett kort stycke (2-5 meningar) om lagrade procedurer och om triggers där du förklarar begreppen (fördel, nackdel, användningsområde) för en som inte är insatt.</p>
+                        <p>En fördel är att man kan använda funktionsliknande sql statements med procedurer och triggers.
+                            Vilket kan underlätta om det är ett statements som behövs köras ofta.
+                            Hade vi haft mer tid så hade jag gärna velat implemntera en soft delete med en trigger, då det känns som det hade varit en fördel att kunna.
+                            En nackdel kan vara att det blir svårt att debugga med triggers.</p>
+                        <p class="prompt">Något att kommentera kring arbetet med att komma igång och implementera CRUD i webbklienten?
+                        </p>
+                        <p>Svårast var att hitta ett sätt att ta bort den data som kom in ifrån csv filerna. Då den data hade främmande nycklar kopplat till andra tabeller än produkt tabellen. Då krav sa att man ej behövde tänka på koppling emellan produkt och kategori, så löst vi därför detta med att göra en Hard delete med en CONSTRAINT och DELETE ON CASCADE för dem främmande nycklar som fanns i datan.</p>
+                        <p class="prompt">Berätta om hur det gick att utföra uppgiften med din Eshop, berätta även vem du jobbade i grupp med, om någon?</p>
+                        <p>
+                            Det gick bra, då vi kunde dela ett git repo och därför se varandras kod. Vi valde dock att dela upp uppgifterna, och koda var för sig. Så viktigast för mig nu är att försäkra mig om att jag också kan förstå och följa den kod som Erik (erna21) skrivit.
+                        </p>
+                        <p class="prompt">Vilken är din TIL för detta kmom?
+                        </p>
+                        <p>
+                            I git så har jag lärt mig ur man kan dra ner bara en mapp till en annan gren, vilket var en stor fördel med tanke på hur vi la upp vårt git repo. Triggers och procedurer var också helt nytt för mig, då jag enbart jobbat i vanilla SQL innan. 
+                        </p>
                         <span class="line"></span>
                     </li>
                     <li>

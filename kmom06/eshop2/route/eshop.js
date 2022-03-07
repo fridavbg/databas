@@ -212,5 +212,21 @@ router.get("/eshop/crud", async (req, res) => {
 
     res.render("eshop/crud", data);
 });
-
 module.exports = router;
+
+/**
+ * CUSTOMERS ROUT
+ * /eshop/customer:
+ *   get:
+ *     summary: Display information of customer table
+ *     description: CRUD - READ information customer table
+ */
+router.get("/eshop/customers", async (req, res) => {
+    let data = {
+        title: `Customer |  ${sitename}`,
+    };
+
+    data.res = await eshop.showCustomers();
+
+    res.render("eshop/customers", data);
+});
