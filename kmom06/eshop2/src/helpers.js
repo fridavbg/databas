@@ -30,6 +30,9 @@ function printMenu() {
             # inv <str>: to search inventory with search word <str>
             # invadd <productid> <shelf> <number>: to add number of products to shelf
             # invdel <productid> <shelf> <number>: to remove number of products from shelf
+            # order <search>: to search order with order id, only order shows full order table
+            # picklist <orderid>: Shows pick list for <orderid>
+            # ship <orderid>: Change orderstatus for order to shipped
     `;
     console.info(message);
 }

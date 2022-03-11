@@ -9,6 +9,7 @@
 // const db = require("./src/connect_db");
 const helpers = require("./src/helpers");
 const eshop = require("./src/eshop");
+const eshop2 = require("./src/eshop2");
 
 // Read from commandline
 const readline = require("readline");
@@ -81,6 +82,27 @@ async function handleInput(line) {
             console.info(
                 `${parts[3]} products with id ${parts[1]} removed from shelf ${parts[2]}`
             );
+            break;
+        case "order":
+            // await eshop.removeFromShelf(parts[1], parts[2], parts[3]);
+            if (parts.length == 1) {
+                console.table(await eshop2.showOrder());
+            } else {
+                console.table(await eshop2.searchOrder(parts[1]));
+            }
+            break;
+        case "picklist":
+            if (parts.length == 1) {
+                console.info(`You need to enter a ordernumber`);
+            } else {
+                console.table(await eshop2.show_plocklista(parts[1]));
+            }
+            break;
+        case "ship":
+            // await eshop.removeFromShelf(parts[1], parts[2], parts[3]);
+            console.info(`ORDERSTATUS for ${parts[1]} has been changed`);
+            console.table(await eshop2.update_kundorder(parts[1]));
+            // console.table(await eshop2.update_kundorder());
             break;
         default:
             helpers.errorLog("Invalid command passed");

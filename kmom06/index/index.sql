@@ -13,7 +13,9 @@ CREATE TABLE `course`
     `code` CHAR(6),
     `nick` CHAR(12),
     `points` DECIMAL(3, 1),
-    `name` VARCHAR(60)
+    `name` VARCHAR(60),
+    PRIMARY KEY (`code`),
+    UNIQUE KEY `nick_unique` (`nick`)
 );
 
 DELETE FROM course;
@@ -30,6 +32,17 @@ VALUES
     ('PA1444', 'dbjs',      10.0, 'Webbprogrammering och databaser')
 ;
 
-SELECT * FROM course;
+-- SELECT * FROM course;
 
-EXPLAIN select * from course;
+-- EXPLAIN select * from course;
+-- SELECT * FROM course WHERE name LIKE 'Webb%';
+DELIMITER ;;
+CREATE PROCEDURE show()
+BEGIN 
+    EXPLAIN SELECT * FROM course WHERE name LIKE '%Python';
+END
+BEGIN
+    SHOW WARNINGS;
+END
+;;
+DELIMITER ;

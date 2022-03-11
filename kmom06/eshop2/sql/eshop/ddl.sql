@@ -6,8 +6,8 @@ DROP TABLE IF EXISTS faktura_rad;
 DROP TABLE IF EXISTS faktura;
 DROP TABLE IF EXISTS produkt_kategori;
 DROP TABLE IF EXISTS kundorder_produkt;
+DROP TABLE IF EXISTS kundorder_rad;
 DROP TABLE IF EXISTS kundorder;
-
 DROP TABLE IF EXISTS kund;
 DROP TABLE IF EXISTS produkt;
 DROP TABLE IF EXISTS kategori;
@@ -101,6 +101,7 @@ CREATE TABLE kundorder
 
     PRIMARY KEY (ordernummer),
     FOREIGN KEY (kund) REFERENCES kund(id)
+
 );
 
 CREATE TABLE kundorder_rad
@@ -111,6 +112,7 @@ CREATE TABLE kundorder_rad
     PRIMARY KEY (kundorder, produkt),
     FOREIGN KEY (kundorder) REFERENCES kundorder(ordernummer),
     FOREIGN KEY (produkt) REFERENCES produkt(produktkod)
+    -- INDEX
 );
 
 ----------------------------------------------------------------
@@ -188,23 +190,47 @@ CREATE TABLE logg
 -- VIEWS
 --
 
+--
+-- Out of stock
+--
+
+DROP FUNCTION IF EXISTS out_of_stock;
+DELIMITER ;;
+CREATE FUNCTION out_of_stock(
+    a_antal INT
+)
+RETURNS VARCHAR(10)
+DETERMINISTIC
+BEGIN
+    IF a_antal <= 0 THEN
+        RETURN "EJ I LAGER";
+    END IF;
+    RETURN a_antal;
+END
+;;
+
+DELIMITER ;
+
 CREATE VIEW plocklista
 AS
 SELECT
     ko.ordernummer,
     ko.kund,
-    kor.kundorder,
     kor.produkt,
-    kor.antal
+    kor.antal AS antal_bestallt,
+    s.lagerhylla,
+    out_of_stock(s.antal) AS antal_i_lager
 FROM kundorder as ko
-    INNER JOIN kundorder_rad AS kor
-        on ko.ordernummer = kor.kundorder
+    JOIN kundorder_rad AS kor
+        ON ko.ordernummer = kor.kundorder
+    JOIN stock AS s
+        on kor.produkt = s.produkt
+ORDER BY ko.ordernummer
 ;
 
 -- SHOW TABLES;
 
 -- DESCRIBE plocklista;
-
 
 -- -----------------------
 -- -- TRIGGERS
@@ -454,7 +480,6 @@ END
 ;;
 DELIMITER ;
 
-
 -- Procedure to insert in stock
 
 DELIMITER ;;
@@ -522,8 +547,100 @@ END
 ;;
 DELIMITER ;
 
-CALL delete_produkt(6);
+-- CALL delete_produkt(6);
 
+
+-- ------------------------
+-- -- ORDER 
+-- --
+
+--
+-- Procedure to show orders
+--
+DELIMITER ;;
+CREATE PROCEDURE show_orders()
+BEGIN
+    SELECT
+        k.ordernummer,
+        k.kund,
+        loggdatum(skapad, orderdatum, uppdaterad, skickad, borttagen) AS datum,
+        COUNT(kr.kundorder) AS antal,
+        orderstatus(skapad, orderdatum, uppdaterad, skickad, borttagen) AS orderstatus
+    FROM kundorder AS k
+    JOIN kundorder_rad AS kr
+    ON k.ordernummer = kr.kundorder
+    GROUP BY ordernummer;
+END
+;;
+DELIMITER ;
+
+--
+-- Procedure to search order
+--
+DELIMITER ;;
+CREATE PROCEDURE search_order(
+    a_search VARCHAR(20)
+)
+BEGIN
+    SELECT
+        k.ordernummer,
+        k.kund,
+        loggdatum(skapad, orderdatum, uppdaterad, skickad, borttagen) AS datum,
+        COUNT(kr.kundorder) AS antal,
+        orderstatus(skapad, orderdatum, uppdaterad, skickad, borttagen) AS orderstatus
+    FROM kundorder AS k
+    JOIN kundorder_rad AS kr
+    ON k.ordernummer = kr.kundorder
+    WHERE
+        k.ordernummer LIKE CONCAT('%', a_search, '%') OR
+        kr.kundorder LIKE CONCAT('%', a_search, '%') OR
+        k.kund = a_search
+    GROUP BY ordernummer
+    ;
+END
+;;
+DELIMITER ;
+
+--
+-- Procedure to show ordernum picklist
+--
+DELIMITER ;;
+CREATE PROCEDURE show_plocklista(
+    a_order_number INT
+)
+BEGIN
+    SELECT
+      *
+    FROM plocklista as pl
+    WHERE
+        pl.ordernummer LIKE CONCAT('%', a_order_number, '%') OR
+        pl.ordernummer = a_order_number
+    ;
+END
+;;
+DELIMITER ;
+
+--
+-- Procdure to update orderstatus (IF NULL) by order number
+--
+
+DELIMITER ;;
+CREATE PROCEDURE update_orderstatus(
+        a_order_number INT
+)
+BEGIN 
+    UPDATE kundorder
+    SET
+    skickad = NOW()
+    WHERE ordernummer = a_order_number
+    -- only update IF skickad IS NULL
+    AND CONCAT(skickad) IS NULL;
+    SELECT * 
+    FROM kundorder
+    WHERE ordernummer = a_order_number;
+END
+;;
+DELIMITER ;
 
 -- -----------------------
 -- -- FUNCTIONS
@@ -563,26 +680,36 @@ END
 
 DELIMITER ;
 
+--
+-- Date Formating
+-- 
 
+DROP FUNCTION IF EXISTS loggdatum;
+DELIMITER ;;
 
--- CREATE FUNCTION orderstatus(
---     a_skapad TIMESTAMP,
---     a_beställd TIMESTAMP,
---     a_uppdaterad TIMESTAMP,
---     a_raderad TIMESTAMP
--- )
--- RETURNS CHAR(10)
--- DETERMINISTIC
--- BEGIN
---     IF a_raderad IS NOT NULL THEN
---         RETURN 'Raderad'
---     ELSEIF a_uppdaterad IS NOT NULL THEN
---         RETURN 'Uppdaterad';
---     ELSEIF a_beställd IS NOT NULL THEN
---         RETURN 'Beställd';
---     ELSEIF a_skapad IS NOT NULL THEN
---         RETURN 'Skapad';
---     END IF;
---     RETURN 'Okänd';
--- END
--- ;;
+CREATE FUNCTION loggdatum(
+    a_skapad TIMESTAMP,
+    a_beställd TIMESTAMP,
+    a_uppdaterad TIMESTAMP,
+    a_skickad TIMESTAMP,
+    a_raderad TIMESTAMP
+)
+RETURNS DATE
+DETERMINISTIC
+BEGIN
+    IF a_raderad IS NOT NULL THEN
+        RETURN a_raderad;
+    ELSEIF a_skickad IS NOT NULL THEN
+        RETURN a_skickad;
+    ELSEIF a_uppdaterad IS NOT NULL THEN
+        RETURN a_uppdaterad;
+    ELSEIF a_beställd IS NOT NULL THEN
+        RETURN a_beställd;
+    ELSEIF a_skapad IS NOT NULL THEN
+        RETURN a_skapad;
+    END IF;
+    RETURN 'Okänt';
+END
+;;
+
+DELIMITER ;

@@ -10,4 +10,4 @@ source ddl.sql;
 source insert.sql;
 
 -- Tabell koll
--- SHOW FULL TABLES;
+SELECT * FROM kundorder;

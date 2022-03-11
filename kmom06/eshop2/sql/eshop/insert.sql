@@ -72,6 +72,7 @@ LINES
 IGNORE 1 LINES
 ;
 
+
 --
 -- -- KRAV 5 att lägga in ordrar med olika status:
 --
@@ -84,6 +85,17 @@ VALUES
     (11123, 3, NOW(), NOW(), NULL, NULL),
     (29304, 4, NULL, NULL, NOW(), NULL),
     (99874, 5, NULL, NULL, NULL, NOW())
+;
+
+LOAD DATA LOCAL INFILE 'kundorder_rad.csv'
+INTO TABLE kundorder_rad
+CHARSET utf8
+FIELDS
+    TERMINATED BY ','
+    ENCLOSED BY '"'
+LINES
+    TERMINATED BY '\n'
+IGNORE 1 LINES
 ;
 
 -- INSERT INTO
@@ -111,19 +123,20 @@ VALUES
 --     WHERE ordernummer = 54542
 -- ;
 
--- INSERT INTO
---     kundorder_rad(kundorder, produkt)
--- VALUES
---     (11123, 3)
--- ;
+/* INSERT INTO
+        kundorder_rad(kundorder, produkt)
+    VALUES
+    (11123, 3, 10)
+; */
 
--- UPDATE kundorder_rad
--- SET
---     antal = 10
--- WHERE
---     kundorder = 11123 AND
---     produkt = 3
--- ;
+/* 
+UPDATE kundorder_rad
+SET
+    antal = 10
+WHERE
+    kundorder = 11123 AND
+    produkt = 3
+; */
 
 -- DELETE FROM
 --     kundorder_rad
@@ -146,7 +159,7 @@ VALUES
 -- ;
 
 
-SELECT * FROM kund;
+-- SELECT * FROM kundorder_rad;
 -- SELECT * FROM produkt;
 -- SELECT * FROM kategori;
 -- SELECT * FROM produkt_kategori;
@@ -163,14 +176,14 @@ SELECT * FROM kund;
 -- -- TESTING ORDERSTATUS
 --
 
-SELECT * FROM kundorder
+/* SELECT * FROM kundorder
 ORDER BY kund;
 
 SELECT
     kund,
     orderstatus(skapad, orderdatum, uppdaterad, skickad, borttagen) AS orderstatus
 FROM kundorder
-ORDER BY kund;
+ORDER BY kund; */
 
 --
 -- -- TESTING INDEX!!!!!
@@ -217,9 +230,9 @@ ORDER BY kund;
 
 
 
-EXPLAIN stock;
+-- EXPLAIN stock;
 
-EXPLAIN
+/* EXPLAIN
 SELECT
     s.produkt,
     p.produktnamn,
@@ -228,9 +241,9 @@ SELECT
 FROM stock as s
     JOIN produkt AS p
         on s.produkt = p.produktkod
-;
+; */
 
-
+/* 
 EXPLAIN
 SELECT
     s.produkt,
@@ -245,16 +258,16 @@ WHERE
     p.produktnamn LIKE CONCAT('%', "kaffe", '%') OR
     s.lagerhylla = "kaffe" OR
     s.antal = "kaffe"
-;
+; */
 
-EXPLAIN
+/* EXPLAIN
 INSERT INTO
     stock(produkt, lagerhylla, antal)
 VALUES
     ("a_produktkod", 5, 200)
 ON DUPLICATE KEY UPDATE
     antal = antal + 200
-;
+; */
 
 -- EXPLAIN
 -- UPDATE
@@ -272,10 +285,10 @@ ON DUPLICATE KEY UPDATE
 --     produktkod = 2;
 
 
-EXPLAIN
+/* EXPLAIN
 SELECT
     kund,
     orderstatus(skapad, orderdatum, uppdaterad, skickad, borttagen) AS orderstatus
 FROM kundorder
-ORDER BY kund;
+ORDER BY kund; */
 
