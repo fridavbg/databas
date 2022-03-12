@@ -1,0 +1,26 @@
+<%- include("../partials/header.ejs", {title: title}); %>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content">
+    <% res = res[0] %>
+    <form class="label-left" method="post" action="/bank/edit">
+        <fieldset>
+            <legend>Edit account</legend>
+    
+            <label for="id">Id</label>
+            <input id="id" type="text" name="id" readonly value="<%= res.id %>">
+    
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" readonly value="<%= res.name %>">
+    
+            <label for="balance">Balance</label>
+            <input id="balance" type="number" name="balance" readonly value="<%= res.balance %>">
+    
+            <input type="submit" name="doit" value="Delete">
+        </fieldset>
+    </form>
+    
+</div>
+
+<%- include("../partials/footer.ejs"); %>

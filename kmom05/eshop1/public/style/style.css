@@ -1,0 +1,175 @@
+/* Google Font CDN Link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/* BACKGROUND */
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(
+        -60deg,
+        rgb(5, 5, 5) 50%,
+        rgb(85, 55, 3) 50%
+    );
+    bottom: 0;
+    left: -50%;
+    opacity: 0.5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0.25em;
+    box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.25);
+    text-align: center;
+    padding: 2em;
+    height: 500px;
+    overflow: auto;
+    float: left;
+    position: relative;
+    margin-left: -5px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+/* NAVBAR */
+header {
+    width: 100%;
+    text-align: center;
+}
+
+header nav {
+    background-color: #ccc;
+    overflow: hidden;
+    padding: 1em;
+    border-bottom: 1px solid #000;
+    margin-bottom: 2em;
+    border-radius: 25px;
+}
+
+header nav a {
+    color: #000;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: rgb(245, 236, 236);
+}
+
+/* TEXT */
+
+p {
+    margin: 1em;
+}
+
+/* IMAGE */
+
+.img {
+    width: 200px;
+}
+
+
+/* LINKS */
+
+.link {
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 7px;
+    box-shadow: 5px 10px rgb(85, 55, 3);
+}
+
+.link:hover {
+    color: rgb(85, 55, 3);
+    box-shadow: 5px 10px #0c0c0c;
+}
+
+/* LIST */
+
+ul {
+    margin: 1em;
+    padding: 0.5em;
+}
+
+/* TABLE */
+
+table {
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* FORM */
+
+form {
+    margin: 1em;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+legend {
+    margin: 0.5em;
+}
+input {
+    text-align: center;
+    padding: 0.1em;
+    margin: 1em;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: #ccc;
+    overflow: hidden;
+    border-bottom: 1px solid #000;
+    margin-top: 2em;
+    border-radius: 25px;
+    padding: 1em;
+    padding: 0.5em;
+}

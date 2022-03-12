@@ -1,0 +1,30 @@
+<%- include("../partials/header.ejs", {title: title}); %>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content">
+    <h1>Product Delete</h1>
+    <% res = res[0] %>
+    <form class="label-left" method="post" action="/eshop/delete">
+        <fieldset>
+            <legend>Radera produkt</legend>
+    
+            <label for="produktkod">Produktkod</label>
+            <input id="produktkod" type="text" name="produktkod" readonly value="<%= res.produktkod %>">
+    
+            <label for="produktnamn">Produktnamn</label>
+            <input id="produktnamn" type="text" name="produktnamn" readonly value="<%= res.produktnamn %>">
+    
+            <label for="produktbeskrivning">Produktbeskrivning</label>
+            <input id="produktbeskrivning" type="text" name="produktbeskrivning" readonly value="<%= res.produktbeskrivning %>">
+
+            <label for="produktpris">Produktpris</label>
+            <input id="produktpris" type="number" name="produktpris" readonly value="<%= res.produktpris %>">
+    
+            <input class="link" type="submit" name="doit" value="Hard Delete">
+        </fieldset>
+    </form>
+    <a href="/eshop/crud" class="link">Go back</a>
+</div>
+
+<%- include("../partials/footer.ejs"); %>

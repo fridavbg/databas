@@ -1,0 +1,32 @@
+<%- include("../partials/header.ejs", {title: title}); %>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content">
+    <h1>Kunder</h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Namn</th>
+            <th>Adress</th>
+            <th>Telefonnummer</th>
+            <th>Mail</th>
+        </tr>
+        <% for (const row of res) { %>
+        <tr>
+            <td><%= row.id %></td>
+            <td><%= row.namn %></td>
+            <td><%= row.adress %></td>
+            <td>+<%= row.telefonnummer %></td>
+            <td><%= row.mail %></td>
+            <td>
+                <a href="/eshop/order/create/<%= row.id  %> " class="link"> Skapa order</a>
+                </a>
+            </td>
+        </tr>
+        <% }; %>
+    </table>
+    <a href="/eshop/crud" class="link">Go back</a>
+</div>
+
+<%- include("../partials/footer.ejs"); %>

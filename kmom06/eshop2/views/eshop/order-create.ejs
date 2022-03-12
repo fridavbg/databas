@@ -1,0 +1,35 @@
+<%- include("../partials/header.ejs", {title: title}); %>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content">
+    <h1>Kund</h1>
+    <% res=res[0] %>
+        <form class="label-left" method="post" action="/eshop/order/create">
+            <fieldset>
+                <legend>Gör beställning</legend>
+
+                <label for="id">id</label>
+                <input id="id" type="number" name="id" readonly value="<%= res.id %>">
+
+                <label for="namn">namn</label>
+                <input id="namn" type="text" name="namn" readonly value="<%= res.namn %>">
+
+                <label for="adress">adress</label>
+                <input id="adress" type="text" name="adress" readonly
+                    value="<%= res.adress %>">
+
+                <label for="telefonnummer">telefonnummer</label>
+                <input id="telefonnummer" type="number" name="telefonnummer" readonly value="<%= res.telefonnummer %>">
+
+                <label for="mail">mail</label>
+                <input id="mail" type="text" name="mail" readonly value="<%= res.mail %>">
+
+                <input class="link" type="submit" name="doit" value="Skapa beställning">
+            </fieldset>
+        </form>
+        <a href="/eshop/customers" class="link">Tillbaka</a>
+
+</div>
+
+<%- include("../partials/footer.ejs"); %>
