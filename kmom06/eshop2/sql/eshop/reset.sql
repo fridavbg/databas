@@ -13,3 +13,5 @@ source insert.sql;
 -- SHOW FULL TABLES;
 
 SELECT * FROM kundorder;
+SELECT * FROM kundorder_rad;
+

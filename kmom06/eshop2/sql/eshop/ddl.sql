@@ -287,7 +287,7 @@ END
 ;;
 DELIMITER ;
 
-CALL show_category();
+-- CALL show_category();
 
 --
 -- Procedure to show product table + stock antal
