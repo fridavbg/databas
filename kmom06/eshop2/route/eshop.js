@@ -215,7 +215,7 @@ router.get("/eshop/crud", async (req, res) => {
 module.exports = router;
 
 /**
- * CUSTOMERS ROUT
+ * CUSTOMERS ROUTE
  * /eshop/customer:
  *   get:
  *     summary: Display information of customer table
@@ -229,4 +229,129 @@ router.get("/eshop/customers", async (req, res) => {
     data.res = await eshop.showCustomers();
 
     res.render("eshop/customers", data);
+});
+
+/**
+ * CREATE ORDER ROUTE
+ * /eshop/customers/:id:
+ *   get:
+ *     summary: Display information of a customer
+ *     description: CRUD - Create new order
+ */
+router.get("/eshop/order/create/:id", async (req, res) => {
+    let id = req.params.id;
+    let data = {
+        title: `Create order for ${id} ${sitename}`,
+    };
+
+    data.res = await eshop.showIndividualCustomer(id);
+
+    res.render("eshop/order-create", data);
+});
+
+/**
+ * CREATE ORDER ROUTE
+ * /eshop/order/create:
+ *   get:
+ *     summary: Display information of a customer
+ *     description: CRUD - Create new order
+ */
+router.post("/eshop/order/create", urlencodedParser, async (req, res) => {
+    console.log(JSON.stringify(req.body, null, 4));
+    // console.log(req.body.id);
+    await eshop.createOrder(req.body.id);
+    res.redirect(`/eshop/order`);
+});
+
+/**
+ * ORDER ROUTE
+ * /eshop/order:
+ *   get:
+ *     summary: Display information of order
+ *     description: CRUD - READ information order
+ */
+router.get("/eshop/order", async (req, res) => {
+    let data = {
+        title: `Order |  ${sitename}`,
+    };
+
+    data.res = await eshop.showOrders();
+
+    res.render("eshop/order", data);
+});
+
+/**
+ * ORDER SHOW ROUTE
+ * /eshop/order/show/:ordernummer:
+ *   get:
+ *     summary: Display information of individual order
+ *     description: CRUD - READ information order
+ */
+router.get("/eshop/order/show/:ordernummer", async (req, res) => {
+    let ordernummer = req.params.ordernummer;
+    let data = {
+        title: `Show order with ${ordernummer} ${sitename}`,
+    };
+
+    data.res = await eshop.showSpecificOrder(ordernummer);
+    data.res2 = await eshop.showSpecificOrderRows(ordernummer);
+
+    res.render("eshop/order-specific", data);
+});
+
+
+/**
+ * CHANGE ORDER STATUS
+ * /eshop/order/add/show:
+ *   get:
+ *     summary: Change order status to "beställd"
+ *     description: CRUD - Change order status to "beställd"
+ */
+router.post("/eshop/order/show", urlencodedParser, async (req, res) => {
+    console.log(JSON.stringify(req.body, null, 4));
+    await eshop.setOrderDate(
+        req.body.ordernummer
+    );
+    res.redirect(`/eshop/order`);
+});
+
+
+
+/**
+ * ORDER SHOW PRODUCTS TO ADD
+ * /eshop/order/add/:ordernummer:
+ *   get:
+ *     summary: Display information of order
+ *     description: CRUD - READ information order
+ */
+router.get("/eshop/order/add/:ordernummer", async (req, res) => {
+    let ordernummer = req.params.ordernummer;
+    // OBS, vi använder ordernumret bara för
+    // att komma tillbaka till rätt varukorg sen
+    let data = {
+        title: `Show order with ${ordernummer} ${sitename}`,
+    };
+
+    data.res = await eshop.showProduct();
+    data.ordernummer = ordernummer;
+
+    res.render("eshop/order-add", data);
+});
+
+
+/**
+ * ADD TO ORDER ROUTE
+ * /eshop/order/add:
+ *   get:
+ *     summary: Add to shop list
+ *     description: CRUD - Add to shop list
+ */
+router.post("/eshop/order/add", urlencodedParser, async (req, res) => {
+    console.log(JSON.stringify(req.body, null, 4));
+    await eshop.insertOrderRow(
+        req.body.ordernummer,
+        req.body.produktkod,
+        req.body.quantity
+    );
+    res.redirect(`/eshop/order/show/` + req.body.ordernummer);
 });

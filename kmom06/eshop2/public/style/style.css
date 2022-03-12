@@ -90,7 +90,9 @@ header nav a:hover {
 }
 
 /* TEXT */
-
+h2 {
+    margin: 10px;
+}
 p {
     margin: 1em;
 }
@@ -111,6 +113,7 @@ p {
     text-decoration: none;
     padding: 7px;
     box-shadow: 5px 10px rgb(85, 55, 3);
+    margin: 10px;
 }
 
 .link:hover {
@@ -158,6 +161,9 @@ input {
     text-align: center;
     padding: 0.1em;
     margin: 1em;
+}
+.hidden {
+    display: none;
 }
 
 /* FOOTER */

@@ -13,9 +13,13 @@ CREATE TABLE `course`
     `code` CHAR(6),
     `nick` CHAR(12),
     `points` DECIMAL(3, 1),
+<<<<<<< HEAD
+    `name` VARCHAR(60)
+=======
     `name` VARCHAR(60),
     PRIMARY KEY (`code`),
     UNIQUE KEY `nick_unique` (`nick`)
+>>>>>>> Frida
 );
 
 DELETE FROM course;
@@ -32,6 +36,11 @@ VALUES
     ('PA1444', 'dbjs',      10.0, 'Webbprogrammering och databaser')
 ;
 
+<<<<<<< HEAD
+SELECT * FROM course;
+
+EXPLAIN select * from course;
+=======
 -- SELECT * FROM course;
 
 -- EXPLAIN select * from course;
@@ -46,3 +55,4 @@ BEGIN
 END
 ;;
 DELIMITER ;
+>>>>>>> Frida

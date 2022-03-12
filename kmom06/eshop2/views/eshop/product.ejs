@@ -21,10 +21,10 @@
             <td><%= row.produktkod %></td>
             <td><%= row.produktnamn %></td>
             <td><%= row.produktbeskrivning %></td>
-            <td><%= row.produktpris %></td>
+            <td><%= row.produktpris %> kr</td>
             <td>
                 <% if (row.antal) { %>
-                    <%= row.antal %>
+                    <%= row.antal %> st
                 <%} else { %>
                     Tillfälligt slut
                 <% } %>
@@ -32,7 +32,6 @@
         </tr>
         <% }; %>
     </table>
-    
 </div>
 
 <%- include("../partials/footer.ejs"); %>

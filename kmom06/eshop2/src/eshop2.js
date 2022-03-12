@@ -7,8 +7,8 @@
 module.exports = {
     searchOrder: searchOrder,
     showOrder: showOrder,
-    show_plocklista: show_plocklista,
-    update_kundorder: update_kundorder,
+    showPlocklista: showPlocklista,
+    updateKundOrder: updateKundOrder,
 };
 
 const mysql = require("promise-mysql");
@@ -76,7 +76,7 @@ async function searchOrder(searchWord) {
  * @param {string} orderNumber      Search on this number.
  * @returns {RowDataPacket} Resultset from the query.
  */
-async function show_plocklista(orderNumber) {
+async function showPlocklista(orderNumber) {
     let sql;
 
     sql = `CALL show_plocklista('${orderNumber}');`;
@@ -97,7 +97,7 @@ async function show_plocklista(orderNumber) {
  * @param {string} orderNumber      Search on this number.
  * @returns {RowDataPacket} Resultset from the query.
  */
-async function update_kundorder(orderNumber) {
+async function updateKundOrder(orderNumber) {
     let sql;
 
     sql = `CALL update_orderstatus('${orderNumber}');`;

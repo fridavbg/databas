@@ -6,6 +6,13 @@
 
 module.exports = {
     showCustomers: showCustomers,
+    showIndividualCustomer: showIndividualCustomer,
+    createOrder: createOrder,
+    showOrders: showOrders,
+    showSpecificOrder: showSpecificOrder,
+    showSpecificOrderRows: showSpecificOrderRows,
+    insertOrderRow: insertOrderRow,
+    setOrderDate: setOrderDate,
     showCategory: showCategory,
     showProduct: showProduct,
     showProductkod: showProductkod,
@@ -172,8 +179,135 @@ async function showCustomers() {
     let res;
 
     res = await db.query(sql);
-    console.log(res);
+    // console.log(res);
     console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
+
+/**
+ * Show all entries in the categories table.
+ *
+ * @async
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+
+async function showIndividualCustomer(kundId) {
+    let sql = `CALL show_individual_customer(?);`;
+    let res;
+
+    res = await db.query(sql, [kundId]);
+    // console.log(res);
+    console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
+
+/**
+ * Show all entries in the categories table.
+ *
+ * @async
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+
+async function createOrder(kundId) {
+    let sql = `CALL create_order(?);`;
+
+    let res;
+
+    console.log(kundId);
+
+    res = await db.query(sql, [kundId]);
+    console.log(res[0]);
+    console.info(`SQL: ${sql} got ${res.length} rows.`);
+}
+
+/**
+ * Show all entries in the categories table.
+ *
+ * @async
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+
+async function showOrders() {
+    let sql = `CALL show_orders();`;
+    let res;
+
+    res = await db.query(sql);
+    console.log(res[0]);
+    // console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
+
+/**
+ * Show all entries in the categories table.
+ *
+ * @async
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+
+async function showSpecificOrder(ordernummer) {
+    let sql = `CALL show_specific_order(?);`;
+    let res;
+
+    res = await db.query(sql, [ordernummer]);
+    console.log(res[0]);
+    // console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
+
+/**
+ * Show all entries in the categories table.
+ *
+ * @async
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+
+async function showSpecificOrderRows(ordernummer) {
+    let sql = `CALL show_specific_order_rows(?);`;
+    let res;
+
+    res = await db.query(sql, [ordernummer]);
+    console.log(res[0]);
+    // console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
+
+/**
+ * Show all entries in the categories table.
+ *
+ * @async
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+
+async function insertOrderRow(ordernummer, produktkod, antal) {
+    let sql = `CALL insert_order_rad(?, ?, ?);`;
+    let res;
+
+    res = await db.query(sql, [ordernummer, produktkod, antal]);
+    console.log(res[0]);
+    // console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
+
+/**
+ * Show all entries in the categories table.
+ *
+ * @async
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+
+async function setOrderDate(ordernummer) {
+    let sql = `CALL set_orderdatum(?);`;
+    let res;
+
+    res = await db.query(sql, [ordernummer]);
+    console.log(res[0]);
+    // console.info(`SQL: ${sql} got ${res.length} rows.`);
 
     return res[0];
 }

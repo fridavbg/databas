@@ -1,0 +1,52 @@
+<%- include("../partials/header.ejs", {title: title}); %>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content">
+
+    <h1>Lägg till produkter</h1>
+    <table>
+        <tr>
+            <th>Produktkod</th>
+            <th>Produktnamn</th>
+            <th>Produktbeskrivning</th>
+            <th>Produktpris</th>
+            <th>Lagerstatus</th>
+        </tr>
+        <% for (const row of res) { %>
+            <tr>
+                <td>
+                    <%= row.produktkod %>
+                </td>
+                <td>
+                    <%= row.produktnamn %>
+                </td>
+                <td>
+                    <%= row.produktbeskrivning %>
+                </td>
+                <td>
+                    <%= row.produktpris %> kr
+                </td>
+                <td>
+                    <% if (row.antal) { %>
+                        <%= row.antal %> st
+                    <%} else { %>
+                        Tillfälligt slut
+                    <% } %>
+                </td>
+                <td>
+                    <form class="label-left" method="post" action="/eshop/order/add">
+                        <input class = "hidden" type="number" id="ordernummer" name="ordernummer" value="<%= ordernummer %>">
+                        <input class = "hidden" type="number" id="produktkod" name="produktkod" value="<%= row.produktkod %>">
+                        <input type="number" id="quantity" name="quantity" value="0" min="0">
+                        <input class="link" type="submit" name="doit" value="Lägg till">
+                    </form>
+                </td>
+            </tr>
+            <% }; %>
+    </table>
+
+    <a href="/eshop/order/show/<%= ordernummer %>" class="link"> Tillbaka till beställning</a>
+</div>
+
+<%- include("../partials/footer.ejs"); %>

@@ -1,0 +1,73 @@
+<%- include("../partials/header.ejs", {title: title}); %>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content">
+    <h1>Beställning</h1>
+    <table>
+        <tr>
+            <th>Ordernummer</th>
+            <th>KundId</th>
+            <th>Orderdatum</th>
+            <th>Status</th>
+        </tr>
+        <% for (const row of res) { %>
+        <tr>
+            <td><%= row.ordernummer %></td>
+            <td><%= row.kund %></td>
+            <td>
+                <% if (row.orderdatum) {%>
+                <%= row.orderdatum %>
+                <%} else { %>
+                    Ej beställd
+                <%} %>
+            </td>
+            <td><%= row.orderstatus %></td>
+        </tr>
+        <% }; %>
+    </table>
+    <h1>Varukorg</h1>
+    <table>
+        <tr>
+            <th>Produktkod</th>
+            <th>Produktnamn</th>
+            <th>Beskrivning</th>
+            <th>Pris</th>
+            <th>Antal</th>
+        </tr>
+        <% let totalkostnad = 0 %>
+        <% for (const row of res2) { %>
+            <tr>
+                <td>
+                    <%= row.produktkod %>
+                </td>
+                <td>
+                    <%= row.produktnamn %>
+                </td>
+                <td>
+                    <%= row.produktbeskrivning %>
+                </td>
+                <td>
+                    <%= row.produktpris %> kr
+                </td>
+                <td>
+                    <%= row.antal %> st
+                </td>
+            </tr>
+            <% totalkostnad += row.produktpris * row.antal %>
+            <% }; %>
+        </table>
+
+    <% res=res[0] %>
+    <h2>Total kostnad: <%= totalkostnad %> kr</h2>
+
+    <a href="/eshop/order/add/<%= res.ordernummer  %> " class="link"> Lägg till nya produkter </a>
+    <% if (res2[0]) { %>
+    <form class="label-left" method="post" action="/eshop/order/show">
+        <input class="hidden" type="number" id="ordernummer" name="ordernummer" value="<%= res.ordernummer %>">
+        <input class="link" type="submit" name="doit" value="Beställ">
+    </form>
+    <% }; %>
+</div>
+
+<%- include("../partials/footer.ejs"); %>

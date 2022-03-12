@@ -95,14 +95,21 @@ async function handleInput(line) {
             if (parts.length == 1) {
                 console.info(`You need to enter a ordernumber`);
             } else {
-                console.table(await eshop2.show_plocklista(parts[1]));
+                const data = await eshop2.showPlocklista(parts[1]);
+
+                for (const row of data) {
+                    if (row.antal_i_lager === 0) {
+                        row.antal_i_lager = "EJ I LAGER";
+                    }
+                }
+                console.table(data);
             }
+
             break;
         case "ship":
             // await eshop.removeFromShelf(parts[1], parts[2], parts[3]);
             console.info(`ORDERSTATUS for ${parts[1]} has been changed`);
-            console.table(await eshop2.update_kundorder(parts[1]));
-            // console.table(await eshop2.update_kundorder());
+            console.table(await eshop2.updateKundOrder(parts[1]));
             break;
         default:
             helpers.errorLog("Invalid command passed");

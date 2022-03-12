@@ -3,12 +3,11 @@
 <div class="bg bg2"></div>
 <div class="bg bg3"></div>
 <div class="content">
-    <h1>Customer overview</h1>
+    <h1>Kunder</h1>
     <table>
         <tr>
             <th>Id</th>
-            <th>Förnamn</th>
-            <th>Efternamn</th>
+            <th>Namn</th>
             <th>Adress</th>
             <th>Telefonnummer</th>
             <th>Mail</th>
@@ -16,14 +15,13 @@
         <% for (const row of res) { %>
         <tr>
             <td><%= row.id %></td>
-            <td><%= row.fornamn %></td>
-            <td><%= row.efternamn %></td>
+            <td><%= row.namn %></td>
             <td><%= row.adress %></td>
-            <td><%= row.telefonnummer %></td>
+            <td>+<%= row.telefonnummer %></td>
             <td><%= row.mail %></td>
             <td>
-                Order
-                <!-- Gör om till länk -->
+                <a href="/eshop/order/create/<%= row.id  %> " class="link"> Skapa order</a>
+                </a>
             </td>
         </tr>
         <% }; %>

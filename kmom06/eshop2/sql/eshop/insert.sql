@@ -6,6 +6,9 @@
 -- OBS, många LOAD DATA... kan man kanske skapa en funktion för det?
 -- Har provat procedur men LOAD DATA är inte tillåtet innanför en procedur
 
+EXPLAIN stock;
+EXPLAIN produkt;
+
 LOAD DATA LOCAL INFILE 'kund.csv'
 INTO TABLE kund
 CHARSET utf8
@@ -16,6 +19,7 @@ LINES
     TERMINATED BY '\n'
 IGNORE 1 LINES
 ;
+
 
 LOAD DATA LOCAL INFILE 'produkt.csv'
 INTO TABLE produkt
@@ -73,19 +77,21 @@ IGNORE 1 LINES
 ;
 
 
+
 --
 -- -- KRAV 5 att lägga in ordrar med olika status:
 --
 
 INSERT INTO
-    kundorder(ordernummer, kund, orderdatum, uppdaterad, skickad, borttagen)
+    kundorder(kund, orderdatum, uppdaterad, skickad, borttagen)
 VALUES
-    (7774, 1, NULL, NULL, NULL, NULL),
-    (54542, 2, NOW(), NULL, NULL, NULL),
-    (11123, 3, NOW(), NOW(), NULL, NULL),
-    (29304, 4, NULL, NULL, NOW(), NULL),
-    (99874, 5, NULL, NULL, NULL, NOW())
+    (1, 1, NULL, NULL, NULL, NULL),
+    (2, 2, NOW(), NULL, NULL, NULL),
+    (3, 3, NOW(), NOW(), NULL, NULL),
+    (4, 4, NULL, NULL, NOW(), NULL),
+    (5, 5, NULL, NULL, NULL, NOW())
 ;
+
 
 LOAD DATA LOCAL INFILE 'kundorder_rad.csv'
 INTO TABLE kundorder_rad
@@ -98,68 +104,9 @@ LINES
 IGNORE 1 LINES
 ;
 
--- INSERT INTO
---     kundorder(ordernummer, kund, orderdatum)
--- VALUES
---     (33433, 5, NOW())
--- ;
-
--- UPDATE kundorder
---     SET
---         kund = 2
---     WHERE
---         kund = 3
--- ;
-
--- UPDATE kundorder
---     SET
---     borttagen = NOW()
---     WHERE kund = 1
--- ;
-
--- UPDATE kundorder
---     SET
---     skickad = NOW()
---     WHERE ordernummer = 54542
--- ;
-
-/* INSERT INTO
-        kundorder_rad(kundorder, produkt)
-    VALUES
-    (11123, 3, 10)
-; */
-
-/* 
-UPDATE kundorder_rad
-SET
-    antal = 10
-WHERE
-    kundorder = 11123 AND
-    produkt = 3
-; */
-
--- DELETE FROM
---     kundorder_rad
--- WHERE
---     kundorder = 11123 AND
---     produkt = 3
--- ;
-
--- INSERT INTO
---     faktura(fakturanummer, kundorder)
--- VALUES
---     (123, 11123)
--- ;
-
--- UPDATE faktura
--- SET
---     totalpris = 300
--- WHERE
---     fakturanummer = 123
--- ;
 
 
--- SELECT * FROM kundorder_rad;
+-- SELECT * FROM kund;
 -- SELECT * FROM produkt;
 -- SELECT * FROM kategori;
 -- SELECT * FROM produkt_kategori;
@@ -170,20 +117,31 @@ WHERE
 -- SELECT * from faktura;
 -- SELECT * FROM logg;
 
+
+-- CALL show_customers();
+-- CALL show_specific_order(1);
+-- CALL show_specific_order_rows(1);
+-- CALL show_orders();
 -- CALL show_product();
+
+-- CALL create_order(5);   -- skapar order
+-- CALL insert_order_rad(5, 1, 10); --lägg in tio av en produkt
+-- CALL set_orderdatum(5); -- lägg till beställningsdatum
 
 
 -- -- TESTING ORDERSTATUS
 --
 
-/* SELECT * FROM kundorder
-ORDER BY kund;
+-- SELECT * FROM kundorder
+-- ORDER BY kund;
 
-SELECT
-    kund,
-    orderstatus(skapad, orderdatum, uppdaterad, skickad, borttagen) AS orderstatus
-FROM kundorder
-ORDER BY kund; */
+
+-- CALL show_orders();
+
+-- CALL show_specific_order(2);
+
+-- CALL show_individual_customer(2);
+
 
 --
 -- -- TESTING INDEX!!!!!
@@ -191,48 +149,43 @@ ORDER BY kund; */
 
 -- EXPLAIN SELECT * from produkt;
 
--- EXPLAIN
--- SELECT
---     p.produktkod,
---     p.produktnamn,
---     p.produktbeskrivning,
---     p.produktpris,
---     s.antal,
---     GROUP_CONCAT(k.kategori) as "kategori"
--- FROM produkt as p
---     LEFT OUTER JOIN stock as s
---         ON p.produktkod = s.produkt
---     LEFT OUTER JOIN produkt_kategori as k
---         ON p.produktkod = k.produkt
--- GROUP BY p.produktkod
--- ;
+EXPLAIN
+SELECT
+    p.produktkod,
+    p.produktnamn,
+    p.produktbeskrivning,
+    p.produktpris,
+    s.antal,
+    GROUP_CONCAT(k.kategori) as "kategori"
+FROM produkt as p
+    LEFT OUTER JOIN stock as s
+        ON p.produktkod = s.produkt
+    LEFT OUTER JOIN produkt_kategori as k
+        ON p.produktkod = k.produkt
+GROUP BY p.produktkod
+;
 
--- EXPLAIN
--- SELECT
---     *
--- FROM produkt
--- WHERE produktkod = 3;
+EXPLAIN
+SELECT
+    *
+FROM produkt
+WHERE produktkod = 3;
 
--- EXPLAIN
--- UPDATE produkt SET
---     produktnamn = "testprod",
---     produktbeskrivning = "testing testing",
---     produktpris = 300
--- WHERE
---     produktkod = 3
--- ;
-
--- EXPLAIN
--- INSERT INTO
---     produkt(produktnamn, produktbeskrivning, produktpris)
--- VALUES
---     ("testprod2", "ojojojoj", 600);
+EXPLAIN
+UPDATE produkt SET
+    produktnamn = "testprod",
+    produktbeskrivning = "testing testing",
+    produktpris = 300
+WHERE
+    produktkod = 3
+;
 
 
+EXPLAIN stock;
 
--- EXPLAIN stock;
+-- CREATE UNIQUE INDEX index_antal ON stock(antal);
 
-/* EXPLAIN
+EXPLAIN
 SELECT
     s.produkt,
     p.produktnamn,
@@ -241,9 +194,58 @@ SELECT
 FROM stock as s
     JOIN produkt AS p
         on s.produkt = p.produktkod
-; */
+;
 
-/* 
+SELECT
+    s.produkt,
+    p.produktnamn,
+    s.lagerhylla,
+    s.antal
+FROM stock as s
+    JOIN produkt AS p
+        on s.produkt = p.produktkod
+;
+
+-- CREATE INDEX index_antal ON stock(antal);
+
+
+
+EXPLAIN
+UPDATE
+    stock
+SET
+    antal = antal - 20
+WHERE
+    produkt = 2 AND
+    lagerhylla = 2
+;
+
+EXPLAIN
+DELETE FROM produkt
+WHERE
+    produktkod = 2;
+
+-- CREATE INDEX index_orderdatum ON kundorder(orderdatum);
+
+EXPLAIN
+SELECT
+    kund,
+    orderstatus(skapad, orderdatum, uppdaterad, skickad, borttagen) AS orderstatus
+FROM kundorder
+ORDER BY kund;
+
+EXPLAIN
+    SELECT
+        p.produktkod,
+        p.produktnamn,
+        p.produktbeskrivning,
+        p.produktpris,
+        k.antal
+    FROM kundorder_rad AS k
+    JOIN produkt AS p
+    ON k.produkt = p.produktkod
+    WHERE k.kundorder = 3;
+
 EXPLAIN
 SELECT
     s.produkt,
@@ -254,41 +256,8 @@ FROM stock as s
     JOIN produkt AS p
         on s.produkt = p.produktkod
 WHERE
-    s.produkt = "kaffe" OR
-    p.produktnamn LIKE CONCAT('%', "kaffe", '%') OR
-    s.lagerhylla = "kaffe" OR
-    s.antal = "kaffe"
-; */
-
-/* EXPLAIN
-INSERT INTO
-    stock(produkt, lagerhylla, antal)
-VALUES
-    ("a_produktkod", 5, 200)
-ON DUPLICATE KEY UPDATE
-    antal = antal + 200
-; */
-
--- EXPLAIN
--- UPDATE
---     stock
--- SET
---     antal = antal - 20
--- WHERE
---     produkt = 2 AND
---     lagerhylla = 2
--- ;
-
--- EXPLAIN
--- DELETE FROM produkt
--- WHERE
---     produktkod = 2;
-
-
-/* EXPLAIN
-SELECT
-    kund,
-    orderstatus(skapad, orderdatum, uppdaterad, skickad, borttagen) AS orderstatus
-FROM kundorder
-ORDER BY kund; */
-
+    s.produkt = 54 OR
+    p.produktnamn LIKE CONCAT('%', 54, '%') OR
+    s.lagerhylla = 54 OR
+    s.antal = 54
+;

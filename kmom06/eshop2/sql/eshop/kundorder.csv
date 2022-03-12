@@ -1,0 +1,6 @@
+ordernummer,kund,orderdatum,uppdaterad,skickad,borttagen
+7774,1,NOW(),,,,
+54542,2,NOW(),,,,
+11123,3,NOW(), NOW(),,,
+29304,4,NOW(),, NOW(),,
+99874,5,NOW(),,,NOW()

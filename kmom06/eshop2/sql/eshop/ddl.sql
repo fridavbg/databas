@@ -12,9 +12,6 @@ DROP TABLE IF EXISTS kund;
 DROP TABLE IF EXISTS produkt;
 DROP TABLE IF EXISTS kategori;
 
--- VIEW DROPS
-DROP VIEW IF EXISTS plocklista;
-
 -- TRIGGER DROPS
 DROP TRIGGER IF EXISTS log_insert_kundorder;
 DROP TRIGGER IF EXISTS log_update_kundorder;
@@ -25,6 +22,8 @@ DROP TRIGGER IF EXISTS log_insert_faktura;
 DROP TRIGGER IF EXISTS log_update_faktura;
 
 -- PROCEDURE DROPS
+DROP PROCEDURE IF EXISTS show_orders;
+DROP PROCEDURE IF EXISTS show_customers;
 DROP PROCEDURE IF EXISTS show_category;
 DROP PROCEDURE IF EXISTS show_product;
 DROP PROCEDURE IF EXISTS show_productkod;
@@ -50,7 +49,8 @@ CREATE TABLE produkt
     produktbeskrivning VARCHAR(50),
     produktpris INT,
 
-    PRIMARY KEY (produktkod)
+    PRIMARY KEY (produktkod),
+    UNIQUE KEY index_produktnamn (produktnamn)
 );
 
 CREATE TABLE kategori
@@ -94,14 +94,13 @@ CREATE TABLE kundorder
     ordernummer INT AUTO_INCREMENT,
     kund INT,
     skapad DATETIME DEFAULT CURRENT_TIMESTAMP,
-    orderdatum DATETIME,
+    orderdatum DATETIME DEFAULT NULL,
     uppdaterad DATETIME DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
-    skickad DATETIME,
-    borttagen DATETIME,
+    skickad DATETIME DEFAULT NULL,
+    borttagen DATETIME DEFAULT NULL,
 
     PRIMARY KEY (ordernummer),
     FOREIGN KEY (kund) REFERENCES kund(id)
-
 );
 
 CREATE TABLE kundorder_rad
@@ -112,7 +111,6 @@ CREATE TABLE kundorder_rad
     PRIMARY KEY (kundorder, produkt),
     FOREIGN KEY (kundorder) REFERENCES kundorder(ordernummer),
     FOREIGN KEY (produkt) REFERENCES produkt(produktkod)
-    -- INDEX
 );
 
 ----------------------------------------------------------------
@@ -189,45 +187,25 @@ CREATE TABLE logg
 ----------------------
 -- VIEWS
 --
-
---
--- Out of stock
---
-
-DROP FUNCTION IF EXISTS out_of_stock;
-DELIMITER ;;
-CREATE FUNCTION out_of_stock(
-    a_antal INT
-)
-RETURNS VARCHAR(10)
-DETERMINISTIC
-BEGIN
-    IF a_antal <= 0 THEN
-        RETURN "EJ I LAGER";
-    END IF;
-    RETURN a_antal;
-END
-;;
-
-DELIMITER ;
+-- VIEW DROPS
+DROP VIEW IF EXISTS plocklista;
 
 CREATE VIEW plocklista
 AS
 SELECT
-    ko.ordernummer,
-    ko.kund,
-    kor.produkt,
-    kor.antal AS antal_bestallt,
+    k.ordernummer,
+    k.kund,
+    kr.produkt,
+    kr.antal AS antal_bestallt,
     s.lagerhylla,
-    out_of_stock(s.antal) AS antal_i_lager
-FROM kundorder as ko
-    JOIN kundorder_rad AS kor
-        ON ko.ordernummer = kor.kundorder
+    s.antal AS antal_i_lager
+FROM kundorder as k
+    JOIN kundorder_rad AS kr
+        ON k.ordernummer = kr.kundorder
     JOIN stock AS s
-        on kor.produkt = s.produkt
-ORDER BY ko.ordernummer
+        on kr.produkt = s.produkt
+ORDER BY k.ordernummer
 ;
-
 -- SHOW TABLES;
 
 -- DESCRIBE plocklista;
@@ -293,7 +271,6 @@ ON faktura FOR EACH ROW
     INSERT INTO logg (kundorder, faktura, loggdatum, kommentar)
         VALUES (NEW.kundorder, NEW.fakturanummer, NEW.fakturadatum, 'faktura ändrad')
 ;
-
 
 -- -----------------------
 -- -- PROCEDURES
@@ -524,17 +501,207 @@ DELIMITER ;
 --
 -- Procedure to show customers
 --
+DROP PROCEDURE IF EXISTS show_customers;
+
 DELIMITER ;;
 CREATE PROCEDURE show_customers()
 BEGIN
-    SELECT * FROM kund;
+    SELECT
+        id,
+        CONCAT(fornamn, ' ', efternamn) AS namn,
+        adress,
+        telefonnummer,
+        mail
+    FROM kund
+    ;
 END
 ;;
 DELIMITER ;
 
 --
--- Create procedure for delete produkt
+-- Procedure to show customers
 --
+DROP PROCEDURE IF EXISTS show_individual_customer;
+
+DELIMITER ;;
+CREATE PROCEDURE show_individual_customer(
+    a_id INT
+)
+BEGIN
+    SELECT
+        id,
+        CONCAT(fornamn, ' ', efternamn) AS namn,
+        adress,
+        telefonnummer,
+        mail
+    FROM kund
+    WHERE id = a_id
+    ;
+END
+;;
+DELIMITER ;
+
+--
+-- Procedure to insert order
+--
+DROP PROCEDURE IF EXISTS create_order;
+
+DELIMITER ;;
+CREATE PROCEDURE create_order(
+    a_kund INT
+)
+BEGIN
+INSERT INTO
+    kundorder(kund)
+VALUES
+    (a_kund)
+;
+END
+;;
+DELIMITER ;
+
+
+--
+-- Procedure to insert order_rader
+--
+DROP PROCEDURE IF EXISTS insert_order_rad;
+
+DELIMITER ;;
+CREATE PROCEDURE insert_order_rad(
+    a_kundorder INT,
+    a_produkt INT,
+    a_antal INT
+)
+BEGIN
+INSERT INTO
+    kundorder_rad(kundorder, produkt, antal)
+VALUES
+    (a_kundorder, a_produkt, a_antal)
+ON DUPLICATE KEY UPDATE
+    antal = antal + a_antal
+;
+END
+;;
+DELIMITER ;
+
+
+--
+-- Procedure to show orders
+--
+DROP PROCEDURE IF EXISTS show_orders;
+
+DELIMITER ;;
+CREATE PROCEDURE show_orders()
+BEGIN
+    SELECT
+        k.ordernummer,
+        k.kund,
+        DATE_FORMAT(k.orderdatum, "%Y-%m-%d") AS orderdatum,
+        COUNT(kr.kundorder) AS antal,
+        orderstatus(skapad, orderdatum, uppdaterad, skickad, borttagen) AS orderstatus
+    FROM kundorder AS k
+    LEFT OUTER JOIN kundorder_rad AS kr
+        ON k.ordernummer = kr.kundorder
+    GROUP BY k.ordernummer;
+END
+;;
+DELIMITER ;
+
+--
+-- Procedure to show specific orders
+--
+DROP PROCEDURE IF EXISTS show_specific_order;
+
+DELIMITER ;;
+CREATE PROCEDURE show_specific_order(
+    a_ordernummer INT
+)
+BEGIN
+    SELECT
+        k.ordernummer AS ordernummer,
+        k.kund AS kund,
+        DATE_FORMAT(k.orderdatum, "%Y-%m-%d") AS orderdatum,
+        -- COUNT(kr.kundorder) AS antal,
+        orderstatus(skapad, orderdatum, uppdaterad, skickad, borttagen) AS orderstatus
+    FROM kundorder AS k
+    -- JOIN kundorder_rad AS kr
+    -- ON k.ordernummer = kr.kundorder
+    WHERE k.ordernummer = a_ordernummer;
+END
+;;
+DELIMITER ;
+
+
+--
+-- Procedure to show specific orders
+--
+DROP PROCEDURE IF EXISTS show_specific_order_rows;
+
+DELIMITER ;;
+CREATE PROCEDURE show_specific_order_rows(
+    a_ordernummer INT
+)
+BEGIN
+    SELECT
+        p.produktkod,
+        p.produktnamn,
+        p.produktbeskrivning,
+        p.produktpris,
+        k.antal
+    FROM kundorder_rad AS k
+    JOIN produkt AS p
+    ON k.produkt = p.produktkod
+    WHERE k.kundorder = a_ordernummer;
+END
+;;
+DELIMITER ;
+
+
+--
+-- Procedure to show orders
+--
+DROP PROCEDURE IF EXISTS set_orderdatum;
+
+DELIMITER ;;
+CREATE PROCEDURE set_orderdatum(
+    a_ordernummer INT
+)
+BEGIN
+    UPDATE kundorder SET
+        orderdatum = NOW(),
+        uppdaterad = NULL -- vill att status är "beställd" inte "uppdaterad"
+    WHERE
+        ordernummer = a_ordernummer
+    ;
+END
+;;
+DELIMITER ;
+
+
+-- DELIMITER ;;
+-- CREATE PROCEDURE edit_produkt(
+--     a_produktkod INT,
+--     a_produktnamn VARCHAR(20),
+--     a_produktbeskrivning VARCHAR(50),
+--     a_produktpris INT
+-- )
+-- BEGIN
+--     UPDATE produkt SET
+--         `produktnamn` = a_produktnamn,
+--         `produktbeskrivning` = a_produktbeskrivning,
+--         `produktpris` = a_produktpris
+--     WHERE
+--         `produktkod` = a_produktkod
+--     ;
+-- END
+-- ;;
+-- DELIMITER ;
+
+
+--
+-- Procedure for delete produkt
+--
+
 DELIMITER ;;
 CREATE PROCEDURE delete_produkt(
     a_id CHAR(4)
@@ -551,28 +718,8 @@ DELIMITER ;
 
 
 -- ------------------------
--- -- ORDER 
+-- -- ORDER
 -- --
-
---
--- Procedure to show orders
---
-DELIMITER ;;
-CREATE PROCEDURE show_orders()
-BEGIN
-    SELECT
-        k.ordernummer,
-        k.kund,
-        loggdatum(skapad, orderdatum, uppdaterad, skickad, borttagen) AS datum,
-        COUNT(kr.kundorder) AS antal,
-        orderstatus(skapad, orderdatum, uppdaterad, skickad, borttagen) AS orderstatus
-    FROM kundorder AS k
-    JOIN kundorder_rad AS kr
-    ON k.ordernummer = kr.kundorder
-    GROUP BY ordernummer;
-END
-;;
-DELIMITER ;
 
 --
 -- Procedure to search order
@@ -585,11 +732,11 @@ BEGIN
     SELECT
         k.ordernummer,
         k.kund,
-        loggdatum(skapad, orderdatum, uppdaterad, skickad, borttagen) AS datum,
+        DATE_FORMAT(k.orderdatum, "%Y-%m-%d") AS orderdatum,
         COUNT(kr.kundorder) AS antal,
         orderstatus(skapad, orderdatum, uppdaterad, skickad, borttagen) AS orderstatus
     FROM kundorder AS k
-    JOIN kundorder_rad AS kr
+    LEFT OUTER JOIN kundorder_rad AS kr
     ON k.ordernummer = kr.kundorder
     WHERE
         k.ordernummer LIKE CONCAT('%', a_search, '%') OR
@@ -606,14 +753,13 @@ DELIMITER ;
 --
 DELIMITER ;;
 CREATE PROCEDURE show_plocklista(
-    a_order_number INT
+    a_order_number VARCHAR(20)
 )
 BEGIN
     SELECT
       *
     FROM plocklista as pl
     WHERE
-        pl.ordernummer LIKE CONCAT('%', a_order_number, '%') OR
         pl.ordernummer = a_order_number
     ;
 END
@@ -628,14 +774,14 @@ DELIMITER ;;
 CREATE PROCEDURE update_orderstatus(
         a_order_number INT
 )
-BEGIN 
+BEGIN
     UPDATE kundorder
     SET
     skickad = NOW()
     WHERE ordernummer = a_order_number
     -- only update IF skickad IS NULL
     AND CONCAT(skickad) IS NULL;
-    SELECT * 
+    SELECT *
     FROM kundorder
     WHERE ordernummer = a_order_number;
 END
@@ -682,7 +828,7 @@ DELIMITER ;
 
 --
 -- Date Formating
--- 
+--
 
 DROP FUNCTION IF EXISTS loggdatum;
 DELIMITER ;;
@@ -698,17 +844,15 @@ RETURNS DATE
 DETERMINISTIC
 BEGIN
     IF a_raderad IS NOT NULL THEN
-        RETURN a_raderad;
+        RETURN DATE_FORMAT(a_raderad, '%Y-%m-%d');
     ELSEIF a_skickad IS NOT NULL THEN
-        RETURN a_skickad;
+        RETURN DATE_FORMAT(a_skickad, '%Y-%m-%d');
     ELSEIF a_uppdaterad IS NOT NULL THEN
-        RETURN a_uppdaterad;
+        RETURN DATE_FORMAT(a_uppdaterad, '%Y-%m-%d');
     ELSEIF a_beställd IS NOT NULL THEN
-        RETURN a_beställd;
-    ELSEIF a_skapad IS NOT NULL THEN
-        RETURN a_skapad;
+        RETURN DATE_FORMAT(a_beställd, '%Y-%m-%d');
     END IF;
-    RETURN 'Okänt';
+    RETURN DATE_FORMAT(a_skapad, '%Y-%m-%d');
 END
 ;;
 
