@@ -1,6 +1,7 @@
 /**
  * A module exporting functions to access the bank database.
  */
+
 "use strict";
 
 module.exports = {
