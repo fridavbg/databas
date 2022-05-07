@@ -167,7 +167,8 @@ CREATE TABLE stock
 
     PRIMARY KEY (produkt, lagerhylla),
     CONSTRAINT FOREIGN KEY (produkt) REFERENCES produkt(produktkod) ON DELETE CASCADE,
-    FOREIGN KEY (lagerhylla) REFERENCES lagerhylla(hylla)
+    FOREIGN KEY (lagerhylla) REFERENCES lagerhylla(hylla),
+    KEY index_antal (antal)
 );
 
 

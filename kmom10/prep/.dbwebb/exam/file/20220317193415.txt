@@ -1,0 +1,23 @@
+20220317193415
+.
+total 104
+drwxr-xr-x  3 frida  staff     96 Mar 17 19:34 .dbwebb
+-rw-r--r--  1 frida  staff  10501 Mar 17 19:34 INSTRUKTION_2020-03-26_rock.md
+-rw-r--r--  1 frida  staff  10713 Mar 17 19:34 INSTRUKTION_2020-05-29_vapen.md
+-rw-r--r--  1 frida  staff  10871 Mar 17 19:34 INSTRUKTION_2021-03-24_hund.md
+-rw-r--r--  1 frida  staff  11214 Mar 17 19:34 INSTRUKTION_2021-05-28_vaccin.md
+-rw-r--r--  1 frida  staff   3926 Mar 17 19:34 README_FIRST.md
+./.dbwebb
+total 0
+drwxr-xr-x  5 frida  staff  160 Mar 17 19:34 exam
+./.dbwebb/exam
+total 8
+drwxr-xr-x  3 frida  staff  96 Mar 17 19:34 file
+-rw-r--r--  1 frida  staff  36 Mar 17 19:34 id.md
+drwxr-xr-x  3 frida  staff  96 Mar 17 19:34 receipt
+./.dbwebb/exam/file
+total 8
+-rw-r--r--  1 frida  staff  722 Mar 17 19:34 20220317193415.txt
+./.dbwebb/exam/receipt
+total 8
+-rw-r--r--  1 frida  staff  588 Mar 17 19:34 20220317183415.md
