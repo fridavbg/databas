@@ -2,7 +2,7 @@
 -- Create database skolan.
 --
 
--- erasse db if it exits
+-- erase db if it exits
 DROP database if exists skolan;
 
 -- create db

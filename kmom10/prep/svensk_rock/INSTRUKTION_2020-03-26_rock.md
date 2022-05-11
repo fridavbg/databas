@@ -91,7 +91,7 @@ Det finns speldagar med id, namn och datum.
 
 Det finns spelning som kopplar artisten till en spelningsdag och tid.
 
-1. Rita ett logiskt ER diagram över databasens tabeller. Spara diagrammet som `doc/er.pdf`.
+1. Rita ett logiskt ER diagram över databasens tabeller. Spara diagrammet som `doc/er.pdf`. [x]
 
 
 
@@ -99,13 +99,13 @@ Det finns spelning som kopplar artisten till en spelningsdag och tid.
 
 Skapa databasen och fyll den med data.
 
-1. SQL-filer lägger du i `sql/exam`. Skapa filen `setup.sql` för att skapa databasen och användaren. Låt din databas heta `exam` och ge användaren `user` med lösenordet `pass` full tillgång till databasen.
+1. SQL-filer lägger du i `sql/exam`. Skapa filen `setup.sql` för att skapa databasen och användaren. Låt din databas heta `exam` och ge användaren `user` med lösenordet `pass` full tillgång till databasen. [x]
 
-1. Skapa filen `ddl.sql` där du samlar all kod som skapar tabeller, vyer, procedurer, triggers och liknande. Använd den filen för att skapa databasens schema.
+1. Skapa filen `ddl.sql` där du samlar all kod som skapar tabeller, vyer, procedurer, triggers och liknande. Använd den filen för att skapa databasens schema. []
 
-1. Skapa filen `insert.sql` med SQL-kod för att lägga in innehåll i tabellerna, motsvarande det som syns i Excelfilen. Innehållet kan du läsa in från CSV-filer eller manuellt via egenskapade INSERT-satser. CSV-filerna sparar du i samma katalog som sql-filerna (tänk på radbrytningar alá LF).
+1. Skapa filen `insert.sql` med SQL-kod för att lägga in innehåll i tabellerna, motsvarande det som syns i Excelfilen. Innehållet kan du läsa in från CSV-filer eller manuellt via egenskapade INSERT-satser. CSV-filerna sparar du i samma katalog som sql-filerna (tänk på radbrytningar alá LF). []
 
-1. Om du skapar extra SQL-kod för att testa tabellerna, till exempel vanlig SELECT, så sparar du den koden i `dml.sql`.
+1. Om du skapar extra SQL-kod för att testa tabellerna, till exempel vanlig SELECT, så sparar du den koden i `dml.sql`. []
 
 
 
@@ -113,37 +113,33 @@ Skapa databasen och fyll den med data.
 
 Bygg en webbklient.
 
-1. Skapa en webbklient med Express. Servern startas via `node index.js` och skall snurra på porten 1337.
+1. Skapa en webbklient med Express. Servern startas via `node index.js` och skall snurra på porten 1337. []
 
-1. Alla sidor skall ha en navigeringsdel så det går att klicka sig fram mellan sidorna, via navigeringen.
+1. Alla sidor skall ha en navigeringsdel så det går att klicka sig fram mellan sidorna, via navigeringen. []
 
-1. I webbklienten, skapa routen `/exam/index` som visar en välkomstssida. Välj något passande att visa på förstasidan.
+1. I webbklienten, skapa routen `/exam/index` som visar en välkomstssida. Välj något passande att visa på förstasidan. []
 
-1. All access från klienten mot databasen skall gå via lagrade procedurer.
+1. All access från klienten mot databasen skall gå via lagrade procedurer. []
 
-1. Skapa routen `/exam/visa` som visar en rapport över samtliga artister, deras namn, id och vilken ort, land samt landskod de har tillsammans med information om eventuella tider de har spelningar en viss speldag (namn, datum).
+1. Skapa routen `/exam/visa` som visar en rapport över samtliga artister, deras namn, id och vilken ort, land samt landskod de har tillsammans med information om eventuella tider de har spelningar en viss speldag (namn, datum). []
 
-1. Lägg till länken i navbaren.
-
-
+1. Lägg till länken i navbaren. []
 
 ### Terminalklient {#terminalklient}
 
-1. Bygg ett terminalprogram och spara main-funktionen i `cli.js`. Terminalprogrammet skall startas med `node cli.js`.
+1. Bygg ett terminalprogram och spara main-funktionen i `cli.js`. Terminalprogrammet skall startas med `node cli.js`. []
 
-1. All access från klienten mot databasen skall gå via lagrade procedurer.
+1. All access från klienten mot databasen skall gå via lagrade procedurer. []
 
-1. Ditt terminalprogram skall fungera som en oändlig kommandoloop där man kan skriva in kommandon som programmet utför. Det skall finnas ett kommando `menu` som visar menyn med samtliga kommandon. När man skriver kommandot `exit` skall programmet avslutas.
+1. Ditt terminalprogram skall fungera som en oändlig kommandoloop där man kan skriva in kommandon som programmet utför. Det skall finnas ett kommando `menu` som visar menyn med samtliga kommandon. När man skriver kommandot `exit` skall programmet avslutas. []
 
-1. Skapa kommandot `visa` som visar en snygg tabell med samma rapport som kan ses i webbklienten via länken `/exam/visa`.
+1. Skapa kommandot `visa` som visar en snygg tabell med samma rapport som kan ses i webbklienten via länken `/exam/visa`. []
 
-1. Lägg till kommandot så det syns när man kör `menu`.
-
-
+1. Lägg till kommandot så det syns när man kör `menu`. []
 
 ### Backup med lagrade procedurer {#backproc}
 
-Skapa en backup av din databas och spara den i `sql/exam/backup.sql`.
+Skapa en backup av din databas och spara den i `sql/exam/backup.sql`. []
 
 Så här gör du för att få med de lagrade procedurerna.
 
@@ -163,26 +159,24 @@ mysqldump -udbwebb -p --routines --add-drop-database --result-file=backup.sql --
 
 Är din backup felaktig går det inte att rätta din inlämning.
 
-Inspektera gärna din backupfil innan du känner dig nöjd. Titta på den i texteditorn och/eller ladda upp den mot en alternativ databas.
-
-
+Inspektera gärna din backupfil innan du känner dig nöjd. Titta på den i texteditorn och/eller ladda upp den mot en alternativ databas. []
 
 Uppgift 2 (5p) {#u2}
 ---------------------------------------
 
-Chefen kommer förbi och hävdar bestämt att det behövs en sökfunktion i ditt verktyg som visar artisternas spelningar. Man skall kunna söka på delsträngar i rapporten som du visat upp (artist id, namn, ort, landskod, land samt speldagens namn och tiden för spelningen).
+Chefen kommer förbi och hävdar bestämt att det behövs en sökfunktion i ditt verktyg som visar artisternas spelningar. Man skall kunna söka på delsträngar i rapporten som du visat upp (artist id, namn, ort, landskod, land samt speldagens namn och tiden för spelningen). 
 
-1. I webbklienten, skapa routen `exam/search` där man i ett formulär kan ange en söksträng. Visa samma rapport som du skapade tidigare, men visa enbart de rader som matchar söksträngen.
+1. I webbklienten, skapa routen `exam/search` där man i ett formulär kan ange en söksträng. Visa samma rapport som du skapade tidigare, men visa enbart de rader som matchar söksträngen. []
 
-1. Lägg till länken i navbaren.
+1. Lägg till länken i navbaren. []
 
-1. I terminalklienten, skapa kommandot `search <str>` som visar motsvarande.
+1. I terminalklienten, skapa kommandot `search <str>` som visar motsvarande. []
 
-1. Lägg till kommandot så det syns när man kör `menu`.
+1. Lägg till kommandot så det syns när man kör `menu`. []
 
 
 
-Uppgift 3 (5p) {#u3}
+Uppgift 3 (5p) {#u3} 
 ---------------------------------------
 
 Denna uppgiften är lite svårare och kan tvinga dig att pilla lite extra med din SQL-konstruktion, kanske till och med googla lite ny information eller leta i minnet från tidigare delar av kursen.
@@ -191,7 +185,7 @@ Chefen är stressad och sent på fredagseftermiddagen, typ kvart i fem, så komm
 
 Studera utskriften nedan extra noggrant, skriv sedan SQL-kod som löser EXAKT samma rapport med EXAKT samma innehåll (samma rubriker, samma rader, samma ordning på raderna, samma innehåll i respektive kolumn).
 
-Det är rapportens innehåll som är viktigt, inte hur du skriver ut det i tabellformatet, det är som vanligt godtyckligt tabellformat.
+Det är rapportens innehåll som är viktigt, inte hur du skriver ut det i tabellformatet, det är som vanligt godtyckligt tabellformat.  []
 
 ```text
 +---------------------+-----------------------+------------------+----------+-------+
@@ -211,21 +205,19 @@ Det är rapportens innehåll som är viktigt, inte hur du skriver ut det i tabel
 10 rows in set (0.00 sec)
 ```
 
-1. I terminalklienten, skapa kommandot `report` som visar ovan rapport.
-
-
+1. I terminalklienten, skapa kommandot `report` som visar ovan rapport. []
 
 Inlämning {#inlamning}
 ---------------------------------------
 
 Läs noggrant, checka av varje punkt innan du är klar.
 
-1. Innan du lämnar in så skall du se till att din kod validerar via `dbwebb validate`. Varje valideringsfel kan ge avdrag med 1 poäng.
+1. Innan du lämnar in så skall du se till att din kod validerar via `dbwebb validate`. Varje valideringsfel kan ge avdrag med 1 poäng. []
 
-1. Uppdatera din databasbackup i `sql/exam/backup.sql` så att den är aktuell.
+1. Uppdatera din databasbackup i `sql/exam/backup.sql` så att den är aktuell. []
 
-1. Lämna in genom att göra `dbwebb exam seal prep`.
+1. Lämna in genom att göra `dbwebb exam seal prep`. []
 
-1. När du är helt klar så går du in på Canvas och berättar att du "lämnat in" tentan genom att skriva "KLAR!" följt av din akronym. Om det är något särskilt som läraren behöver veta om din inlämning så skriver du det.
+1. När du är helt klar så går du in på Canvas och berättar att du "lämnat in" tentan genom att skriva "KLAR!" följt av din akronym. Om det är något särskilt som läraren behöver veta om din inlämning så skriver du det. []
 
-Vid problem, gör en `dbwebb upload` och maila sedan mos@bth.se och berätta vad som hänt och ange ditt namn och studentakronym.
+Vid problem, gör en `dbwebb upload` och maila sedan mos@bth.se och berätta vad som hänt och ange ditt namn och studentakronym. 
