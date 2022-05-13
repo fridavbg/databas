@@ -113,9 +113,9 @@ Skapa databasen och fyll den med data.
 
 Bygg en webbklient.
 
-1. Skapa en webbklient med Express. Servern startas via `node index.js` och skall snurra på porten 1337. []
+1. Skapa en webbklient med Express. Servern startas via `node index.js` och skall snurra på porten 1337. [x]
 
-1. Alla sidor skall ha en navigeringsdel så det går att klicka sig fram mellan sidorna, via navigeringen. []
+1. Alla sidor skall ha en navigeringsdel så det går att klicka sig fram mellan sidorna, via navigeringen. [x]
 
 1. I webbklienten, skapa routen `/exam/index` som visar en välkomstssida. Välj något passande att visa på förstasidan. []
 
