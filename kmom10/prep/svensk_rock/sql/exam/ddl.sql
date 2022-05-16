@@ -79,7 +79,7 @@ ORDER BY sd.datum ;
 -- --
 
 --
--- Procedure to show concert_info view
+-- Procedure to show concert_info
 --
 
 DELIMITER ;;
@@ -102,6 +102,45 @@ BEGIN
         JOIN speldag AS sd
         ON sd.id = s.speldag_id
     ORDER BY sd.datum
+    ;
+END
+;;
+DELIMITER ;
+
+--
+-- Procedure to search concert_info view
+--
+
+DELIMITER ;;
+CREATE PROCEDURE search_concertinfo(
+    a_search VARCHAR(20)
+)
+BEGIN
+    SELECT
+        a.id,
+        a.namn,
+        a.ort,
+        a.landskod,
+        lk.namn AS land, 
+        s.klockslag,
+        sd.datum,
+        sd.namn AS dag
+    FROM artist AS a
+        JOIN landskod AS lk
+        ON a.landskod = lk.kod
+        JOIN spelning AS s
+        ON a.id = s.artist_id
+        JOIN speldag AS sd
+        ON sd.id = s.speldag_id
+    WHERE 
+        a.id = a_search OR
+        a.namn LIKE CONCAT('%', a_search, '%') OR
+        a.ort LIKE CONCAT('%', a_search, '%') OR
+        a.landskod = a_search OR
+        lk.namn LIKE CONCAT('%', a_search, '%') OR
+        s.klockslag LIKE CONCAT('%', a_search, '%') OR
+        sd.datum LIKE CONCAT('%', a_search, '%') OR
+        sd.namn LIKE CONCAT('%', a_search, '%')
     ;
 END
 ;;

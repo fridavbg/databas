@@ -22,7 +22,7 @@ router.get("/exam/index", (req, res) => {
     res.render("exam/", data);
 });
 
-// Add a route for the path /about
+// Add a route for the path /eaxm/visa
 router.get("/exam/visa", async (req, res) => {
     let data = {
         title: `Visa  ${sitename}`,
@@ -31,6 +31,17 @@ router.get("/exam/visa", async (req, res) => {
     data.res = await rock.showGigs();
 
     res.render("exam/visa", data);
+});
+
+// Add a route for the path /exam/search
+router.get("/exam/search", async (req, res) => {
+    let data = {
+        title: `Search  ${sitename}`,
+    };
+
+    // data.res = await rock.searchGigs();
+
+    res.render("exam/search", data);
 });
 
 module.exports = router;

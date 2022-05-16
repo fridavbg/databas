@@ -6,8 +6,8 @@
 
 ("use strict");
 
-// const db = require("./src/connect_db");
 const helpers = require("./src/helpers");
+const rock = require("./src/rock");
 
 // Read from commandline
 const readline = require("readline");
@@ -49,6 +49,12 @@ async function handleInput(line) {
         case "help":
         case "menu":
             helpers.printMenu();
+            break;
+        case "visa":
+            console.table(await rock.showGigs());
+            break;
+        case "search":
+            console.table(await rock.searchGigs(parts[1]));
             break;
         default:
             helpers.errorLog("Invalid command passed");

@@ -7,7 +7,7 @@ const port = process.env.DBWEBB_PORT || 1337;
 const path = require("path");
 const express = require("express");
 const app = express();
-const routeIndex = require("./route/index.js");
+const routeIndex = require("./route/rock.js");
 const middleware = require("./middleware/index.js");
 
 app.set("view engine", "ejs");

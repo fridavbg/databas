@@ -6,6 +6,7 @@
 
 module.exports = {
     showGigs: showGigs,
+    searchGigs: searchGigs,
 };
 
 const mysql = require("promise-mysql");
@@ -36,7 +37,28 @@ async function showGigs() {
     let sql = `CALL show_concertInfo();`;
     let res;
     res = await db.query(sql);
-    console.log(res);
+    // console.log(res);
     console.info(`SQL: ${sql} got ${res.length} rows.`);
+    return res[0];
+}
+
+/**
+ * Search concert schedule.
+ *
+ * @async
+ * @param {string} searchWord Search on this word.
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+async function searchGigs(searchWord) {
+    let sql;
+
+    sql = `CALL search_concertinfo('${searchWord}');`;
+
+    let res;
+
+    res = await db.query(sql);
+    //console.log(res);
+    // console.info(`SQL: ${sql} got ${res.length} rows.`);
+
     return res[0];
 }

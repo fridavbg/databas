@@ -18,6 +18,8 @@ function printMenu() {
     ----- Please choose one of the following:
             # exit or quit or ctrl + d: to quit
             # menu or help: to see programme option
+            # visa : see concert schedule
+            # search <str> : search concert schedule
     `;
     console.info(message);
 }
