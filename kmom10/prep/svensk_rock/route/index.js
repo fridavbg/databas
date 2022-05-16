@@ -5,7 +5,7 @@
 
 const express = require("express");
 const router = express.Router();
-const db = require("../src/connect_db");
+const rock = require("../src/rock");
 const sitename = "Svensk Rock";
 
 /**
@@ -14,7 +14,8 @@ const sitename = "Svensk Rock";
  *   get:
  *     summary: Display welcome page
  *     description: Render welcome page
- */ router.get("/exam/index", (req, res) => {
+ */
+router.get("/exam/index", (req, res) => {
     let data = {
         title: `Välkommen  ${sitename}`,
     };
@@ -27,7 +28,7 @@ router.get("/exam/visa", async (req, res) => {
         title: `Visa  ${sitename}`,
     };
 
-    data.res = await db.connectDb();
+    data.res = await rock.showGigs();
 
     res.render("exam/visa", data);
 });

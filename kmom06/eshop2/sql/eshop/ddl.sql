@@ -188,6 +188,7 @@ CREATE TABLE logg
 ----------------------
 -- VIEWS
 --
+
 -- VIEW DROPS
 DROP VIEW IF EXISTS plocklista;
 
