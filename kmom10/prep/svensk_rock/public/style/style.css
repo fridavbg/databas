@@ -162,6 +162,9 @@ input {
     padding: 0.1em;
     margin: 1em;
 }
+button {
+    padding: 0.1em;
+}
 .hidden {
     display: none;
 }
