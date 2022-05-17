@@ -6,10 +6,42 @@
 <div class="content">
     <h1>Svensk Rock</h1>
     <p>Search concert schedule</p>
-    <form action="/exam/search" method="GET">
-        <input type="text" placeholder="Search.." />
+    <form action="/exam/search">
+        <input id="search" name="search" type="text" placeholder="Search.." />
         <button type="submit">Submit</button>
     </form>
+    <% if (res.length > 0){%>
+    <p>Spel Schema</p>
+    <table>
+        <tr>
+            <th>Artist ID</th>
+            <th>Artist namn</th>
+            <th>Ort</th>
+            <th>Landskod</th>
+            <th>Land</th>
+            <th>Klockslag</th>
+            <th>Datum</th>
+            <th>Dag</th>
+        </tr>
+        <% for (const row of res) { %>
+        <tr>
+            <td><%= row.id %></td>
+            <td><%= row.namn %></td>
+            <td><%= row.ort %></td>
+            <td><%= row.landskod %></td>
+            <td><%= row.land %></td>
+            <td><%= row.klockslag %></td>
+            <td><%= row.datum %></td>
+            <td><%= row.dag %></td>
+        </tr>
+        <% }; %>
+    </table>
+    <% } else { %>
+    <p>
+        Ingen match har hittats <br />
+        Vänligen skriv in ett sökord i rutan ovan
+    </p>
+    <% } %>
 </div>
 
 <%- include("../partials/footer.ejs"); %>

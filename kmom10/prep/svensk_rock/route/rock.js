@@ -6,6 +6,8 @@
 const express = require("express");
 const router = express.Router();
 const rock = require("../src/rock");
+const bodyParser = require("body-parser");
+const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const sitename = "Svensk Rock";
 
 /**
@@ -22,8 +24,13 @@ router.get("/exam/index", (req, res) => {
     res.render("exam/", data);
 });
 
-// Add a route for the path /eaxm/visa
-router.get("/exam/visa", async (req, res) => {
+/**
+ * Visa ROUTE
+ * /exam/visa:
+ *   get:
+ *     summary: Display concertinfo table
+ *     description: Render information for database
+ */ router.get("/exam/visa", async (req, res) => {
     let data = {
         title: `Visa  ${sitename}`,
     };
@@ -33,13 +40,42 @@ router.get("/exam/visa", async (req, res) => {
     res.render("exam/visa", data);
 });
 
-// Add a route for the path /exam/search
-router.get("/exam/search", async (req, res) => {
+/**
+ * Search ROUTE
+ * /exam/search:
+ *   get:
+ *     summary: Display db info matching searchWord
+ *     description: Render information of database query
+ */ router.get("/exam/search", urlencodedParser, async (req, res) => {
+    let searchWord = req.query.search;
     let data = {
         title: `Search  ${sitename}`,
     };
 
-    // data.res = await rock.searchGigs();
+    data.res = await rock.searchGigs(searchWord);
+
+    res.render("exam/search", data);
+});
+
+/**
+ * Search word ROUTE
+ * /exam/search/:searchWord:
+ *   get:
+ *     summary: Display db info matching searchWord
+ *     description: Render information of database query
+ */ router.get("/exam/search/:search", async (req, res) => {
+    let search = req.body;
+    let params = req.params;
+    let data = {
+        title: `Search  ${sitename}`,
+        search: search,
+    };
+    console.log("SEARCHWORD");
+
+    console.log(search);
+    console.log(params);
+
+    data.res = await rock.searchGigs(search);
 
     res.render("exam/search", data);
 });
