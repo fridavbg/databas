@@ -27,15 +27,17 @@ let db;
 })();
 
 /**
- * Show rapport with all artist name, id, location, country, countrycode and times and dates they have a concert
+ * Show rapport with all artist name,
+ * id, location, country, countrycode
+ * and times and dates they have a concert
  * @async
  * @returns {RowPacketData} Resultset from query.
  */
 
 async function showGigs() {
-    console.log("QUERY");
     let sql = `CALL show_concertInfo();`;
     let res;
+
     res = await db.query(sql);
     // console.log(res);
     console.info(`SQL: ${sql} got ${res.length} rows.`);

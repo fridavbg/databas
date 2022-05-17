@@ -21,6 +21,7 @@ router.get("/exam/index", (req, res) => {
     let data = {
         title: `Välkommen  ${sitename}`,
     };
+
     res.render("exam/", data);
 });
 
@@ -66,11 +67,11 @@ router.get("/exam/index", (req, res) => {
  */ router.get("/exam/search/:search", async (req, res) => {
     let search = req.body;
     let params = req.params;
+
     let data = {
         title: `Search  ${sitename}`,
         search: search,
     };
-    console.log("SEARCHWORD");
 
     console.log(search);
     console.log(params);
