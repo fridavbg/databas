@@ -26,18 +26,18 @@ router.get("/exam/index", (req, res) => {
 });
 
 /**
- * About ROUTE
- * /exam/about:
+ * Visa ROUTE
+ * /exam/visa:
  *   get:
  *     summary: Display about page
  *     description: Render information of creators
  */
-router.get("/exam/about", async (req, res) => {
+router.get("/exam/visa", async (req, res) => {
     let data = {
         title: `Om  ${sitename}`,
     };
 
-    res.render("exam/about", data);
+    res.render("exam/visa", data);
 });
 
 module.exports = router;
