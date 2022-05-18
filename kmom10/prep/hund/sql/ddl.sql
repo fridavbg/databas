@@ -4,11 +4,15 @@
 
 use exam; 
 
+SET foreign_key_checks = 0;
+
 -- DROP TABLES 
-DROP TABLE IF EXISTS medlem;
-DROP TABLE IF EXISTS hund;
 DROP TABLE IF EXISTS ras;
 DROP TABLE IF EXISTS medlem2hund;
+DROP TABLE IF EXISTS medlem;
+DROP TABLE IF EXISTS hund;
+
+SET foreign_key_checks = 1; 
 
 -- ---------
 -- -- Tables
