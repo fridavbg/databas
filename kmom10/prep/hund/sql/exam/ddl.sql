@@ -98,3 +98,27 @@ BEGIN
 END
 ;;
 DELIMITER ;
+
+--
+-- Procedure to search memberinfo table
+--
+
+DELIMITER ;;
+CREATE PROCEDURE search_memberinfo(
+    a_search VARCHAR(20)
+)
+BEGIN
+    SELECT *
+    FROM memberInfo AS mI
+WHERE 
+    mI.fornamn LIKE CONCAT('%', a_search, '%') OR
+    mI.efternamn LIKE CONCAT('%', a_search, '%') OR
+    mI.alias LIKE CONCAT('%', a_search, '%') OR
+    mI.ort LIKE CONCAT('%', a_search, '%') OR
+    mI.namn LIKE CONCAT('%', a_search, '%') OR
+    mI.ras LIKE CONCAT('%', a_search, '%') OR
+    mI.godkänd LIKE CONCAT('%', a_search, '%')
+    ;
+END
+;;
+DELIMITER ;

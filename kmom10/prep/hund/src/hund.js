@@ -6,6 +6,7 @@
 
 module.exports = {
     showMemberInfo: showMemberInfo,
+    searchMemberInfo: searchMemberInfo,
 };
 
 const mysql = require("promise-mysql");
@@ -33,6 +34,22 @@ let db;
 
 async function showMemberInfo() {
     let sql = `CALL show_memberInfo();`;
+    let res;
+
+    res = await db.query(sql);
+
+    console.info(`SQL: ${sql} got ${res.length} rows.`);
+    return res[0];
+}
+
+/**
+ * Function to show member information
+ * @async
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+
+async function searchMemberInfo(searchWord) {
+    let sql = `CALL search_memberInfo('${searchWord}');`;
     let res;
 
     res = await db.query(sql);

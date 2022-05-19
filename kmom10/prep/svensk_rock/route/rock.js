@@ -59,27 +59,4 @@ router.get("/exam/visa", async (req, res) => {
     res.render("exam/search", data);
 });
 
-/**
- * Search word ROUTE
- * /exam/search/:searchWord:
- *   get:
- *     summary: Display db info matching searchWord
- *     description: Render information of database query
- */ router.get("/exam/search/:search", async (req, res) => {
-    let search = req.body;
-    let params = req.params;
-
-    let data = {
-        title: `Search  ${sitename}`,
-        search: search,
-    };
-
-    console.log(search);
-    console.log(params);
-
-    data.res = await rock.searchGigs(search);
-
-    res.render("exam/search", data);
-});
-
 module.exports = router;
