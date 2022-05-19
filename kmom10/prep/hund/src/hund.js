@@ -4,6 +4,10 @@
 
 "use strict";
 
+module.exports = {
+    showMemberInfo: showMemberInfo,
+};
+
 const mysql = require("promise-mysql");
 const config = require("../config/db/exam.json");
 let db;
@@ -20,3 +24,19 @@ let db;
         db.end();
     });
 })();
+
+/**
+ * Function to show member information
+ * @async
+ * @returns {RowDataPacket} Resultset from the query.
+ */
+
+async function showMemberInfo() {
+    let sql = `CALL show_memberInfo();`;
+    let res;
+
+    res = await db.query(sql);
+
+    console.info(`SQL: ${sql} got ${res.length} rows.`);
+    return res[0];
+}

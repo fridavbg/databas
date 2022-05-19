@@ -29,13 +29,15 @@ router.get("/exam/index", (req, res) => {
  * Visa ROUTE
  * /exam/visa:
  *   get:
- *     summary: Display about page
- *     description: Render information of creators
+ *     summary: Display member information
+ *     description: Render information of members
  */
 router.get("/exam/visa", async (req, res) => {
     let data = {
         title: `Om  ${sitename}`,
     };
+
+    data.res = await hund.showMemberInfo();
 
     res.render("exam/visa", data);
 });

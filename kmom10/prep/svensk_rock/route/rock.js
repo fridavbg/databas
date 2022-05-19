@@ -31,7 +31,8 @@ router.get("/exam/index", (req, res) => {
  *   get:
  *     summary: Display concertinfo table
  *     description: Render information for database
- */ router.get("/exam/visa", async (req, res) => {
+ */
+router.get("/exam/visa", async (req, res) => {
     let data = {
         title: `Visa  ${sitename}`,
     };

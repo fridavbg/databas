@@ -13,7 +13,7 @@ LINES
 IGNORE 1 LINES
 ;
 
-SELECT * FROM medlem;
+/* SELECT * FROM medlem; */
 
 LOAD DATA LOCAL INFILE 'ras.csv'
 INTO TABLE ras
@@ -26,7 +26,7 @@ LINES
 IGNORE 1 LINES
 ;
 
-SELECT * FROM ras;
+/* SELECT * FROM ras; */
 
 LOAD DATA LOCAL INFILE 'medlem2hund.csv'
 INTO TABLE medlem2hund
@@ -39,7 +39,7 @@ LINES
 IGNORE 1 LINES
 ;
 
-SELECT * FROM medlem2hund;
+/* SELECT * FROM medlem2hund; */
 
 LOAD DATA LOCAL INFILE 'hund.csv'
 INTO TABLE hund
@@ -52,4 +52,6 @@ LINES
 IGNORE 1 LINES
 ;
 
-SELECT * FROM hund;
+/* SELECT * FROM hund; */
+
+SELECT * FROM memberInfo;

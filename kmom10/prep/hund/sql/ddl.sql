@@ -14,6 +14,12 @@ DROP TABLE IF EXISTS hund;
 
 SET foreign_key_checks = 1; 
 
+-- DROP VIEWS
+DROP VIEW IF EXISTS memberInfo;
+
+-- DROP PROCEDURES
+DROP PROCEDURE IF EXISTS show_memberinfo;
+
 -- ---------
 -- -- Tables
 -- -- 
@@ -61,3 +67,34 @@ CREATE TABLE medlem2hund
     FOREIGN KEY(hund_id) REFERENCES hund(id)
 );
 
+CREATE VIEW memberInfo
+AS
+SELECT
+    m.fornamn,
+    m.efternamn,
+    m.alias,
+    m.ort,
+    h.namn,
+    h.url,
+    r.namn AS ras,
+    r.godkänd
+FROM medlem AS m
+    JOIN medlem2hund AS mh
+        ON m.id = mh.medlem_id
+    JOIN hund AS h
+        ON h.id = mh.hund_id
+    JOIN ras AS r
+        ON r.id = h.ras_id
+ORDER BY m.fornamn;
+
+--
+-- Proceudre to show member info
+--
+
+DELIMITER ;; 
+CREATE PROCEDURE show_memberinfo()
+BEGIN 
+    SELECT * FROM memberInfo;
+END
+;;
+DELIMITER ;
