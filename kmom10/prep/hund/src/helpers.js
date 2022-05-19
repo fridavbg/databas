@@ -19,6 +19,7 @@ function printMenu() {
             # exit or quit or ctrl + d: to quit
             # menu or help: to see programme option
             # visa : see member information
+            # search <str> : search member information
     `;
     console.info(message);
 }

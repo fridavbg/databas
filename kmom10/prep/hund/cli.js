@@ -53,6 +53,9 @@ async function handleInput(line) {
         case "visa":
             console.table(await hund.showMemberInfo());
             break;
+        case "search":
+            console.table(await hund.searchMemberInfo(parts[1]));
+            break;
         default:
             helpers.errorLog("Invalid command passed");
     }
