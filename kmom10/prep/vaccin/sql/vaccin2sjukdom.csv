@@ -1,0 +1,8 @@
+id,vaccin_id,sjukdom_id,sannolikhet
+1,mt,1,7
+2,ss,1,11
+3,mt,3,2
+4,as,3,9
+5,mt,4,13
+6,rr,4,50
+7,rr,5,50
