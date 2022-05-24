@@ -181,7 +181,6 @@ router.post("/eshop/create", urlencodedParser, async (req, res) => {
     res.redirect(`/eshop/crud`);
 });
 
-
 /**
  * PRODUCT ROUTE
  * /eshop/delete/:produktkod:
@@ -194,7 +193,6 @@ router.post("/eshop/delete", urlencodedParser, async (req, res) => {
     await eshop.deleteProduct(req.body.produktkod);
     res.redirect(`/eshop/crud`);
 });
-module.exports = router;
 
 /**
  * PRODUCT ROUTE
@@ -299,7 +297,6 @@ router.get("/eshop/order/show/:ordernummer", async (req, res) => {
     res.render("eshop/order-specific", data);
 });
 
-
 /**
  * CHANGE ORDER STATUS
  * /eshop/order/add/show:
@@ -309,13 +306,9 @@ router.get("/eshop/order/show/:ordernummer", async (req, res) => {
  */
 router.post("/eshop/order/show", urlencodedParser, async (req, res) => {
     console.log(JSON.stringify(req.body, null, 4));
-    await eshop.setOrderDate(
-        req.body.ordernummer
-    );
+    await eshop.setOrderDate(req.body.ordernummer);
     res.redirect(`/eshop/order`);
 });
-
-
 
 /**
  * ORDER SHOW PRODUCTS TO ADD
@@ -338,7 +331,6 @@ router.get("/eshop/order/add/:ordernummer", async (req, res) => {
     res.render("eshop/order-add", data);
 });
 
-
 /**
  * ADD TO ORDER ROUTE
  * /eshop/order/add:
@@ -355,3 +347,5 @@ router.post("/eshop/order/add", urlencodedParser, async (req, res) => {
     );
     res.redirect(`/eshop/order/show/` + req.body.ordernummer);
 });
+
+module.exports = router;
