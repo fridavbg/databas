@@ -84,13 +84,13 @@ SELECT
     DATE_FORMAT(kv.datum, '%d-%m-%Y') AS vaccinerades,
     vs.sannolikhet
 FROM kund as k
-    JOIN kund2vaccin AS kv
+    LEFT JOIN kund2vaccin AS kv
         ON k.id = kv.kund_id
-    JOIN vaccin AS v
+    LEFT JOIN vaccin AS v
         ON v.id = kv.vaccin_id
-    JOIN vaccin2sjukdom AS vs
+    LEFT JOIN vaccin2sjukdom AS vs
         ON v.id = vs.vaccin_id
-    JOIN sjukdom AS s 
+    LEFT JOIN sjukdom AS s 
         ON vs.sjukdom_id = s.id
 ORDER BY kv.datum DESC
 ;
@@ -102,10 +102,18 @@ DELIMITER ;;
 CREATE PROCEDURE show_vaccinereport()
 BEGIN
     SELECT
-    *
+    fornamn,
+    efternamn,
+    ort,
+    registrerades,
+    sjukdom,
+    beskrivning,
+    vaccin,
+    typ,
+    vaccinerades,
+    sannolikhet
     FROM 
-    vaccineReport
-    ;
+    vaccineReport;
 END
 ;;
 DELIMITER ;
