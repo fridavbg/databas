@@ -6,7 +6,7 @@ use exam;
 
 SET foreign_key_checks = 0;
 
--- DROP TABLES in right order
+-- DROP TABLES / VIEWS in right order
 DROP TABLE IF EXISTS kund;
 DROP TABLE IF EXISTS sjukdom;
 DROP TABLE IF EXISTS vaccin;
@@ -15,6 +15,9 @@ DROP TABLE IF EXISTS vaccin2sjukdom;
 
 SET foreign_key_checks = 1; 
 
+DROP VIEW IF EXISTS vaccineReport;
+
+DROP PROCEDURE IF EXISTS show_vaccinereport;
 
 CREATE TABLE kund
 (
@@ -64,21 +67,21 @@ CREATE TABLE vaccin2sjukdom
     FOREIGN KEY(sjukdom_id) REFERENCES sjukdom(id)  
 );
 
-CREATE VIEW kundInfo
+CREATE VIEW vaccineReport
 AS
 SELECT
     k.id AS kund_id,
     k.fornamn,
     k.efternamn,
     k.ort,
-    k.medlem,
+    DATE_FORMAT(k.medlem, '%d-%m-%Y') AS registrerades,
     s.id AS sjukdom_id,
     s.namn AS sjukdom,
     s.beskrivning,
     v.id AS vaccin_id,
     v.namn AS vaccin,
     v.typ,
-    kv.datum,
+    DATE_FORMAT(kv.datum, '%d-%m-%Y') AS vaccinerades,
     vs.sannolikhet
 FROM kund as k
     JOIN kund2vaccin AS kv
@@ -89,5 +92,20 @@ FROM kund as k
         ON v.id = vs.vaccin_id
     JOIN sjukdom AS s 
         ON vs.sjukdom_id = s.id
-ORDER BY k.id
+ORDER BY kv.datum DESC
 ;
+
+--
+-- Procedure to show vaccine report
+--
+DELIMITER ;;
+CREATE PROCEDURE show_vaccinereport()
+BEGIN
+    SELECT
+    *
+    FROM 
+    vaccineReport
+    ;
+END
+;;
+DELIMITER ;

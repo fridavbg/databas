@@ -20,3 +20,24 @@ let db;
         db.end();
     });
 })();
+
+/**
+ * Function to display vaccine report
+ * @async
+ * @returns {RowDataPacket} Resultset from query
+ */
+
+async function showVaccineReport() {
+    let sql = `CALL show_vaccinereport()`;
+    let res;
+
+    res = await db.query(sql);
+
+    console.info(`SQL: ${sql} got ${res.length} rows.`);
+
+    return res[0];
+}
+
+module.exports = {
+    showVaccineReport: showVaccineReport,
+};

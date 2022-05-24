@@ -1,0 +1,40 @@
+<%- include("../partials/header.ejs", {title: title}); %>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
+<div class="content">
+    <h1>Effektiv Vaccinering</h1>
+    <p>Vaccine Rapport</p>
+
+    <table>
+        <tr>
+            <th>Förnamn</th>
+            <th>Efternamn</th>
+            <th>Ort</th>
+            <th>Blev medlem</th>
+            <th>Sjukdom</th>
+            <th>Sjukdoms Beskrivning</th>
+            <th>Vaccine</th>
+            <th>Typ av vaccine</th>
+            <th>Senast vaccinerad</th>
+            <th>Sannolikhet</th>
+        </tr>
+        <% for (const row of res) { %>
+        <tr>
+            <td><%= row.fornamn %></td>
+            <td><%= row.efternamn %></td>
+            <td><%= row.ort %></td>
+            <td><%= row.registrerades %></td>
+            <td><%= row.sjukdom %></td>
+            <td><%= row.beskrivning %></td>
+            <td><%= row.vaccin %></td>
+            <td><%= row.typ %></td>
+            <td><%= row.vaccinerades %></td>
+            <td><%= row.sannolikhet %></td>
+        </tr>
+        <% }; %>
+    </table>
+</div>
+
+<%- include("../partials/footer.ejs"); %>
