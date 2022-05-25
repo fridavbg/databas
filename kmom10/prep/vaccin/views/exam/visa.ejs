@@ -26,12 +26,17 @@
             <td><%= row.efternamn %></td>
             <td><%= row.ort %></td>
             <td><%= row.registrerades %></td>
-            <td><%= row.sjukdom %></td>
-            <td><%= row.beskrivning %></td>
-            <td><%= row.vaccin %></td>
-            <td><%= row.typ %></td>
-            <td><%= row.vaccinerades %></td>
-            <td><%= row.sannolikhet %></td>
+            <% if(row.sjukdom === null){ %>
+                <td><p>Ej vaccinerad</p></td>
+                <% } else{ %>
+                <td><%= row.sjukdom %></td>
+                <td><%= row.sjukdom %></td>
+                <td><%= row.beskrivning %></td>
+                <td><%= row.vaccin %></td>
+                <td><%= row.typ %></td>
+                <td><%= row.vaccinerades %></td>
+                <td><%= row.sannolikhet %></td>
+                <% } %>
         </tr>
         <% }; %>
     </table>

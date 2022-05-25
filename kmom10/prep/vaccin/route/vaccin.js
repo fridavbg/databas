@@ -26,7 +26,7 @@ router.get("/exam/index", (req, res) => {
 });
 
 /**
- * INDEX ROUTE
+ * VISA ROUTE
  * /exam/visa:
  *   get:
  *     summary: Display vaccine report
@@ -39,6 +39,21 @@ router.get("/exam/visa", async (req, res) => {
 
     data.res = await vaccine.showVaccineReport();
     res.render("exam/visa", data);
+});
+
+/**
+ * INDEX ROUTE
+ * /exam/visa:
+ *   get:
+ *     summary: Display vaccine report
+ *     description: Render visa page
+ */
+router.get("/exam/search", async (req, res) => {
+    let data = {
+        title: `Vaccine Search ${sitename}`,
+    };
+
+    res.render("exam/search", data);
 });
 
 module.exports = router;
