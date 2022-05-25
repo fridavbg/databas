@@ -18,6 +18,7 @@ SET foreign_key_checks = 1;
 DROP VIEW IF EXISTS vaccineReport;
 
 DROP PROCEDURE IF EXISTS show_vaccinereport;
+DROP PROCEDURE IF EXISTS search_vaccineInfo;
 
 CREATE TABLE kund
 (
@@ -114,6 +115,36 @@ BEGIN
     sannolikhet
     FROM 
     vaccineReport;
+END
+;;
+DELIMITER ;
+
+--
+-- Procedure to search vaccine information
+-- Del sträng sjukdomsnamn, beskrivning, vaccinnamn & vaccin typ
+--
+DELIMITER ;;
+CREATE PROCEDURE search_vaccineInfo(
+    a_search VARCHAR(20)
+)
+BEGIN
+    SELECT 
+    s.namn AS sjukdom,
+    s.beskrivning,
+    v.namn AS vaccin,
+    v.typ,
+    v2s.sannolikhet
+FROM sjukdom AS s
+    LEFT JOIN vaccin2sjukdom AS v2s
+        ON s.id = v2s.sjukdom_id
+    LEFT JOIN vaccin AS v
+        ON v.id = v2s.vaccin_id
+WHERE 
+    s.namn LIKE CONCAT('%', a_search, '%') OR
+    v.typ LIKE CONCAT('%', a_search, '%') OR
+    s.beskrivning LIKE CONCAT('%', a_search, '%') OR
+    v.namn LIKE CONCAT('%', a_search, '%')
+ORDER BY s.namn;
 END
 ;;
 DELIMITER ;
