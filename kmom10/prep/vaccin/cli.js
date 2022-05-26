@@ -53,9 +53,9 @@ async function handleInput(line) {
         case "visa":
             console.table(await vaccin.showVaccineReport());
             break;
-        // case "search":
-        //     console.table(await rock.searchGigs(parts[1]));
-        //     break;
+        case "search":
+            console.table(await vaccin.searchVaccineInfo(parts[1]));
+            break;
         default:
             helpers.errorLog("Invalid command passed");
     }

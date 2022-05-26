@@ -49,9 +49,12 @@ router.get("/exam/visa", async (req, res) => {
  *     description: Render visa page
  */
 router.get("/exam/search", async (req, res) => {
+    let searchWord = req.query.search;
     let data = {
         title: `Vaccine Search ${sitename}`,
     };
+
+    data.res = await vaccine.searchVaccineInfo(searchWord);
 
     res.render("exam/search", data);
 });

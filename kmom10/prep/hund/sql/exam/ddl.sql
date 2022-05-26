@@ -19,6 +19,7 @@ DROP VIEW IF EXISTS memberInfo;
 
 -- DROP PROCEDURES
 DROP PROCEDURE IF EXISTS show_memberinfo;
+DROP PROCEDURE IF EXISTS search_memberinfo;
 
 -- ---------
 -- -- Tables
