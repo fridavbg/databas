@@ -19,6 +19,7 @@ DROP VIEW IF EXISTS vaccineReport;
 
 DROP PROCEDURE IF EXISTS show_vaccinereport;
 DROP PROCEDURE IF EXISTS search_vaccineInfo;
+DROP PROCEDURE IF EXISTS show_specialreport;
 
 CREATE TABLE kund
 (
@@ -75,14 +76,14 @@ SELECT
     k.fornamn,
     k.efternamn,
     k.ort,
-    DATE_FORMAT(k.medlem, '%d-%m-%Y') AS registrerades,
+    k.medlem AS registrerades,
     s.id AS sjukdom_id,
     s.namn AS sjukdom,
     s.beskrivning,
     v.id AS vaccin_id,
     v.namn AS vaccin,
     v.typ,
-    DATE_FORMAT(kv.datum, '%d-%m-%Y') AS vaccinerades,
+    kv.datum AS vaccinerades,
     vs.sannolikhet
 FROM kund as k
     LEFT JOIN kund2vaccin AS kv
@@ -106,12 +107,12 @@ BEGIN
     fornamn,
     efternamn,
     ort,
-    registrerades,
+    DATE_FORMAT(registrerades, '%d-%m-%Y') AS registrerades,
     sjukdom,
     beskrivning,
     vaccin,
     typ,
-    vaccinerades,
+    DATE_FORMAT(vaccinerades, '%d-%m-%Y') AS vaccinerades,
     sannolikhet
     FROM 
     vaccineReport;
@@ -145,6 +146,24 @@ WHERE
     s.beskrivning LIKE CONCAT('%', a_search, '%') OR
     v.namn LIKE CONCAT('%', a_search, '%')
 ORDER BY s.namn;
+END
+;;
+DELIMITER ;
+
+--
+-- Procedure to show vaccine report
+--
+DELIMITER ;;
+CREATE PROCEDURE show_specialreport()
+BEGIN
+    SELECT
+    CONCAT(fornamn, ' ' ,efternamn, ' (', ort, ')') AS Kund,
+    CONCAT(vaccin, ' (', typ, ')') AS Vaccin,
+    DATE_FORMAT(vaccinerades, '%d-%m-%y') AS Datum,
+    sjukdom AS Sjukdom
+    FROM 
+    vaccineReport
+    ORDER BY ort DESC;
 END
 ;;
 DELIMITER ;
