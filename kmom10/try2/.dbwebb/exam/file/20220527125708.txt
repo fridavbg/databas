@@ -1,0 +1,3509 @@
+20220527125708
+.
+total 384
+-rw-r--r--@   1 frida  staff    6148 May 27 10:26 .DS_Store
+drwxr-xr-x    3 frida  staff      96 May 27 10:04 .dbwebb
+-rw-r--r--    1 frida  staff   10680 May 27 10:04 INSTRUKTION.md
+-rw-r--r--    1 frida  staff    3926 May 27 10:04 README_FIRST.md
+-rw-r--r--    1 frida  staff    1321 May 27 11:40 cli.js
+drwxr-xr-x    3 frida  staff      96 May 27 10:07 config
+drwxr-xr-x    3 frida  staff      96 May 27 10:26 doc
+-rw-r--r--    1 frida  staff    1613 May 27 11:21 index.js
+drwxr-xr-x    3 frida  staff      96 May 27 11:13 middleware
+drwxr-xr-x  192 frida  staff    6144 May 27 11:20 node_modules
+-rw-r--r--    1 frida  staff  158861 May 27 11:20 package-lock.json
+-rw-r--r--    1 frida  staff     785 May 27 11:14 package.json
+drwxr-xr-x    7 frida  staff     224 May 27 11:14 public
+drwxr-xr-x    3 frida  staff      96 May 27 11:15 route
+drwxr-xr-x    3 frida  staff      96 May 27 10:31 sql
+drwxr-xr-x    4 frida  staff     128 May 27 11:18 src
+drwxr-xr-x    4 frida  staff     128 May 27 11:21 views
+./middleware
+total 8
+-rw-r--r--  1 frida  staff  523 May 27 11:13 index.js
+./route
+total 8
+-rw-r--r--  1 frida  staff  1348 May 27 11:41 formogenhet.js
+./config
+total 0
+drwxr-xr-x  3 frida  staff  96 May 27 10:07 db
+./config/db
+total 8
+-rw-r--r--  1 frida  staff  140 May 27 10:29 exam.json
+./node_modules/sqlstring
+total 48
+-rw-r--r--  1 frida  staff   859 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1118 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  7969 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff    45 May 27 11:20 index.js
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 lib
+-rw-r--r--  1 frida  staff  1188 May 27 11:20 package.json
+./node_modules/sqlstring/lib
+total 16
+-rw-r--r--  1 frida  staff  5858 May 27 11:20 SqlString.js
+./node_modules/responselike
+total 24
+-rw-r--r--  1 frida  staff  1055 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1924 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   825 May 27 11:20 package.json
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 src
+./node_modules/responselike/src
+total 8
+-rw-r--r--  1 frida  staff  823 May 27 11:20 index.js
+./node_modules/destroy
+total 40
+-rw-r--r--  1 frida  staff  1173 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  2459 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  4258 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1128 May 27 11:20 package.json
+./node_modules/duplexer3
+total 32
+-rw-r--r--  1 frida  staff  1535 May 27 11:20 LICENSE.md
+-rw-r--r--  1 frida  staff  2707 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1667 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   519 May 27 11:20 package.json
+./node_modules/@types
+total 0
+drwxr-xr-x   7 frida  staff   224 May 27 11:20 bluebird
+drwxr-xr-x   6 frida  staff   192 May 27 11:20 mysql
+drwxr-xr-x  54 frida  staff  1728 May 27 11:20 node
+./node_modules/@types/bluebird
+total 136
+-rwxr-xr-x  1 frida  staff   1141 May 27 11:20 LICENSE
+-rwxr-xr-x  1 frida  staff    499 May 27 11:20 README.md
+-rwxr-xr-x  1 frida  staff  55400 May 27 11:20 index.d.ts
+-rwxr-xr-x  1 frida  staff    909 May 27 11:20 package.json
+drwxr-xr-x  3 frida  staff     96 May 27 11:20 ts4.1
+./node_modules/@types/bluebird/ts4.1
+total 112
+-rwxr-xr-x  1 frida  staff  54241 May 27 11:20 index.d.ts
+./node_modules/@types/mysql
+total 72
+-rwxr-xr-x  1 frida  staff   1141 May 27 11:20 LICENSE
+-rwxr-xr-x  1 frida  staff    681 May 27 11:20 README.md
+-rwxr-xr-x  1 frida  staff  22678 May 27 11:20 index.d.ts
+-rwxr-xr-x  1 frida  staff   1267 May 27 11:20 package.json
+./node_modules/@types/node
+total 3312
+-rwxr-xr-x  1 frida  staff    1141 May 27 11:20 LICENSE
+-rwxr-xr-x  1 frida  staff    2499 May 27 11:20 README.md
+drwxr-xr-x  3 frida  staff      96 May 27 11:20 assert
+-rwxr-xr-x  1 frida  staff   38561 May 27 11:20 assert.d.ts
+-rwxr-xr-x  1 frida  staff   20933 May 27 11:20 async_hooks.d.ts
+-rwxr-xr-x  1 frida  staff  102175 May 27 11:20 buffer.d.ts
+-rwxr-xr-x  1 frida  staff   66120 May 27 11:20 child_process.d.ts
+-rwxr-xr-x  1 frida  staff   20539 May 27 11:20 cluster.d.ts
+-rwxr-xr-x  1 frida  staff   18331 May 27 11:20 console.d.ts
+-rwxr-xr-x  1 frida  staff     613 May 27 11:20 constants.d.ts
+-rwxr-xr-x  1 frida  staff  152409 May 27 11:20 crypto.d.ts
+-rwxr-xr-x  1 frida  staff   26735 May 27 11:20 dgram.d.ts
+-rwxr-xr-x  1 frida  staff    5936 May 27 11:20 diagnostics_channel.d.ts
+drwxr-xr-x  3 frida  staff      96 May 27 11:20 dns
+-rwxr-xr-x  1 frida  staff   29697 May 27 11:20 dns.d.ts
+-rwxr-xr-x  1 frida  staff    7805 May 27 11:20 domain.d.ts
+-rwxr-xr-x  1 frida  staff   29065 May 27 11:20 events.d.ts
+drwxr-xr-x  3 frida  staff      96 May 27 11:20 fs
+-rwxr-xr-x  1 frida  staff  175785 May 27 11:20 fs.d.ts
+-rwxr-xr-x  1 frida  staff    9252 May 27 11:20 globals.d.ts
+-rwxr-xr-x  1 frida  staff      39 May 27 11:20 globals.global.d.ts
+-rwxr-xr-x  1 frida  staff   64373 May 27 11:20 http.d.ts
+-rwxr-xr-x  1 frida  staff  112387 May 27 11:20 http2.d.ts
+-rwxr-xr-x  1 frida  staff   21371 May 27 11:20 https.d.ts
+-rwxr-xr-x  1 frida  staff    6394 May 27 11:20 index.d.ts
+-rwxr-xr-x  1 frida  staff  125418 May 27 11:20 inspector.d.ts
+-rwxr-xr-x  1 frida  staff    4089 May 27 11:20 module.d.ts
+-rwxr-xr-x  1 frida  staff   36766 May 27 11:20 net.d.ts
+-rwxr-xr-x  1 frida  staff   16674 May 27 11:20 os.d.ts
+-rwxr-xr-x  1 frida  staff    6787 May 27 11:20 package.json
+-rwxr-xr-x  1 frida  staff    7064 May 27 11:20 path.d.ts
+-rwxr-xr-x  1 frida  staff   21036 May 27 11:20 perf_hooks.d.ts
+-rwxr-xr-x  1 frida  staff   72914 May 27 11:20 process.d.ts
+-rwxr-xr-x  1 frida  staff    5482 May 27 11:20 punycode.d.ts
+-rwxr-xr-x  1 frida  staff    6487 May 27 11:20 querystring.d.ts
+-rwxr-xr-x  1 frida  staff   26488 May 27 11:20 readline.d.ts
+-rwxr-xr-x  1 frida  staff   19463 May 27 11:20 repl.d.ts
+drwxr-xr-x  5 frida  staff     160 May 27 11:20 stream
+-rwxr-xr-x  1 frida  staff   64203 May 27 11:20 stream.d.ts
+-rwxr-xr-x  1 frida  staff    2818 May 27 11:20 string_decoder.d.ts
+drwxr-xr-x  3 frida  staff      96 May 27 11:20 timers
+-rwxr-xr-x  1 frida  staff    4568 May 27 11:20 timers.d.ts
+-rwxr-xr-x  1 frida  staff   50772 May 27 11:20 tls.d.ts
+-rwxr-xr-x  1 frida  staff    6780 May 27 11:20 trace_events.d.ts
+-rwxr-xr-x  1 frida  staff    9854 May 27 11:20 tty.d.ts
+-rwxr-xr-x  1 frida  staff   39297 May 27 11:20 url.d.ts
+-rwxr-xr-x  1 frida  staff   64299 May 27 11:20 util.d.ts
+-rwxr-xr-x  1 frida  staff   15269 May 27 11:20 v8.d.ts
+-rwxr-xr-x  1 frida  staff   20970 May 27 11:20 vm.d.ts
+-rwxr-xr-x  1 frida  staff    7051 May 27 11:20 wasi.d.ts
+-rwxr-xr-x  1 frida  staff   32234 May 27 11:20 worker_threads.d.ts
+-rwxr-xr-x  1 frida  staff   19520 May 27 11:20 zlib.d.ts
+./node_modules/@types/node/timers
+total 8
+-rwxr-xr-x  1 frida  staff  1954 May 27 11:20 promises.d.ts
+./node_modules/@types/node/stream
+total 48
+-rwxr-xr-x  1 frida  staff   1196 May 27 11:20 consumers.d.ts
+-rwxr-xr-x  1 frida  staff   2374 May 27 11:20 promises.d.ts
+-rwxr-xr-x  1 frida  staff  13774 May 27 11:20 web.d.ts
+./node_modules/@types/node/assert
+total 8
+-rwxr-xr-x  1 frida  staff  201 May 27 11:20 strict.d.ts
+./node_modules/@types/node/dns
+total 32
+-rwxr-xr-x  1 frida  staff  15661 May 27 11:20 promises.d.ts
+./node_modules/@types/node/fs
+total 104
+-rwxr-xr-x  1 frida  staff  49768 May 27 11:20 promises.d.ts
+./node_modules/latest-version
+total 40
+-rw-r--r--  1 frida  staff   981 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   334 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   710 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1158 May 27 11:20 readme.md
+./node_modules/process-nextick-args
+total 32
+-rw-r--r--  1 frida  staff  1083 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1064 May 27 11:20 license.md
+-rw-r--r--  1 frida  staff   578 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   450 May 27 11:20 readme.md
+./node_modules/http-cache-semantics
+total 88
+-rw-r--r--  1 frida  staff   1274 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  10387 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  23786 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff    733 May 27 11:20 package.json
+./node_modules/.bin
+total 0
+lrwxr-xr-x  1 frida  staff  17 May 27 11:20 ejs -> ../ejs/bin/cli.js
+lrwxr-xr-x  1 frida  staff  15 May 27 11:20 is-ci -> ../is-ci/bin.js
+lrwxr-xr-x  1 frida  staff  18 May 27 11:20 jake -> ../jake/bin/cli.js
+lrwxr-xr-x  1 frida  staff  14 May 27 11:20 mime -> ../mime/cli.js
+lrwxr-xr-x  1 frida  staff  25 May 27 11:20 nodemon -> ../nodemon/bin/nodemon.js
+lrwxr-xr-x  1 frida  staff  25 May 27 11:20 nodetouch -> ../touch/bin/nodetouch.js
+lrwxr-xr-x  1 frida  staff  19 May 27 11:20 nopt -> ../nopt/bin/nopt.js
+lrwxr-xr-x  1 frida  staff  12 May 27 11:20 rc -> ../rc/cli.js
+lrwxr-xr-x  1 frida  staff  20 May 27 11:20 semver -> ../semver/bin/semver
+./node_modules/toidentifier
+total 40
+-rw-r--r--  1 frida  staff   128 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1108 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1803 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   504 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1142 May 27 11:20 package.json
+./node_modules/typedarray-to-buffer
+total 48
+-rw-r--r--  1 frida  staff   279 May 27 11:20 .airtap.yml
+-rw-r--r--  1 frida  staff   480 May 27 11:20 .travis.yml
+-rw-r--r--  1 frida  staff  1081 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  3463 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   758 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1149 May 27 11:20 package.json
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 test
+./node_modules/typedarray-to-buffer/test
+total 8
+-rw-r--r--  1 frida  staff  1625 May 27 11:20 basic.js
+./node_modules/make-dir
+total 40
+-rw-r--r--  1 frida  staff  1534 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  3124 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+drwxr-xr-x  4 frida  staff   128 May 27 11:20 node_modules
+-rw-r--r--  1 frida  staff  1051 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  3224 May 27 11:20 readme.md
+./node_modules/make-dir/node_modules
+total 0
+drwxr-xr-x  3 frida  staff   96 May 27 11:20 .bin
+drwxr-xr-x  9 frida  staff  288 May 27 11:20 semver
+./node_modules/make-dir/node_modules/.bin
+total 0
+lrwxr-xr-x  1 frida  staff  23 May 27 11:20 semver -> ../semver/bin/semver.js
+./node_modules/make-dir/node_modules/semver
+total 160
+-rw-r--r--  1 frida  staff   1307 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff    765 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  16974 May 27 11:20 README.md
+drwxr-xr-x  3 frida  staff     96 May 27 11:20 bin
+-rw-r--r--  1 frida  staff    559 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff    619 May 27 11:20 range.bnf
+-rw-r--r--  1 frida  staff  42130 May 27 11:20 semver.js
+./node_modules/make-dir/node_modules/semver/bin
+total 16
+-rwxr-xr-x  1 frida  staff  4717 May 27 11:20 semver.js
+./node_modules/strip-ansi
+total 40
+-rw-r--r--  1 frida  staff   369 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   154 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   798 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1599 May 27 11:20 readme.md
+./node_modules/content-type
+total 48
+-rw-r--r--  1 frida  staff   436 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1089 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  2796 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  4809 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1070 May 27 11:20 package.json
+./node_modules/xdg-basedir
+total 40
+-rw-r--r--  1 frida  staff  1566 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   801 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   642 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1575 May 27 11:20 readme.md
+./node_modules/has-yarn
+total 40
+-rw-r--r--  1 frida  staff   448 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   268 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   599 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   968 May 27 11:20 readme.md
+./node_modules/is-obj
+total 40
+-rw-r--r--  1 frida  staff   345 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   144 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   535 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   688 May 27 11:20 readme.md
+./node_modules/unique-string
+total 40
+-rw-r--r--  1 frida  staff   388 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   122 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   647 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   614 May 27 11:20 readme.md
+./node_modules/cacheable-request
+total 32
+-rw-r--r--  1 frida  staff  1068 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  7586 May 27 11:20 README.md
+drwxr-xr-x  4 frida  staff   128 May 27 11:20 node_modules
+-rw-r--r--  1 frida  staff  1160 May 27 11:20 package.json
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 src
+./node_modules/cacheable-request/node_modules
+total 0
+drwxr-xr-x  8 frida  staff  256 May 27 11:20 get-stream
+drwxr-xr-x  7 frida  staff  224 May 27 11:20 lowercase-keys
+./node_modules/cacheable-request/node_modules/lowercase-keys
+total 40
+-rw-r--r--  1 frida  staff   351 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   178 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   614 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   529 May 27 11:20 readme.md
+./node_modules/cacheable-request/node_modules/get-stream
+total 56
+-rw-r--r--  1 frida  staff   894 May 27 11:20 buffer-stream.js
+-rw-r--r--  1 frida  staff  3752 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  1444 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1117 May 27 11:20 license
+-rw-r--r--  1 frida  staff   858 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  4332 May 27 11:20 readme.md
+./node_modules/cacheable-request/src
+total 16
+-rw-r--r--  1 frida  staff  6936 May 27 11:20 index.js
+./node_modules/p-cancelable
+total 48
+-rw-r--r--  1 frida  staff  4564 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  1927 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   821 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  4094 May 27 11:20 readme.md
+./node_modules/ms
+total 32
+-rw-r--r--  1 frida  staff  2764 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1077 May 27 11:20 license.md
+-rw-r--r--  1 frida  staff   704 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1721 May 27 11:20 readme.md
+./node_modules/content-disposition
+total 64
+-rw-r--r--  1 frida  staff   1020 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff   1094 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff   5205 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  10594 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   1200 May 27 11:20 package.json
+./node_modules/call-bind
+total 72
+-rw-r--r--  1 frida  staff    10 May 27 11:20 .eslintignore
+-rw-r--r--  1 frida  staff   247 May 27 11:20 .eslintrc
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 .github
+-rw-r--r--  1 frida  staff   216 May 27 11:20 .nycrc
+-rw-r--r--  1 frida  staff  3331 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff  1071 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff    48 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   413 May 27 11:20 callBound.js
+-rw-r--r--  1 frida  staff  1306 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1793 May 27 11:20 package.json
+drwxr-xr-x  4 frida  staff   128 May 27 11:20 test
+./node_modules/call-bind/test
+total 16
+-rw-r--r--  1 frida  staff  2379 May 27 11:20 callBound.js
+-rw-r--r--  1 frida  staff  3354 May 27 11:20 index.js
+./node_modules/call-bind/.github
+total 8
+-rw-r--r--  1 frida  staff  580 May 27 11:20 FUNDING.yml
+./node_modules/methods
+total 40
+-rw-r--r--  1 frida  staff   427 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1180 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1694 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1040 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   947 May 27 11:20 package.json
+./node_modules/strip-json-comments
+total 32
+-rw-r--r--  1 frida  staff  1700 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1119 May 27 11:20 license
+-rw-r--r--  1 frida  staff   749 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1493 May 27 11:20 readme.md
+./node_modules/lru-cache
+total 48
+-rw-r--r--  1 frida  staff   765 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  5987 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  8186 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   705 May 27 11:20 package.json
+./node_modules/imurmurhash
+total 48
+-rw-r--r--  1 frida  staff  4763 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  4412 May 27 11:20 imurmurhash.js
+-rw-r--r--  1 frida  staff  1894 May 27 11:20 imurmurhash.min.js
+-rw-r--r--  1 frida  staff   818 May 27 11:20 package.json
+./node_modules/type-fest
+total 96
+-rw-r--r--   1 frida  staff   1724 May 27 11:20 base.d.ts
+-rw-r--r--   1 frida  staff    115 May 27 11:20 index.d.ts
+-rw-r--r--   1 frida  staff   1116 May 27 11:20 license
+-rw-r--r--   1 frida  staff   1039 May 27 11:20 package.json
+-rw-r--r--   1 frida  staff  30621 May 27 11:20 readme.md
+drwxr-xr-x  33 frida  staff   1056 May 27 11:20 source
+drwxr-xr-x   8 frida  staff    256 May 27 11:20 ts41
+./node_modules/type-fest/source
+total 304
+-rw-r--r--  1 frida  staff    715 May 27 11:20 async-return-type.d.ts
+-rw-r--r--  1 frida  staff   1214 May 27 11:20 asyncify.d.ts
+-rw-r--r--  1 frida  staff   2020 May 27 11:20 basic.d.ts
+-rw-r--r--  1 frida  staff   1012 May 27 11:20 conditional-except.d.ts
+-rw-r--r--  1 frida  staff   1199 May 27 11:20 conditional-keys.d.ts
+-rw-r--r--  1 frida  staff    933 May 27 11:20 conditional-pick.d.ts
+-rw-r--r--  1 frida  staff   2482 May 27 11:20 entries.d.ts
+-rw-r--r--  1 frida  staff   2759 May 27 11:20 entry.d.ts
+-rw-r--r--  1 frida  staff    886 May 27 11:20 except.d.ts
+-rw-r--r--  1 frida  staff   1480 May 27 11:20 fixed-length-array.d.ts
+-rw-r--r--  1 frida  staff   1282 May 27 11:20 iterable-element.d.ts
+-rw-r--r--  1 frida  staff   1135 May 27 11:20 literal-union.d.ts
+-rw-r--r--  1 frida  staff   1340 May 27 11:20 merge-exclusive.d.ts
+-rw-r--r--  1 frida  staff    415 May 27 11:20 merge.d.ts
+-rw-r--r--  1 frida  staff    860 May 27 11:20 mutable.d.ts
+-rw-r--r--  1 frida  staff   2676 May 27 11:20 opaque.d.ts
+-rw-r--r--  1 frida  staff  14074 May 27 11:20 package-json.d.ts
+-rw-r--r--  1 frida  staff   2312 May 27 11:20 partial-deep.d.ts
+-rw-r--r--  1 frida  staff    775 May 27 11:20 promisable.d.ts
+-rw-r--r--  1 frida  staff   1050 May 27 11:20 promise-value.d.ts
+-rw-r--r--  1 frida  staff   1828 May 27 11:20 readonly-deep.d.ts
+-rw-r--r--  1 frida  staff    848 May 27 11:20 require-at-least-one.d.ts
+-rw-r--r--  1 frida  staff   1255 May 27 11:20 require-exactly-one.d.ts
+-rw-r--r--  1 frida  staff   1068 May 27 11:20 set-optional.d.ts
+-rw-r--r--  1 frida  staff   1069 May 27 11:20 set-required.d.ts
+-rw-r--r--  1 frida  staff   1698 May 27 11:20 set-return-type.d.ts
+-rw-r--r--  1 frida  staff    416 May 27 11:20 stringified.d.ts
+-rw-r--r--  1 frida  staff  16837 May 27 11:20 tsconfig-json.d.ts
+-rw-r--r--  1 frida  staff   1961 May 27 11:20 union-to-intersection.d.ts
+-rw-r--r--  1 frida  staff    236 May 27 11:20 utilities.d.ts
+-rw-r--r--  1 frida  staff    829 May 27 11:20 value-of.d.ts
+./node_modules/type-fest/ts41
+total 48
+-rw-r--r--  1 frida  staff  2107 May 27 11:20 camel-case.d.ts
+-rw-r--r--  1 frida  staff  2846 May 27 11:20 delimiter-case.d.ts
+-rw-r--r--  1 frida  staff   392 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   686 May 27 11:20 kebab-case.d.ts
+-rw-r--r--  1 frida  staff   608 May 27 11:20 pascal-case.d.ts
+-rw-r--r--  1 frida  staff   672 May 27 11:20 snake-case.d.ts
+./node_modules/punycode
+total 96
+-rw-r--r--  1 frida  staff   1077 May 27 11:20 LICENSE-MIT.txt
+-rw-r--r--  1 frida  staff   4941 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   1225 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  12630 May 27 11:20 punycode.es6.js
+-rw-r--r--  1 frida  staff  12561 May 27 11:20 punycode.js
+./node_modules/proxy-addr
+total 56
+-rw-r--r--  1 frida  staff  2991 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1094 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  4131 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  6000 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1183 May 27 11:20 package.json
+./node_modules/depd
+total 72
+-rw-r--r--  1 frida  staff   2256 May 27 11:20 History.md
+-rw-r--r--  1 frida  staff   1094 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff   9988 May 27 11:20 Readme.md
+-rw-r--r--  1 frida  staff  10932 May 27 11:20 index.js
+drwxr-xr-x  3 frida  staff     96 May 27 11:20 lib
+-rw-r--r--  1 frida  staff   1335 May 27 11:20 package.json
+./node_modules/depd/lib
+total 0
+drwxr-xr-x  3 frida  staff  96 May 27 11:20 browser
+./node_modules/depd/lib/browser
+total 8
+-rw-r--r--  1 frida  staff  1512 May 27 11:20 index.js
+./node_modules/core-util-is
+total 24
+-rw-r--r--  1 frida  staff  1077 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff    67 May 27 11:20 README.md
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 lib
+-rw-r--r--  1 frida  staff   799 May 27 11:20 package.json
+./node_modules/core-util-is/lib
+total 8
+-rw-r--r--  1 frida  staff  3039 May 27 11:20 util.js
+./node_modules/abbrev
+total 32
+-rw-r--r--  1 frida  staff  2011 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff   499 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1763 May 27 11:20 abbrev.js
+-rw-r--r--  1 frida  staff   509 May 27 11:20 package.json
+./node_modules/ci-info
+total 56
+-rw-r--r--  1 frida  staff  2004 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff  1091 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  4146 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1739 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   798 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  3030 May 27 11:20 vendors.json
+./node_modules/pstree.remy
+total 32
+-rw-r--r--  1 frida  staff   100 May 27 11:20 .travis.yml
+-rw-r--r--  1 frida  staff  1126 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff   421 May 27 11:20 README.md
+drwxr-xr-x  5 frida  staff   160 May 27 11:20 lib
+-rw-r--r--  1 frida  staff   629 May 27 11:20 package.json
+drwxr-xr-x  4 frida  staff   128 May 27 11:20 tests
+./node_modules/pstree.remy/tests
+total 8
+drwxr-xr-x  5 frida  staff   160 May 27 11:20 fixtures
+-rw-r--r--  1 frida  staff  1387 May 27 11:20 index.test.js
+./node_modules/pstree.remy/tests/fixtures
+total 32
+-rw-r--r--  1 frida  staff   282 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  2382 May 27 11:20 out1
+-rw-r--r--  1 frida  staff  5822 May 27 11:20 out2
+./node_modules/pstree.remy/lib
+total 24
+-rw-r--r--  1 frida  staff   800 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   857 May 27 11:20 tree.js
+-rw-r--r--  1 frida  staff  1171 May 27 11:20 utils.js
+./node_modules/range-parser
+total 40
+-rw-r--r--  1 frida  staff   917 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1178 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  2278 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  2900 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1184 May 27 11:20 package.json
+./node_modules/deep-extend
+total 40
+-rw-r--r--  1 frida  staff  1155 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff  1093 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1290 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff    47 May 27 11:20 index.js
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 lib
+-rw-r--r--  1 frida  staff  1312 May 27 11:20 package.json
+./node_modules/deep-extend/lib
+total 16
+-rw-r--r--  1 frida  staff  4293 May 27 11:20 deep-extend.js
+./node_modules/balanced-match
+total 32
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 .github
+-rw-r--r--  1 frida  staff  1096 May 27 11:20 LICENSE.md
+-rw-r--r--  1 frida  staff  3502 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1219 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1069 May 27 11:20 package.json
+./node_modules/balanced-match/.github
+total 8
+-rw-r--r--  1 frida  staff  53 May 27 11:20 FUNDING.yml
+./node_modules/bytes
+total 48
+-rw-r--r--  1 frida  staff  1775 May 27 11:20 History.md
+-rw-r--r--  1 frida  staff  1153 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  4770 May 27 11:20 Readme.md
+-rw-r--r--  1 frida  staff  3613 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   959 May 27 11:20 package.json
+./node_modules/touch
+total 40
+-rw-r--r--  1 frida  staff   748 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1224 May 27 11:20 README.md
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 bin
+-rw-r--r--  1 frida  staff  5038 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   654 May 27 11:20 package.json
+./node_modules/touch/bin
+total 8
+-rwxr-xr-x  1 frida  staff  2612 May 27 11:20 nodetouch.js
+./node_modules/express
+total 264
+-rw-r--r--   1 frida  staff  112891 May 27 11:20 History.md
+-rw-r--r--   1 frida  staff    1249 May 27 11:20 LICENSE
+-rw-r--r--   1 frida  staff    5404 May 27 11:20 Readme.md
+-rw-r--r--   1 frida  staff     224 May 27 11:20 index.js
+drwxr-xr-x  10 frida  staff     320 May 27 11:20 lib
+-rw-r--r--   1 frida  staff    2623 May 27 11:20 package.json
+./node_modules/express/lib
+total 152
+-rw-r--r--  1 frida  staff  14593 May 27 11:20 application.js
+-rw-r--r--  1 frida  staff   2409 May 27 11:20 express.js
+drwxr-xr-x  4 frida  staff    128 May 27 11:20 middleware
+-rw-r--r--  1 frida  staff  12505 May 27 11:20 request.js
+-rw-r--r--  1 frida  staff  28014 May 27 11:20 response.js
+drwxr-xr-x  5 frida  staff    160 May 27 11:20 router
+-rw-r--r--  1 frida  staff   5955 May 27 11:20 utils.js
+-rw-r--r--  1 frida  staff   3325 May 27 11:20 view.js
+./node_modules/express/lib/middleware
+total 16
+-rw-r--r--  1 frida  staff  853 May 27 11:20 init.js
+-rw-r--r--  1 frida  staff  885 May 27 11:20 query.js
+./node_modules/express/lib/router
+total 56
+-rw-r--r--  1 frida  staff  15124 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   3296 May 27 11:20 layer.js
+-rw-r--r--  1 frida  staff   4269 May 27 11:20 route.js
+./node_modules/encodeurl
+total 40
+-rw-r--r--  1 frida  staff   238 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1089 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  3855 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1586 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1091 May 27 11:20 package.json
+./node_modules/signal-exit
+total 48
+-rw-r--r--  1 frida  staff   748 May 27 11:20 LICENSE.txt
+-rw-r--r--  1 frida  staff  1343 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  5708 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   864 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1295 May 27 11:20 signals.js
+./node_modules/configstore
+total 32
+-rw-r--r--  1 frida  staff  2460 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1305 May 27 11:20 license
+-rw-r--r--  1 frida  staff   828 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  3021 May 27 11:20 readme.md
+./node_modules/wrap-ansi
+total 40
+-rwxr-xr-x  1 frida  staff  5772 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1117 May 27 11:20 license
+-rw-r--r--  1 frida  staff  1014 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  2745 May 27 11:20 readme.md
+./node_modules/once
+total 32
+-rw-r--r--  1 frida  staff   765 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1772 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   935 May 27 11:20 once.js
+-rw-r--r--  1 frida  staff   574 May 27 11:20 package.json
+./node_modules/@szmarczak
+total 0
+drwxr-xr-x  6 frida  staff  192 May 27 11:20 http-timer
+./node_modules/@szmarczak/http-timer
+total 24
+-rwxr-xr-x  1 frida  staff  1071 May 27 11:20 LICENSE
+-rwxr-xr-x  1 frida  staff  2241 May 27 11:20 README.md
+-rwxr-xr-x  1 frida  staff   889 May 27 11:20 package.json
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 source
+./node_modules/@szmarczak/http-timer/source
+total 8
+-rwxr-xr-x  1 frida  staff  2095 May 27 11:20 index.js
+./node_modules/normalize-url
+total 64
+-rw-r--r--  1 frida  staff  4952 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  6046 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   707 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  5291 May 27 11:20 readme.md
+./node_modules/promise-mysql
+total 72
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 .github
+-rw-r--r--  1 frida  staff    15 May 27 11:20 .tool-versions
+-rw-r--r--  1 frida  staff  1083 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  8505 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  4547 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   648 May 27 11:20 index.js
+drwxr-xr-x  7 frida  staff   224 May 27 11:20 lib
+-rw-r--r--  1 frida  staff  1103 May 27 11:20 package.json
+./node_modules/promise-mysql/.github
+total 0
+drwxr-xr-x  3 frida  staff  96 May 27 11:20 workflows
+./node_modules/promise-mysql/.github/workflows
+total 8
+-rw-r--r--  1 frida  staff  694 May 27 11:20 node.js.yml
+./node_modules/promise-mysql/lib
+total 48
+-rw-r--r--  1 frida  staff  4249 May 27 11:20 connection.js
+-rw-r--r--  1 frida  staff   825 May 27 11:20 helper.js
+-rw-r--r--  1 frida  staff  2104 May 27 11:20 pool.js
+-rw-r--r--  1 frida  staff  1515 May 27 11:20 poolCluster.js
+-rw-r--r--  1 frida  staff   265 May 27 11:20 poolConnection.js
+./node_modules/string_decoder
+total 32
+-rw-r--r--  1 frida  staff   899 May 27 11:20 .travis.yml
+-rw-r--r--  1 frida  staff  2338 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1801 May 27 11:20 README.md
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 lib
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 node_modules
+-rw-r--r--  1 frida  staff   795 May 27 11:20 package.json
+./node_modules/string_decoder/node_modules
+total 0
+drwxr-xr-x  7 frida  staff  224 May 27 11:20 safe-buffer
+./node_modules/string_decoder/node_modules/safe-buffer
+total 88
+-rw-r--r--  1 frida  staff   1081 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  19555 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   8738 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   1529 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff    783 May 27 11:20 package.json
+./node_modules/string_decoder/lib
+total 24
+-rw-r--r--  1 frida  staff  9465 May 27 11:20 string_decoder.js
+./node_modules/merge-descriptors
+total 40
+-rw-r--r--  1 frida  staff   363 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1167 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1213 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1215 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   931 May 27 11:20 package.json
+./node_modules/array-flatten
+total 32
+-rw-r--r--  1 frida  staff  1103 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1245 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1195 May 27 11:20 array-flatten.js
+-rw-r--r--  1 frida  staff   879 May 27 11:20 package.json
+./node_modules/picomatch
+total 96
+-rw-r--r--  1 frida  staff   6203 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff   1091 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  27445 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff     60 May 27 11:20 index.js
+drwxr-xr-x  7 frida  staff    224 May 27 11:20 lib
+-rw-r--r--  1 frida  staff   1912 May 27 11:20 package.json
+./node_modules/picomatch/lib
+total 128
+-rw-r--r--  1 frida  staff   4448 May 27 11:20 constants.js
+-rw-r--r--  1 frida  staff  27763 May 27 11:20 parse.js
+-rw-r--r--  1 frida  staff   9956 May 27 11:20 picomatch.js
+-rw-r--r--  1 frida  staff   9189 May 27 11:20 scan.js
+-rw-r--r--  1 frida  staff   1885 May 27 11:20 utils.js
+./node_modules/safe-buffer
+total 88
+-rw-r--r--  1 frida  staff   1081 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  19555 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   8738 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   1670 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   1057 May 27 11:20 package.json
+./node_modules/write-file-atomic
+total 48
+-rw-r--r--  1 frida  staff   893 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff   734 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  3109 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  6812 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1239 May 27 11:20 package.json
+./node_modules/lowercase-keys
+total 32
+-rw-r--r--  1 frida  staff   208 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1119 May 27 11:20 license
+-rw-r--r--  1 frida  staff   596 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   533 May 27 11:20 readme.md
+./node_modules/lodash.truncate
+total 64
+-rw-r--r--  1 frida  staff   1951 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff    467 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  16655 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff    749 May 27 11:20 package.json
+./node_modules/function-bind
+total 96
+-rw-r--r--  1 frida  staff   286 May 27 11:20 .editorconfig
+-rw-r--r--  1 frida  staff   231 May 27 11:20 .eslintrc
+-rw-r--r--  1 frida  staff  4140 May 27 11:20 .jscs.json
+-rw-r--r--  1 frida  staff   252 May 27 11:20 .npmignore
+-rw-r--r--  1 frida  staff  5451 May 27 11:20 .travis.yml
+-rw-r--r--  1 frida  staff  1052 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1488 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1463 May 27 11:20 implementation.js
+-rw-r--r--  1 frida  staff   126 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1498 May 27 11:20 package.json
+drwxr-xr-x  4 frida  staff   128 May 27 11:20 test
+./node_modules/function-bind/test
+total 32
+-rw-r--r--  1 frida  staff   176 May 27 11:20 .eslintrc
+-rw-r--r--  1 frida  staff  8991 May 27 11:20 index.js
+./node_modules/is-glob
+total 40
+-rw-r--r--  1 frida  staff  1088 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  7145 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  3628 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1748 May 27 11:20 package.json
+./node_modules/jake
+total 40
+-rw-r--r--   1 frida  staff  1319 May 27 11:20 Makefile
+-rw-r--r--   1 frida  staff   556 May 27 11:20 README.md
+drwxr-xr-x   4 frida  staff   128 May 27 11:20 bin
+-rw-r--r--   1 frida  staff  2336 May 27 11:20 jakefile.js
+drwxr-xr-x  14 frida  staff   448 May 27 11:20 lib
+-rw-r--r--   1 frida  staff   952 May 27 11:20 package.json
+drwxr-xr-x   4 frida  staff   128 May 27 11:20 test
+-rw-r--r--   1 frida  staff   993 May 27 11:20 usage.txt
+./node_modules/jake/test
+total 0
+drwxr-xr-x  12 frida  staff  384 May 27 11:20 integration
+drwxr-xr-x   5 frida  staff  160 May 27 11:20 unit
+./node_modules/jake/test/unit
+total 32
+-rw-r--r--  1 frida  staff   580 May 27 11:20 jakefile.js
+-rw-r--r--  1 frida  staff  2582 May 27 11:20 namespace.js
+-rw-r--r--  1 frida  staff  5320 May 27 11:20 parseargs.js
+./node_modules/jake/test/integration
+total 120
+-rw-r--r--  1 frida  staff  1626 May 27 11:20 concurrent.js
+-rw-r--r--  1 frida  staff  6598 May 27 11:20 file.js
+-rw-r--r--  1 frida  staff  4565 May 27 11:20 file_task.js
+-rw-r--r--  1 frida  staff  1590 May 27 11:20 helpers.js
+-rw-r--r--  1 frida  staff  9118 May 27 11:20 jakefile.js
+drwxr-xr-x  6 frida  staff   192 May 27 11:20 jakelib
+-rw-r--r--  1 frida  staff   678 May 27 11:20 publish_task.js
+-rw-r--r--  1 frida  staff  6816 May 27 11:20 rule.js
+-rw-r--r--  1 frida  staff   812 May 27 11:20 selfdep.js
+-rw-r--r--  1 frida  staff  5688 May 27 11:20 task_base.js
+./node_modules/jake/test/integration/jakelib
+total 40
+-rw-r--r--  1 frida  staff  2473 May 27 11:20 concurrent.jake.js
+-rw-r--r--  1 frida  staff  1413 May 27 11:20 publish.jake.js
+-rw-r--r--  1 frida  staff   182 May 27 11:20 required_module.jake.js
+-rw-r--r--  1 frida  staff  6881 May 27 11:20 rule.jake.js
+./node_modules/jake/bin
+total 16
+-rwxr-xr-x  1 frida  staff  1375 May 27 11:20 bash_completion.sh
+-rwxr-xr-x  1 frida  staff   907 May 27 11:20 cli.js
+./node_modules/jake/lib
+total 184
+-rw-r--r--  1 frida  staff  12216 May 27 11:20 api.js
+-rw-r--r--  1 frida  staff   9697 May 27 11:20 jake.js
+-rw-r--r--  1 frida  staff   4411 May 27 11:20 loader.js
+-rw-r--r--  1 frida  staff   2453 May 27 11:20 namespace.js
+-rw-r--r--  1 frida  staff  11004 May 27 11:20 package_task.js
+-rw-r--r--  1 frida  staff   3753 May 27 11:20 parseargs.js
+-rw-r--r--  1 frida  staff   6544 May 27 11:20 program.js
+-rw-r--r--  1 frida  staff   9079 May 27 11:20 publish_task.js
+-rw-r--r--  1 frida  staff   7873 May 27 11:20 rule.js
+drwxr-xr-x  6 frida  staff    192 May 27 11:20 task
+-rw-r--r--  1 frida  staff   8482 May 27 11:20 test_task.js
+drwxr-xr-x  5 frida  staff    160 May 27 11:20 utils
+./node_modules/jake/lib/utils
+total 40
+-rw-r--r--  1 frida  staff  7660 May 27 11:20 file.js
+-rw-r--r--  1 frida  staff  7274 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   505 May 27 11:20 logger.js
+./node_modules/jake/lib/task
+total 48
+-rw-r--r--  1 frida  staff    575 May 27 11:20 directory_task.js
+-rw-r--r--  1 frida  staff   3306 May 27 11:20 file_task.js
+-rw-r--r--  1 frida  staff    238 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  12259 May 27 11:20 task.js
+./node_modules/ee-first
+total 32
+-rw-r--r--  1 frida  staff  1099 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  2617 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1684 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   859 May 27 11:20 package.json
+./node_modules/is-fullwidth-code-point
+total 40
+-rw-r--r--  1 frida  staff   549 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  1756 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   737 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   843 May 27 11:20 readme.md
+./node_modules/inherits
+total 40
+-rw-r--r--  1 frida  staff   749 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1625 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   250 May 27 11:20 inherits.js
+-rw-r--r--  1 frida  staff   753 May 27 11:20 inherits_browser.js
+-rw-r--r--  1 frida  staff   581 May 27 11:20 package.json
+./node_modules/is-ci
+total 48
+-rw-r--r--  1 frida  staff   269 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff  1091 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1299 May 27 11:20 README.md
+-rwxr-xr-x  1 frida  staff    70 May 27 11:20 bin.js
+-rw-r--r--  1 frida  staff    55 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   797 May 27 11:20 package.json
+./node_modules/iconv-lite
+total 48
+-rw-r--r--   1 frida  staff  4342 May 27 11:20 Changelog.md
+-rw-r--r--   1 frida  staff  1064 May 27 11:20 LICENSE
+-rw-r--r--   1 frida  staff  6534 May 27 11:20 README.md
+drwxr-xr-x  12 frida  staff   384 May 27 11:20 encodings
+drwxr-xr-x   7 frida  staff   224 May 27 11:20 lib
+-rw-r--r--   1 frida  staff  1227 May 27 11:20 package.json
+./node_modules/iconv-lite/encodings
+total 224
+-rw-r--r--   1 frida  staff  21415 May 27 11:20 dbcs-codec.js
+-rw-r--r--   1 frida  staff   8291 May 27 11:20 dbcs-data.js
+-rw-r--r--   1 frida  staff    710 May 27 11:20 index.js
+-rw-r--r--   1 frida  staff   6115 May 27 11:20 internal.js
+-rw-r--r--   1 frida  staff   2191 May 27 11:20 sbcs-codec.js
+-rw-r--r--   1 frida  staff  32034 May 27 11:20 sbcs-data-generated.js
+-rw-r--r--   1 frida  staff   4686 May 27 11:20 sbcs-data.js
+drwxr-xr-x  10 frida  staff    320 May 27 11:20 tables
+-rw-r--r--   1 frida  staff   5011 May 27 11:20 utf16.js
+-rw-r--r--   1 frida  staff   9215 May 27 11:20 utf7.js
+./node_modules/iconv-lite/encodings/tables
+total 456
+-rw-r--r--  1 frida  staff  17717 May 27 11:20 big5-added.json
+-rw-r--r--  1 frida  staff  47320 May 27 11:20 cp936.json
+-rw-r--r--  1 frida  staff  38122 May 27 11:20 cp949.json
+-rw-r--r--  1 frida  staff  42356 May 27 11:20 cp950.json
+-rw-r--r--  1 frida  staff  41064 May 27 11:20 eucjp.json
+-rw-r--r--  1 frida  staff   2216 May 27 11:20 gb18030-ranges.json
+-rw-r--r--  1 frida  staff   1227 May 27 11:20 gbk-added.json
+-rw-r--r--  1 frida  staff  23782 May 27 11:20 shiftjis.json
+./node_modules/iconv-lite/lib
+total 64
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 bom-handling.js
+-rw-r--r--  1 frida  staff  8701 May 27 11:20 extend-node.js
+-rw-r--r--  1 frida  staff   982 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  5123 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  3387 May 27 11:20 streams.js
+./node_modules/anymatch
+total 40
+-rw-r--r--  1 frida  staff   784 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  4023 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   660 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  3173 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   904 May 27 11:20 package.json
+./node_modules/color-name
+total 40
+-rw-r--r--  1 frida  staff  1085 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff   384 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  4617 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   607 May 27 11:20 package.json
+./node_modules/to-readable-stream
+total 32
+-rw-r--r--  1 frida  staff   160 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   659 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   861 May 27 11:20 readme.md
+./node_modules/async
+total 1096
+-rw-r--r--   1 frida  staff  33217 May 27 11:20 CHANGELOG.md
+-rw-r--r--   1 frida  staff   1063 May 27 11:20 LICENSE
+-rw-r--r--   1 frida  staff   3463 May 27 11:20 README.md
+-rw-r--r--   1 frida  staff   3558 May 27 11:20 all.js
+-rw-r--r--   1 frida  staff   1750 May 27 11:20 allLimit.js
+-rw-r--r--   1 frida  staff   1644 May 27 11:20 allSeries.js
+-rw-r--r--   1 frida  staff   3802 May 27 11:20 any.js
+-rw-r--r--   1 frida  staff   1785 May 27 11:20 anyLimit.js
+-rw-r--r--   1 frida  staff   1679 May 27 11:20 anySeries.js
+-rw-r--r--   1 frida  staff   3121 May 27 11:20 apply.js
+-rw-r--r--   1 frida  staff   1989 May 27 11:20 applyEach.js
+-rw-r--r--   1 frida  staff   1303 May 27 11:20 applyEachSeries.js
+-rw-r--r--   1 frida  staff   3739 May 27 11:20 asyncify.js
+-rw-r--r--   1 frida  staff  11856 May 27 11:20 auto.js
+-rw-r--r--   1 frida  staff   7092 May 27 11:20 autoInject.js
+-rw-r--r--   1 frida  staff    239 May 27 11:20 bower.json
+-rw-r--r--   1 frida  staff   2745 May 27 11:20 cargo.js
+-rw-r--r--   1 frida  staff   3351 May 27 11:20 cargoQueue.js
+-rw-r--r--   1 frida  staff   1564 May 27 11:20 compose.js
+-rw-r--r--   1 frida  staff   3651 May 27 11:20 concat.js
+-rw-r--r--   1 frida  staff   2096 May 27 11:20 concatLimit.js
+-rw-r--r--   1 frida  staff   1473 May 27 11:20 concatSeries.js
+-rw-r--r--   1 frida  staff   2977 May 27 11:20 constant.js
+-rw-r--r--   1 frida  staff   3238 May 27 11:20 detect.js
+-rw-r--r--   1 frida  staff   1823 May 27 11:20 detectLimit.js
+-rw-r--r--   1 frida  staff   1729 May 27 11:20 detectSeries.js
+-rw-r--r--   1 frida  staff   1297 May 27 11:20 dir.js
+drwxr-xr-x   5 frida  staff    160 May 27 11:20 dist
+-rw-r--r--   1 frida  staff   2303 May 27 11:20 doDuring.js
+-rw-r--r--   1 frida  staff   1706 May 27 11:20 doUntil.js
+-rw-r--r--   1 frida  staff   2303 May 27 11:20 doWhilst.js
+-rw-r--r--   1 frida  staff   2333 May 27 11:20 during.js
+-rw-r--r--   1 frida  staff   4024 May 27 11:20 each.js
+-rw-r--r--   1 frida  staff   1789 May 27 11:20 eachLimit.js
+-rw-r--r--   1 frida  staff   5746 May 27 11:20 eachOf.js
+-rw-r--r--   1 frida  staff   1637 May 27 11:20 eachOfLimit.js
+-rw-r--r--   1 frida  staff   1329 May 27 11:20 eachOfSeries.js
+-rw-r--r--   1 frida  staff   1575 May 27 11:20 eachSeries.js
+-rw-r--r--   1 frida  staff   2314 May 27 11:20 ensureAsync.js
+-rw-r--r--   1 frida  staff   3558 May 27 11:20 every.js
+-rw-r--r--   1 frida  staff   1750 May 27 11:20 everyLimit.js
+-rw-r--r--   1 frida  staff   1644 May 27 11:20 everySeries.js
+-rw-r--r--   1 frida  staff   2897 May 27 11:20 filter.js
+-rw-r--r--   1 frida  staff   1654 May 27 11:20 filterLimit.js
+-rw-r--r--   1 frida  staff   1546 May 27 11:20 filterSeries.js
+-rw-r--r--   1 frida  staff   3238 May 27 11:20 find.js
+-rw-r--r--   1 frida  staff   1823 May 27 11:20 findLimit.js
+-rw-r--r--   1 frida  staff   1729 May 27 11:20 findSeries.js
+-rw-r--r--   1 frida  staff   3651 May 27 11:20 flatMap.js
+-rw-r--r--   1 frida  staff   2096 May 27 11:20 flatMapLimit.js
+-rw-r--r--   1 frida  staff   1473 May 27 11:20 flatMapSeries.js
+-rw-r--r--   1 frida  staff   4881 May 27 11:20 foldl.js
+-rw-r--r--   1 frida  staff   1498 May 27 11:20 foldr.js
+-rw-r--r--   1 frida  staff   4024 May 27 11:20 forEach.js
+-rw-r--r--   1 frida  staff   1789 May 27 11:20 forEachLimit.js
+-rw-r--r--   1 frida  staff   5746 May 27 11:20 forEachOf.js
+-rw-r--r--   1 frida  staff   1637 May 27 11:20 forEachOfLimit.js
+-rw-r--r--   1 frida  staff   1329 May 27 11:20 forEachOfSeries.js
+-rw-r--r--   1 frida  staff   1575 May 27 11:20 forEachSeries.js
+-rw-r--r--   1 frida  staff   2121 May 27 11:20 forever.js
+-rw-r--r--   1 frida  staff   3597 May 27 11:20 groupBy.js
+-rw-r--r--   1 frida  staff   2449 May 27 11:20 groupByLimit.js
+-rw-r--r--   1 frida  staff   1330 May 27 11:20 groupBySeries.js
+-rw-r--r--   1 frida  staff  19730 May 27 11:20 index.js
+-rw-r--r--   1 frida  staff   4881 May 27 11:20 inject.js
+drwxr-xr-x  27 frida  staff    864 May 27 11:20 internal
+-rw-r--r--   1 frida  staff   1197 May 27 11:20 log.js
+-rw-r--r--   1 frida  staff   4595 May 27 11:20 map.js
+-rw-r--r--   1 frida  staff   1619 May 27 11:20 mapLimit.js
+-rw-r--r--   1 frida  staff   1514 May 27 11:20 mapSeries.js
+-rw-r--r--   1 frida  staff   4589 May 27 11:20 mapValues.js
+-rw-r--r--   1 frida  staff   2120 May 27 11:20 mapValuesLimit.js
+-rw-r--r--   1 frida  staff   1377 May 27 11:20 mapValuesSeries.js
+-rw-r--r--   1 frida  staff   3073 May 27 11:20 memoize.js
+-rw-r--r--   1 frida  staff   1478 May 27 11:20 nextTick.js
+-rw-r--r--   1 frida  staff   2518 May 27 11:20 package.json
+-rw-r--r--   1 frida  staff   5573 May 27 11:20 parallel.js
+-rw-r--r--   1 frida  staff   1510 May 27 11:20 parallelLimit.js
+-rw-r--r--   1 frida  staff   2874 May 27 11:20 priorityQueue.js
+-rw-r--r--   1 frida  staff   7380 May 27 11:20 queue.js
+-rw-r--r--   1 frida  staff   2099 May 27 11:20 race.js
+-rw-r--r--   1 frida  staff   4881 May 27 11:20 reduce.js
+-rw-r--r--   1 frida  staff   1498 May 27 11:20 reduceRight.js
+-rw-r--r--   1 frida  staff   2269 May 27 11:20 reflect.js
+-rw-r--r--   1 frida  staff   2452 May 27 11:20 reflectAll.js
+-rw-r--r--   1 frida  staff   2675 May 27 11:20 reject.js
+-rw-r--r--   1 frida  staff   1577 May 27 11:20 rejectLimit.js
+-rw-r--r--   1 frida  staff   1469 May 27 11:20 rejectSeries.js
+-rw-r--r--   1 frida  staff   5527 May 27 11:20 retry.js
+-rw-r--r--   1 frida  staff   2538 May 27 11:20 retryable.js
+-rw-r--r--   1 frida  staff   2897 May 27 11:20 select.js
+-rw-r--r--   1 frida  staff   1654 May 27 11:20 selectLimit.js
+-rw-r--r--   1 frida  staff   1546 May 27 11:20 selectSeries.js
+-rw-r--r--   1 frida  staff   2656 May 27 11:20 seq.js
+-rw-r--r--   1 frida  staff   5822 May 27 11:20 series.js
+-rw-r--r--   1 frida  staff   1392 May 27 11:20 setImmediate.js
+-rw-r--r--   1 frida  staff   3802 May 27 11:20 some.js
+-rw-r--r--   1 frida  staff   1785 May 27 11:20 someLimit.js
+-rw-r--r--   1 frida  staff   1679 May 27 11:20 someSeries.js
+-rw-r--r--   1 frida  staff   6213 May 27 11:20 sortBy.js
+-rw-r--r--   1 frida  staff   2758 May 27 11:20 timeout.js
+-rw-r--r--   1 frida  staff   1486 May 27 11:20 times.js
+-rw-r--r--   1 frida  staff   1448 May 27 11:20 timesLimit.js
+-rw-r--r--   1 frida  staff   1060 May 27 11:20 timesSeries.js
+-rw-r--r--   1 frida  staff   5566 May 27 11:20 transform.js
+-rw-r--r--   1 frida  staff   2543 May 27 11:20 tryEach.js
+-rw-r--r--   1 frida  staff    668 May 27 11:20 unmemoize.js
+-rw-r--r--   1 frida  staff   2077 May 27 11:20 until.js
+-rw-r--r--   1 frida  staff   3170 May 27 11:20 waterfall.js
+-rw-r--r--   1 frida  staff   2333 May 27 11:20 whilst.js
+-rw-r--r--   1 frida  staff   3739 May 27 11:20 wrapSync.js
+./node_modules/async/dist
+total 880
+-rw-r--r--  1 frida  staff  224526 May 27 11:20 async.js
+-rw-r--r--  1 frida  staff   21588 May 27 11:20 async.min.js
+-rw-r--r--  1 frida  staff  200031 May 27 11:20 async.mjs
+./node_modules/async/internal
+total 216
+-rw-r--r--  1 frida  staff  2285 May 27 11:20 DoublyLinkedList.js
+-rw-r--r--  1 frida  staff  2500 May 27 11:20 Heap.js
+-rw-r--r--  1 frida  staff   786 May 27 11:20 applyEach.js
+-rw-r--r--  1 frida  staff  1979 May 27 11:20 asyncEachOfLimit.js
+-rw-r--r--  1 frida  staff   796 May 27 11:20 awaitify.js
+-rw-r--r--  1 frida  staff   255 May 27 11:20 breakLoop.js
+-rw-r--r--  1 frida  staff   922 May 27 11:20 consoleFunc.js
+-rw-r--r--  1 frida  staff  1231 May 27 11:20 createTester.js
+-rw-r--r--  1 frida  staff  2641 May 27 11:20 eachOfLimit.js
+-rw-r--r--  1 frida  staff  1623 May 27 11:20 filter.js
+-rw-r--r--  1 frida  staff   220 May 27 11:20 getIterator.js
+-rw-r--r--  1 frida  staff   292 May 27 11:20 initialParams.js
+-rw-r--r--  1 frida  staff   282 May 27 11:20 isArrayLike.js
+-rw-r--r--  1 frida  staff  1463 May 27 11:20 iterator.js
+-rw-r--r--  1 frida  staff   764 May 27 11:20 map.js
+-rw-r--r--  1 frida  staff   365 May 27 11:20 once.js
+-rw-r--r--  1 frida  staff   363 May 27 11:20 onlyOnce.js
+-rw-r--r--  1 frida  staff   965 May 27 11:20 parallel.js
+-rw-r--r--  1 frida  staff   532 May 27 11:20 promiseCallback.js
+-rw-r--r--  1 frida  staff  8416 May 27 11:20 queue.js
+-rw-r--r--  1 frida  staff   273 May 27 11:20 range.js
+-rw-r--r--  1 frida  staff   698 May 27 11:20 reject.js
+-rw-r--r--  1 frida  staff   857 May 27 11:20 setImmediate.js
+-rw-r--r--  1 frida  staff   254 May 27 11:20 withoutIndex.js
+-rw-r--r--  1 frida  staff   955 May 27 11:20 wrapAsync.js
+./node_modules/chokidar
+total 104
+-rw-r--r--  1 frida  staff   1129 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  14275 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  28368 May 27 11:20 index.js
+drwxr-xr-x  5 frida  staff    160 May 27 11:20 lib
+-rw-r--r--  1 frida  staff   1832 May 27 11:20 package.json
+drwxr-xr-x  3 frida  staff     96 May 27 11:20 types
+./node_modules/chokidar/types
+total 16
+-rw-r--r--  1 frida  staff  6303 May 27 11:20 index.d.ts
+./node_modules/chokidar/lib
+total 80
+-rw-r--r--  1 frida  staff   1834 May 27 11:20 constants.js
+-rw-r--r--  1 frida  staff  16274 May 27 11:20 fsevents-handler.js
+-rw-r--r--  1 frida  staff  20067 May 27 11:20 nodefs-handler.js
+./node_modules/fresh
+total 40
+-rw-r--r--  1 frida  staff  1500 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1174 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  3374 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  2711 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1357 May 27 11:20 package.json
+./node_modules/get-intrinsic
+total 96
+-rw-r--r--  1 frida  staff     10 May 27 11:20 .eslintignore
+-rw-r--r--  1 frida  staff    715 May 27 11:20 .eslintrc
+drwxr-xr-x  3 frida  staff     96 May 27 11:20 .github
+-rw-r--r--  1 frida  staff    216 May 27 11:20 .nycrc
+-rw-r--r--  1 frida  staff   4550 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff   1071 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff   2359 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  12499 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   1990 May 27 11:20 package.json
+drwxr-xr-x  3 frida  staff     96 May 27 11:20 test
+./node_modules/get-intrinsic/test
+total 24
+-rw-r--r--  1 frida  staff  8519 May 27 11:20 GetIntrinsic.js
+./node_modules/get-intrinsic/.github
+total 8
+-rw-r--r--  1 frida  staff  584 May 27 11:20 FUNDING.yml
+./node_modules/keyv
+total 40
+-rw-r--r--  1 frida  staff   1068 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  10115 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   1183 May 27 11:20 package.json
+drwxr-xr-x  3 frida  staff     96 May 27 11:20 src
+./node_modules/keyv/src
+total 8
+-rw-r--r--  1 frida  staff  2295 May 27 11:20 index.js
+./node_modules/decompress-response
+total 32
+-rw-r--r--  1 frida  staff   628 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1120 May 27 11:20 license
+-rw-r--r--  1 frida  staff   951 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   841 May 27 11:20 readme.md
+./node_modules/qs
+total 136
+-rw-r--r--  1 frida  staff    540 May 27 11:20 .editorconfig
+-rw-r--r--  1 frida  staff   1022 May 27 11:20 .eslintrc
+drwxr-xr-x  3 frida  staff     96 May 27 11:20 .github
+-rw-r--r--  1 frida  staff    216 May 27 11:20 .nycrc
+-rw-r--r--  1 frida  staff  21401 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff   1600 May 27 11:20 LICENSE.md
+-rw-r--r--  1 frida  staff  20737 May 27 11:20 README.md
+drwxr-xr-x  3 frida  staff     96 May 27 11:20 dist
+drwxr-xr-x  7 frida  staff    224 May 27 11:20 lib
+-rw-r--r--  1 frida  staff   2071 May 27 11:20 package.json
+drwxr-xr-x  5 frida  staff    160 May 27 11:20 test
+./node_modules/qs/test
+total 152
+-rw-r--r--  1 frida  staff  35295 May 27 11:20 parse.js
+-rw-r--r--  1 frida  staff  32699 May 27 11:20 stringify.js
+-rw-r--r--  1 frida  staff   5112 May 27 11:20 utils.js
+./node_modules/qs/dist
+total 136
+-rw-r--r--  1 frida  staff  68450 May 27 11:20 qs.js
+./node_modules/qs/.github
+total 8
+-rw-r--r--  1 frida  staff  548 May 27 11:20 FUNDING.yml
+./node_modules/qs/lib
+total 80
+-rw-r--r--  1 frida  staff   476 May 27 11:20 formats.js
+-rw-r--r--  1 frida  staff   211 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  9380 May 27 11:20 parse.js
+-rw-r--r--  1 frida  staff  9819 May 27 11:20 stringify.js
+-rw-r--r--  1 frida  staff  6823 May 27 11:20 utils.js
+./node_modules/got
+total 104
+-rw-r--r--   1 frida  staff   1109 May 27 11:20 license
+-rw-r--r--   1 frida  staff   1323 May 27 11:20 package.json
+-rw-r--r--   1 frida  staff  44187 May 27 11:20 readme.md
+drwxr-xr-x  14 frida  staff    448 May 27 11:20 source
+./node_modules/got/source
+total 112
+-rw-r--r--  1 frida  staff  2878 May 27 11:20 as-promise.js
+-rw-r--r--  1 frida  staff  2310 May 27 11:20 as-stream.js
+-rw-r--r--  1 frida  staff  2106 May 27 11:20 create.js
+-rw-r--r--  1 frida  staff  2842 May 27 11:20 errors.js
+-rw-r--r--  1 frida  staff   935 May 27 11:20 get-response.js
+-rw-r--r--  1 frida  staff   939 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   132 May 27 11:20 known-hook-events.js
+-rw-r--r--  1 frida  staff  1858 May 27 11:20 merge.js
+-rw-r--r--  1 frida  staff  7549 May 27 11:20 normalize-arguments.js
+-rw-r--r--  1 frida  staff  2324 May 27 11:20 progress.js
+-rw-r--r--  1 frida  staff  8856 May 27 11:20 request-as-event-emitter.js
+drwxr-xr-x  7 frida  staff   224 May 27 11:20 utils
+./node_modules/got/source/utils
+total 48
+-rw-r--r--  1 frida  staff   276 May 27 11:20 deep-freeze.js
+-rw-r--r--  1 frida  staff   644 May 27 11:20 get-body-size.js
+-rw-r--r--  1 frida  staff   134 May 27 11:20 is-form-data.js
+-rw-r--r--  1 frida  staff  4421 May 27 11:20 timed-out.js
+-rw-r--r--  1 frida  staff   588 May 27 11:20 url-to-options.js
+./node_modules/cli-boxes
+total 48
+-rw-r--r--  1 frida  staff  1037 May 27 11:20 boxes.json
+-rw-r--r--  1 frida  staff  1545 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   167 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1117 May 27 11:20 license
+-rw-r--r--  1 frida  staff   692 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1580 May 27 11:20 readme.md
+./node_modules/is-binary-path
+total 40
+-rw-r--r--  1 frida  staff   290 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   239 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1159 May 27 11:20 license
+-rw-r--r--  1 frida  staff   657 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   733 May 27 11:20 readme.md
+./node_modules/import-lazy
+total 32
+-rw-r--r--  1 frida  staff   976 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1119 May 27 11:20 license
+-rw-r--r--  1 frida  staff   720 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1951 May 27 11:20 readme.md
+./node_modules/path-to-regexp
+total 40
+-rw-r--r--  1 frida  staff   694 May 27 11:20 History.md
+-rw-r--r--  1 frida  staff  1103 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1102 May 27 11:20 Readme.md
+-rw-r--r--  1 frida  staff  3328 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   554 May 27 11:20 package.json
+./node_modules/safer-buffer
+total 120
+-rw-r--r--  1 frida  staff   1094 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  12794 May 27 11:20 Porting-Buffer.md
+-rw-r--r--  1 frida  staff   8261 May 27 11:20 Readme.md
+-rw-r--r--  1 frida  staff   1483 May 27 11:20 dangerous.js
+-rw-r--r--  1 frida  staff    822 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   2110 May 27 11:20 safer.js
+-rw-r--r--  1 frida  staff  15735 May 27 11:20 tests.js
+./node_modules/is-path-inside
+total 40
+-rw-r--r--  1 frida  staff   758 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   290 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   590 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1374 May 27 11:20 readme.md
+./node_modules/ejs
+total 224
+-rw-r--r--  1 frida  staff  11358 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  12998 May 27 11:20 README.md
+drwxr-xr-x  3 frida  staff     96 May 27 11:20 bin
+-rw-r--r--  1 frida  staff  49056 May 27 11:20 ejs.js
+-rw-r--r--  1 frida  staff  23906 May 27 11:20 ejs.min.js
+-rw-r--r--  1 frida  staff   2545 May 27 11:20 jakefile.js
+drwxr-xr-x  4 frida  staff    128 May 27 11:20 lib
+-rw-r--r--  1 frida  staff    896 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   1677 May 27 11:20 usage.txt
+./node_modules/ejs/bin
+total 16
+-rwxr-xr-x  1 frida  staff  4702 May 27 11:20 cli.js
+./node_modules/ejs/lib
+total 72
+-rwxr-xr-x  1 frida  staff  27481 May 27 11:20 ejs.js
+-rw-r--r--  1 frida  staff   5286 May 27 11:20 utils.js
+./node_modules/mime-types
+total 56
+-rw-r--r--  1 frida  staff  8812 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1167 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  3481 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  3663 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1149 May 27 11:20 package.json
+./node_modules/bignumber.js
+total 648
+-rw-r--r--  1 frida  staff   7851 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff   1104 May 27 11:20 LICENCE
+-rw-r--r--  1 frida  staff  10289 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  67076 May 27 11:20 bignumber.d.ts
+-rw-r--r--  1 frida  staff  89253 May 27 11:20 bignumber.js
+-rw-r--r--  1 frida  staff  18598 May 27 11:20 bignumber.min.js
+-rw-r--r--  1 frida  staff  35516 May 27 11:20 bignumber.min.js.map
+-rw-r--r--  1 frida  staff  84325 May 27 11:20 bignumber.mjs
+drwxr-xr-x  3 frida  staff     96 May 27 11:20 doc
+-rw-r--r--  1 frida  staff    885 May 27 11:20 package.json
+./node_modules/bignumber.js/doc
+total 176
+-rw-r--r--  1 frida  staff  86676 May 27 11:20 API.html
+./node_modules/json-schema-traverse
+total 48
+-rw-r--r--  1 frida  staff   630 May 27 11:20 .eslintrc.yml
+drwxr-xr-x  4 frida  staff   128 May 27 11:20 .github
+-rw-r--r--  1 frida  staff  1074 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  3350 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   740 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  2428 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1004 May 27 11:20 package.json
+drwxr-xr-x  5 frida  staff   160 May 27 11:20 spec
+./node_modules/json-schema-traverse/spec
+total 24
+-rw-r--r--  1 frida  staff    91 May 27 11:20 .eslintrc.yml
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 fixtures
+-rw-r--r--  1 frida  staff  6042 May 27 11:20 index.spec.js
+./node_modules/json-schema-traverse/spec/fixtures
+total 16
+-rw-r--r--  1 frida  staff  5544 May 27 11:20 schema.js
+./node_modules/json-schema-traverse/.github
+total 8
+-rw-r--r--  1 frida  staff   57 May 27 11:20 FUNDING.yml
+drwxr-xr-x  4 frida  staff  128 May 27 11:20 workflows
+./node_modules/json-schema-traverse/.github/workflows
+total 16
+-rw-r--r--  1 frida  staff  582 May 27 11:20 build.yml
+-rw-r--r--  1 frida  staff  678 May 27 11:20 publish.yml
+./node_modules/is-typedarray
+total 40
+-rw-r--r--  1 frida  staff  1073 May 27 11:20 LICENSE.md
+-rw-r--r--  1 frida  staff   558 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1016 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   665 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1095 May 27 11:20 test.js
+./node_modules/end-of-stream
+total 32
+-rw-r--r--  1 frida  staff  1078 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1701 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  2678 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   777 May 27 11:20 package.json
+./node_modules/type-is
+total 64
+-rw-r--r--  1 frida  staff  5447 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1172 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  5183 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  5562 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1133 May 27 11:20 package.json
+./node_modules/minimist
+total 48
+-rw-r--r--   1 frida  staff   116 May 27 11:20 .travis.yml
+-rw-r--r--   1 frida  staff  1073 May 27 11:20 LICENSE
+drwxr-xr-x   3 frida  staff    96 May 27 11:20 example
+-rw-r--r--   1 frida  staff  7807 May 27 11:20 index.js
+-rw-r--r--   1 frida  staff   883 May 27 11:20 package.json
+-rw-r--r--   1 frida  staff  2590 May 27 11:20 readme.markdown
+drwxr-xr-x  17 frida  staff   544 May 27 11:20 test
+./node_modules/minimist/test
+total 136
+-rw-r--r--  1 frida  staff   756 May 27 11:20 all_bool.js
+-rw-r--r--  1 frida  staff  4208 May 27 11:20 bool.js
+-rw-r--r--  1 frida  staff   980 May 27 11:20 dash.js
+-rw-r--r--  1 frida  staff   778 May 27 11:20 default_bool.js
+-rw-r--r--  1 frida  staff   588 May 27 11:20 dotted.js
+-rw-r--r--  1 frida  staff   376 May 27 11:20 kv_short.js
+-rw-r--r--  1 frida  staff   779 May 27 11:20 long.js
+-rw-r--r--  1 frida  staff   909 May 27 11:20 num.js
+-rw-r--r--  1 frida  staff  4606 May 27 11:20 parse.js
+-rw-r--r--  1 frida  staff   238 May 27 11:20 parse_modified.js
+-rw-r--r--  1 frida  staff  1793 May 27 11:20 proto.js
+-rw-r--r--  1 frida  staff  1593 May 27 11:20 short.js
+-rw-r--r--  1 frida  staff   328 May 27 11:20 stop_early.js
+-rw-r--r--  1 frida  staff  2541 May 27 11:20 unknown.js
+-rw-r--r--  1 frida  staff   191 May 27 11:20 whitespace.js
+./node_modules/minimist/example
+total 8
+-rw-r--r--  1 frida  staff  69 May 27 11:20 parse.js
+./node_modules/chalk
+total 72
+-rw-r--r--  1 frida  staff   8899 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   1197 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  13365 May 27 11:20 readme.md
+drwxr-xr-x  5 frida  staff    160 May 27 11:20 source
+./node_modules/chalk/source
+total 32
+-rw-r--r--  1 frida  staff  6075 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  3367 May 27 11:20 templates.js
+-rw-r--r--  1 frida  staff  1035 May 27 11:20 util.js
+./node_modules/ansi-regex
+total 40
+-rw-r--r--  1 frida  staff   744 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   350 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   841 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  2565 May 27 11:20 readme.md
+./node_modules/mimic-response
+total 32
+-rw-r--r--  1 frida  staff   758 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   651 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1066 May 27 11:20 readme.md
+./node_modules/has-flag
+total 40
+-rw-r--r--  1 frida  staff   684 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   330 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   696 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1600 May 27 11:20 readme.md
+./node_modules/supports-color
+total 40
+-rw-r--r--  1 frida  staff    67 May 27 11:20 browser.js
+-rw-r--r--  1 frida  staff  2748 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   817 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  2294 May 27 11:20 readme.md
+./node_modules/vary
+total 40
+-rw-r--r--  1 frida  staff   792 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1094 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  2716 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  2930 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1215 May 27 11:20 package.json
+./node_modules/color-convert
+total 88
+-rw-r--r--  1 frida  staff   1417 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff   1087 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff   2853 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  17040 May 27 11:20 conversions.js
+-rw-r--r--  1 frida  staff   1708 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff    827 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   2257 May 27 11:20 route.js
+./node_modules/readdirp
+total 64
+-rw-r--r--  1 frida  staff  1114 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  6942 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1018 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  8876 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  2522 May 27 11:20 package.json
+./node_modules/unpipe
+total 40
+-rw-r--r--  1 frida  staff    59 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1114 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1250 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1118 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   770 May 27 11:20 package.json
+./node_modules/brace-expansion
+total 40
+-rw-r--r--  1 frida  staff  1096 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  4058 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  4792 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1113 May 27 11:20 package.json
+./node_modules/fill-range
+total 48
+-rw-r--r--  1 frida  staff  1091 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  7486 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  6315 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1459 May 27 11:20 package.json
+./node_modules/registry-auth-token
+total 56
+-rw-r--r--  1 frida  staff  3287 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff  1084 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1987 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   264 May 27 11:20 base64.js
+-rw-r--r--  1 frida  staff  3846 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1021 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   231 May 27 11:20 registry-url.js
+./node_modules/binary-extensions
+total 56
+-rw-r--r--  1 frida  staff  2158 May 27 11:20 binary-extensions.json
+-rw-r--r--  1 frida  staff    87 May 27 11:20 binary-extensions.json.d.ts
+-rw-r--r--  1 frida  staff   249 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff    54 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1159 May 27 11:20 license
+-rw-r--r--  1 frida  staff   652 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   997 May 27 11:20 readme.md
+./node_modules/astral-regex
+total 40
+-rw-r--r--  1 frida  staff   681 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   203 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1116 May 27 11:20 license
+-rw-r--r--  1 frida  staff   562 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   839 May 27 11:20 readme.md
+./node_modules/util-deprecate
+total 48
+-rw-r--r--  1 frida  staff   282 May 27 11:20 History.md
+-rw-r--r--  1 frida  staff  1102 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1666 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1614 May 27 11:20 browser.js
+-rw-r--r--  1 frida  staff   123 May 27 11:20 node.js
+-rw-r--r--  1 frida  staff   694 May 27 11:20 package.json
+./node_modules/has-symbols
+total 72
+-rw-r--r--  1 frida  staff   164 May 27 11:20 .eslintrc
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 .github
+-rw-r--r--  1 frida  staff   139 May 27 11:20 .nycrc
+-rw-r--r--  1 frida  staff  7690 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff  1071 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  2044 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   420 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  2648 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1761 May 27 11:20 shams.js
+drwxr-xr-x  5 frida  staff   160 May 27 11:20 test
+./node_modules/has-symbols/test
+total 16
+-rw-r--r--  1 frida  staff   654 May 27 11:20 index.js
+drwxr-xr-x  4 frida  staff   128 May 27 11:20 shams
+-rw-r--r--  1 frida  staff  2021 May 27 11:20 tests.js
+./node_modules/has-symbols/test/shams
+total 16
+-rw-r--r--  1 frida  staff  723 May 27 11:20 core-js.js
+-rw-r--r--  1 frida  staff  686 May 27 11:20 get-own-property-symbols.js
+./node_modules/has-symbols/.github
+total 8
+-rw-r--r--  1 frida  staff  582 May 27 11:20 FUNDING.yml
+./node_modules/package-json
+total 48
+-rw-r--r--  1 frida  staff  6001 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  2789 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+drwxr-xr-x  4 frida  staff   128 May 27 11:20 node_modules
+-rw-r--r--  1 frida  staff   813 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  3565 May 27 11:20 readme.md
+./node_modules/package-json/node_modules
+total 0
+drwxr-xr-x  3 frida  staff   96 May 27 11:20 .bin
+drwxr-xr-x  9 frida  staff  288 May 27 11:20 semver
+./node_modules/package-json/node_modules/.bin
+total 0
+lrwxr-xr-x  1 frida  staff  23 May 27 11:20 semver -> ../semver/bin/semver.js
+./node_modules/package-json/node_modules/semver
+total 160
+-rw-r--r--  1 frida  staff   1307 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff    765 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  16974 May 27 11:20 README.md
+drwxr-xr-x  3 frida  staff     96 May 27 11:20 bin
+-rw-r--r--  1 frida  staff    559 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff    619 May 27 11:20 range.bnf
+-rw-r--r--  1 frida  staff  42130 May 27 11:20 semver.js
+./node_modules/package-json/node_modules/semver/bin
+total 16
+-rwxr-xr-x  1 frida  staff  4717 May 27 11:20 semver.js
+./node_modules/json-buffer
+total 48
+-rw-r--r--  1 frida  staff    42 May 27 11:20 .npmignore
+-rw-r--r--  1 frida  staff    38 May 27 11:20 .travis.yml
+-rw-r--r--  1 frida  staff  1071 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff   658 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1503 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   878 May 27 11:20 package.json
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 test
+./node_modules/json-buffer/test
+total 8
+-rw-r--r--  1 frida  staff  1246 May 27 11:20 index.js
+./node_modules/raw-body
+total 80
+-rw-r--r--  1 frida  staff  5962 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1181 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  6534 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1188 May 27 11:20 SECURITY.md
+-rw-r--r--  1 frida  staff  2286 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  6902 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1324 May 27 11:20 package.json
+./node_modules/bluebird
+total 32
+-rw-r--r--  1 frida  staff  1086 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  3058 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff    87 May 27 11:20 changelog.md
+drwxr-xr-x  4 frida  staff   128 May 27 11:20 js
+-rw-r--r--  1 frida  staff  2216 May 27 11:20 package.json
+./node_modules/bluebird/js
+total 0
+drwxr-xr-x   6 frida  staff   192 May 27 11:20 browser
+drwxr-xr-x  39 frida  staff  1248 May 27 11:20 release
+./node_modules/bluebird/js/release
+total 496
+-rw-r--r--  1 frida  staff    421 May 27 11:20 any.js
+-rw-r--r--  1 frida  staff   1653 May 27 11:20 assert.js
+-rw-r--r--  1 frida  staff   2876 May 27 11:20 async.js
+-rw-r--r--  1 frida  staff   1970 May 27 11:20 bind.js
+-rw-r--r--  1 frida  staff    291 May 27 11:20 bluebird.js
+-rw-r--r--  1 frida  staff   4355 May 27 11:20 call_get.js
+-rw-r--r--  1 frida  staff   3707 May 27 11:20 cancel.js
+-rw-r--r--  1 frida  staff   1426 May 27 11:20 catch_filter.js
+-rw-r--r--  1 frida  staff   2382 May 27 11:20 context.js
+-rw-r--r--  1 frida  staff  32170 May 27 11:20 debuggability.js
+-rw-r--r--  1 frida  staff   1395 May 27 11:20 direct_resolve.js
+-rw-r--r--  1 frida  staff    789 May 27 11:20 each.js
+-rw-r--r--  1 frida  staff   3717 May 27 11:20 errors.js
+-rw-r--r--  1 frida  staff   1978 May 27 11:20 es5.js
+-rw-r--r--  1 frida  staff    314 May 27 11:20 filter.js
+-rw-r--r--  1 frida  staff   4613 May 27 11:20 finally.js
+-rw-r--r--  1 frida  staff   7761 May 27 11:20 generators.js
+-rw-r--r--  1 frida  staff   8136 May 27 11:20 join.js
+-rw-r--r--  1 frida  staff   5602 May 27 11:20 map.js
+-rw-r--r--  1 frida  staff   1768 May 27 11:20 method.js
+-rw-r--r--  1 frida  staff   1560 May 27 11:20 nodeback.js
+-rw-r--r--  1 frida  staff   1647 May 27 11:20 nodeify.js
+-rw-r--r--  1 frida  staff  26986 May 27 11:20 promise.js
+-rw-r--r--  1 frida  staff   5252 May 27 11:20 promise_array.js
+-rw-r--r--  1 frida  staff  12182 May 27 11:20 promisify.js
+-rw-r--r--  1 frida  staff   3117 May 27 11:20 props.js
+-rw-r--r--  1 frida  staff   1873 May 27 11:20 queue.js
+-rw-r--r--  1 frida  staff   1250 May 27 11:20 race.js
+-rw-r--r--  1 frida  staff   5372 May 27 11:20 reduce.js
+-rw-r--r--  1 frida  staff   2148 May 27 11:20 schedule.js
+-rw-r--r--  1 frida  staff   1366 May 27 11:20 settle.js
+-rw-r--r--  1 frida  staff   3959 May 27 11:20 some.js
+-rw-r--r--  1 frida  staff   2813 May 27 11:20 synchronous_inspection.js
+-rw-r--r--  1 frida  staff   2131 May 27 11:20 thenables.js
+-rw-r--r--  1 frida  staff   2395 May 27 11:20 timers.js
+-rw-r--r--  1 frida  staff   7525 May 27 11:20 using.js
+-rw-r--r--  1 frida  staff  11379 May 27 11:20 util.js
+./node_modules/bluebird/js/browser
+total 888
+-rw-r--r--  1 frida  staff  123379 May 27 11:20 bluebird.core.js
+-rw-r--r--  1 frida  staff   57355 May 27 11:20 bluebird.core.min.js
+-rw-r--r--  1 frida  staff  183390 May 27 11:20 bluebird.js
+-rw-r--r--  1 frida  staff   81530 May 27 11:20 bluebird.min.js
+./node_modules/semver
+total 144
+-rw-r--r--  1 frida  staff    672 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff    765 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  15723 May 27 11:20 README.md
+drwxr-xr-x  3 frida  staff     96 May 27 11:20 bin
+-rw-r--r--  1 frida  staff    578 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff    619 May 27 11:20 range.bnf
+-rw-r--r--  1 frida  staff  38803 May 27 11:20 semver.js
+./node_modules/semver/bin
+total 16
+-rwxr-xr-x  1 frida  staff  4418 May 27 11:20 semver
+./node_modules/ini
+total 40
+-rw-r--r--  1 frida  staff   765 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  2718 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  5107 May 27 11:20 ini.js
+-rw-r--r--  1 frida  staff   884 May 27 11:20 package.json
+./node_modules/http-errors
+total 56
+-rw-r--r--  1 frida  staff  3973 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1168 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  5962 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  6391 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1314 May 27 11:20 package.json
+./node_modules/minimatch
+total 88
+-rw-r--r--  1 frida  staff    765 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff   7171 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  26266 May 27 11:20 minimatch.js
+-rw-r--r--  1 frida  staff    700 May 27 11:20 package.json
+./node_modules/crypto-random-string
+total 40
+-rw-r--r--  1 frida  staff   444 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   253 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   655 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1468 May 27 11:20 readme.md
+./node_modules/accepts
+total 64
+-rw-r--r--  1 frida  staff  5096 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1167 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  4123 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  5252 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1157 May 27 11:20 package.json
+./node_modules/widest-line
+total 40
+-rw-r--r--  1 frida  staff   490 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   322 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   894 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   914 May 27 11:20 readme.md
+./node_modules/pupa
+total 40
+-rw-r--r--  1 frida  staff   746 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  1100 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   734 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1248 May 27 11:20 readme.md
+./node_modules/@sindresorhus
+total 0
+drwxr-xr-x  6 frida  staff  192 May 27 11:20 is
+./node_modules/@sindresorhus/is
+total 40
+drwxr-xr-x  5 frida  staff    160 May 27 11:20 dist
+-rw-r--r--  1 frida  staff   1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   1256 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  10313 May 27 11:20 readme.md
+./node_modules/@sindresorhus/is/dist
+total 64
+-rw-r--r--  1 frida  staff   6063 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  10891 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  10526 May 27 11:20 index.js.map
+./node_modules/semver-diff
+total 40
+-rw-r--r--  1 frida  staff  1082 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   287 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+drwxr-xr-x  4 frida  staff   128 May 27 11:20 node_modules
+-rw-r--r--  1 frida  staff   637 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  2128 May 27 11:20 readme.md
+./node_modules/semver-diff/node_modules
+total 0
+drwxr-xr-x  3 frida  staff   96 May 27 11:20 .bin
+drwxr-xr-x  9 frida  staff  288 May 27 11:20 semver
+./node_modules/semver-diff/node_modules/.bin
+total 0
+lrwxr-xr-x  1 frida  staff  23 May 27 11:20 semver -> ../semver/bin/semver.js
+./node_modules/semver-diff/node_modules/semver
+total 160
+-rw-r--r--  1 frida  staff   1307 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff    765 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  16974 May 27 11:20 README.md
+drwxr-xr-x  3 frida  staff     96 May 27 11:20 bin
+-rw-r--r--  1 frida  staff    559 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff    619 May 27 11:20 range.bnf
+-rw-r--r--  1 frida  staff  42130 May 27 11:20 semver.js
+./node_modules/semver-diff/node_modules/semver/bin
+total 16
+-rwxr-xr-x  1 frida  staff  4717 May 27 11:20 semver.js
+./node_modules/ansi-styles
+total 64
+-rw-r--r--  1 frida  staff  6349 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  4139 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff  1054 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  4327 May 27 11:20 readme.md
+./node_modules/cookie-signature
+total 40
+-rw-r--r--  1 frida  staff    29 May 27 11:20 .npmignore
+-rw-r--r--  1 frida  staff   695 May 27 11:20 History.md
+-rw-r--r--  1 frida  staff  1490 May 27 11:20 Readme.md
+-rw-r--r--  1 frida  staff  1230 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   492 May 27 11:20 package.json
+./node_modules/ansi-align
+total 40
+-rw-r--r--  1 frida  staff  1748 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff   731 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  2945 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1334 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   926 May 27 11:20 package.json
+./node_modules/forwarded
+total 40
+-rw-r--r--  1 frida  staff   400 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1094 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1654 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1578 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1150 May 27 11:20 package.json
+./node_modules/table
+total 72
+-rw-r--r--  1 frida  staff   1529 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  25938 May 27 11:20 README.md
+drwxr-xr-x  3 frida  staff     96 May 27 11:20 dist
+-rw-r--r--  1 frida  staff   2196 May 27 11:20 package.json
+./node_modules/table/dist
+total 0
+drwxr-xr-x  101 frida  staff  3232 May 27 11:20 src
+./node_modules/table/dist/src
+total 800
+-rw-r--r--  1 frida  staff   462 May 27 11:20 alignSpanningCell.d.ts
+-rw-r--r--  1 frida  staff  2361 May 27 11:20 alignSpanningCell.js
+-rw-r--r--  1 frida  staff  1859 May 27 11:20 alignSpanningCell.js.map
+-rw-r--r--  1 frida  staff   280 May 27 11:20 alignString.d.ts
+-rw-r--r--  1 frida  staff  2206 May 27 11:20 alignString.js
+-rw-r--r--  1 frida  staff  1909 May 27 11:20 alignString.js.map
+-rw-r--r--  1 frida  staff   138 May 27 11:20 alignTableData.d.ts
+-rw-r--r--  1 frida  staff   834 May 27 11:20 alignTableData.js
+-rw-r--r--  1 frida  staff   723 May 27 11:20 alignTableData.js.map
+-rw-r--r--  1 frida  staff   200 May 27 11:20 calculateCellHeight.d.ts
+-rw-r--r--  1 frida  staff   497 May 27 11:20 calculateCellHeight.js
+-rw-r--r--  1 frida  staff   344 May 27 11:20 calculateCellHeight.js.map
+-rw-r--r--  1 frida  staff   403 May 27 11:20 calculateMaximumColumnWidths.d.ts
+-rw-r--r--  1 frida  staff  1626 May 27 11:20 calculateMaximumColumnWidths.js
+-rw-r--r--  1 frida  staff  1223 May 27 11:20 calculateMaximumColumnWidths.js.map
+-rw-r--r--  1 frida  staff   138 May 27 11:20 calculateOutputColumnWidths.d.ts
+-rw-r--r--  1 frida  staff   410 May 27 11:20 calculateOutputColumnWidths.js
+-rw-r--r--  1 frida  staff   386 May 27 11:20 calculateOutputColumnWidths.js.map
+-rw-r--r--  1 frida  staff   247 May 27 11:20 calculateRowHeights.d.ts
+-rw-r--r--  1 frida  staff  2293 May 27 11:20 calculateRowHeights.js
+-rw-r--r--  1 frida  staff  1604 May 27 11:20 calculateRowHeights.js.map
+-rw-r--r--  1 frida  staff   247 May 27 11:20 calculateSpanningCellWidth.d.ts
+-rw-r--r--  1 frida  staff  1357 May 27 11:20 calculateSpanningCellWidth.js
+-rw-r--r--  1 frida  staff  1271 May 27 11:20 calculateSpanningCellWidth.js.map
+-rw-r--r--  1 frida  staff   154 May 27 11:20 createStream.d.ts
+-rw-r--r--  1 frida  staff  2989 May 27 11:20 createStream.js
+-rw-r--r--  1 frida  staff  2638 May 27 11:20 createStream.js.map
+-rw-r--r--  1 frida  staff  1747 May 27 11:20 drawBorder.d.ts
+-rw-r--r--  1 frida  staff  8233 May 27 11:20 drawBorder.js
+-rw-r--r--  1 frida  staff  6023 May 27 11:20 drawBorder.js.map
+-rw-r--r--  1 frida  staff   542 May 27 11:20 drawContent.d.ts
+-rw-r--r--  1 frida  staff  2407 May 27 11:20 drawContent.js
+-rw-r--r--  1 frida  staff  1858 May 27 11:20 drawContent.js.map
+-rw-r--r--  1 frida  staff   438 May 27 11:20 drawRow.d.ts
+-rw-r--r--  1 frida  staff   809 May 27 11:20 drawRow.js
+-rw-r--r--  1 frida  staff   651 May 27 11:20 drawRow.js.map
+-rw-r--r--  1 frida  staff   188 May 27 11:20 drawTable.d.ts
+-rw-r--r--  1 frida  staff  1310 May 27 11:20 drawTable.js
+-rw-r--r--  1 frida  staff  1110 May 27 11:20 drawTable.js.map
+drwxr-xr-x  5 frida  staff   160 May 27 11:20 generated
+-rw-r--r--  1 frida  staff   123 May 27 11:20 getBorderCharacters.d.ts
+-rw-r--r--  1 frida  staff  2971 May 27 11:20 getBorderCharacters.js
+-rw-r--r--  1 frida  staff  2139 May 27 11:20 getBorderCharacters.js.map
+-rw-r--r--  1 frida  staff   224 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  1280 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   234 May 27 11:20 index.js.map
+-rw-r--r--  1 frida  staff   231 May 27 11:20 injectHeaderConfig.d.ts
+-rw-r--r--  1 frida  staff  1085 May 27 11:20 injectHeaderConfig.js
+-rw-r--r--  1 frida  staff  1070 May 27 11:20 injectHeaderConfig.js.map
+-rw-r--r--  1 frida  staff   248 May 27 11:20 makeRangeConfig.d.ts
+-rw-r--r--  1 frida  staff   718 May 27 11:20 makeRangeConfig.js
+-rw-r--r--  1 frida  staff   538 May 27 11:20 makeRangeConfig.js.map
+-rw-r--r--  1 frida  staff   329 May 27 11:20 makeStreamConfig.d.ts
+-rw-r--r--  1 frida  staff  1520 May 27 11:20 makeStreamConfig.js
+-rw-r--r--  1 frida  staff  1064 May 27 11:20 makeStreamConfig.js.map
+-rw-r--r--  1 frida  staff   426 May 27 11:20 makeTableConfig.d.ts
+-rw-r--r--  1 frida  staff  2818 May 27 11:20 makeTableConfig.js
+-rw-r--r--  1 frida  staff  1659 May 27 11:20 makeTableConfig.js.map
+-rw-r--r--  1 frida  staff   358 May 27 11:20 mapDataUsingRowHeights.d.ts
+-rw-r--r--  1 frida  staff  2406 May 27 11:20 mapDataUsingRowHeights.js
+-rw-r--r--  1 frida  staff  2148 May 27 11:20 mapDataUsingRowHeights.js.map
+-rw-r--r--  1 frida  staff   238 May 27 11:20 padTableData.d.ts
+-rw-r--r--  1 frida  staff   973 May 27 11:20 padTableData.js
+-rw-r--r--  1 frida  staff   896 May 27 11:20 padTableData.js.map
+drwxr-xr-x  5 frida  staff   160 May 27 11:20 schemas
+-rw-r--r--  1 frida  staff   957 May 27 11:20 spanningCellManager.d.ts
+-rw-r--r--  1 frida  staff  3991 May 27 11:20 spanningCellManager.js
+-rw-r--r--  1 frida  staff  3452 May 27 11:20 spanningCellManager.js.map
+-rw-r--r--  1 frida  staff   116 May 27 11:20 stringifyTableData.d.ts
+-rw-r--r--  1 frida  staff   440 May 27 11:20 stringifyTableData.js
+-rw-r--r--  1 frida  staff   427 May 27 11:20 stringifyTableData.js.map
+-rw-r--r--  1 frida  staff   141 May 27 11:20 table.d.ts
+-rw-r--r--  1 frida  staff  1906 May 27 11:20 table.js
+-rw-r--r--  1 frida  staff  1116 May 27 11:20 table.js.map
+-rw-r--r--  1 frida  staff   260 May 27 11:20 truncateTableData.d.ts
+-rw-r--r--  1 frida  staff   894 May 27 11:20 truncateTableData.js
+-rw-r--r--  1 frida  staff   641 May 27 11:20 truncateTableData.js.map
+drwxr-xr-x  8 frida  staff   256 May 27 11:20 types
+-rw-r--r--  1 frida  staff   829 May 27 11:20 utils.d.ts
+-rw-r--r--  1 frida  staff  4903 May 27 11:20 utils.js
+-rw-r--r--  1 frida  staff  3873 May 27 11:20 utils.js.map
+-rw-r--r--  1 frida  staff   171 May 27 11:20 validateConfig.d.ts
+-rw-r--r--  1 frida  staff  1061 May 27 11:20 validateConfig.js
+-rw-r--r--  1 frida  staff   739 May 27 11:20 validateConfig.js.map
+-rw-r--r--  1 frida  staff   203 May 27 11:20 validateSpanningCellConfig.d.ts
+-rw-r--r--  1 frida  staff  2318 May 27 11:20 validateSpanningCellConfig.js
+-rw-r--r--  1 frida  staff  2203 May 27 11:20 validateSpanningCellConfig.js.map
+-rw-r--r--  1 frida  staff    69 May 27 11:20 validateTableData.d.ts
+-rw-r--r--  1 frida  staff  1217 May 27 11:20 validateTableData.js
+-rw-r--r--  1 frida  staff   992 May 27 11:20 validateTableData.js.map
+-rw-r--r--  1 frida  staff   287 May 27 11:20 wrapCell.d.ts
+-rw-r--r--  1 frida  staff  1221 May 27 11:20 wrapCell.js
+-rw-r--r--  1 frida  staff   753 May 27 11:20 wrapCell.js.map
+-rw-r--r--  1 frida  staff   369 May 27 11:20 wrapString.d.ts
+-rw-r--r--  1 frida  staff  1064 May 27 11:20 wrapString.js
+-rw-r--r--  1 frida  staff   538 May 27 11:20 wrapString.js.map
+-rw-r--r--  1 frida  staff    74 May 27 11:20 wrapWord.d.ts
+-rw-r--r--  1 frida  staff  1602 May 27 11:20 wrapWord.js
+-rw-r--r--  1 frida  staff  1551 May 27 11:20 wrapWord.js.map
+./node_modules/table/dist/src/generated
+total 352
+-rw-r--r--  1 frida  staff     521 May 27 11:20 validators.d.ts
+-rw-r--r--  1 frida  staff  100210 May 27 11:20 validators.js
+-rw-r--r--  1 frida  staff   71611 May 27 11:20 validators.js.map
+./node_modules/table/dist/src/types
+total 56
+-rw-r--r--  1 frida  staff  4179 May 27 11:20 api.d.ts
+-rw-r--r--  1 frida  staff   108 May 27 11:20 api.js
+-rw-r--r--  1 frida  staff   110 May 27 11:20 api.js.map
+-rw-r--r--  1 frida  staff    11 May 27 11:20 internal.d.ts
+-rw-r--r--  1 frida  staff   113 May 27 11:20 internal.js
+-rw-r--r--  1 frida  staff   120 May 27 11:20 internal.js.map
+./node_modules/table/dist/src/schemas
+total 32
+-rw-r--r--  1 frida  staff  2876 May 27 11:20 config.json
+-rw-r--r--  1 frida  staff  4142 May 27 11:20 shared.json
+-rw-r--r--  1 frida  staff   657 May 27 11:20 streamConfig.json
+./node_modules/negotiator
+total 48
+-rw-r--r--  1 frida  staff  2499 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1177 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  4901 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  2451 May 27 11:20 index.js
+drwxr-xr-x  6 frida  staff   192 May 27 11:20 lib
+-rw-r--r--  1 frida  staff   993 May 27 11:20 package.json
+./node_modules/negotiator/lib
+total 40
+-rw-r--r--  1 frida  staff  3081 May 27 11:20 charset.js
+-rw-r--r--  1 frida  staff  3506 May 27 11:20 encoding.js
+-rw-r--r--  1 frida  staff  3409 May 27 11:20 language.js
+-rw-r--r--  1 frida  staff  5358 May 27 11:20 mediaType.js
+./node_modules/defer-to-connect
+total 24
+-rw-r--r--  1 frida  staff  1071 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff   951 May 27 11:20 README.md
+drwxr-xr-x  4 frida  staff   128 May 27 11:20 dist
+-rw-r--r--  1 frida  staff  1613 May 27 11:20 package.json
+./node_modules/defer-to-connect/dist
+total 16
+-rw-r--r--  1 frida  staff   346 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  1470 May 27 11:20 index.js
+./node_modules/body-parser
+total 104
+-rw-r--r--  1 frida  staff  16192 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff   1172 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  18196 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   1193 May 27 11:20 SECURITY.md
+-rw-r--r--  1 frida  staff   2656 May 27 11:20 index.js
+drwxr-xr-x  4 frida  staff    128 May 27 11:20 lib
+-rw-r--r--  1 frida  staff   1471 May 27 11:20 package.json
+./node_modules/body-parser/lib
+total 16
+-rw-r--r--  1 frida  staff  4325 May 27 11:20 read.js
+drwxr-xr-x  6 frida  staff   192 May 27 11:20 types
+./node_modules/body-parser/lib/types
+total 48
+-rw-r--r--  1 frida  staff  5012 May 27 11:20 json.js
+-rw-r--r--  1 frida  staff  1884 May 27 11:20 raw.js
+-rw-r--r--  1 frida  staff  2285 May 27 11:20 text.js
+-rw-r--r--  1 frida  staff  5797 May 27 11:20 urlencoded.js
+./node_modules/is-number
+total 40
+-rw-r--r--  1 frida  staff  1091 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  6514 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   411 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1599 May 27 11:20 package.json
+./node_modules/undefsafe
+total 56
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 .github
+-rw-r--r--  1 frida  staff   364 May 27 11:20 .jscsrc
+-rw-r--r--  1 frida  staff   240 May 27 11:20 .jshintrc
+-rw-r--r--  1 frida  staff   283 May 27 11:20 .travis.yml
+-rw-r--r--  1 frida  staff  1119 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1414 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   245 May 27 11:20 example.js
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 lib
+-rw-r--r--  1 frida  staff   784 May 27 11:20 package.json
+./node_modules/undefsafe/.github
+total 0
+drwxr-xr-x  3 frida  staff  96 May 27 11:20 workflows
+./node_modules/undefsafe/.github/workflows
+total 8
+-rw-r--r--  1 frida  staff  556 May 27 11:20 release.yml
+./node_modules/undefsafe/lib
+total 8
+-rw-r--r--  1 frida  staff  2595 May 27 11:20 undefsafe.js
+./node_modules/mysql
+total 200
+-rw-r--r--   1 frida  staff  21090 May 27 11:20 Changes.md
+-rw-r--r--   1 frida  staff   1118 May 27 11:20 License
+-rw-r--r--   1 frida  staff  57600 May 27 11:20 Readme.md
+-rw-r--r--   1 frida  staff   4533 May 27 11:20 index.js
+drwxr-xr-x  11 frida  staff    352 May 27 11:20 lib
+drwxr-xr-x   3 frida  staff     96 May 27 11:20 node_modules
+-rw-r--r--   1 frida  staff   1372 May 27 11:20 package.json
+./node_modules/mysql/node_modules
+total 0
+drwxr-xr-x  7 frida  staff  224 May 27 11:20 safe-buffer
+./node_modules/mysql/node_modules/safe-buffer
+total 88
+-rw-r--r--  1 frida  staff   1081 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  19555 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   8738 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   1529 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff    783 May 27 11:20 package.json
+./node_modules/mysql/lib
+total 112
+-rw-r--r--   1 frida  staff  13831 May 27 11:20 Connection.js
+-rw-r--r--   1 frida  staff   6614 May 27 11:20 ConnectionConfig.js
+-rw-r--r--   1 frida  staff   7586 May 27 11:20 Pool.js
+-rw-r--r--   1 frida  staff   6470 May 27 11:20 PoolCluster.js
+-rw-r--r--   1 frida  staff   1057 May 27 11:20 PoolConfig.js
+-rw-r--r--   1 frida  staff   1697 May 27 11:20 PoolConnection.js
+-rw-r--r--   1 frida  staff   3220 May 27 11:20 PoolNamespace.js
+-rw-r--r--   1 frida  staff    588 May 27 11:20 PoolSelector.js
+drwxr-xr-x  14 frida  staff    448 May 27 11:20 protocol
+./node_modules/mysql/lib/protocol
+total 128
+-rw-r--r--   1 frida  staff   4292 May 27 11:20 Auth.js
+-rw-r--r--   1 frida  staff    385 May 27 11:20 BufferList.js
+-rw-r--r--   1 frida  staff    121 May 27 11:20 PacketHeader.js
+-rw-r--r--   1 frida  staff   5372 May 27 11:20 PacketWriter.js
+-rw-r--r--   1 frida  staff  13406 May 27 11:20 Parser.js
+-rw-r--r--   1 frida  staff  11657 May 27 11:20 Protocol.js
+-rw-r--r--   1 frida  staff    233 May 27 11:20 ResultSet.js
+-rw-r--r--   1 frida  staff     39 May 27 11:20 SqlString.js
+-rw-r--r--   1 frida  staff    699 May 27 11:20 Timer.js
+drwxr-xr-x   9 frida  staff    288 May 27 11:20 constants
+drwxr-xr-x  26 frida  staff    832 May 27 11:20 packets
+drwxr-xr-x  10 frida  staff    320 May 27 11:20 sequences
+./node_modules/mysql/lib/protocol/constants
+total 568
+-rw-r--r--  1 frida  staff   11398 May 27 11:20 charsets.js
+-rw-r--r--  1 frida  staff    1629 May 27 11:20 client.js
+-rw-r--r--  1 frida  staff  176038 May 27 11:20 errors.js
+-rw-r--r--  1 frida  staff    1066 May 27 11:20 field_flags.js
+-rw-r--r--  1 frida  staff    1449 May 27 11:20 server_status.js
+-rw-r--r--  1 frida  staff   82511 May 27 11:20 ssl_profiles.js
+-rw-r--r--  1 frida  staff    1763 May 27 11:20 types.js
+./node_modules/mysql/lib/protocol/packets
+total 192
+-rw-r--r--  1 frida  staff   707 May 27 11:20 AuthSwitchRequestPacket.js
+-rw-r--r--  1 frida  staff   375 May 27 11:20 AuthSwitchResponsePacket.js
+-rw-r--r--  1 frida  staff  2080 May 27 11:20 ClientAuthenticationPacket.js
+-rw-r--r--  1 frida  staff   960 May 27 11:20 ComChangeUserPacket.js
+-rw-r--r--  1 frida  staff   289 May 27 11:20 ComPingPacket.js
+-rw-r--r--  1 frida  staff   405 May 27 11:20 ComQueryPacket.js
+-rw-r--r--  1 frida  staff   301 May 27 11:20 ComQuitPacket.js
+-rw-r--r--  1 frida  staff   313 May 27 11:20 ComStatisticsPacket.js
+-rw-r--r--  1 frida  staff   163 May 27 11:20 EmptyPacket.js
+-rw-r--r--  1 frida  staff   721 May 27 11:20 EofPacket.js
+-rw-r--r--  1 frida  staff  1007 May 27 11:20 ErrorPacket.js
+-rw-r--r--  1 frida  staff   649 May 27 11:20 Field.js
+-rw-r--r--  1 frida  staff  3264 May 27 11:20 FieldPacket.js
+-rw-r--r--  1 frida  staff  3958 May 27 11:20 HandshakeInitializationPacket.js
+-rw-r--r--  1 frida  staff   319 May 27 11:20 LocalDataFilePacket.js
+-rw-r--r--  1 frida  staff   609 May 27 11:20 LocalInfileRequestPacket.js
+-rw-r--r--  1 frida  staff  1414 May 27 11:20 OkPacket.js
+-rw-r--r--  1 frida  staff   367 May 27 11:20 OldPasswordPacket.js
+-rw-r--r--  1 frida  staff   381 May 27 11:20 ResultSetHeaderPacket.js
+-rw-r--r--  1 frida  staff  4088 May 27 11:20 RowDataPacket.js
+-rw-r--r--  1 frida  staff   983 May 27 11:20 SSLRequestPacket.js
+-rw-r--r--  1 frida  staff   544 May 27 11:20 StatisticsPacket.js
+-rw-r--r--  1 frida  staff   379 May 27 11:20 UseOldPasswordPacket.js
+-rw-r--r--  1 frida  staff  1360 May 27 11:20 index.js
+./node_modules/mysql/lib/protocol/sequences
+total 72
+-rw-r--r--  1 frida  staff  2071 May 27 11:20 ChangeUser.js
+-rw-r--r--  1 frida  staff  3723 May 27 11:20 Handshake.js
+-rw-r--r--  1 frida  staff   434 May 27 11:20 Ping.js
+-rw-r--r--  1 frida  staff  5705 May 27 11:20 Query.js
+-rw-r--r--  1 frida  staff   861 May 27 11:20 Quit.js
+-rw-r--r--  1 frida  staff  3231 May 27 11:20 Sequence.js
+-rw-r--r--  1 frida  staff   727 May 27 11:20 Statistics.js
+-rw-r--r--  1 frida  staff   282 May 27 11:20 index.js
+./node_modules/utils-merge
+total 40
+-rw-r--r--  1 frida  staff    79 May 27 11:20 .npmignore
+-rw-r--r--  1 frida  staff  1084 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1319 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   381 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   857 May 27 11:20 package.json
+./node_modules/side-channel
+total 72
+-rw-r--r--  1 frida  staff    10 May 27 11:20 .eslintignore
+-rw-r--r--  1 frida  staff   172 May 27 11:20 .eslintrc
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 .github
+-rw-r--r--  1 frida  staff   216 May 27 11:20 .nycrc
+-rw-r--r--  1 frida  staff  5607 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff  1071 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff    98 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  3391 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1676 May 27 11:20 package.json
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 test
+./node_modules/side-channel/test
+total 8
+-rw-r--r--  1 frida  staff  1741 May 27 11:20 index.js
+./node_modules/side-channel/.github
+total 8
+-rw-r--r--  1 frida  staff  583 May 27 11:20 FUNDING.yml
+./node_modules/concat-map
+total 40
+-rw-r--r--  1 frida  staff    43 May 27 11:20 .travis.yml
+-rw-r--r--  1 frida  staff  1073 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1165 May 27 11:20 README.markdown
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 example
+-rw-r--r--  1 frida  staff   345 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   989 May 27 11:20 package.json
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 test
+./node_modules/concat-map/test
+total 8
+-rw-r--r--  1 frida  staff  1075 May 27 11:20 map.js
+./node_modules/concat-map/example
+total 8
+-rw-r--r--  1 frida  staff  171 May 27 11:20 map.js
+./node_modules/pump
+total 56
+-rw-r--r--  1 frida  staff    58 May 27 11:20 .travis.yml
+-rw-r--r--  1 frida  staff  1078 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  1721 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  2224 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   530 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1172 May 27 11:20 test-browser.js
+-rw-r--r--  1 frida  staff   992 May 27 11:20 test-node.js
+./node_modules/get-stream
+total 40
+-rw-r--r--  1 frida  staff   841 May 27 11:20 buffer-stream.js
+-rw-r--r--  1 frida  staff  1251 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   713 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  3963 May 27 11:20 readme.md
+./node_modules/serve-static
+total 72
+-rw-r--r--  1 frida  staff  10537 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff   1189 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff   7812 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   4570 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   1141 May 27 11:20 package.json
+./node_modules/prepend-http
+total 32
+-rw-r--r--  1 frida  staff   387 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   622 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   862 May 27 11:20 readme.md
+./node_modules/registry-url
+total 40
+-rw-r--r--  1 frida  staff   949 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   398 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   681 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1191 May 27 11:20 readme.md
+./node_modules/uri-js
+total 240
+-rwxr-xr-x  1 frida  staff    1452 May 27 11:20 LICENSE
+-rwxr-xr-x  1 frida  staff    6416 May 27 11:20 README.md
+drwxr-xr-x  4 frida  staff     128 May 27 11:20 dist
+-rwxr-xr-x  1 frida  staff    2172 May 27 11:20 package.json
+-rwxr-xr-x  1 frida  staff  103956 May 27 11:20 yarn.lock
+./node_modules/uri-js/dist
+total 0
+drwxr-xr-x   8 frida  staff  256 May 27 11:20 es5
+drwxr-xr-x  18 frida  staff  576 May 27 11:20 esnext
+./node_modules/uri-js/dist/es5
+total 536
+-rwxr-xr-x  1 frida  staff    2446 May 27 11:20 uri.all.d.ts
+-rwxr-xr-x  1 frida  staff   57304 May 27 11:20 uri.all.js
+-rwxr-xr-x  1 frida  staff  102192 May 27 11:20 uri.all.js.map
+-rwxr-xr-x  1 frida  staff    2446 May 27 11:20 uri.all.min.d.ts
+-rwxr-xr-x  1 frida  staff   17200 May 27 11:20 uri.all.min.js
+-rwxr-xr-x  1 frida  staff   83083 May 27 11:20 uri.all.min.js.map
+./node_modules/uri-js/dist/esnext
+total 208
+-rwxr-xr-x   1 frida  staff     23 May 27 11:20 index.d.ts
+-rwxr-xr-x   1 frida  staff    537 May 27 11:20 index.js
+-rwxr-xr-x   1 frida  staff    747 May 27 11:20 index.js.map
+-rwxr-xr-x   1 frida  staff     97 May 27 11:20 regexps-iri.d.ts
+-rwxr-xr-x   1 frida  staff    114 May 27 11:20 regexps-iri.js
+-rwxr-xr-x   1 frida  staff    192 May 27 11:20 regexps-iri.js.map
+-rwxr-xr-x   1 frida  staff    160 May 27 11:20 regexps-uri.d.ts
+-rwxr-xr-x   1 frida  staff   7813 May 27 11:20 regexps-uri.js
+-rwxr-xr-x   1 frida  staff   8283 May 27 11:20 regexps-uri.js.map
+drwxr-xr-x  23 frida  staff    736 May 27 11:20 schemes
+-rwxr-xr-x   1 frida  staff   2446 May 27 11:20 uri.d.ts
+-rwxr-xr-x   1 frida  staff  20153 May 27 11:20 uri.js
+-rwxr-xr-x   1 frida  staff  19219 May 27 11:20 uri.js.map
+-rwxr-xr-x   1 frida  staff    343 May 27 11:20 util.d.ts
+-rwxr-xr-x   1 frida  staff   1114 May 27 11:20 util.js
+-rwxr-xr-x   1 frida  staff   1715 May 27 11:20 util.js.map
+./node_modules/uri-js/dist/esnext/schemes
+total 184
+-rwxr-xr-x  1 frida  staff   108 May 27 11:20 http.d.ts
+-rwxr-xr-x  1 frida  staff   959 May 27 11:20 http.js
+-rwxr-xr-x  1 frida  staff   841 May 27 11:20 http.js.map
+-rwxr-xr-x  1 frida  staff   108 May 27 11:20 https.d.ts
+-rwxr-xr-x  1 frida  staff   212 May 27 11:20 https.js
+-rwxr-xr-x  1 frida  staff   312 May 27 11:20 https.js.map
+-rwxr-xr-x  1 frida  staff   359 May 27 11:20 mailto.d.ts
+-rwxr-xr-x  1 frida  staff  7746 May 27 11:20 mailto.js
+-rwxr-xr-x  1 frida  staff  7209 May 27 11:20 mailto.js.map
+-rwxr-xr-x  1 frida  staff   279 May 27 11:20 urn-uuid.d.ts
+-rwxr-xr-x  1 frida  staff   868 May 27 11:20 urn-uuid.js
+-rwxr-xr-x  1 frida  staff   832 May 27 11:20 urn-uuid.js.map
+-rwxr-xr-x  1 frida  staff   324 May 27 11:20 urn.d.ts
+-rwxr-xr-x  1 frida  staff  2050 May 27 11:20 urn.js
+-rwxr-xr-x  1 frida  staff  1939 May 27 11:20 urn.js.map
+-rwxr-xr-x  1 frida  staff   228 May 27 11:20 ws.d.ts
+-rwxr-xr-x  1 frida  staff  1659 May 27 11:20 ws.js
+-rwxr-xr-x  1 frida  staff  1610 May 27 11:20 ws.js.map
+-rwxr-xr-x  1 frida  staff   108 May 27 11:20 wss.d.ts
+-rwxr-xr-x  1 frida  staff   198 May 27 11:20 wss.js
+-rwxr-xr-x  1 frida  staff   307 May 27 11:20 wss.js.map
+./node_modules/is-yarn-global
+total 40
+-rw-r--r--  1 frida  staff    43 May 27 11:20 .travis.yml
+-rw-r--r--  1 frida  staff  1065 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff   769 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   309 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   366 May 27 11:20 package.json
+./node_modules/filelist
+total 64
+-rw-r--r--  1 frida  staff   2131 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   2348 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  13233 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff    238 May 27 11:20 jakefile.js
+drwxr-xr-x  4 frida  staff    128 May 27 11:20 node_modules
+-rw-r--r--  1 frida  staff    637 May 27 11:20 package.json
+./node_modules/filelist/node_modules
+total 0
+drwxr-xr-x  7 frida  staff  224 May 27 11:20 brace-expansion
+drwxr-xr-x  7 frida  staff  224 May 27 11:20 minimatch
+./node_modules/filelist/node_modules/brace-expansion
+total 48
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 .github
+-rw-r--r--  1 frida  staff  1096 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  4252 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  4992 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1092 May 27 11:20 package.json
+./node_modules/filelist/node_modules/brace-expansion/.github
+total 8
+-rw-r--r--  1 frida  staff  54 May 27 11:20 FUNDING.yml
+./node_modules/filelist/node_modules/minimatch
+total 96
+-rw-r--r--  1 frida  staff    775 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff   8455 May 27 11:20 README.md
+drwxr-xr-x  3 frida  staff     96 May 27 11:20 lib
+-rw-r--r--  1 frida  staff  27422 May 27 11:20 minimatch.js
+-rw-r--r--  1 frida  staff    671 May 27 11:20 package.json
+./node_modules/filelist/node_modules/minimatch/lib
+total 8
+-rw-r--r--  1 frida  staff  151 May 27 11:20 path.js
+./node_modules/slice-ansi
+total 32
+-rwxr-xr-x  1 frida  staff  2604 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1158 May 27 11:20 license
+-rw-r--r--  1 frida  staff   837 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1835 May 27 11:20 readme.md
+./node_modules/ignore-by-default
+total 32
+-rw-r--r--  1 frida  staff  748 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  680 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  614 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  775 May 27 11:20 package.json
+./node_modules/mime
+total 128
+-rw-r--r--  1 frida  staff      0 May 27 11:20 .npmignore
+-rw-r--r--  1 frida  staff   9473 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff   1098 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff   2119 May 27 11:20 README.md
+-rwxr-xr-x  1 frida  staff    149 May 27 11:20 cli.js
+-rw-r--r--  1 frida  staff   2726 May 27 11:20 mime.js
+-rw-r--r--  1 frida  staff    933 May 27 11:20 package.json
+drwxr-xr-x  4 frida  staff    128 May 27 11:20 src
+-rw-r--r--  1 frida  staff  31555 May 27 11:20 types.json
+./node_modules/mime/src
+total 16
+-rwxr-xr-x  1 frida  staff  1351 May 27 11:20 build.js
+-rw-r--r--  1 frida  staff  2334 May 27 11:20 test.js
+./node_modules/clone-response
+total 24
+-rw-r--r--  1 frida  staff  1068 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  2087 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1055 May 27 11:20 package.json
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 src
+./node_modules/clone-response/src
+total 8
+-rw-r--r--  1 frida  staff  401 May 27 11:20 index.js
+./node_modules/update-notifier
+total 56
+-rw-r--r--  1 frida  staff   780 May 27 11:20 check.js
+-rw-r--r--  1 frida  staff  5358 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1254 May 27 11:20 license
+drwxr-xr-x  4 frida  staff   128 May 27 11:20 node_modules
+-rw-r--r--  1 frida  staff  1205 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  6668 May 27 11:20 readme.md
+./node_modules/update-notifier/node_modules
+total 0
+drwxr-xr-x   3 frida  staff   96 May 27 11:20 .bin
+drwxr-xr-x  13 frida  staff  416 May 27 11:20 semver
+./node_modules/update-notifier/node_modules/.bin
+total 0
+lrwxr-xr-x  1 frida  staff  23 May 27 11:20 semver -> ../semver/bin/semver.js
+./node_modules/update-notifier/node_modules/semver
+total 88
+-rw-r--r--   1 frida  staff    765 May 27 11:20 LICENSE
+-rw-r--r--   1 frida  staff  22213 May 27 11:20 README.md
+drwxr-xr-x   3 frida  staff     96 May 27 11:20 bin
+drwxr-xr-x   6 frida  staff    192 May 27 11:20 classes
+drwxr-xr-x  26 frida  staff    832 May 27 11:20 functions
+-rw-r--r--   1 frida  staff   1982 May 27 11:20 index.js
+drwxr-xr-x   7 frida  staff    224 May 27 11:20 internal
+-rw-r--r--   1 frida  staff   1630 May 27 11:20 package.json
+-rw-r--r--   1 frida  staff     69 May 27 11:20 preload.js
+-rw-r--r--   1 frida  staff    619 May 27 11:20 range.bnf
+drwxr-xr-x  13 frida  staff    416 May 27 11:20 ranges
+./node_modules/update-notifier/node_modules/semver/ranges
+total 96
+-rw-r--r--  1 frida  staff   217 May 27 11:20 gtr.js
+-rw-r--r--  1 frida  staff   201 May 27 11:20 intersects.js
+-rw-r--r--  1 frida  staff   213 May 27 11:20 ltr.js
+-rw-r--r--  1 frida  staff   579 May 27 11:20 max-satisfying.js
+-rw-r--r--  1 frida  staff   577 May 27 11:20 min-satisfying.js
+-rw-r--r--  1 frida  staff  1500 May 27 11:20 min-version.js
+-rw-r--r--  1 frida  staff  2190 May 27 11:20 outside.js
+-rw-r--r--  1 frida  staff  1341 May 27 11:20 simplify.js
+-rw-r--r--  1 frida  staff  7418 May 27 11:20 subset.js
+-rw-r--r--  1 frida  staff   268 May 27 11:20 to-comparators.js
+-rw-r--r--  1 frida  staff   312 May 27 11:20 valid.js
+./node_modules/update-notifier/node_modules/semver/bin
+total 16
+-rwxr-xr-x  1 frida  staff  4426 May 27 11:20 semver.js
+./node_modules/update-notifier/node_modules/semver/classes
+total 64
+-rw-r--r--  1 frida  staff   3610 May 27 11:20 comparator.js
+-rw-r--r--  1 frida  staff    129 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  14046 May 27 11:20 range.js
+-rw-r--r--  1 frida  staff   8008 May 27 11:20 semver.js
+./node_modules/update-notifier/node_modules/semver/internal
+total 48
+-rw-r--r--  1 frida  staff   467 May 27 11:20 constants.js
+-rw-r--r--  1 frida  staff   226 May 27 11:20 debug.js
+-rw-r--r--  1 frida  staff   410 May 27 11:20 identifiers.js
+-rw-r--r--  1 frida  staff   383 May 27 11:20 parse-options.js
+-rw-r--r--  1 frida  staff  6672 May 27 11:20 re.js
+./node_modules/update-notifier/node_modules/semver/functions
+total 192
+-rw-r--r--  1 frida  staff   191 May 27 11:20 clean.js
+-rw-r--r--  1 frida  staff   947 May 27 11:20 cmp.js
+-rw-r--r--  1 frida  staff  1505 May 27 11:20 coerce.js
+-rw-r--r--  1 frida  staff   267 May 27 11:20 compare-build.js
+-rw-r--r--  1 frida  staff   118 May 27 11:20 compare-loose.js
+-rw-r--r--  1 frida  staff   156 May 27 11:20 compare.js
+-rw-r--r--  1 frida  staff   634 May 27 11:20 diff.js
+-rw-r--r--  1 frida  staff   112 May 27 11:20 eq.js
+-rw-r--r--  1 frida  staff   110 May 27 11:20 gt.js
+-rw-r--r--  1 frida  staff   113 May 27 11:20 gte.js
+-rw-r--r--  1 frida  staff   400 May 27 11:20 inc.js
+-rw-r--r--  1 frida  staff   110 May 27 11:20 lt.js
+-rw-r--r--  1 frida  staff   113 May 27 11:20 lte.js
+-rw-r--r--  1 frida  staff   122 May 27 11:20 major.js
+-rw-r--r--  1 frida  staff   122 May 27 11:20 minor.js
+-rw-r--r--  1 frida  staff   114 May 27 11:20 neq.js
+-rw-r--r--  1 frida  staff   662 May 27 11:20 parse.js
+-rw-r--r--  1 frida  staff   122 May 27 11:20 patch.js
+-rw-r--r--  1 frida  staff   220 May 27 11:20 prerelease.js
+-rw-r--r--  1 frida  staff   118 May 27 11:20 rcompare.js
+-rw-r--r--  1 frida  staff   149 May 27 11:20 rsort.js
+-rw-r--r--  1 frida  staff   233 May 27 11:20 satisfies.js
+-rw-r--r--  1 frida  staff   147 May 27 11:20 sort.js
+-rw-r--r--  1 frida  staff   162 May 27 11:20 valid.js
+./node_modules/ipaddr.js
+total 64
+-rw-r--r--  1 frida  staff  1087 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  8309 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  9738 May 27 11:20 ipaddr.min.js
+drwxr-xr-x  4 frida  staff   128 May 27 11:20 lib
+-rw-r--r--  1 frida  staff   719 May 27 11:20 package.json
+./node_modules/ipaddr.js/lib
+total 48
+-rw-r--r--  1 frida  staff  19333 May 27 11:20 ipaddr.js
+-rw-r--r--  1 frida  staff   2959 May 27 11:20 ipaddr.js.d.ts
+./node_modules/is-installed-globally
+total 40
+-rw-r--r--  1 frida  staff   379 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   342 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1117 May 27 11:20 license
+-rw-r--r--  1 frida  staff   940 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   828 May 27 11:20 readme.md
+./node_modules/has
+total 24
+-rw-r--r--  1 frida  staff  1060 May 27 11:20 LICENSE-MIT
+-rw-r--r--  1 frida  staff   239 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1011 May 27 11:20 package.json
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 src
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 test
+./node_modules/has/test
+total 8
+-rw-r--r--  1 frida  staff  331 May 27 11:20 index.js
+./node_modules/has/src
+total 8
+-rw-r--r--  1 frida  staff  129 May 27 11:20 index.js
+./node_modules/cookie
+total 72
+-rw-r--r--  1 frida  staff   3120 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff   1175 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  11298 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   1180 May 27 11:20 SECURITY.md
+-rw-r--r--  1 frida  staff   5224 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   1140 May 27 11:20 package.json
+./node_modules/to-regex-range
+total 64
+-rw-r--r--  1 frida  staff   1091 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  13585 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   6481 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   1782 May 27 11:20 package.json
+./node_modules/escape-html
+total 32
+-rw-r--r--  1 frida  staff  1157 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff   707 May 27 11:20 Readme.md
+-rw-r--r--  1 frida  staff  1362 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   434 May 27 11:20 package.json
+./node_modules/statuses
+total 48
+-rw-r--r--  1 frida  staff  1546 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1172 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  3559 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1789 May 27 11:20 codes.json
+-rw-r--r--  1 frida  staff  2610 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1440 May 27 11:20 package.json
+./node_modules/string-width
+total 40
+-rw-r--r--  1 frida  staff   792 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   923 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   941 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1396 May 27 11:20 readme.md
+./node_modules/escape-goat
+total 40
+-rw-r--r--  1 frida  staff  1738 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   797 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   718 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1914 May 27 11:20 readme.md
+./node_modules/yallist
+total 64
+-rw-r--r--  1 frida  staff   765 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  4717 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   207 May 27 11:20 iterator.js
+-rw-r--r--  1 frida  staff   652 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  8411 May 27 11:20 yallist.js
+./node_modules/parseurl
+total 40
+-rw-r--r--  1 frida  staff  1043 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1173 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  4094 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  2809 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1180 May 27 11:20 package.json
+./node_modules/etag
+total 48
+-rw-r--r--  1 frida  staff  1732 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1094 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  4198 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  2479 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1306 May 27 11:20 package.json
+./node_modules/camelcase
+total 40
+-rw-r--r--  1 frida  staff  2543 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  3272 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1117 May 27 11:20 license
+-rw-r--r--  1 frida  staff   812 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  3953 May 27 11:20 readme.md
+./node_modules/isarray
+total 64
+-rw-r--r--  1 frida  staff    13 May 27 11:20 .npmignore
+-rw-r--r--  1 frida  staff    48 May 27 11:20 .travis.yml
+-rw-r--r--  1 frida  staff    55 May 27 11:20 Makefile
+-rw-r--r--  1 frida  staff  1890 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   470 May 27 11:20 component.json
+-rw-r--r--  1 frida  staff   132 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   958 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   320 May 27 11:20 test.js
+./node_modules/wrappy
+total 32
+-rw-r--r--  1 frida  staff  765 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  685 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  606 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  905 May 27 11:20 wrappy.js
+./node_modules/nodemon
+total 96
+-rw-r--r--   1 frida  staff    360 May 27 11:20 .eslintrc.json
+-rw-r--r--   1 frida  staff    239 May 27 11:20 .jshintrc
+-rw-r--r--   1 frida  staff     27 May 27 11:20 .releaserc
+-rw-r--r--   1 frida  staff    345 May 27 11:20 .travis.yml
+-rw-r--r--   1 frida  staff   1122 May 27 11:20 LICENSE
+-rw-r--r--   1 frida  staff  20471 May 27 11:20 README.md
+drwxr-xr-x   5 frida  staff    160 May 27 11:20 bin
+-rw-r--r--   1 frida  staff     70 May 27 11:20 commitlint.config.js
+drwxr-xr-x   3 frida  staff     96 May 27 11:20 doc
+drwxr-xr-x  12 frida  staff    384 May 27 11:20 lib
+drwxr-xr-x   6 frida  staff    192 May 27 11:20 node_modules
+-rw-r--r--   1 frida  staff   2182 May 27 11:20 package.json
+./node_modules/nodemon/bin
+total 176
+-rwxr-xr-x  1 frida  staff    438 May 27 11:20 nodemon.js
+-rwxr-xr-x  1 frida  staff    894 May 27 11:20 postinstall.js
+-rw-r--r--  1 frida  staff  80384 May 27 11:20 windows-kill.exe
+./node_modules/nodemon/node_modules
+total 0
+drwxr-xr-x  8 frida  staff  256 May 27 11:20 debug
+drwxr-xr-x  6 frida  staff  192 May 27 11:20 has-flag
+drwxr-xr-x  6 frida  staff  192 May 27 11:20 ms
+drwxr-xr-x  7 frida  staff  224 May 27 11:20 supports-color
+./node_modules/nodemon/node_modules/ms
+total 32
+-rw-r--r--  1 frida  staff  3024 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1079 May 27 11:20 license.md
+-rw-r--r--  1 frida  staff   732 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1886 May 27 11:20 readme.md
+./node_modules/nodemon/node_modules/has-flag
+total 32
+-rw-r--r--  1 frida  staff   320 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   710 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   986 May 27 11:20 readme.md
+./node_modules/nodemon/node_modules/supports-color
+total 40
+-rw-r--r--  1 frida  staff    67 May 27 11:20 browser.js
+-rw-r--r--  1 frida  staff  2771 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   818 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1865 May 27 11:20 readme.md
+./node_modules/nodemon/node_modules/debug
+total 104
+-rw-r--r--  1 frida  staff  12950 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff   1107 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  21045 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff     40 May 27 11:20 node.js
+-rw-r--r--  1 frida  staff   1153 May 27 11:20 package.json
+drwxr-xr-x  6 frida  staff    192 May 27 11:20 src
+./node_modules/nodemon/node_modules/debug/src
+total 56
+-rw-r--r--  1 frida  staff  6285 May 27 11:20 browser.js
+-rw-r--r--  1 frida  staff  5929 May 27 11:20 common.js
+-rw-r--r--  1 frida  staff   331 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  4415 May 27 11:20 node.js
+./node_modules/nodemon/lib
+total 48
+drwxr-xr-x  4 frida  staff   128 May 27 11:20 cli
+drwxr-xr-x  7 frida  staff   224 May 27 11:20 config
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 help
+-rw-r--r--  1 frida  staff    38 May 27 11:20 index.js
+drwxr-xr-x  7 frida  staff   224 May 27 11:20 monitor
+-rw-r--r--  1 frida  staff  8777 May 27 11:20 nodemon.js
+drwxr-xr-x  5 frida  staff   160 May 27 11:20 rules
+-rw-r--r--  1 frida  staff  1893 May 27 11:20 spawn.js
+drwxr-xr-x  8 frida  staff   256 May 27 11:20 utils
+-rw-r--r--  1 frida  staff  2465 May 27 11:20 version.js
+./node_modules/nodemon/lib/monitor
+total 88
+-rw-r--r--  1 frida  staff     82 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   6730 May 27 11:20 match.js
+-rw-r--r--  1 frida  staff  16493 May 27 11:20 run.js
+-rw-r--r--  1 frida  staff    488 May 27 11:20 signals.js
+-rw-r--r--  1 frida  staff   6454 May 27 11:20 watch.js
+./node_modules/nodemon/lib/config
+total 56
+-rw-r--r--  1 frida  staff  1249 May 27 11:20 command.js
+-rw-r--r--  1 frida  staff   815 May 27 11:20 defaults.js
+-rw-r--r--  1 frida  staff  6859 May 27 11:20 exec.js
+-rw-r--r--  1 frida  staff  2511 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  7613 May 27 11:20 load.js
+./node_modules/nodemon/lib/utils
+total 48
+-rw-r--r--  1 frida  staff   946 May 27 11:20 bus.js
+-rw-r--r--  1 frida  staff   829 May 27 11:20 clone.js
+-rw-r--r--  1 frida  staff   690 May 27 11:20 colour.js
+-rw-r--r--  1 frida  staff  2580 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1738 May 27 11:20 log.js
+-rw-r--r--  1 frida  staff  1186 May 27 11:20 merge.js
+./node_modules/nodemon/lib/cli
+total 24
+-rw-r--r--  1 frida  staff  1089 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  6039 May 27 11:20 parse.js
+./node_modules/nodemon/lib/rules
+total 24
+-rw-r--r--  1 frida  staff  2662 May 27 11:20 add.js
+-rw-r--r--  1 frida  staff  1260 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   804 May 27 11:20 parse.js
+./node_modules/nodemon/lib/help
+total 8
+-rw-r--r--  1 frida  staff  733 May 27 11:20 index.js
+./node_modules/nodemon/doc
+total 0
+drwxr-xr-x  10 frida  staff  320 May 27 11:20 cli
+./node_modules/nodemon/doc/cli
+total 64
+-rw-r--r--  1 frida  staff   236 May 27 11:20 authors.txt
+-rw-r--r--  1 frida  staff  1158 May 27 11:20 config.txt
+-rw-r--r--  1 frida  staff  1268 May 27 11:20 help.txt
+-rw-r--r--  1 frida  staff   799 May 27 11:20 logo.txt
+-rw-r--r--  1 frida  staff  1869 May 27 11:20 options.txt
+-rw-r--r--  1 frida  staff   325 May 27 11:20 topics.txt
+-rw-r--r--  1 frida  staff    88 May 27 11:20 usage.txt
+-rw-r--r--  1 frida  staff  1223 May 27 11:20 whoami.txt
+./node_modules/is-npm
+total 40
+-rw-r--r--  1 frida  staff   780 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   456 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1117 May 27 11:20 license
+-rw-r--r--  1 frida  staff   664 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  2087 May 27 11:20 readme.md
+./node_modules/send
+total 128
+-rw-r--r--  1 frida  staff  13301 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff   1128 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff   9476 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   1170 May 27 11:20 SECURITY.md
+-rw-r--r--  1 frida  staff  23502 May 27 11:20 index.js
+drwxr-xr-x  3 frida  staff     96 May 27 11:20 node_modules
+-rw-r--r--  1 frida  staff   1571 May 27 11:20 package.json
+./node_modules/send/node_modules
+total 0
+drwxr-xr-x  6 frida  staff  192 May 27 11:20 ms
+./node_modules/send/node_modules/ms
+total 32
+-rw-r--r--  1 frida  staff  3024 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1079 May 27 11:20 license.md
+-rw-r--r--  1 frida  staff   732 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1886 May 27 11:20 readme.md
+./node_modules/is-extglob
+total 32
+-rw-r--r--  1 frida  staff  1087 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  3469 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   441 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1220 May 27 11:20 package.json
+./node_modules/finalhandler
+total 72
+-rw-r--r--  1 frida  staff  4292 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1119 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  4133 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1202 May 27 11:20 SECURITY.md
+-rw-r--r--  1 frida  staff  6689 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1207 May 27 11:20 package.json
+./node_modules/rc
+total 72
+-rw-r--r--  1 frida  staff   586 May 27 11:20 LICENSE.APACHE2
+-rw-r--r--  1 frida  staff  1516 May 27 11:20 LICENSE.BSD
+-rw-r--r--  1 frida  staff  1088 May 27 11:20 LICENSE.MIT
+-rw-r--r--  1 frida  staff  5982 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   137 May 27 11:20 browser.js
+-rwxr-xr-x  1 frida  staff   109 May 27 11:20 cli.js
+-rwxr-xr-x  1 frida  staff  1503 May 27 11:20 index.js
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 lib
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 node_modules
+-rw-r--r--  1 frida  staff   695 May 27 11:20 package.json
+drwxr-xr-x  5 frida  staff   160 May 27 11:20 test
+./node_modules/rc/test
+total 24
+-rw-r--r--  1 frida  staff   312 May 27 11:20 ini.js
+-rw-r--r--  1 frida  staff  1392 May 27 11:20 nested-env-vars.js
+-rw-r--r--  1 frida  staff  1176 May 27 11:20 test.js
+./node_modules/rc/node_modules
+total 0
+drwxr-xr-x  6 frida  staff  192 May 27 11:20 ini
+./node_modules/rc/node_modules/ini
+total 40
+-rw-r--r--  1 frida  staff   765 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  2718 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  4976 May 27 11:20 ini.js
+-rw-r--r--  1 frida  staff   845 May 27 11:20 package.json
+./node_modules/rc/lib
+total 8
+-rw-r--r--  1 frida  staff  2759 May 27 11:20 utils.js
+./node_modules/boxen
+total 56
+-rw-r--r--  1 frida  staff  3728 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  7995 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1117 May 27 11:20 license
+-rw-r--r--  1 frida  staff   908 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  4666 May 27 11:20 readme.md
+./node_modules/braces
+total 96
+-rw-r--r--  1 frida  staff   5147 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff   1088 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  21130 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   4375 May 27 11:20 index.js
+drwxr-xr-x  8 frida  staff    256 May 27 11:20 lib
+-rw-r--r--  1 frida  staff   1647 May 27 11:20 package.json
+./node_modules/braces/lib
+total 56
+-rw-r--r--  1 frida  staff  1415 May 27 11:20 compile.js
+-rw-r--r--  1 frida  staff  1593 May 27 11:20 constants.js
+-rw-r--r--  1 frida  staff  2780 May 27 11:20 expand.js
+-rw-r--r--  1 frida  staff  6913 May 27 11:20 parse.js
+-rw-r--r--  1 frida  staff   700 May 27 11:20 stringify.js
+-rw-r--r--  1 frida  staff  2451 May 27 11:20 utils.js
+./node_modules/url-parse-lax
+total 32
+-rw-r--r--  1 frida  staff   376 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   716 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  2030 May 27 11:20 readme.md
+./node_modules/ajv
+total 56
+-rw-r--r--   1 frida  staff    496 May 27 11:20 .runkit_example.js
+-rw-r--r--   1 frida  staff   1090 May 27 11:20 LICENSE
+-rw-r--r--   1 frida  staff  11789 May 27 11:20 README.md
+drwxr-xr-x  23 frida  staff    736 May 27 11:20 dist
+drwxr-xr-x  13 frida  staff    416 May 27 11:20 lib
+-rw-r--r--   1 frida  staff   4452 May 27 11:20 package.json
+./node_modules/ajv/dist
+total 224
+-rw-r--r--   1 frida  staff   1095 May 27 11:20 2019.d.ts
+-rw-r--r--   1 frida  staff   2690 May 27 11:20 2019.js
+-rw-r--r--   1 frida  staff   1508 May 27 11:20 2019.js.map
+-rw-r--r--   1 frida  staff   1095 May 27 11:20 2020.d.ts
+-rw-r--r--   1 frida  staff   2396 May 27 11:20 2020.js
+-rw-r--r--   1 frida  staff   1342 May 27 11:20 2020.js.map
+-rw-r--r--   1 frida  staff   1065 May 27 11:20 ajv.d.ts
+-rw-r--r--   1 frida  staff   2363 May 27 11:20 ajv.js
+-rw-r--r--   1 frida  staff   1345 May 27 11:20 ajv.js.map
+drwxr-xr-x  26 frida  staff    832 May 27 11:20 compile
+-rw-r--r--   1 frida  staff   8311 May 27 11:20 core.d.ts
+-rw-r--r--   1 frida  staff  25103 May 27 11:20 core.js
+-rw-r--r--   1 frida  staff  21066 May 27 11:20 core.js.map
+-rw-r--r--   1 frida  staff   2085 May 27 11:20 jtd.d.ts
+-rw-r--r--   1 frida  staff   2882 May 27 11:20 jtd.js
+-rw-r--r--   1 frida  staff   1905 May 27 11:20 jtd.js.map
+drwxr-xr-x  11 frida  staff    352 May 27 11:20 refs
+drwxr-xr-x  26 frida  staff    832 May 27 11:20 runtime
+drwxr-xr-x   8 frida  staff    256 May 27 11:20 standalone
+drwxr-xr-x  11 frida  staff    352 May 27 11:20 types
+drwxr-xr-x  28 frida  staff    896 May 27 11:20 vocabularies
+./node_modules/ajv/dist/vocabularies
+total 160
+drwxr-xr-x  56 frida  staff  1792 May 27 11:20 applicator
+-rw-r--r--   1 frida  staff  1462 May 27 11:20 code.d.ts
+-rw-r--r--   1 frida  staff  6216 May 27 11:20 code.js
+-rw-r--r--   1 frida  staff  6020 May 27 11:20 code.js.map
+drwxr-xr-x  11 frida  staff   352 May 27 11:20 core
+drwxr-xr-x   8 frida  staff   256 May 27 11:20 discriminator
+-rw-r--r--   1 frida  staff   133 May 27 11:20 draft2020.d.ts
+-rw-r--r--   1 frida  staff   762 May 27 11:20 draft2020.js
+-rw-r--r--   1 frida  staff   419 May 27 11:20 draft2020.js.map
+-rw-r--r--   1 frida  staff   127 May 27 11:20 draft7.d.ts
+-rw-r--r--   1 frida  staff   557 May 27 11:20 draft7.js
+-rw-r--r--   1 frida  staff   328 May 27 11:20 draft7.js.map
+drwxr-xr-x  17 frida  staff   544 May 27 11:20 dynamic
+-rw-r--r--   1 frida  staff   745 May 27 11:20 errors.d.ts
+-rw-r--r--   1 frida  staff   111 May 27 11:20 errors.js
+-rw-r--r--   1 frida  staff   120 May 27 11:20 errors.js.map
+drwxr-xr-x   8 frida  staff   256 May 27 11:20 format
+drwxr-xr-x  41 frida  staff  1312 May 27 11:20 jtd
+-rw-r--r--   1 frida  staff   149 May 27 11:20 metadata.d.ts
+-rw-r--r--   1 frida  staff   427 May 27 11:20 metadata.js
+-rw-r--r--   1 frida  staff   299 May 27 11:20 metadata.js.map
+-rw-r--r--   1 frida  staff    97 May 27 11:20 next.d.ts
+-rw-r--r--   1 frida  staff   433 May 27 11:20 next.js
+-rw-r--r--   1 frida  staff   243 May 27 11:20 next.js.map
+drwxr-xr-x  11 frida  staff   352 May 27 11:20 unevaluated
+drwxr-xr-x  41 frida  staff  1312 May 27 11:20 validation
+./node_modules/ajv/dist/vocabularies/dynamic
+total 120
+-rw-r--r--  1 frida  staff   256 May 27 11:20 dynamicAnchor.d.ts
+-rw-r--r--  1 frida  staff  1261 May 27 11:20 dynamicAnchor.js
+-rw-r--r--  1 frida  staff  1351 May 27 11:20 dynamicAnchor.js.map
+-rw-r--r--  1 frida  staff   250 May 27 11:20 dynamicRef.d.ts
+-rw-r--r--  1 frida  staff  1985 May 27 11:20 dynamicRef.js
+-rw-r--r--  1 frida  staff  1639 May 27 11:20 dynamicRef.js.map
+-rw-r--r--  1 frida  staff   106 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   457 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   278 May 27 11:20 index.js.map
+-rw-r--r--  1 frida  staff   120 May 27 11:20 recursiveAnchor.d.ts
+-rw-r--r--  1 frida  staff   522 May 27 11:20 recursiveAnchor.js
+-rw-r--r--  1 frida  staff   435 May 27 11:20 recursiveAnchor.js.map
+-rw-r--r--  1 frida  staff   120 May 27 11:20 recursiveRef.d.ts
+-rw-r--r--  1 frida  staff   325 May 27 11:20 recursiveRef.js
+-rw-r--r--  1 frida  staff   339 May 27 11:20 recursiveRef.js.map
+./node_modules/ajv/dist/vocabularies/core
+total 88
+-rw-r--r--  1 frida  staff   120 May 27 11:20 id.d.ts
+-rw-r--r--  1 frida  staff   267 May 27 11:20 id.js
+-rw-r--r--  1 frida  staff   257 May 27 11:20 id.js.map
+-rw-r--r--  1 frida  staff   100 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   357 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   306 May 27 11:20 index.js.map
+-rw-r--r--  1 frida  staff   443 May 27 11:20 ref.d.ts
+-rw-r--r--  1 frida  staff  5234 May 27 11:20 ref.js
+-rw-r--r--  1 frida  staff  5014 May 27 11:20 ref.js.map
+./node_modules/ajv/dist/vocabularies/unevaluated
+total 72
+-rw-r--r--  1 frida  staff   114 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   350 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   236 May 27 11:20 index.js.map
+-rw-r--r--  1 frida  staff   256 May 27 11:20 unevaluatedItems.d.ts
+-rw-r--r--  1 frida  staff  1588 May 27 11:20 unevaluatedItems.js
+-rw-r--r--  1 frida  staff  1793 May 27 11:20 unevaluatedItems.js.map
+-rw-r--r--  1 frida  staff   280 May 27 11:20 unevaluatedProperties.d.ts
+-rw-r--r--  1 frida  staff  2608 May 27 11:20 unevaluatedProperties.js
+-rw-r--r--  1 frida  staff  2468 May 27 11:20 unevaluatedProperties.js.map
+./node_modules/ajv/dist/vocabularies/jtd
+total 328
+-rw-r--r--  1 frida  staff   391 May 27 11:20 discriminator.d.ts
+-rw-r--r--  1 frida  staff  2785 May 27 11:20 discriminator.js
+-rw-r--r--  1 frida  staff  2691 May 27 11:20 discriminator.js.map
+-rw-r--r--  1 frida  staff   264 May 27 11:20 elements.d.ts
+-rw-r--r--  1 frida  staff   949 May 27 11:20 elements.js
+-rw-r--r--  1 frida  staff   908 May 27 11:20 elements.js.map
+-rw-r--r--  1 frida  staff   233 May 27 11:20 enum.d.ts
+-rw-r--r--  1 frida  staff  1745 May 27 11:20 enum.js
+-rw-r--r--  1 frida  staff  1688 May 27 11:20 enum.js.map
+-rw-r--r--  1 frida  staff   529 May 27 11:20 error.d.ts
+-rw-r--r--  1 frida  staff   893 May 27 11:20 error.js
+-rw-r--r--  1 frida  staff   716 May 27 11:20 error.js.map
+-rw-r--r--  1 frida  staff   541 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   962 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   530 May 27 11:20 index.js.map
+-rw-r--r--  1 frida  staff   254 May 27 11:20 metadata.d.ts
+-rw-r--r--  1 frida  staff   810 May 27 11:20 metadata.js
+-rw-r--r--  1 frida  staff   787 May 27 11:20 metadata.js.map
+-rw-r--r--  1 frida  staff   305 May 27 11:20 nullable.d.ts
+-rw-r--r--  1 frida  staff   859 May 27 11:20 nullable.js
+-rw-r--r--  1 frida  staff   801 May 27 11:20 nullable.js.map
+-rw-r--r--  1 frida  staff   120 May 27 11:20 optionalProperties.d.ts
+-rw-r--r--  1 frida  staff   436 May 27 11:20 optionalProperties.js
+-rw-r--r--  1 frida  staff   398 May 27 11:20 optionalProperties.js.map
+-rw-r--r--  1 frida  staff   903 May 27 11:20 properties.d.ts
+-rw-r--r--  1 frida  staff  6094 May 27 11:20 properties.js
+-rw-r--r--  1 frida  staff  5584 May 27 11:20 properties.js.map
+-rw-r--r--  1 frida  staff   203 May 27 11:20 ref.d.ts
+-rw-r--r--  1 frida  staff  2648 May 27 11:20 ref.js
+-rw-r--r--  1 frida  staff  2436 May 27 11:20 ref.js.map
+-rw-r--r--  1 frida  staff   509 May 27 11:20 type.d.ts
+-rw-r--r--  1 frida  staff  2706 May 27 11:20 type.js
+-rw-r--r--  1 frida  staff  2564 May 27 11:20 type.js.map
+-rw-r--r--  1 frida  staff   120 May 27 11:20 union.d.ts
+-rw-r--r--  1 frida  staff   343 May 27 11:20 union.js
+-rw-r--r--  1 frida  staff   320 May 27 11:20 union.js.map
+-rw-r--r--  1 frida  staff   261 May 27 11:20 values.d.ts
+-rw-r--r--  1 frida  staff  1710 May 27 11:20 values.js
+-rw-r--r--  1 frida  staff  1612 May 27 11:20 values.js.map
+./node_modules/ajv/dist/vocabularies/discriminator
+total 56
+-rw-r--r--  1 frida  staff   296 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  4659 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  4000 May 27 11:20 index.js.map
+-rw-r--r--  1 frida  staff   279 May 27 11:20 types.d.ts
+-rw-r--r--  1 frida  staff   316 May 27 11:20 types.js
+-rw-r--r--  1 frida  staff   250 May 27 11:20 types.js.map
+./node_modules/ajv/dist/vocabularies/format
+total 56
+-rw-r--r--  1 frida  staff   248 May 27 11:20 format.d.ts
+-rw-r--r--  1 frida  staff  4317 May 27 11:20 format.js
+-rw-r--r--  1 frida  staff  3792 May 27 11:20 format.js.map
+-rw-r--r--  1 frida  staff   104 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   209 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   205 May 27 11:20 index.js.map
+./node_modules/ajv/dist/vocabularies/applicator
+total 440
+-rw-r--r--  1 frida  staff   404 May 27 11:20 additionalItems.d.ts
+-rw-r--r--  1 frida  staff  1931 May 27 11:20 additionalItems.js
+-rw-r--r--  1 frida  staff  2063 May 27 11:20 additionalItems.js.map
+-rw-r--r--  1 frida  staff   326 May 27 11:20 additionalProperties.d.ts
+-rw-r--r--  1 frida  staff  4309 May 27 11:20 additionalProperties.js
+-rw-r--r--  1 frida  staff  3662 May 27 11:20 additionalProperties.js.map
+-rw-r--r--  1 frida  staff   120 May 27 11:20 allOf.d.ts
+-rw-r--r--  1 frida  staff   756 May 27 11:20 allOf.js
+-rw-r--r--  1 frida  staff   812 May 27 11:20 allOf.js.map
+-rw-r--r--  1 frida  staff   216 May 27 11:20 anyOf.d.ts
+-rw-r--r--  1 frida  staff   343 May 27 11:20 anyOf.js
+-rw-r--r--  1 frida  staff   327 May 27 11:20 anyOf.js.map
+-rw-r--r--  1 frida  staff   272 May 27 11:20 contains.d.ts
+-rw-r--r--  1 frida  staff  3680 May 27 11:20 contains.js
+-rw-r--r--  1 frida  staff  3743 May 27 11:20 contains.js.map
+-rw-r--r--  1 frida  staff   855 May 27 11:20 dependencies.d.ts
+-rw-r--r--  1 frida  staff  3198 May 27 11:20 dependencies.js
+-rw-r--r--  1 frida  staff  3112 May 27 11:20 dependencies.js.map
+-rw-r--r--  1 frida  staff   120 May 27 11:20 dependentSchemas.d.ts
+-rw-r--r--  1 frida  staff   354 May 27 11:20 dependentSchemas.js
+-rw-r--r--  1 frida  staff   353 May 27 11:20 dependentSchemas.js.map
+-rw-r--r--  1 frida  staff   244 May 27 11:20 if.d.ts
+-rw-r--r--  1 frida  staff  2438 May 27 11:20 if.js
+-rw-r--r--  1 frida  staff  2415 May 27 11:20 if.js.map
+-rw-r--r--  1 frida  staff   866 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  1529 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   766 May 27 11:20 index.js.map
+-rw-r--r--  1 frida  staff   293 May 27 11:20 items.d.ts
+-rw-r--r--  1 frida  staff  1993 May 27 11:20 items.js
+-rw-r--r--  1 frida  staff  2032 May 27 11:20 items.js.map
+-rw-r--r--  1 frida  staff   234 May 27 11:20 items2020.d.ts
+-rw-r--r--  1 frida  staff  1037 May 27 11:20 items2020.js
+-rw-r--r--  1 frida  staff   947 May 27 11:20 items2020.js.map
+-rw-r--r--  1 frida  staff   217 May 27 11:20 not.d.ts
+-rw-r--r--  1 frida  staff   773 May 27 11:20 not.js
+-rw-r--r--  1 frida  staff   821 May 27 11:20 not.js.map
+-rw-r--r--  1 frida  staff   262 May 27 11:20 oneOf.d.ts
+-rw-r--r--  1 frida  staff  2257 May 27 11:20 oneOf.js
+-rw-r--r--  1 frida  staff  2016 May 27 11:20 oneOf.js.map
+-rw-r--r--  1 frida  staff   120 May 27 11:20 patternProperties.d.ts
+-rw-r--r--  1 frida  staff  3236 May 27 11:20 patternProperties.js
+-rw-r--r--  1 frida  staff  2634 May 27 11:20 patternProperties.js.map
+-rw-r--r--  1 frida  staff   120 May 27 11:20 prefixItems.d.ts
+-rw-r--r--  1 frida  staff   354 May 27 11:20 prefixItems.js
+-rw-r--r--  1 frida  staff   381 May 27 11:20 prefixItems.js.map
+-rw-r--r--  1 frida  staff   120 May 27 11:20 properties.d.ts
+-rw-r--r--  1 frida  staff  2153 May 27 11:20 properties.js
+-rw-r--r--  1 frida  staff  1994 May 27 11:20 properties.js.map
+-rw-r--r--  1 frida  staff   257 May 27 11:20 propertyNames.d.ts
+-rw-r--r--  1 frida  staff  1221 May 27 11:20 propertyNames.js
+-rw-r--r--  1 frida  staff  1230 May 27 11:20 propertyNames.js.map
+-rw-r--r--  1 frida  staff   120 May 27 11:20 thenElse.d.ts
+-rw-r--r--  1 frida  staff   446 May 27 11:20 thenElse.js
+-rw-r--r--  1 frida  staff   442 May 27 11:20 thenElse.js.map
+./node_modules/ajv/dist/vocabularies/validation
+total 312
+-rw-r--r--  1 frida  staff   216 May 27 11:20 const.d.ts
+-rw-r--r--  1 frida  staff   852 May 27 11:20 const.js
+-rw-r--r--  1 frida  staff   799 May 27 11:20 const.js.map
+-rw-r--r--  1 frida  staff   351 May 27 11:20 dependentRequired.d.ts
+-rw-r--r--  1 frida  staff   403 May 27 11:20 dependentRequired.js
+-rw-r--r--  1 frida  staff   376 May 27 11:20 dependentRequired.js.map
+-rw-r--r--  1 frida  staff   249 May 27 11:20 enum.d.ts
+-rw-r--r--  1 frida  staff  1901 May 27 11:20 enum.js
+-rw-r--r--  1 frida  staff  1979 May 27 11:20 enum.js.map
+-rw-r--r--  1 frida  staff   787 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  1036 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   595 May 27 11:20 index.js.map
+-rw-r--r--  1 frida  staff   120 May 27 11:20 limitContains.d.ts
+-rw-r--r--  1 frida  staff   495 May 27 11:20 limitContains.js
+-rw-r--r--  1 frida  staff   463 May 27 11:20 limitContains.js.map
+-rw-r--r--  1 frida  staff   120 May 27 11:20 limitItems.d.ts
+-rw-r--r--  1 frida  staff   852 May 27 11:20 limitItems.js
+-rw-r--r--  1 frida  staff   905 May 27 11:20 limitItems.js.map
+-rw-r--r--  1 frida  staff   120 May 27 11:20 limitLength.d.ts
+-rw-r--r--  1 frida  staff  1130 May 27 11:20 limitLength.js
+-rw-r--r--  1 frida  staff  1145 May 27 11:20 limitLength.js.map
+-rw-r--r--  1 frida  staff   410 May 27 11:20 limitNumber.d.ts
+-rw-r--r--  1 frida  staff  1036 May 27 11:20 limitNumber.js
+-rw-r--r--  1 frida  staff  1300 May 27 11:20 limitNumber.js.map
+-rw-r--r--  1 frida  staff   120 May 27 11:20 limitProperties.d.ts
+-rw-r--r--  1 frida  staff   896 May 27 11:20 limitProperties.js
+-rw-r--r--  1 frida  staff   915 May 27 11:20 limitProperties.js.map
+-rw-r--r--  1 frida  staff   260 May 27 11:20 multipleOf.d.ts
+-rw-r--r--  1 frida  staff  1023 May 27 11:20 multipleOf.js
+-rw-r--r--  1 frida  staff   986 May 27 11:20 multipleOf.js.map
+-rw-r--r--  1 frida  staff   251 May 27 11:20 pattern.d.ts
+-rw-r--r--  1 frida  staff   905 May 27 11:20 pattern.js
+-rw-r--r--  1 frida  staff   933 May 27 11:20 pattern.js.map
+-rw-r--r--  1 frida  staff   263 May 27 11:20 required.d.ts
+-rw-r--r--  1 frida  staff  3188 May 27 11:20 required.js
+-rw-r--r--  1 frida  staff  2914 May 27 11:20 required.js.map
+-rw-r--r--  1 frida  staff   269 May 27 11:20 uniqueItems.d.ts
+-rw-r--r--  1 frida  staff  3037 May 27 11:20 uniqueItems.js
+-rw-r--r--  1 frida  staff  3354 May 27 11:20 uniqueItems.js.map
+./node_modules/ajv/dist/types
+total 96
+-rw-r--r--  1 frida  staff  6535 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   110 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   111 May 27 11:20 index.js.map
+-rw-r--r--  1 frida  staff  5129 May 27 11:20 json-schema.d.ts
+-rw-r--r--  1 frida  staff   116 May 27 11:20 json-schema.js
+-rw-r--r--  1 frida  staff   123 May 27 11:20 json-schema.js.map
+-rw-r--r--  1 frida  staff  6909 May 27 11:20 jtd-schema.d.ts
+-rw-r--r--  1 frida  staff   115 May 27 11:20 jtd-schema.js
+-rw-r--r--  1 frida  staff   121 May 27 11:20 jtd-schema.js.map
+./node_modules/ajv/dist/standalone
+total 56
+-rw-r--r--  1 frida  staff   243 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  4480 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  4018 May 27 11:20 index.js.map
+-rw-r--r--  1 frida  staff   633 May 27 11:20 instance.d.ts
+-rw-r--r--  1 frida  staff  1015 May 27 11:20 instance.js
+-rw-r--r--  1 frida  staff  1091 May 27 11:20 instance.js.map
+./node_modules/ajv/dist/runtime
+total 208
+-rw-r--r--  1 frida  staff   157 May 27 11:20 equal.d.ts
+-rw-r--r--  1 frida  staff   286 May 27 11:20 equal.js
+-rw-r--r--  1 frida  staff   199 May 27 11:20 equal.js.map
+-rw-r--r--  1 frida  staff   642 May 27 11:20 parseJson.d.ts
+-rw-r--r--  1 frida  staff  5280 May 27 11:20 parseJson.js
+-rw-r--r--  1 frida  staff  5024 May 27 11:20 parseJson.js.map
+-rw-r--r--  1 frida  staff   115 May 27 11:20 quote.d.ts
+-rw-r--r--  1 frida  staff   943 May 27 11:20 quote.js
+-rw-r--r--  1 frida  staff   877 May 27 11:20 quote.js.map
+-rw-r--r--  1 frida  staff   137 May 27 11:20 re2.d.ts
+-rw-r--r--  1 frida  staff   213 May 27 11:20 re2.js
+-rw-r--r--  1 frida  staff   182 May 27 11:20 re2.js.map
+-rw-r--r--  1 frida  staff   165 May 27 11:20 timestamp.d.ts
+-rw-r--r--  1 frida  staff  1536 May 27 11:20 timestamp.js
+-rw-r--r--  1 frida  staff  1994 May 27 11:20 timestamp.js.map
+-rw-r--r--  1 frida  staff   132 May 27 11:20 ucs2length.d.ts
+-rw-r--r--  1 frida  staff   808 May 27 11:20 ucs2length.js
+-rw-r--r--  1 frida  staff   708 May 27 11:20 ucs2length.js.map
+-rw-r--r--  1 frida  staff   140 May 27 11:20 uri.d.ts
+-rw-r--r--  1 frida  staff   216 May 27 11:20 uri.js
+-rw-r--r--  1 frida  staff   182 May 27 11:20 uri.js.map
+-rw-r--r--  1 frida  staff   249 May 27 11:20 validation_error.d.ts
+-rw-r--r--  1 frida  staff   337 May 27 11:20 validation_error.js
+-rw-r--r--  1 frida  staff   332 May 27 11:20 validation_error.js.map
+./node_modules/ajv/dist/compile
+total 248
+drwxr-xr-x  11 frida  staff   352 May 27 11:20 codegen
+-rw-r--r--   1 frida  staff   826 May 27 11:20 errors.d.ts
+-rw-r--r--   1 frida  staff  5744 May 27 11:20 errors.js
+-rw-r--r--   1 frida  staff  5983 May 27 11:20 errors.js.map
+-rw-r--r--   1 frida  staff  2922 May 27 11:20 index.d.ts
+-rw-r--r--   1 frida  staff  9983 May 27 11:20 index.js
+-rw-r--r--   1 frida  staff  9117 May 27 11:20 index.js.map
+drwxr-xr-x  11 frida  staff   352 May 27 11:20 jtd
+-rw-r--r--   1 frida  staff   398 May 27 11:20 names.d.ts
+-rw-r--r--   1 frida  staff  1113 May 27 11:20 names.js
+-rw-r--r--   1 frida  staff   902 May 27 11:20 names.js.map
+-rw-r--r--   1 frida  staff   252 May 27 11:20 ref_error.d.ts
+-rw-r--r--   1 frida  staff   543 May 27 11:20 ref_error.js
+-rw-r--r--   1 frida  staff   474 May 27 11:20 ref_error.js.map
+-rw-r--r--   1 frida  staff   763 May 27 11:20 resolve.d.ts
+-rw-r--r--   1 frida  staff  4981 May 27 11:20 resolve.js
+-rw-r--r--   1 frida  staff  4771 May 27 11:20 resolve.js.map
+-rw-r--r--   1 frida  staff   823 May 27 11:20 rules.d.ts
+-rw-r--r--   1 frida  staff   918 May 27 11:20 rules.js
+-rw-r--r--   1 frida  staff  1030 May 27 11:20 rules.js.map
+-rw-r--r--   1 frida  staff  2226 May 27 11:20 util.d.ts
+-rw-r--r--   1 frida  staff  7111 May 27 11:20 util.js
+-rw-r--r--   1 frida  staff  7022 May 27 11:20 util.js.map
+drwxr-xr-x  23 frida  staff   736 May 27 11:20 validate
+./node_modules/ajv/dist/compile/validate
+total 280
+-rw-r--r--  1 frida  staff    456 May 27 11:20 applicability.d.ts
+-rw-r--r--  1 frida  staff    853 May 27 11:20 applicability.js
+-rw-r--r--  1 frida  staff    775 May 27 11:20 applicability.js.map
+-rw-r--r--  1 frida  staff    216 May 27 11:20 boolSchema.d.ts
+-rw-r--r--  1 frida  staff   1531 May 27 11:20 boolSchema.js
+-rw-r--r--  1 frida  staff   1330 May 27 11:20 boolSchema.js.map
+-rw-r--r--  1 frida  staff    892 May 27 11:20 dataType.d.ts
+-rw-r--r--  1 frida  staff   8339 May 27 11:20 dataType.js
+-rw-r--r--  1 frida  staff   7654 May 27 11:20 dataType.js.map
+-rw-r--r--  1 frida  staff    117 May 27 11:20 defaults.d.ts
+-rw-r--r--  1 frida  staff   1448 May 27 11:20 defaults.js
+-rw-r--r--  1 frida  staff   1292 May 27 11:20 defaults.js.map
+-rw-r--r--  1 frida  staff   2073 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  20297 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  20638 May 27 11:20 index.js.map
+-rw-r--r--  1 frida  staff    679 May 27 11:20 keyword.d.ts
+-rw-r--r--  1 frida  staff   5695 May 27 11:20 keyword.js
+-rw-r--r--  1 frida  staff   5951 May 27 11:20 keyword.js.map
+-rw-r--r--  1 frida  staff   1730 May 27 11:20 subschema.d.ts
+-rw-r--r--  1 frida  staff   3858 May 27 11:20 subschema.js
+-rw-r--r--  1 frida  staff   3078 May 27 11:20 subschema.js.map
+./node_modules/ajv/dist/compile/codegen
+total 184
+-rw-r--r--  1 frida  staff   1678 May 27 11:20 code.d.ts
+-rw-r--r--  1 frida  staff   4609 May 27 11:20 code.js
+-rw-r--r--  1 frida  staff   5226 May 27 11:20 code.js.map
+-rw-r--r--  1 frida  staff   3332 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  23127 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  23663 May 27 11:20 index.js.map
+-rw-r--r--  1 frida  staff   2437 May 27 11:20 scope.d.ts
+-rw-r--r--  1 frida  staff   5206 May 27 11:20 scope.js
+-rw-r--r--  1 frida  staff   5115 May 27 11:20 scope.js.map
+./node_modules/ajv/dist/compile/jtd
+total 152
+-rw-r--r--  1 frida  staff    217 May 27 11:20 parse.d.ts
+-rw-r--r--  1 frida  staff  13727 May 27 11:20 parse.js
+-rw-r--r--  1 frida  staff  15545 May 27 11:20 parse.js.map
+-rw-r--r--  1 frida  staff    221 May 27 11:20 serialize.d.ts
+-rw-r--r--  1 frida  staff   8728 May 27 11:20 serialize.js
+-rw-r--r--  1 frida  staff   9917 May 27 11:20 serialize.js.map
+-rw-r--r--  1 frida  staff    323 May 27 11:20 types.d.ts
+-rw-r--r--  1 frida  staff    291 May 27 11:20 types.js
+-rw-r--r--  1 frida  staff    236 May 27 11:20 types.js.map
+./node_modules/ajv/dist/refs
+total 56
+-rw-r--r--  1 frida  staff   409 May 27 11:20 data.json
+drwxr-xr-x  7 frida  staff   224 May 27 11:20 json-schema-2019-09
+drwxr-xr-x  7 frida  staff   224 May 27 11:20 json-schema-2020-12
+-rw-r--r--  1 frida  staff  3449 May 27 11:20 json-schema-draft-06.json
+-rw-r--r--  1 frida  staff  3811 May 27 11:20 json-schema-draft-07.json
+-rw-r--r--  1 frida  staff  2521 May 27 11:20 json-schema-secure.json
+-rw-r--r--  1 frida  staff   114 May 27 11:20 jtd-schema.d.ts
+-rw-r--r--  1 frida  staff  2882 May 27 11:20 jtd-schema.js
+-rw-r--r--  1 frida  staff  2824 May 27 11:20 jtd-schema.js.map
+./node_modules/ajv/dist/refs/json-schema-2019-09
+total 32
+-rw-r--r--  1 frida  staff   111 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   938 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   726 May 27 11:20 index.js.map
+drwxr-xr-x  8 frida  staff   256 May 27 11:20 meta
+-rw-r--r--  1 frida  staff  1579 May 27 11:20 schema.json
+./node_modules/ajv/dist/refs/json-schema-2019-09/meta
+total 48
+-rw-r--r--  1 frida  staff  1566 May 27 11:20 applicator.json
+-rw-r--r--  1 frida  staff   477 May 27 11:20 content.json
+-rw-r--r--  1 frida  staff  1273 May 27 11:20 core.json
+-rw-r--r--  1 frida  staff   375 May 27 11:20 format.json
+-rw-r--r--  1 frida  staff   758 May 27 11:20 meta-data.json
+-rw-r--r--  1 frida  staff  2264 May 27 11:20 validation.json
+./node_modules/ajv/dist/refs/json-schema-2020-12
+total 32
+-rw-r--r--  1 frida  staff   111 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  1026 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   751 May 27 11:20 index.js.map
+drwxr-xr-x  9 frida  staff   288 May 27 11:20 meta
+-rw-r--r--  1 frida  staff  2166 May 27 11:20 schema.json
+./node_modules/ajv/dist/refs/json-schema-2020-12/meta
+total 56
+-rw-r--r--  1 frida  staff  1441 May 27 11:20 applicator.json
+-rw-r--r--  1 frida  staff   479 May 27 11:20 content.json
+-rw-r--r--  1 frida  staff  1344 May 27 11:20 core.json
+-rw-r--r--  1 frida  staff   420 May 27 11:20 format-annotation.json
+-rw-r--r--  1 frida  staff   758 May 27 11:20 meta-data.json
+-rw-r--r--  1 frida  staff   472 May 27 11:20 unevaluated.json
+-rw-r--r--  1 frida  staff  2264 May 27 11:20 validation.json
+./node_modules/ajv/lib
+total 96
+-rw-r--r--   1 frida  staff   2329 May 27 11:20 2019.ts
+-rw-r--r--   1 frida  staff   2044 May 27 11:20 2020.ts
+-rw-r--r--   1 frida  staff   2064 May 27 11:20 ajv.ts
+drwxr-xr-x  12 frida  staff    384 May 27 11:20 compile
+-rw-r--r--   1 frida  staff  30436 May 27 11:20 core.ts
+-rw-r--r--   1 frida  staff   4007 May 27 11:20 jtd.ts
+drwxr-xr-x   9 frida  staff    288 May 27 11:20 refs
+drwxr-xr-x  10 frida  staff    320 May 27 11:20 runtime
+drwxr-xr-x   4 frida  staff    128 May 27 11:20 standalone
+drwxr-xr-x   5 frida  staff    160 May 27 11:20 types
+drwxr-xr-x  16 frida  staff    512 May 27 11:20 vocabularies
+./node_modules/ajv/lib/vocabularies
+total 56
+drwxr-xr-x  20 frida  staff   640 May 27 11:20 applicator
+-rw-r--r--   1 frida  staff  5247 May 27 11:20 code.ts
+drwxr-xr-x   5 frida  staff   160 May 27 11:20 core
+drwxr-xr-x   4 frida  staff   128 May 27 11:20 discriminator
+-rw-r--r--   1 frida  staff   698 May 27 11:20 draft2020.ts
+-rw-r--r--   1 frida  staff   496 May 27 11:20 draft7.ts
+drwxr-xr-x   7 frida  staff   224 May 27 11:20 dynamic
+-rw-r--r--   1 frida  staff   731 May 27 11:20 errors.ts
+drwxr-xr-x   4 frida  staff   128 May 27 11:20 format
+drwxr-xr-x  15 frida  staff   480 May 27 11:20 jtd
+-rw-r--r--   1 frida  staff   304 May 27 11:20 metadata.ts
+-rw-r--r--   1 frida  staff   320 May 27 11:20 next.ts
+drwxr-xr-x   5 frida  staff   160 May 27 11:20 unevaluated
+drwxr-xr-x  15 frida  staff   480 May 27 11:20 validation
+./node_modules/ajv/lib/vocabularies/dynamic
+total 40
+-rw-r--r--  1 frida  staff  1122 May 27 11:20 dynamicAnchor.ts
+-rw-r--r--  1 frida  staff  1797 May 27 11:20 dynamicRef.ts
+-rw-r--r--  1 frida  staff   328 May 27 11:20 index.ts
+-rw-r--r--  1 frida  staff   401 May 27 11:20 recursiveAnchor.ts
+-rw-r--r--  1 frida  staff   253 May 27 11:20 recursiveRef.ts
+./node_modules/ajv/lib/vocabularies/core
+total 32
+-rw-r--r--  1 frida  staff   224 May 27 11:20 id.ts
+-rw-r--r--  1 frida  staff   274 May 27 11:20 index.ts
+-rw-r--r--  1 frida  staff  4384 May 27 11:20 ref.ts
+./node_modules/ajv/lib/vocabularies/unevaluated
+total 24
+-rw-r--r--  1 frida  staff   257 May 27 11:20 index.ts
+-rw-r--r--  1 frida  staff  1524 May 27 11:20 unevaluatedItems.ts
+-rw-r--r--  1 frida  staff  2440 May 27 11:20 unevaluatedProperties.ts
+./node_modules/ajv/lib/vocabularies/jtd
+total 112
+-rw-r--r--  1 frida  staff  2656 May 27 11:20 discriminator.ts
+-rw-r--r--  1 frida  staff   976 May 27 11:20 elements.ts
+-rw-r--r--  1 frida  staff  1627 May 27 11:20 enum.ts
+-rw-r--r--  1 frida  staff   746 May 27 11:20 error.ts
+-rw-r--r--  1 frida  staff  1007 May 27 11:20 index.ts
+-rw-r--r--  1 frida  staff   716 May 27 11:20 metadata.ts
+-rw-r--r--  1 frida  staff   649 May 27 11:20 nullable.ts
+-rw-r--r--  1 frida  staff   394 May 27 11:20 optionalProperties.ts
+-rw-r--r--  1 frida  staff  6049 May 27 11:20 properties.ts
+-rw-r--r--  1 frida  staff  2346 May 27 11:20 ref.ts
+-rw-r--r--  1 frida  staff  2547 May 27 11:20 type.ts
+-rw-r--r--  1 frida  staff   292 May 27 11:20 union.ts
+-rw-r--r--  1 frida  staff  1599 May 27 11:20 values.ts
+./node_modules/ajv/lib/vocabularies/discriminator
+total 24
+-rw-r--r--  1 frida  staff  4129 May 27 11:20 index.ts
+-rw-r--r--  1 frida  staff   251 May 27 11:20 types.ts
+./node_modules/ajv/lib/vocabularies/format
+total 16
+-rw-r--r--  1 frida  staff  3987 May 27 11:20 format.ts
+-rw-r--r--  1 frida  staff   148 May 27 11:20 index.ts
+./node_modules/ajv/lib/vocabularies/applicator
+total 144
+-rw-r--r--  1 frida  staff  1824 May 27 11:20 additionalItems.ts
+-rw-r--r--  1 frida  staff  3782 May 27 11:20 additionalProperties.ts
+-rw-r--r--  1 frida  staff   717 May 27 11:20 allOf.ts
+-rw-r--r--  1 frida  staff   380 May 27 11:20 anyOf.ts
+-rw-r--r--  1 frida  staff  3278 May 27 11:20 contains.ts
+-rw-r--r--  1 frida  staff  3391 May 27 11:20 dependencies.ts
+-rw-r--r--  1 frida  staff   280 May 27 11:20 dependentSchemas.ts
+-rw-r--r--  1 frida  staff  2395 May 27 11:20 if.ts
+-rw-r--r--  1 frida  staff  1592 May 27 11:20 index.ts
+-rw-r--r--  1 frida  staff  1892 May 27 11:20 items.ts
+-rw-r--r--  1 frida  staff  1053 May 27 11:20 items2020.ts
+-rw-r--r--  1 frida  staff   859 May 27 11:20 not.ts
+-rw-r--r--  1 frida  staff  2197 May 27 11:20 oneOf.ts
+-rw-r--r--  1 frida  staff  2870 May 27 11:20 patternProperties.ts
+-rw-r--r--  1 frida  staff   292 May 27 11:20 prefixItems.ts
+-rw-r--r--  1 frida  staff  1845 May 27 11:20 properties.ts
+-rw-r--r--  1 frida  staff  1247 May 27 11:20 propertyNames.ts
+-rw-r--r--  1 frida  staff   441 May 27 11:20 thenElse.ts
+./node_modules/ajv/lib/vocabularies/validation
+total 104
+-rw-r--r--  1 frida  staff   863 May 27 11:20 const.ts
+-rw-r--r--  1 frida  staff   510 May 27 11:20 dependentRequired.ts
+-rw-r--r--  1 frida  staff  1837 May 27 11:20 enum.ts
+-rw-r--r--  1 frida  staff  1271 May 27 11:20 index.ts
+-rw-r--r--  1 frida  staff   485 May 27 11:20 limitContains.ts
+-rw-r--r--  1 frida  staff   812 May 27 11:20 limitItems.ts
+-rw-r--r--  1 frida  staff  1025 May 27 11:20 limitLength.ts
+-rw-r--r--  1 frida  staff  1350 May 27 11:20 limitNumber.ts
+-rw-r--r--  1 frida  staff   851 May 27 11:20 limitProperties.ts
+-rw-r--r--  1 frida  staff  1072 May 27 11:20 multipleOf.ts
+-rw-r--r--  1 frida  staff   961 May 27 11:20 pattern.ts
+-rw-r--r--  1 frida  staff  2961 May 27 11:20 required.ts
+-rw-r--r--  1 frida  staff  2690 May 27 11:20 uniqueItems.ts
+./node_modules/ajv/lib/types
+total 56
+-rw-r--r--  1 frida  staff  7201 May 27 11:20 index.ts
+-rw-r--r--  1 frida  staff  6367 May 27 11:20 json-schema.ts
+-rw-r--r--  1 frida  staff  8941 May 27 11:20 jtd-schema.ts
+./node_modules/ajv/lib/standalone
+total 24
+-rw-r--r--  1 frida  staff  4151 May 27 11:20 index.ts
+-rw-r--r--  1 frida  staff  1272 May 27 11:20 instance.ts
+./node_modules/ajv/lib/runtime
+total 72
+-rw-r--r--  1 frida  staff   236 May 27 11:20 equal.ts
+-rw-r--r--  1 frida  staff  4442 May 27 11:20 parseJson.ts
+-rw-r--r--  1 frida  staff   802 May 27 11:20 quote.ts
+-rw-r--r--  1 frida  staff   157 May 27 11:20 re2.ts
+-rw-r--r--  1 frida  staff  1492 May 27 11:20 timestamp.ts
+-rw-r--r--  1 frida  staff   629 May 27 11:20 ucs2length.ts
+-rw-r--r--  1 frida  staff   160 May 27 11:20 uri.ts
+-rw-r--r--  1 frida  staff   336 May 27 11:20 validation_error.ts
+./node_modules/ajv/lib/compile
+total 104
+drwxr-xr-x  5 frida  staff    160 May 27 11:20 codegen
+-rw-r--r--  1 frida  staff   5269 May 27 11:20 errors.ts
+-rw-r--r--  1 frida  staff  12296 May 27 11:20 index.ts
+drwxr-xr-x  5 frida  staff    160 May 27 11:20 jtd
+-rw-r--r--  1 frida  staff   1116 May 27 11:20 names.ts
+-rw-r--r--  1 frida  staff    513 May 27 11:20 ref_error.ts
+-rw-r--r--  1 frida  staff   4649 May 27 11:20 resolve.ts
+-rw-r--r--  1 frida  staff   1454 May 27 11:20 rules.ts
+-rw-r--r--  1 frida  staff   6639 May 27 11:20 util.ts
+drwxr-xr-x  9 frida  staff    288 May 27 11:20 validate
+./node_modules/ajv/lib/compile/validate
+total 112
+-rw-r--r--  1 frida  staff    739 May 27 11:20 applicability.ts
+-rw-r--r--  1 frida  staff   1298 May 27 11:20 boolSchema.ts
+-rw-r--r--  1 frida  staff   7016 May 27 11:20 dataType.ts
+-rw-r--r--  1 frida  staff   1215 May 27 11:20 defaults.ts
+-rw-r--r--  1 frida  staff  19189 May 27 11:20 index.ts
+-rw-r--r--  1 frida  staff   5337 May 27 11:20 keyword.ts
+-rw-r--r--  1 frida  staff   4366 May 27 11:20 subschema.ts
+./node_modules/ajv/lib/compile/codegen
+total 80
+-rw-r--r--  1 frida  staff   4407 May 27 11:20 code.ts
+-rw-r--r--  1 frida  staff  22971 May 27 11:20 index.ts
+-rw-r--r--  1 frida  staff   5981 May 27 11:20 scope.ts
+./node_modules/ajv/lib/compile/jtd
+total 56
+-rw-r--r--  1 frida  staff  12345 May 27 11:20 parse.ts
+-rw-r--r--  1 frida  staff   8061 May 27 11:20 serialize.ts
+-rw-r--r--  1 frida  staff    309 May 27 11:20 types.ts
+./node_modules/ajv/lib/refs
+total 40
+-rw-r--r--  1 frida  staff   409 May 27 11:20 data.json
+drwxr-xr-x  5 frida  staff   160 May 27 11:20 json-schema-2019-09
+drwxr-xr-x  5 frida  staff   160 May 27 11:20 json-schema-2020-12
+-rw-r--r--  1 frida  staff  3449 May 27 11:20 json-schema-draft-06.json
+-rw-r--r--  1 frida  staff  3811 May 27 11:20 json-schema-draft-07.json
+-rw-r--r--  1 frida  staff  2521 May 27 11:20 json-schema-secure.json
+-rw-r--r--  1 frida  staff  2586 May 27 11:20 jtd-schema.ts
+./node_modules/ajv/lib/refs/json-schema-2019-09
+total 16
+-rw-r--r--  1 frida  staff   899 May 27 11:20 index.ts
+drwxr-xr-x  8 frida  staff   256 May 27 11:20 meta
+-rw-r--r--  1 frida  staff  1579 May 27 11:20 schema.json
+./node_modules/ajv/lib/refs/json-schema-2019-09/meta
+total 48
+-rw-r--r--  1 frida  staff  1566 May 27 11:20 applicator.json
+-rw-r--r--  1 frida  staff   477 May 27 11:20 content.json
+-rw-r--r--  1 frida  staff  1273 May 27 11:20 core.json
+-rw-r--r--  1 frida  staff   375 May 27 11:20 format.json
+-rw-r--r--  1 frida  staff   758 May 27 11:20 meta-data.json
+-rw-r--r--  1 frida  staff  2264 May 27 11:20 validation.json
+./node_modules/ajv/lib/refs/json-schema-2020-12
+total 16
+-rw-r--r--  1 frida  staff   982 May 27 11:20 index.ts
+drwxr-xr-x  9 frida  staff   288 May 27 11:20 meta
+-rw-r--r--  1 frida  staff  2166 May 27 11:20 schema.json
+./node_modules/ajv/lib/refs/json-schema-2020-12/meta
+total 56
+-rw-r--r--  1 frida  staff  1441 May 27 11:20 applicator.json
+-rw-r--r--  1 frida  staff   479 May 27 11:20 content.json
+-rw-r--r--  1 frida  staff  1344 May 27 11:20 core.json
+-rw-r--r--  1 frida  staff   420 May 27 11:20 format-annotation.json
+-rw-r--r--  1 frida  staff   758 May 27 11:20 meta-data.json
+-rw-r--r--  1 frida  staff   472 May 27 11:20 unevaluated.json
+-rw-r--r--  1 frida  staff  2264 May 27 11:20 validation.json
+./node_modules/emoji-regex
+total 80
+-rw-r--r--  1 frida  staff   1077 May 27 11:20 LICENSE-MIT.txt
+-rw-r--r--  1 frida  staff   2691 May 27 11:20 README.md
+drwxr-xr-x  4 frida  staff    128 May 27 11:20 es2015
+-rw-r--r--  1 frida  staff    427 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  10286 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   1278 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  10287 May 27 11:20 text.js
+./node_modules/emoji-regex/es2015
+total 48
+-rw-r--r--  1 frida  staff  11104 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  11105 May 27 11:20 text.js
+./node_modules/object-inspect
+total 168
+-rw-r--r--   1 frida  staff   1298 May 27 11:20 .eslintrc
+drwxr-xr-x   3 frida  staff     96 May 27 11:20 .github
+-rw-r--r--   1 frida  staff    236 May 27 11:20 .nycrc
+-rw-r--r--   1 frida  staff  30574 May 27 11:20 CHANGELOG.md
+-rw-r--r--   1 frida  staff   1071 May 27 11:20 LICENSE
+drwxr-xr-x   6 frida  staff    192 May 27 11:20 example
+-rw-r--r--   1 frida  staff  18486 May 27 11:20 index.js
+-rw-r--r--   1 frida  staff    365 May 27 11:20 package-support.json
+-rw-r--r--   1 frida  staff   2525 May 27 11:20 package.json
+-rw-r--r--   1 frida  staff   2934 May 27 11:20 readme.markdown
+drwxr-xr-x  20 frida  staff    640 May 27 11:20 test
+-rw-r--r--   1 frida  staff    534 May 27 11:20 test-core-js.js
+-rw-r--r--   1 frida  staff     42 May 27 11:20 util.inspect.js
+./node_modules/object-inspect/test
+total 160
+-rw-r--r--  1 frida  staff  2082 May 27 11:20 bigint.js
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 browser
+-rw-r--r--  1 frida  staff   451 May 27 11:20 circular.js
+-rw-r--r--  1 frida  staff   400 May 27 11:20 deep.js
+-rw-r--r--  1 frida  staff  1575 May 27 11:20 element.js
+-rw-r--r--  1 frida  staff  1536 May 27 11:20 err.js
+-rw-r--r--  1 frida  staff   683 May 27 11:20 fakes.js
+-rw-r--r--  1 frida  staff  2227 May 27 11:20 fn.js
+-rw-r--r--  1 frida  staff   514 May 27 11:20 has.js
+-rw-r--r--  1 frida  staff   255 May 27 11:20 holes.js
+-rw-r--r--  1 frida  staff  6633 May 27 11:20 indent-option.js
+-rw-r--r--  1 frida  staff  4946 May 27 11:20 inspect.js
+-rw-r--r--  1 frida  staff   268 May 27 11:20 lowbyte.js
+-rw-r--r--  1 frida  staff  2312 May 27 11:20 number.js
+-rw-r--r--  1 frida  staff   933 May 27 11:20 quoteStyle.js
+-rw-r--r--  1 frida  staff  1546 May 27 11:20 toStringTag.js
+-rw-r--r--  1 frida  staff   302 May 27 11:20 undef.js
+-rw-r--r--  1 frida  staff  7034 May 27 11:20 values.js
+./node_modules/object-inspect/test/browser
+total 8
+-rw-r--r--  1 frida  staff  416 May 27 11:20 dom.js
+./node_modules/object-inspect/example
+total 32
+-rw-r--r--  1 frida  staff  391 May 27 11:20 all.js
+-rw-r--r--  1 frida  staff  116 May 27 11:20 circular.js
+-rw-r--r--  1 frida  staff  126 May 27 11:20 fn.js
+-rw-r--r--  1 frida  staff  251 May 27 11:20 inspect.js
+./node_modules/object-inspect/.github
+total 8
+-rw-r--r--  1 frida  staff  585 May 27 11:20 FUNDING.yml
+./node_modules/readable-stream
+total 120
+-rw-r--r--  1 frida  staff   991 May 27 11:20 .travis.yml
+-rw-r--r--  1 frida  staff  1443 May 27 11:20 CONTRIBUTING.md
+-rw-r--r--  1 frida  staff  5550 May 27 11:20 GOVERNANCE.md
+-rw-r--r--  1 frida  staff  2337 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  2999 May 27 11:20 README.md
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 doc
+-rw-r--r--  1 frida  staff    53 May 27 11:20 duplex-browser.js
+-rw-r--r--  1 frida  staff    46 May 27 11:20 duplex.js
+drwxr-xr-x  8 frida  staff   256 May 27 11:20 lib
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 node_modules
+-rw-r--r--  1 frida  staff  1370 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff    51 May 27 11:20 passthrough.js
+-rw-r--r--  1 frida  staff   351 May 27 11:20 readable-browser.js
+-rw-r--r--  1 frida  staff   771 May 27 11:20 readable.js
+-rw-r--r--  1 frida  staff    49 May 27 11:20 transform.js
+-rw-r--r--  1 frida  staff    55 May 27 11:20 writable-browser.js
+-rw-r--r--  1 frida  staff   229 May 27 11:20 writable.js
+./node_modules/readable-stream/node_modules
+total 0
+drwxr-xr-x  7 frida  staff  224 May 27 11:20 safe-buffer
+./node_modules/readable-stream/node_modules/safe-buffer
+total 88
+-rw-r--r--  1 frida  staff   1081 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  19555 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff   8738 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   1529 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff    783 May 27 11:20 package.json
+./node_modules/readable-stream/lib
+total 136
+-rw-r--r--  1 frida  staff   4015 May 27 11:20 _stream_duplex.js
+-rw-r--r--  1 frida  staff   1753 May 27 11:20 _stream_passthrough.js
+-rw-r--r--  1 frida  staff  31324 May 27 11:20 _stream_readable.js
+-rw-r--r--  1 frida  staff   7742 May 27 11:20 _stream_transform.js
+-rw-r--r--  1 frida  staff  20317 May 27 11:20 _stream_writable.js
+drwxr-xr-x  3 frida  staff     96 May 27 11:20 internal
+./node_modules/readable-stream/lib/internal
+total 0
+drwxr-xr-x  6 frida  staff  192 May 27 11:20 streams
+./node_modules/readable-stream/lib/internal/streams
+total 32
+-rw-r--r--  1 frida  staff  2059 May 27 11:20 BufferList.js
+-rw-r--r--  1 frida  staff  1849 May 27 11:20 destroy.js
+-rw-r--r--  1 frida  staff    49 May 27 11:20 stream-browser.js
+-rw-r--r--  1 frida  staff    36 May 27 11:20 stream.js
+./node_modules/readable-stream/doc
+total 0
+drwxr-xr-x  3 frida  staff  96 May 27 11:20 wg-meetings
+./node_modules/readable-stream/doc/wg-meetings
+total 8
+-rw-r--r--  1 frida  staff  2280 May 27 11:20 2015-01-30.md
+./node_modules/graceful-fs
+total 104
+-rw-r--r--  1 frida  staff    791 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff   4741 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff    496 May 27 11:20 clone.js
+-rw-r--r--  1 frida  staff  12680 May 27 11:20 graceful-fs.js
+-rw-r--r--  1 frida  staff   2655 May 27 11:20 legacy-streams.js
+-rw-r--r--  1 frida  staff    989 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  10118 May 27 11:20 polyfills.js
+./node_modules/on-finished
+total 56
+-rw-r--r--  1 frida  staff  1865 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1167 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  5160 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  4430 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1057 May 27 11:20 package.json
+./node_modules/normalize-path
+total 40
+-rw-r--r--  1 frida  staff  1088 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  5441 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1024 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1666 May 27 11:20 package.json
+./node_modules/fsevents
+total 328
+-rw-r--r--  1 frida  staff    1133 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff    2958 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff    1431 May 27 11:20 fsevents.d.ts
+-rw-r--r--  1 frida  staff    2424 May 27 11:20 fsevents.js
+-rwxr-xr-x  1 frida  staff  147128 May 27 11:20 fsevents.node
+-rw-r--r--  1 frida  staff    1348 May 27 11:20 package.json
+./node_modules/fast-deep-equal
+total 56
+-rw-r--r--  1 frida  staff  1074 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  3323 May 27 11:20 README.md
+drwxr-xr-x  6 frida  staff   192 May 27 11:20 es6
+-rw-r--r--  1 frida  staff   103 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  1177 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1496 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff    66 May 27 11:20 react.d.ts
+-rw-r--r--  1 frida  staff  1451 May 27 11:20 react.js
+./node_modules/fast-deep-equal/es6
+total 32
+-rw-r--r--  1 frida  staff    66 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  1935 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff    66 May 27 11:20 react.d.ts
+-rw-r--r--  1 frida  staff  2209 May 27 11:20 react.js
+./node_modules/global-dirs
+total 40
+-rw-r--r--  1 frida  staff  1288 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  3195 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1117 May 27 11:20 license
+-rw-r--r--  1 frida  staff   934 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  1758 May 27 11:20 readme.md
+./node_modules/require-from-string
+total 32
+-rw-r--r--  1 frida  staff   866 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1128 May 27 11:20 license
+-rw-r--r--  1 frida  staff   511 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff   917 May 27 11:20 readme.md
+./node_modules/nopt
+total 32
+-rw-r--r--  1 frida  staff     0 May 27 11:20 .npmignore
+-rw-r--r--  1 frida  staff  1092 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  7476 May 27 11:20 README.md
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 bin
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 examples
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 lib
+-rw-r--r--  1 frida  staff   485 May 27 11:20 package.json
+./node_modules/nopt/bin
+total 8
+-rwxr-xr-x  1 frida  staff  1277 May 27 11:20 nopt.js
+./node_modules/nopt/examples
+total 8
+-rwxr-xr-x  1 frida  staff  1032 May 27 11:20 my-program.js
+./node_modules/nopt/lib
+total 32
+-rw-r--r--  1 frida  staff  15345 May 27 11:20 nopt.js
+./node_modules/debug
+total 144
+-rw-r--r--  1 frida  staff     46 May 27 11:20 .coveralls.yml
+-rw-r--r--  1 frida  staff    180 May 27 11:20 .eslintrc
+-rw-r--r--  1 frida  staff     72 May 27 11:20 .npmignore
+-rw-r--r--  1 frida  staff    140 May 27 11:20 .travis.yml
+-rw-r--r--  1 frida  staff  11707 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff   1107 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff   1059 May 27 11:20 Makefile
+-rw-r--r--  1 frida  staff  17918 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff    321 May 27 11:20 component.json
+-rw-r--r--  1 frida  staff   1736 May 27 11:20 karma.conf.js
+-rw-r--r--  1 frida  staff     40 May 27 11:20 node.js
+-rw-r--r--  1 frida  staff   1138 May 27 11:20 package.json
+drwxr-xr-x  7 frida  staff    224 May 27 11:20 src
+./node_modules/debug/src
+total 64
+-rw-r--r--  1 frida  staff  4734 May 27 11:20 browser.js
+-rw-r--r--  1 frida  staff  4394 May 27 11:20 debug.js
+-rw-r--r--  1 frida  staff   263 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   373 May 27 11:20 inspector-log.js
+-rw-r--r--  1 frida  staff  6015 May 27 11:20 node.js
+./node_modules/dot-prop
+total 40
+-rw-r--r--  1 frida  staff  2543 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff  2770 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1109 May 27 11:20 license
+-rw-r--r--  1 frida  staff   746 May 27 11:20 package.json
+-rw-r--r--  1 frida  staff  2439 May 27 11:20 readme.md
+./node_modules/glob-parent
+total 56
+-rw-r--r--  1 frida  staff  4510 May 27 11:20 CHANGELOG.md
+-rw-r--r--  1 frida  staff   753 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  4646 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  1120 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1105 May 27 11:20 package.json
+./node_modules/media-typer
+total 48
+-rw-r--r--  1 frida  staff   461 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff  1089 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff  2371 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  6375 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff   759 May 27 11:20 package.json
+./node_modules/mime-db
+total 432
+-rw-r--r--  1 frida  staff   12581 May 27 11:20 HISTORY.md
+-rw-r--r--  1 frida  staff    1172 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff    4091 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff  185882 May 27 11:20 db.json
+-rw-r--r--  1 frida  staff     189 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff    1624 May 27 11:20 package.json
+./node_modules/setprototypeof
+total 40
+-rw-r--r--  1 frida  staff   727 May 27 11:20 LICENSE
+-rw-r--r--  1 frida  staff   844 May 27 11:20 README.md
+-rw-r--r--  1 frida  staff    93 May 27 11:20 index.d.ts
+-rw-r--r--  1 frida  staff   407 May 27 11:20 index.js
+-rw-r--r--  1 frida  staff  1264 May 27 11:20 package.json
+drwxr-xr-x  3 frida  staff    96 May 27 11:20 test
+./node_modules/setprototypeof/test
+total 8
+-rw-r--r--  1 frida  staff  690 May 27 11:20 index.js
+./.dbwebb
+total 0
+drwxr-xr-x  5 frida  staff  160 May 27 10:04 exam
+./.dbwebb/exam
+total 8
+drwxr-xr-x  7 frida  staff  224 May 27 12:57 file
+-rw-r--r--  1 frida  staff   36 May 27 10:04 id.md
+drwxr-xr-x  7 frida  staff  224 May 27 12:57 receipt
+./.dbwebb/exam/file
+total 1576
+-rw-r--r--  1 frida  staff     634 May 27 10:04 20220527100428.txt
+-rw-r--r--  1 frida  staff  170649 May 27 12:17 20220527121718.txt
+-rw-r--r--  1 frida  staff  170779 May 27 12:38 20220527123827.txt
+-rw-r--r--  1 frida  staff  170910 May 27 12:54 20220527125404.txt
+-rw-r--r--  1 frida  staff  168511 May 27 12:57 20220527125708.txt
+./.dbwebb/exam/receipt
+total 40
+-rw-r--r--  1 frida  staff  584 May 27 10:04 20220527080428.md
+-rw-r--r--  1 frida  staff  668 May 27 12:57 20220527105708.md
+-rw-r--r--  1 frida  staff  584 May 27 12:17 20220527121717.md
+-rw-r--r--  1 frida  staff  584 May 27 12:38 20220527123826.md
+-rw-r--r--  1 frida  staff  584 May 27 12:54 20220527125404.md
+./public
+total 88
+-rw-r--r--  1 frida  staff   6148 May 27 11:14 .DS_Store
+-rw-r--r--  1 frida  staff  32988 May 27 11:14 favicon.ico
+drwxr-xr-x  4 frida  staff    128 May 27 11:24 img
+drwxr-xr-x  3 frida  staff     96 May 27 11:14 js
+drwxr-xr-x  3 frida  staff     96 May 27 11:14 style
+./public/js
+total 8
+-rw-r--r--  1 frida  staff  548 May 27 11:14 main.js
+./public/style
+total 8
+-rw-r--r--  1 frida  staff  2800 May 27 11:59 style.css
+./public/img
+total 2264
+-rw-r--r--  1 frida  staff  1147167 May 27 11:24 assets.jpg
+-rw-r--r--  1 frida  staff     6805 May 27 11:14 leaf_256x256.png
+./doc
+total 80
+-rw-r--r--@ 1 frida  staff  40553 May 27 10:26 er.pdf
+./views
+total 0
+drwxr-xr-x  5 frida  staff  160 May 27 11:21 exam
+drwxr-xr-x  4 frida  staff  128 May 27 11:21 partials
+./views/exam
+total 24
+-rw-r--r--  1 frida  staff   304 May 27 12:00 index.ejs
+-rw-r--r--  1 frida  staff  1716 May 27 12:00 search.ejs
+-rw-r--r--  1 frida  staff  1301 May 27 11:33 visa.ejs
+./views/partials
+total 16
+-rw-r--r--  1 frida  staff  130 May 27 11:22 footer.ejs
+-rw-r--r--  1 frida  staff  319 May 27 11:21 header.ejs
+./src
+total 16
+-rw-r--r--  1 frida  staff  1128 May 27 11:40 formogenhet.js
+-rw-r--r--  1 frida  staff   852 May 27 11:14 helpers.js
+./sql
+total 0
+drwxr-xr-x  11 frida  staff  352 May 27 11:39 exam
+./sql/exam
+total 88
+-rw-r--r--@ 1 frida  staff     53 May 27 11:35 aktier.csv
+-rw-r--r--  1 frida  staff  10436 May 27 12:54 backup.sql
+-rw-r--r--  1 frida  staff   3087 May 27 12:53 ddl.sql
+-rw-r--r--  1 frida  staff    202 May 27 10:58 dml.sql
+-rw-r--r--@ 1 frida  staff    138 May 27 11:35 fastighet.csv
+-rw-r--r--  1 frida  staff    695 May 27 10:56 insert.sql
+-rw-r--r--@ 1 frida  staff    173 May 27 11:35 person.csv
+-rw-r--r--@ 1 frida  staff    132 May 27 11:35 portfolj.csv
+-rw-r--r--  1 frida  staff    421 May 27 10:32 setup.sql

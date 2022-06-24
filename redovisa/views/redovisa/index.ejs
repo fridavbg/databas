@@ -1,25 +1,7 @@
-<!doctype html>
-<html lang="sv">
-<head>
-    <meta charset="utf-8">
-    <title>Presentation av min själv i kursen XXX</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="icon" href="favicon.ico">
-</head>
-
-<body>
-
-
-
-<header>
-    <nav>
-        <a href="me.html">Me</a> |
-        <a href="redovisning.html">Redovisning</a> | 
-        <a href="om.html">Om</a>
-    </nav>
-</header>
-
-
+<%- include("../partials/header.ejs", {title: title}); %>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
 
 <article class="accordion">
     <div class="accordion-text">
@@ -67,10 +49,4 @@
 </div>
 </article>
 
-<footer class="footer">
-    <p>Skapad utav Frida i BTHs Databas kurs</p>
-</footer>
-
-<script type="text/javascript" src="js/main.js"></script>
-</body>
-</html>
+<%- include("../partials/footer.ejs"); %>

@@ -1,0 +1,55 @@
+<%- include("../partials/header.ejs", {title: title}); %>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
+<div class="content">
+    <h1>Sök Assets</h1>
+    <form action="/exam/search">
+        <input id="search" name="search" type="text" placeholder="Skriv in ett sökord" />
+        <button type="submit">Sök</button>
+    </form>
+
+    <% if (res.length > 0){%>
+    <p>Sök resultat</p>
+    <table>
+        <tr>
+            <th>Förnamn</th>
+            <th>Efternamn</th>
+            <th>Företag</th>
+            <th>Förmögenhet</th>
+            <th>Aktie</th>
+            <th>Antal</th>
+            <th>Inköp</th>
+            <th>Pris</th>
+            <th>Fastighet</th>
+            <th>Värdering</th>
+        </tr>
+        <% for (const row of res) { %>
+            <tr>
+                <td><%= row.fornamn %></td>
+                <td><%= row.efternamn %></td>
+                <td><%= row.foretag %></td>
+                <td><%= row.formogenhet %></td>
+                <% if(row.aktie_id === null){ %>
+                    <td><p>Tom aktie portfölj</p></td>
+                    <% } else { %>
+                        <td><%= row.aktie_id %></td>
+                        <td><%= row.antal %></td>
+                        <td><%= row.inkop %></td>
+                        <td><%= row.varde %></td>
+                        <td><%= row.fastighet_id %></td>
+                        <td><%= row.vardering %></td>
+                    <% } %>
+            </tr>
+            <% }; %>
+    </table>
+    <% } else { %>
+    <p>
+        Ingen match har hittats <br />
+        Vänligen skriv in ett sökord i rutan ovan
+    </p>
+    <% } %>
+</div>
+
+<%- include("../partials/footer.ejs"); %>
