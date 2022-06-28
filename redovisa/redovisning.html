@@ -341,29 +341,79 @@
                             <span class="question">kmom05</span>
                             <i class="bx bxs-chevron-down arrow"></i>
                         </div>
-                        <p class="prompt">Gick det bra att komma igång med lagrade procedurer och triggers?
-                        </p>
-                        <p>Ja då, det kändes som att det gick lätt att implementera, och kul att fördjupa sig lite mer i SQL. Fastnade med en trigger ett tag, men efter jag kunnat gå igenom några föredrag och läsa på mer så hittade jag felet.</p>
-                        <p class="prompt">Hur är din syn på att “programmera” på detta viset i databasen, jämför med traditionell SQL som exponeras i klienten?</p>
-                        <p>
-                            Det känns som det blir mer organiserat och lättare att kunna anpassa databasen om man ev. skulle behöva göra ändringar. Precis som man delar upp moduler i JavaScript, så skulle man nu kunna dela upp SQL kod och samla relevanta triggers, procedurer och andra statements i en fil. 
-                        </p>
-                        <p class="prompt">Skriv ett kort stycke (2-5 meningar) om lagrade procedurer och om triggers där du förklarar begreppen (fördel, nackdel, användningsområde) för en som inte är insatt.</p>
-                        <p>En fördel är att man kan använda funktionsliknande sql statements med procedurer och triggers.
-                            Vilket kan underlätta om det är ett statements som behövs köras ofta.
-                            Hade vi haft mer tid så hade jag gärna velat implemntera en soft delete med en trigger, då det känns som det hade varit en fördel att kunna.
-                            En nackdel kan vara att det blir svårt att debugga med triggers.</p>
-                        <p class="prompt">Något att kommentera kring arbetet med att komma igång och implementera CRUD i webbklienten?
-                        </p>
-                        <p>Svårast var att hitta ett sätt att ta bort den data som kom in ifrån csv filerna. Då den data hade främmande nycklar kopplat till andra tabeller än produkt tabellen. Då krav sa att man ej behövde tänka på koppling emellan produkt och kategori, så löst vi därför detta med att göra en Hard delete med en CONSTRAINT och DELETE ON CASCADE för dem främmande nycklar som fanns i datan.</p>
-                        <p class="prompt">Berätta om hur det gick att utföra uppgiften med din Eshop, berätta även vem du jobbade i grupp med, om någon?</p>
-                        <p>
-                            Det gick bra, då vi kunde dela ett git repo och därför se varandras kod. Vi valde dock att dela upp uppgifterna, och koda var för sig. Så viktigast för mig nu är att försäkra mig om att jag också kan förstå och följa den kod som Erik (erna21) skrivit.
-                        </p>
-                        <p class="prompt">Vilken är din TIL för detta kmom?
+                        <p class="prompt">
+                            Gick det bra att komma igång med lagrade procedurer
+                            och triggers?
                         </p>
                         <p>
-                            I git så har jag lärt mig ur man kan dra ner bara en mapp till en annan gren, vilket var en stor fördel med tanke på hur vi la upp vårt git repo. Triggers och procedurer var också helt nytt för mig, då jag enbart jobbat i vanilla SQL innan.
+                            Ja då, det kändes som att det gick lätt att
+                            implementera, och kul att fördjupa sig lite mer i
+                            SQL. Fastnade med en trigger ett tag, men efter jag
+                            kunnat gå igenom några föredrag och läsa på mer så
+                            hittade jag felet.
+                        </p>
+                        <p class="prompt">
+                            Hur är din syn på att “programmera” på detta viset i
+                            databasen, jämför med traditionell SQL som exponeras
+                            i klienten?
+                        </p>
+                        <p>
+                            Det känns som det blir mer organiserat och lättare
+                            att kunna anpassa databasen om man ev. skulle behöva
+                            göra ändringar. Precis som man delar upp moduler i
+                            JavaScript, så skulle man nu kunna dela upp SQL kod
+                            och samla relevanta triggers, procedurer och andra
+                            statements i en fil.
+                        </p>
+                        <p class="prompt">
+                            Skriv ett kort stycke (2-5 meningar) om lagrade
+                            procedurer och om triggers där du förklarar
+                            begreppen (fördel, nackdel, användningsområde) för
+                            en som inte är insatt.
+                        </p>
+                        <p>
+                            En fördel är att man kan använda funktionsliknande
+                            sql statements med procedurer och triggers. Vilket
+                            kan underlätta om det är ett statements som behövs
+                            köras ofta. Hade vi haft mer tid så hade jag gärna
+                            velat implemntera en soft delete med en trigger, då
+                            det känns som det hade varit en fördel att kunna. En
+                            nackdel kan vara att det blir svårt att debugga med
+                            triggers.
+                        </p>
+                        <p class="prompt">
+                            Något att kommentera kring arbetet med att komma
+                            igång och implementera CRUD i webbklienten?
+                        </p>
+                        <p>
+                            Svårast var att hitta ett sätt att ta bort den data
+                            som kom in ifrån csv filerna. Då den data hade
+                            främmande nycklar kopplat till andra tabeller än
+                            produkt tabellen. Då krav sa att man ej behövde
+                            tänka på koppling emellan produkt och kategori, så
+                            löst vi därför detta med att göra en Hard delete med
+                            en CONSTRAINT och DELETE ON CASCADE för dem
+                            främmande nycklar som fanns i datan.
+                        </p>
+                        <p class="prompt">
+                            Berätta om hur det gick att utföra uppgiften med din
+                            Eshop, berätta även vem du jobbade i grupp med, om
+                            någon?
+                        </p>
+                        <p>
+                            Det gick bra, då vi kunde dela ett git repo och
+                            därför se varandras kod. Vi valde dock att dela upp
+                            uppgifterna, och koda var för sig. Så viktigast för
+                            mig nu är att försäkra mig om att jag också kan
+                            förstå och följa den kod som Erik (erna21) skrivit.
+                        </p>
+                        <p class="prompt">Vilken är din TIL för detta kmom?</p>
+                        <p>
+                            I git så har jag lärt mig ur man kan dra ner bara en
+                            mapp till en annan gren, vilket var en stor fördel
+                            med tanke på hur vi la upp vårt git repo. Triggers
+                            och procedurer var också helt nytt för mig, då jag
+                            enbart jobbat i vanilla SQL innan.
                         </p>
                         <span class="line"></span>
                     </li>
@@ -378,33 +428,72 @@
                             stycke (3-7 rader).
                         </p>
                         <p>
-                            Index funkar som en pekare till data i en tabell. Lite som ett index i en bok, så blir det lättare att hitta vis information. Till exempel om du vill hitta sidor i boken angående ett visst ämne, så kan du använda ett index istället för att gå igenom hela boken. Index fungerar då lite som en tabell där man kan kolla upp ett visst ämne och se vilka sidor det ämne finns. Index snabbar därför upp sökningar, men vid insert och update så blir det långsammare då också index måste skapas och updateras.
+                            Index funkar som en pekare till data i en tabell.
+                            Lite som ett index i en bok, så blir det lättare att
+                            hitta vis information. Till exempel om du vill hitta
+                            sidor i boken angående ett visst ämne, så kan du
+                            använda ett index istället för att gå igenom hela
+                            boken. Index fungerar då lite som en tabell där man
+                            kan kolla upp ett visst ämne och se vilka sidor det
+                            ämne finns. Index snabbar därför upp sökningar, men
+                            vid insert och update så blir det långsammare då
+                            också index måste skapas och updateras.
                         </p>
                         <p class="prompt">
                             Berätta vilka extra index du tillförde i din eshop.
                         </p>
                         <p>
-                            Tyckte det var lite svårt att få in Index då det kändes som om våra nycklar fyllde det mesta behovet i våra tabeller. Men till slut så la vi in index i produkt och stock tabellen, det kändes som den mest lämpliga platsen. 
+                            Tyckte det var lite svårt att få in Index då det
+                            kändes som om våra nycklar fyllde det mesta behovet
+                            i våra tabeller. Men till slut så la vi in index i
+                            produkt och stock tabellen, det kändes som den mest
+                            lämpliga platsen.
                         </p>
                         <p class="prompt">
                             Berätta kort hur du ser på nyttan med funktioner i
                             databasen.
                         </p>
-                        <p>Tror det kan vara en stor fördel, men tycker också det blir lite svårt att veta när man borde använda det i SQLen eller Nodejs. I vårt fall så har det fungerar bra med funktioner för att formattera datum och tid, men jag fick det ej att fungera på ett bra sätt när stock är slut i lagret utan valde då att lägga funktionen i Nodejs istället.</p>
+                        <p>
+                            Tror det kan vara en stor fördel, men tycker också
+                            det blir lite svårt att veta när man borde använda
+                            det i SQLen eller Nodejs. I vårt fall så har det
+                            fungerar bra med funktioner för att formattera datum
+                            och tid, men jag fick det ej att fungera på ett bra
+                            sätt när stock är slut i lagret utan valde då att
+                            lägga funktionen i Nodejs istället.
+                        </p>
                         <p class="prompt">
                             Kommentera arbetet med din eshop, är du nöjd eller
                             finns förbättringspotential och hur tycker du
                             svårighetsgraden har varit på uppgiften eshop som
                             helhet?
                         </p>
-                        <p>Jag tror det finns en stor förbättringspotential för både webbklienten och terminalklienten, så som felmeddelande vid fel input, soft delete m.m. Men jag kan också känna att det är en tidskrävande uppgift med månge saker som man kan göra. Svårighetsgraden var på en bra nivå. </p>
+                        <p>
+                            Jag tror det finns en stor förbättringspotential för
+                            både webbklienten och terminalklienten, så som
+                            felmeddelande vid fel input, soft delete m.m. Men
+                            jag kan också känna att det är en tidskrävande
+                            uppgift med månge saker som man kan göra.
+                            Svårighetsgraden var på en bra nivå.
+                        </p>
                         <p class="prompt">
                             Berätta om någon extra sak du valde att göra i din
                             eshop, om du gjorde något.
                         </p>
-                        <p>La lite tid på stylingen för att få rörande backgrund, samt fixade tabellerna så att dem stannar inom sin egna ruta med en scroll. I terminalklienten så är varje utskrift tydlig och lättläslig, samt att en sträng visas när stock antal är slut.</p>
+                        <p>
+                            La lite tid på stylingen för att få rörande
+                            backgrund, samt fixade tabellerna så att dem stannar
+                            inom sin egna ruta med en scroll. I terminalklienten
+                            så är varje utskrift tydlig och lättläslig, samt att
+                            en sträng visas när stock antal är slut.
+                        </p>
                         <p class="prompt">Vilken är din TIL för detta kmom?</p>
-                        <p>Index och funktioner var absolut helt nytt för mig då jag enbart jobbat med nycklar tidigare. SQL börjar bli rätt kul, då jag inser hur mycket mer man kan göra.</p>
+                        <p>
+                            Index och funktioner var absolut helt nytt för mig
+                            då jag enbart jobbat med nycklar tidigare. SQL
+                            börjar bli rätt kul, då jag inser hur mycket mer man
+                            kan göra.
+                        </p>
                         <span class="line"></span>
                     </li>
                     <li>
@@ -412,19 +501,52 @@
                             <span class="question">kmom10</span>
                             <i class="bx bxs-chevron-down arrow"></i>
                         </div>
-                            <br/>
-                            <p>Programmeringstenta för mig är alltid lite stressigt, jag blir alltid lite nervös under tidspress men det är nått som jag jobbar på. Vet inte om det berodde på att jag känner mig som mest bekväm att koda i JavaScript, men tentan kändes helt ok. Fick ihop allting mycket snabbare än jag trodde, dock så var den sista SQL uppgiften rätt svår och jag fick aldrig ihop nått bra för den. Tycker absolut examinationen var rimlig, då det är många steg att komma ihåg och få rätt. Men kändes som om att tentan gick över alla dem sakerna som man har gjort i kursen. Tyckte även om att man kunde fokusera på nodejs och hur man binder ihop en databas till en klient. Var en bra balans för övningar emellan JavaScript och SQL.</p>
-                            <br/>
-                            <p>Jag gillade kursen och tyckte den va väldigt rolig. Personligen var det skönt att gå igenom lite Nodejs grunder och känner att jag har lite mer klarhet över hur man kan bygga upp vissa element. Nytt för mig var allt om SQL, kul att lära sig om procedures och triggers, och se hur man kan skapa mer funktionalitet i databasen.
-                            Dock över kursmomenten så med mer och mer övningar så fanns det väldigt många olika alternativ på hur man kan få ihop nodejs, vilket gjorde att jag ibland tappade bort mig. Så ett bättringsförslag hade varit att göra det lite tydligare genom att markera dem olika sätten att sätta upp en webbklient. 
-                            </p>
-                            <br/>
-                            <p>
-                            Hade gärna också sett lite förslag på hur man skall hantera kod när man arbetar i grupp, vi valde att använda git. Men aldrig fel med att få lite extra material som visar på hur det funkar i arbetsliv gällande grupparbete. Jag är nöjd med kursen, tyckte det var kul att det var en blandning utav grupp och individuellt arbete. Skulle absolut rekommendera kursen och ger den en 7. </p>
-                            <span class="line"></span>
-                        </li>
-                    </ul>
-                </div>
+                        <br />
+                        <p>
+                            Programmeringstenta för mig är alltid lite
+                            stressigt, jag blir alltid lite nervös under
+                            tidspress men det är nått som jag jobbar på. Vet
+                            inte om det berodde på att jag känner mig som mest
+                            bekväm att koda i JavaScript, men tentan kändes helt
+                            ok. Fick ihop allting mycket snabbare än jag trodde,
+                            dock så var den sista SQL uppgiften rätt svår och
+                            jag fick aldrig ihop nått bra för den. Tycker
+                            absolut examinationen var rimlig, då det är många
+                            steg att komma ihåg och få rätt. Men kändes som om
+                            att tentan gick över alla dem sakerna som man har
+                            gjort i kursen. Tyckte även om att man kunde
+                            fokusera på nodejs och hur man binder ihop en
+                            databas till en klient. Var en bra balans för
+                            övningar emellan JavaScript och SQL.
+                        </p>
+                        <br />
+                        <p>
+                            Jag gillade kursen och tyckte den va väldigt rolig.
+                            Personligen var det skönt att gå igenom lite Nodejs
+                            grunder och känner att jag har lite mer klarhet över
+                            hur man kan bygga upp vissa element. Nytt för mig
+                            var allt om SQL, kul att lära sig om procedures och
+                            triggers, och se hur man kan skapa mer
+                            funktionalitet i databasen. Dock över kursmomenten
+                            så med mer och mer övningar så fanns det väldigt
+                            många olika alternativ på hur man kan få ihop
+                            nodejs, vilket gjorde att jag ibland tappade bort
+                            mig. Så ett bättringsförslag hade varit att göra det
+                            lite tydligare genom att markera dem olika sätten
+                            att sätta upp en webbklient.
+                        </p>
+                        <br />
+                        <p>
+                            Hade gärna också sett lite förslag på hur man skall
+                            hantera kod när man arbetar i grupp, vi valde att
+                            använda git. Men aldrig fel med att få lite extra
+                            material som visar på hur det funkar i arbetsliv
+                            gällande grupparbete. Jag är nöjd med kursen, tyckte
+                            det var kul att det var en blandning utav grupp och
+                            individuellt arbete. Skulle absolut rekommendera
+                            kursen och ger den en 7.
+                        </p>
+                        <span class="line"></span>
                     </li>
                 </ul>
             </div>
@@ -435,4 +557,3 @@
         <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>
-
