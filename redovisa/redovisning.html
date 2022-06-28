@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="utf-8" />
+        <title>Redovisning av kursmoment i kursen Databas</title>
+        <link rel="stylesheet" href="style/style.css" />
+        <link rel="icon" href="favicon.ico" />
+    </head>
+
+    <body>
+        <header>
+            <nav id="navbar">
+                <a href="me.html">Me</a> |
+                <a href="redovisning.html">Redovisning</a> |
+                <a href="om.html">Om</a>
+            </nav>
+        </header>
+
+        <div class="accordion">
+            <div class="accordion-text">
+                <div class="title">
+                    Redovisning av kursmoment i kursen Databas
+                </div>
+                <p>Vänligen klicka på det kmom som du vill läsa</p>
+                <ul class="redo-text">
+                    <li>
+                        <div class="question-arrow">
+                            <span class="question">Kmom01</span>
+                            <i class="bx bxs-chevron-down arrow"></i>
+                        </div>
+                        <p class="prompt">
+                            Hur känns det att komma igång med databaser,
+                            klienter och SQL - är det något du ser fram emot
+                            eller fasar inför?
+                        </p>
+                        <p>
+                            Jag ser fram emot det men fasar också inför det. Det
+                            är mycket att hålla koll på, och även en hel del
+                            saker som kan gå fel. Mitt största bekymmer just nu
+                            har varit att få igång docker, pga av en uppdatering
+                            som inte ville sig. Även sättet man tänker i SQL tar
+                            mig en stund att komma in i, eller ja backend över
+                            huvudtaget är nog nått som tar mig lite mer
+                            betänketid.
+                        </p>
+                        <p class="prompt">
+                            Har du jobbat med databaser eller liknande tekniker
+                            tidigare?
+                        </p>
+                        <p>
+                            Jag har jobbat litegrann i MySQL sedan innan. Tror
+                            en utav min första full-stack appar va med
+                            Nodejs/Express, MySQL och React. Men det var också
+                            ett tag sedan jag gjorde den. Så känns bra att kunna
+                            gå igenom grunderna igen, och förhoppningsvis reda
+                            ut lite frågetecken på vägen.
+                        </p>
+                        <p class="prompt">
+                            Berätta lite om ditt arbetet med SQL i guiden, hur
+                            gick det?
+                        </p>
+                        <p>
+                            Det gick ganska dåligt till en början, till jag
+                            hittade en bra rutin för att starta om databasen.
+                            När jag kom igång med det så var det lättare att
+                            kunna testa varje SQL statement och dubbelkolla att
+                            dem fungerade som dem borde. Det är mycket att hålla
+                            kolla på med MySQL, VS Code och mariadb terminalen,
+                            samt flödet som man behöver köra scripten för att
+                            det skall bli rätt. Väldigt lätt att missa nått om
+                            man inte ser vad man gör.
+                        </p>
+                        <p class="prompt">
+                            Jämför SQL med andra sätt att programmera, relatera
+                            till några av de programmeringsspråk du kan.
+                        </p>
+                        <p>
+                            Tycker mest det påminner om python iallafall dem if
+                            statements där man kan skriva in (). Dock så känns
+                            SQL mer kompakt och med mindre funktionalitet.
+                            Logiken är nog det som påminner mest om andra sätt
+                            att programmera.
+                        </p>
+                        <p class="prompt">Vilken är din TIL för detta kmom?</p>
+                        <p>
+                            Har inte riktigt kommit igång med docker, men
+                            anledningen har varit att Docker desktop ej
+                            uppdaterade sig ordentligt. Efter uppdatering så
+                            blev jag alltid tvingad att sätta om den till
+                            factory defaults. Men efter löjligt många timmar i
+                            google så tror jag att det kan fungera, jag kan
+                            iallafall skapa containers nu som inte crashar. Så
+                            veckans TIL har absolut varit att när saker och ting
+                            inte fungerar, gå bort från skärmen gör nått annat,
+                            och sen titta på det igen när frustrationen är borta
+                            / lite mindre. 😅
+                        </p>
+                        <span class="line"></span>
+                    </li>
+                    <li>
+                        <div class="question-arrow">
+                            <span class="question">Kmom02</span>
+                            <i class="bx bxs-chevron-down arrow"></i>
+                        </div>
+                        <p class="prompt">
+                            Du har nu använt både UNION och JOIN för att slå
+                            samman tabeller i SQL, vilken är din uppfattning om
+                            databaser och SQL så här långt?
+                        </p>
+                        <p>
+                            Jag har jobbat litegrann med MySQL sen innan. Det är
+                            iallafall mitt första "databasspråk". Så kändes
+                            skönt att få gå igenom grunderna igen. Förstår att
+                            det är nått som är viktigt att förstå för att kunna
+                            jobba med större projekt. JOIN och UNION känns som
+                            det är rätt logiskt när man läser om det, men att
+                            implementera känns som det är nått som man får öva
+                            på tills det blir lättare.
+                        </p>
+                        <p class="prompt">
+                            Är detta den första bekantskap med JavaScript på
+                            serversidan och Node.js, hur känns det och vilken
+                            uppfattning, eller förutfattade meningar, har du om
+                            detta?
+                        </p>
+                        <p>
+                            Node.js var det språk som jag för första gången
+                            kunde börja bygga lite större projekt med. Så kan
+                            inte säga att jag har så där jättemycket
+                            förutfattade meningar. Jag gillar det för att det är
+                            bekant, och det är lätt för mig att läsa koden.
+                            Kändes som en bra bekräftelse att jag inte behövde
+                            spendera lika mycket tid på att koppla upp databasen
+                            denna gång, jämfört med hur det var för mig första
+                            gången.
+                        </p>
+                        <p class="prompt">
+                            Hur kändes konceptet med async och await och
+                            asynkron programmering?
+                        </p>
+                        <p>
+                            Det känns som ett extra steg att komma ihåg, men
+                            svårt att komma undan. Känns som om att detta är
+                            nått som används för alla större Javascript projekt,
+                            så ser fram emot att få jobba mer med det. Vet att
+                            första gången som jag kodade med async/await så var
+                            det även med Fetch API och Postman, och då kunde jag
+                            ingenting om HTTP requests. Kändes därför skönt att
+                            gå igenom konceptet med lite mindre att tänka på.
+                        </p>
+                        <p class="prompt">
+                            Hur gick det att koppla ihop JavaScript, Node.js med
+                            SQL och databasen?
+                        </p>
+                        <p>
+                            Som jag nämnde tidigare så kändes det mycket lättare
+                            att få ihop allting jämfört med första gången som
+                            jag gjorde det. Visst finns det saker som
+                            fortfarande förvirrar mig, men nu känner jag mig
+                            lite mer bekväm med koden och det är lättare att
+                            hitta och förstå vad som gör vad.
+                        </p>
+                        <p class="prompt">Vilken är din TIL för detta kmom?</p>
+                        <p>
+                            Jag slåss nog fortfarande med tiden och har en
+                            mentalitet, där jag vill kunna förstå allting. Men
+                            för att jag skall hinna med allt så får det bli att
+                            prioritera dem bitarna som behövs för att klara av
+                            kraven. Så kan väl säga att mitt TIL för detta kmom
+                            är att försöka att göra en lista innan jag börjar en
+                            övning och se till så att jag håller mig till den.
+                            Istället för att snöa in på andra spännande saker
+                            som finns där ute på webben. 😉
+                        </p>
+                        <span class="line"></span>
+                    </li>
+                    <li>
+                        <div class="question-arrow">
+                            <span class="question">Kmom03</span>
+                            <i class="bx bxs-chevron-down arrow"></i>
+                        </div>
+                        <p class="prompt">
+                            Några generella reflektioner på att skriva och jobba
+                            med menydrivna terminalprogram i JavaScript och
+                            Node.js?
+                        </p>
+                        <p>
+                            Då JavaScript är det språk som jag är mest bekväm i,
+                            så har det känts lite lättare denna veckan att få
+                            ihop allting. Dock kan jag fortfarande tycka det är
+                            svårt att veta vad som är bra och dålig struktur. En
+                            kompis tipsade om att läsa på lite om circular
+                            dependencies i JavaScript, vilket gav mig lite mer
+                            klarhet. Men känns också som det börjar bli väldigt
+                            mycket som man behöver ha i åtanke när man kodar på
+                            egen hand.
+                        </p>
+                        <p class="prompt">
+                            Berätta om din kodstruktur i ditt terminalprogram
+                            mot databasen, är du nöjd eller ser du
+                            förbättringspotential?
+                        </p>
+                        <p>
+                            Jag valde att skapa en fil för varje "uppgift", mest
+                            för att när jag började så vill jag har ett extra
+                            meny val som dubbelkollade att databas kopplingen
+                            fungerade, connect_db.js. Sedan så fick "extra"
+                            funktioner vara i helpers.js och resterande moduler
+                            innehåller queries. Tror säkert att det finns rum
+                            för förbättring här då programmet växer så kan det
+                            lätta bli många filer. Men för ett program utav
+                            denna storlek så kändes det som ett ok sätt att
+                            organisera allt.
+                        </p>
+                        <p class="prompt">
+                            Något att nämna kring det aktuella stycket i guiden
+                            skolan med till exempel outer joins och subqueries?
+                        </p>
+                        <p>
+                            Vet inte riktigt om jag har något att nämna
+                            egentligen. Jag gillar att jobba med SQL, då det
+                            känns som ett logiskt sätt att få ihop olika
+                            tabeller i en större databas. Det som jag kan tycka
+                            är svårt är att veta när man skall använda vad, men
+                            hoppas att det blir lättare ju mer man jobbar med
+                            SQL.
+                        </p>
+                        <p class="prompt">
+                            Hur gick det att jobba med ER-modelleringen, några
+                            reflektioner?
+                        </p>
+                        <p>
+                            Jag vet inte riktigt, om det är rätt tänkt. Men när
+                            jag gick på gymnasiet så jobbade jag på lager och
+                            även jobbat litegrann inom kundtjänst. Så försökte
+                            tänka vad för information som jag fick i tillgång
+                            till när jag var på lagret vs satt på kundtjänst. Vi
+                            diskuterade även litegrann om hur säkerhet fungerade
+                            text kunds kreditkort och hur den informationen
+                            endast skulle vara tillgänglig med en nyckel.
+                        </p>
+                        <p class="prompt">
+                            Fanns det några extra svårigheter/utmaningar du
+                            kämpade med i kursmomentet?
+                        </p>
+                        <p>
+                            Denna veckan var nog SQL tuffast, att komma ihåg
+                            ordningen som skript skall köras. Lätt hänt att det
+                            blir fel, om man inte har koll på det. Jag fastnade
+                            ett tag med att få inte csv filer, men efter att jag
+                            kunnat lägga in data manuellt så kunde jag köra min
+                            insert-csv.sql fil.
+                        </p>
+                        <p class="prompt">Vilken är din TIL för detta kmom?</p>
+                        <p>
+                            Jag vet att första gången som jag försökte lära mig
+                            SQL, så tyckte jag det var väldigt jobbigt. Men
+                            känner att efter detta kmom så har nog mer fastnat
+                            än vad jag trott. Har kunnat jobba mer på egen hand
+                            och inte be om hjälp så ofta, så det har varit en
+                            positiv överraskning.
+                        </p>
+                        <span class="line"></span>
+                    </li>
+                    <li>
+                        <div class="question-arrow">
+                            <span class="question">Kmom04</span>
+                            <i class="bx bxs-chevron-down arrow"></i>
+                        </div>
+                        <p class="prompt">
+                            Hur gick det att förstå konceptet transaktioner i
+                            databas?
+                        </p>
+                        <p>
+                            Ja jag tror jag grepar hur det fungerar och hur det
+                            används. En transaktion hanterar en grupp utav SQL
+                            statements som skall köras i en viss följd. Om ett
+                            statement ej fungerar så körs inga mer statements,
+                            dvs statmentsen i en transaktionsenhet kan bara gå
+                            igenom om alla statements går igenom.
+                        </p>
+                        <p class="prompt">
+                            Gick det bra att komma igång med Express.js, Node,
+                            EJS och MySQL?
+                        </p>
+                        <p>
+                            Ja det var kul att jobba i en stack som jag kände
+                            igen. Om jag inte minns fel så var min första
+                            full-stack app med Express.js Node, MySQL och React.
+                            Så var kul att jobba med den och se hur mycket mer
+                            jag kunde förstå jämfört med första gången som jag
+                            byggden en app med nästan samma tekniker.
+                        </p>
+                        <p class="prompt">
+                            Lyckas du med god kodstruktur för terminal och
+                            webbklient, du såg att man kunde göra en enda
+                            funktion som löste flytten av pengar åt båda hållen?
+                        </p>
+                        <p>
+                            Ja jag tror att min kodstruktur är okej, och såg att
+                            men kunde göra en funktion som löste överföring åt
+                            båda hållen. Dock så fastnade jag med att leka med
+                            stylingen, så tiden försvann. Denna veckan fick jag
+                            klart allting lite snabbare än vanligt så valde att
+                            läsa dokumentation osv istället för extra
+                            uppgifterna.
+                        </p>
+                        <p class="prompt">
+                            Gick det bra att sluföra uppgiften om ER modellering
+                            samt skapa SQL-kod för databasen?
+                        </p>
+                        <p>
+                            Ja och nej, modelleringen finns det mycket
+                            information och många olika sätt att tänka. Så har
+                            fortfarande lite frågetecken, men hoppas också att
+                            det klarnar med nästa kmom, då vi börjar att bygga
+                            ihop allting.
+                        </p>
+                        <p class="prompt">
+                            Hur känner du allmänt inför kursen så här långt?
+                        </p>
+                        <p>
+                            Mycket information och långa föredrag, men det känns
+                            också nödvändigt eftersom annars hade tiden nog gått
+                            åt till att googla en hel del.Dock hade jag nog
+                            velat få se lite mer "verkliga" exempel ER-modeller.
+                            Känns forfarande lite svårt med att veta vilka väg
+                            som man skall ta.
+                        </p>
+                        <p class="prompt">Vilken är din TIL för detta kmom?</p>
+                        <p>
+                            Transaktions var helt nytt för mig, så det var kul
+                            att få lära sig om. Ser framemot att få komma igång
+                            och bygga själva eshop appen, och se om vi kommer
+                            att återanvända det eller inte.
+                        </p>
+                        <span class="line"></span>
+                    </li>
+                    <li>
+                        <div class="question-arrow">
+                            <span class="question">kmom05</span>
+                            <i class="bx bxs-chevron-down arrow"></i>
+                        </div>
+                        <p class="prompt">Gick det bra att komma igång med lagrade procedurer och triggers?
+                        </p>
+                        <p>Ja då, det kändes som att det gick lätt att implementera, och kul att fördjupa sig lite mer i SQL. Fastnade med en trigger ett tag, men efter jag kunnat gå igenom några föredrag och läsa på mer så hittade jag felet.</p>
+                        <p class="prompt">Hur är din syn på att “programmera” på detta viset i databasen, jämför med traditionell SQL som exponeras i klienten?</p>
+                        <p>
+                            Det känns som det blir mer organiserat och lättare att kunna anpassa databasen om man ev. skulle behöva göra ändringar. Precis som man delar upp moduler i JavaScript, så skulle man nu kunna dela upp SQL kod och samla relevanta triggers, procedurer och andra statements i en fil. 
+                        </p>
+                        <p class="prompt">Skriv ett kort stycke (2-5 meningar) om lagrade procedurer och om triggers där du förklarar begreppen (fördel, nackdel, användningsområde) för en som inte är insatt.</p>
+                        <p>En fördel är att man kan använda funktionsliknande sql statements med procedurer och triggers.
+                            Vilket kan underlätta om det är ett statements som behövs köras ofta.
+                            Hade vi haft mer tid så hade jag gärna velat implemntera en soft delete med en trigger, då det känns som det hade varit en fördel att kunna.
+                            En nackdel kan vara att det blir svårt att debugga med triggers.</p>
+                        <p class="prompt">Något att kommentera kring arbetet med att komma igång och implementera CRUD i webbklienten?
+                        </p>
+                        <p>Svårast var att hitta ett sätt att ta bort den data som kom in ifrån csv filerna. Då den data hade främmande nycklar kopplat till andra tabeller än produkt tabellen. Då krav sa att man ej behövde tänka på koppling emellan produkt och kategori, så löst vi därför detta med att göra en Hard delete med en CONSTRAINT och DELETE ON CASCADE för dem främmande nycklar som fanns i datan.</p>
+                        <p class="prompt">Berätta om hur det gick att utföra uppgiften med din Eshop, berätta även vem du jobbade i grupp med, om någon?</p>
+                        <p>
+                            Det gick bra, då vi kunde dela ett git repo och därför se varandras kod. Vi valde dock att dela upp uppgifterna, och koda var för sig. Så viktigast för mig nu är att försäkra mig om att jag också kan förstå och följa den kod som Erik (erna21) skrivit.
+                        </p>
+                        <p class="prompt">Vilken är din TIL för detta kmom?
+                        </p>
+                        <p>
+                            I git så har jag lärt mig ur man kan dra ner bara en mapp till en annan gren, vilket var en stor fördel med tanke på hur vi la upp vårt git repo. Triggers och procedurer var också helt nytt för mig, då jag enbart jobbat i vanilla SQL innan.
+                        </p>
+                        <span class="line"></span>
+                    </li>
+                    <li>
+                        <div class="question-arrow">
+                            <span class="question">kmom06</span>
+                            <i class="bx bxs-chevron-down arrow"></i>
+                        </div>
+                        <p class="prompt">
+                            Förklara begreppet index i databas för en nybörjare,
+                            berätta varför index är viktigt. Skriv ett kort
+                            stycke (3-7 rader).
+                        </p>
+                        <p>
+                            Index funkar som en pekare till data i en tabell. Lite som ett index i en bok, så blir det lättare att hitta vis information. Till exempel om du vill hitta sidor i boken angående ett visst ämne, så kan du använda ett index istället för att gå igenom hela boken. Index fungerar då lite som en tabell där man kan kolla upp ett visst ämne och se vilka sidor det ämne finns. Index snabbar därför upp sökningar, men vid insert och update så blir det långsammare då också index måste skapas och updateras.
+                        </p>
+                        <p class="prompt">
+                            Berätta vilka extra index du tillförde i din eshop.
+                        </p>
+                        <p>
+                            Tyckte det var lite svårt att få in Index då det kändes som om våra nycklar fyllde det mesta behovet i våra tabeller. Men till slut så la vi in index i produkt och stock tabellen, det kändes som den mest lämpliga platsen. 
+                        </p>
+                        <p class="prompt">
+                            Berätta kort hur du ser på nyttan med funktioner i
+                            databasen.
+                        </p>
+                        <p>Tror det kan vara en stor fördel, men tycker också det blir lite svårt att veta när man borde använda det i SQLen eller Nodejs. I vårt fall så har det fungerar bra med funktioner för att formattera datum och tid, men jag fick det ej att fungera på ett bra sätt när stock är slut i lagret utan valde då att lägga funktionen i Nodejs istället.</p>
+                        <p class="prompt">
+                            Kommentera arbetet med din eshop, är du nöjd eller
+                            finns förbättringspotential och hur tycker du
+                            svårighetsgraden har varit på uppgiften eshop som
+                            helhet?
+                        </p>
+                        <p>Jag tror det finns en stor förbättringspotential för både webbklienten och terminalklienten, så som felmeddelande vid fel input, soft delete m.m. Men jag kan också känna att det är en tidskrävande uppgift med månge saker som man kan göra. Svårighetsgraden var på en bra nivå. </p>
+                        <p class="prompt">
+                            Berätta om någon extra sak du valde att göra i din
+                            eshop, om du gjorde något.
+                        </p>
+                        <p>La lite tid på stylingen för att få rörande backgrund, samt fixade tabellerna så att dem stannar inom sin egna ruta med en scroll. I terminalklienten så är varje utskrift tydlig och lättläslig, samt att en sträng visas när stock antal är slut.</p>
+                        <p class="prompt">Vilken är din TIL för detta kmom?</p>
+                        <p>Index och funktioner var absolut helt nytt för mig då jag enbart jobbat med nycklar tidigare. SQL börjar bli rätt kul, då jag inser hur mycket mer man kan göra.</p>
+                        <span class="line"></span>
+                    </li>
+                    <li>
+                        <div class="question-arrow">
+                            <span class="question">kmom10</span>
+                            <i class="bx bxs-chevron-down arrow"></i>
+                        </div>
+                            <br/>
+                            <p>Programmeringstenta för mig är alltid lite stressigt, jag blir alltid lite nervös under tidspress men det är nått som jag jobbar på. Vet inte om det berodde på att jag känner mig som mest bekväm att koda i JavaScript, men tentan kändes helt ok. Fick ihop allting mycket snabbare än jag trodde, dock så var den sista SQL uppgiften rätt svår och jag fick aldrig ihop nått bra för den. Tycker absolut examinationen var rimlig, då det är många steg att komma ihåg och få rätt. Men kändes som om att tentan gick över alla dem sakerna som man har gjort i kursen. Tyckte även om att man kunde fokusera på nodejs och hur man binder ihop en databas till en klient. Var en bra balans för övningar emellan JavaScript och SQL.</p>
+                            <br/>
+                            <p>Jag gillade kursen och tyckte den va väldigt rolig. Personligen var det skönt att gå igenom lite Nodejs grunder och känner att jag har lite mer klarhet över hur man kan bygga upp vissa element. Nytt för mig var allt om SQL, kul att lära sig om procedures och triggers, och se hur man kan skapa mer funktionalitet i databasen.
+                            Dock över kursmomenten så med mer och mer övningar så fanns det väldigt många olika alternativ på hur man kan få ihop nodejs, vilket gjorde att jag ibland tappade bort mig. Så ett bättringsförslag hade varit att göra det lite tydligare genom att markera dem olika sätten att sätta upp en webbklient. 
+                            </p>
+                            <br/>
+                            <p>
+                            Hade gärna också sett lite förslag på hur man skall hantera kod när man arbetar i grupp, vi valde att använda git. Men aldrig fel med att få lite extra material som visar på hur det funkar i arbetsliv gällande grupparbete. Jag är nöjd med kursen, tyckte det var kul att det var en blandning utav grupp och individuellt arbete. Skulle absolut rekommendera kursen och ger den en 7. </p>
+                            <span class="line"></span>
+                        </li>
+                    </ul>
+                </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>Skapad utav Frida - frpe21 i BTHs Databas kurs</p>
+        </footer>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
+
